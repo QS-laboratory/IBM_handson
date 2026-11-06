@@ -5,7 +5,7 @@
 今回は認証とバックエンド一覧の取得までを確認します。
 Googleアカウントと、Google Colabを利用できる環境をご用意ください。
 
-## 1. 本人用のAPIキーを作成する
+## 1. 練習用のAPIキーを作成する
 
 1. ご自身のIBMidでIBM Quantum Platform（[https://quantum.cloud.ibm.com/](https://quantum.cloud.ibm.com/)）にログインします。
 2. 今回招待された東京大学のアカウントを選びます。
