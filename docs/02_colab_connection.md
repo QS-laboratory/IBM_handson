@@ -1,13 +1,13 @@
 # ② IBM Quantum実習用アカウントとGoogle Colabの接続確認
 
-先に[① 利用登録](01_ibm_quantum_registration.md)を完了し、実習用インスタンスが見えることを確認してください。
+先に① 利用登録を完了し、実習用インスタンスが見えることを確認してください。
 
 今回は認証とバックエンド一覧の取得までを確認します。
 Googleアカウントと、Google Colabを利用できる環境をご用意ください。
 
 ## 1. 本人用のAPIキーを作成する
 
-1. ご自身のIBMidで[IBM Quantum Platform](https://quantum.cloud.ibm.com/)にログインします。
+1. ご自身のIBMidでIBM Quantum Platform（[https://quantum.cloud.ibm.com/](https://quantum.cloud.ibm.com/)）にログインします。
 2. 今回招待された東京大学のアカウントを選びます。
 3. ホーム画面の **API key → Create** からキーを作成します。
 4. 名前を求められたら、例えば `FTQC-HandsOn-test` とします。
@@ -25,7 +25,7 @@ CRNは `crn:` で始まる長い識別子です。今回使う実習用インス
 
 ## 3. Google Colabを準備する
 
-[Google Colab](https://colab.research.google.com/)を開き、新しいノートブックを作成します。
+Google Colab（[https://colab.research.google.com/](https://colab.research.google.com/)）を開き、新しいノートブックを作成します。
 最初のコードセルに次を貼り付け、実行ボタンを押してください。
 
 ```python
@@ -89,7 +89,7 @@ APIキーの入力内容は画面に表示されません。コード本文を�
 
 ## IBM公式資料
 
-- [APIキー・CRNの取得と接続](https://quantum.cloud.ibm.com/docs/en/guides/initialize-account)
-- [外部環境での接続とAPIキーの扱い](https://quantum.cloud.ibm.com/docs/en/guides/cloud-setup-untrusted)
+- APIキー・CRNの取得と接続（[https://quantum.cloud.ibm.com/docs/en/guides/initialize-account](https://quantum.cloud.ibm.com/docs/en/guides/initialize-account)）
+- 外部環境での接続とAPIキーの扱い（[https://quantum.cloud.ibm.com/docs/en/guides/cloud-setup-untrusted](https://quantum.cloud.ibm.com/docs/en/guides/cloud-setup-untrusted)）
 
 最終更新：2026年11月6日

@@ -1,14 +1,14 @@
 # ① IBM Quantum実機利用のための登録手順
 
 2026年11月9日（月）FTQC Hands-on workshopのFlex利用希望者向けです。
-まず本書に沿って参加登録を完了し、その後、[② Google Colabからの接続確認](02_colab_connection.md)へ進んでください。
+まず本書に沿って参加登録を完了し、その後、② Google Colabからの接続確認へ進んでください。
 
 利用費用は主催者が負担します。**ご自身での有料プラン契約やクレジットカード登録は不要です。**
 
 ## 1. IBMid（ログイン用ID）を準備する
 
 - IBMidをお持ちの方は、既存のIDをご利用ください。
-- お持ちでない方は、[IBMのWebサイト](https://www.ibm.com/)のログイン画面から、今回申し込んだメールアドレスでIBMidを作成してください。
+- お持ちでない方は、IBMのWebサイト（[https://www.ibm.com/](https://www.ibm.com/)）のログイン画面から、今回申し込んだメールアドレスでIBMidを作成してください。
 
 必要なのはログイン用のIBMidです。
 ご自身が所有者となるIBM Cloudアカウントを新規開設する必要はありません。
@@ -31,7 +31,7 @@
 
 ## 3. IBM Quantum Platformで実習用インスタンスを確認する
 
-1. 参加承諾後、[IBM Quantum Platform](https://quantum.cloud.ibm.com/)を開きます。
+1. 参加承諾後、IBM Quantum Platform（[https://quantum.cloud.ibm.com/](https://quantum.cloud.ibm.com/)）を開きます。
 2. 再ログインを求められた場合は、招待を承諾したIBMidを使います。
 3. 画面上部で、招待された今回の東京大学のアカウントを選びます。
 4. 画面上部のリージョンで **us-east** を選びます。今回の実習では **us-eastのみ**を使用します。
@@ -42,7 +42,7 @@
 
 ## 4. 接続確認へ進む
 
-実習用インスタンスが見えたら、[② Google Colabからの接続確認](02_colab_connection.md)へ進んでください。
+実習用インスタンスが見えたら、② Google Colabからの接続確認へ進んでください。
 すでに完了している手順を繰り返す必要はありません。
 
 不明な点は、主催者の案内メールへ返信し、止まった手順と画面のメッセージをお知らせください。
@@ -50,7 +50,7 @@
 
 ## IBM公式資料
 
-- [招待の承諾と、カード登録なしで参加するための説明](https://www.ibm.com/support/pages/how-accept-ibm-cloud-invite)（IBM Cloudへの招待に関する説明。リンク先のTechZone固有の操作は本実習には不要です）
-- [IBM Quantum：招待された利用者の設定](https://quantum.cloud.ibm.com/docs/en/guides/cloud-setup-invited)
+- 招待の承諾と、カード登録なしで参加するための説明（[https://www.ibm.com/support/pages/how-accept-ibm-cloud-invite](https://www.ibm.com/support/pages/how-accept-ibm-cloud-invite)）（IBM Cloudへの招待に関する説明。リンク先のTechZone固有の操作は本実習には不要です）
+- IBM Quantum：招待された利用者の設定（[https://quantum.cloud.ibm.com/docs/en/guides/cloud-setup-invited](https://quantum.cloud.ibm.com/docs/en/guides/cloud-setup-invited)）
 
 最終更新：2026年11月6日
