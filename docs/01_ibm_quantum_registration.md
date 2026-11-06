@@ -8,7 +8,7 @@
 ## 1. IBMid（ログイン用ID）を準備する
 
 - IBMidをお持ちの方は、既存のIDをご利用ください。
-- お持ちでない方は、IBMのWebサイト（[https://www.ibm.com/](https://www.ibm.com/)）のログイン画面から、今回申し込んだメールアドレスでIBMidを作成してください。
+- お持ちでない方は、IBMid作成画面（[https://www.ibm.com/account/reg/us-en/signup?formid=urx-19776](https://www.ibm.com/account/reg/us-en/signup?formid=urx-19776)）を直接開き、今回申し込んだメールアドレスでIBMidを作成してください。
 
 必要なのはログイン用のIBMidです。
 ご自身が所有者となるIBM Cloudアカウントを新規開設する必要はありません。
