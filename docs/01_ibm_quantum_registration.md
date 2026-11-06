@@ -34,8 +34,8 @@
 1. 参加承諾後、[IBM Quantum Platform](https://quantum.cloud.ibm.com/)を開きます。
 2. 再ログインを求められた場合は、招待を承諾したIBMidを使います。
 3. 画面上部で、招待された今回の東京大学のアカウントを選びます。
-4. **Instances** を開き、実習用の **FTQC-HandsOn-20261109** が表示されることを確認します。
-5. 見つからない場合は、上部のリージョンを **us-east / eu-de** と切り替えて確認します。インスタンスはリージョンごとに表示されます。
+4. 画面上部のリージョンで **us-east** を選びます。今回の実習では **us-eastのみ**を使用します。
+5. **Instances** を開き、実習用の **FTQC-HandsOn-20261109** が表示されることを確認します。
 
 招待の承諾は **IBM Cloud**、量子実機の利用は **IBM Quantum Platform** で行います。
 承諾後は、基本的にIBM Quantum Platformを入口としてご利用ください。
