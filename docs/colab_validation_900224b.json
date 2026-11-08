@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Asia/Tokyo",
+  "validated_commit": "900224bfff3b277b843756f25c5185dd58ca6a5c",
+  "method": "Actual Google Colab browser UI. Updated notebooks opened from this exact GitHub commit; each connected to a newly allocated CPU runtime and ran all cells.",
+  "initial_setup": "Enabled the supplied pip installation cell; all remaining cells used default settings. No IBM API key, Drive mount or local repository files used.",
+  "pip_command": "%pip -q install \"numpy>=1.26,<3\" \"scipy>=1.12,<2\" \"matplotlib>=3.8,<4\" \"qiskit==2.4.1\" \"pylatexenc>=2.10,<3\"",
+  "results": [
+    {
+      "notebook": "04_h4_circuit_assessment.ipynb",
+      "status": "passed_colab_new_runtime",
+      "executed_code_cells": 14,
+      "added_checks": "Displayed all nine preparation/evolution M combinations with state/operator fidelity, L=1 CX cost, peak shift and signal comparison figures."
+    },
+    {
+      "notebook": "05_h4_iterative_bayes.ipynb",
+      "status": "passed_colab_new_runtime",
+      "executed_code_cells": 15,
+      "added_checks": "Displayed all nine M combinations with completed rounds, final L, posterior mean, Gaussian SD, signed FCI error, fit residual and iteration comparison figures."
+    }
+  ],
+  "local_release_tests": {
+    "passed": 68,
+    "failed": 0,
+    "source_and_saved_notebooks_match": true
+  },
+  "ibm_jobs_submitted": false,
+  "test_runtimes_disconnected_and_deleted": true,
+  "limitations": [
+    "Default simulation settings tested; no IBM hardware execution.",
+    "Additional M comparisons run without shot noise; adaptive time/scan schedules differ across M.",
+    "The initial pip installation cell must be enabled for fresh runtimes."
+  ],
+  "previous_validation": "colab_validation_1203538.json"
+}

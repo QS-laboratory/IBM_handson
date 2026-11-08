@@ -35,7 +35,7 @@ jupyter lab hands_on/exercises
 ```
 
 ColabではルートREADMEのリンク、またはNotebookのアップロードから開けます。
-検証済みコミットと条件は [Colab検証記録](../../docs/colab_validation_1203538.json) を参照してください。以降の改訂は記録ごとに検証範囲を区別します。IBM実機への送信はこの検証に含めません。
+検証済みコミットと条件は [5冊の初回検証](../../docs/colab_validation_1203538.json) と [追加改訂後の04・05の検証](../../docs/colab_validation_900224b.json) を参照してください。以降の改訂は記録ごとに検証範囲を区別します。IBM実機への送信はこの検証に含めません。
 本編にPySCF・Julia・Aerは不要です。分子積分の再生成や最適化は元の自習教材を参照してください。
 
 ## 演習4・5の測定モード
