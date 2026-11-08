@@ -330,6 +330,84 @@ np.testing.assert_allclose(L1_METRICS['both']['pmax'],SELECTED_RESULTS['fringe']
 高いPmaxだけから「正しいエネルギー差が得られた」とは判断できません。
 3. 同じではありません。小さなギャップでは、小さな位相の偏りも大きな相対誤差になり得ます。
 演算子・準備・信号・推定をそれぞれ確認します。''')
+    md(r'''### 5.2．Mを変えて、精度・費用・L=1曲線を比較する
+
+準備M=4・6・8 × 発展M=8・16・32の9通りを、同じH・Δt=0.1・CASE=bothで比べます。
+この対照はMODEにかかわらず**shot noiseなし**で、実機へ送信しません。
+表のCXはCX(A)+CX(A†)+CX(Uapp)というL=1のブロック直列見積もりです。
+全結合条件で、全体最適化・実機配置の費用は含みません。
+F_opがほぼ1なので、図では1−F_opを対数軸で示します。
+曲線の上段はFCI近傍の全0確率、下段は同じ探索点での厳密信号との差です。
+L=1でのピークずれは一回の干渉位相のずれで、演習5の反復推定のずれとは別です。
+
+比較後は冒頭で選んだMへ戻します。以降の主実験の設定は変えません。
+''')
+    code(r'''from IPython.display import Markdown, display
+
+def assess_saved_m():
+    selected=(SELECTED_PREP_M,SELECTED_EVOLUTION_M)
+    rows=[]
+    eps=np.linspace(GAP-.05,GAP+.05,301)
+    exact_curve=probability('exact',1,eps)
+    try:
+        for pm in AVAILABLE_PREP_M:
+            for em in AVAILABLE_EVOLUTION_M:
+                select_circuits(pm,em)
+                rows.append(dict(prep_m=pm,evolution_m=em,
+                    state_S0=SELECTED_RESULTS['fidelities']['S0'],
+                    state_T=SELECTED_RESULTS['fidelities']['T'],
+                    operator_fidelity=EVOLUTION_INFO['operator_fidelity'],
+                    cx_L1=SERIAL_CX['preparation']+SERIAL_CX['evolution'],
+                    pmax=SELECTED_RESULTS['fringe']['Pmax'],
+                    peak_error=SELECTED_RESULTS['fringe']['apparent_gap']-GAP,
+                    curve=probability('both',1,eps)))
+    finally:
+        select_circuits(*selected)
+    return rows,eps,exact_curve
+
+M_ASSESSMENT,M_SCAN,M_EXACT_CURVE=assess_saved_m()
+header='| 準備M | 発展M | F_state(S0) | F_state(T0) | F_op | CX(L=1) | Pmax(L=1) | peak−FCI / Ha |\n|---|---|---|---|---|---|---|---|'
+lines=[f"| {r['prep_m']} | {r['evolution_m']} | {r['state_S0']:.8f} | {r['state_T']:.8f} | {r['operator_fidelity']:.12f} | {r['cx_L1']} | {r['pmax']:.8f} | {r['peak_error']:+.8f} |" for r in M_ASSESSMENT]
+display(Markdown(header+'\n'+'\n'.join(lines)))
+fig,axes=plt.subplots(1,3,figsize=(13,3.5))
+prep_rows=[r for r in M_ASSESSMENT if r['evolution_m']==16]
+for key,label in [('state_S0','S0'),('state_T','T0')]:
+    axes[0].plot([r['prep_m'] for r in prep_rows],[r[key] for r in prep_rows],'o-',label=label)
+axes[0].set(xlabel='Preparation M',ylabel='State fidelity');axes[0].legend()
+evo_rows=[r for r in M_ASSESSMENT if r['prep_m']==6]
+axes[1].semilogy([r['evolution_m'] for r in evo_rows],
+    [1-r['operator_fidelity'] for r in evo_rows],'o-')
+axes[1].set(xlabel='Evolution M',ylabel='1 - operator fidelity')
+for pm in AVAILABLE_PREP_M:
+    rows=[r for r in M_ASSESSMENT if r['prep_m']==pm]
+    axes[2].plot([r['evolution_m'] for r in rows],[r['cx_L1'] for r in rows],'o-',label=f'prep M={pm}')
+axes[2].set(xlabel='Evolution M',ylabel='Serial CX, L=1');axes[2].legend(fontsize=8)
+plt.tight_layout();plt.show();plt.close(fig)
+fig,axes=plt.subplots(2,3,figsize=(13,6))
+for j,pm in enumerate(AVAILABLE_PREP_M):
+    axes[0,j].plot(M_SCAN,M_EXACT_CURVE,'k--',label='exact')
+    for r in [r for r in M_ASSESSMENT if r['prep_m']==pm]:
+        label=f"evolution M={r['evolution_m']}"
+        axes[0,j].plot(M_SCAN,r['curve'],label=label)
+        axes[1,j].plot(M_SCAN,r['curve']-M_EXACT_CURVE,label=label)
+    axes[0,j].set(title=f'Preparation M={pm}; L=1',ylabel='P(all zero)')
+    axes[0,j].ticklabel_format(axis='y',useOffset=False)
+    axes[1,j].axhline(0,color='black',ls='--',lw=.7)
+    axes[1,j].set(ylabel='P(both) - P(exact)')
+    for ax in axes[:,j]:
+        ax.axvline(GAP,color='gray',ls=':');ax.set_xlabel('Trial gap / Ha');ax.legend(fontsize=7)
+plt.tight_layout();plt.show();plt.close(fig)
+''')
+    md('''### 課題5補足：Mの比較表を読む
+
+Mを増やしてfidelityが上がれば、L=1のピークずれも必ず小さくなるか。
+また、表のCX(L=1)をそのまま次冊の全ラウンドの費用と呼べるか。
+''')
+    answer('''どちらもいえません。fidelityは状態の重なり／全空間の演算子の一致で、目的の相対位相そのものではありません。
+準備と発展の誤差は相殺する場合もあり、表のpeak−FCIと曲線を直接確認します。
+state fidelityは準備Mだけ、operator fidelityは発展Mだけに依存しますが、信号は両方に依存します。
+次冊では各ラウンドのLに合わせ、CX(A)+CX(A†)+L×CX(Uapp)を使います。
+さらに探索点数と各点のshotsを掛ける必要があり、実機配置や待ち時間の費用も別です。''')
     md(r'''## 6．測定モードを選ぶ：CASEとMODEは別の設定
 
 CASEは「どの状態と発展を使うか」、MODEは「その回路をどう測るか」です。

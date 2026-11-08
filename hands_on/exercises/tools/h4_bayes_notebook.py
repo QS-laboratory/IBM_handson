@@ -378,6 +378,71 @@ if RUN_COMPARISON:
 特にevolution_onlyの比較は、厳密準備を保ったまま近似発展の位相の影響を調べる対照です。
 2. 主張できません。観測曲線とフィットを見て、残差の増加が形の不一致や平坦な局所解などによらないか確認します。
 3. いえません。二つの影響が相殺する場合があります。prep_only/evolution_only、演習4の各fidelityと信号も合わせて読みます。''')
+    md(r'''### 8.1．Mごとの反復推定を比較する
+
+準備M=4・6・8 × 発展M=8・16・32を、**CASE=both・MODE=exact**で比較します。
+主実験のMODEがshots/ibmでも、この比較は常にshot noiseなしで、実機へ送信しません。
+同じINITIAL_MU・INITIAL_VARIANCE・POINTS・MAX_Lと更新回数から開始します。
+各Mの測定結果から独立に次のL・探索点を選ぶため、途中から測定計画や完了回数が異なり得ます。
+M_COMPARE_ROUNDSを変更すると比較の更新上限を変えられます。
+
+表の「平均−FCI」は、この有限反復の結果の符号付き誤差です。
+ここで比較する偏りには回路近似だけでなくGaussian近似・有限反復・フィットの影響も含まれます。
+厳密準備・厳密発展の対照も同じ初期条件で計算し、図の破線で示します。
+SDはGaussian更新の幅で、全誤差を覆う保証ではありません。L=1のピークずれとも区別します。
+比較後は元のMへ戻し、主実験のmeter・history・保存ファイルを保持します。
+''')
+    code(r'''from IPython.display import Markdown, display
+M_COMPARE_ROUNDS=8
+
+def compare_saved_m_bayes():
+    selected=(SELECTED_PREP_M,SELECTED_EVOLUTION_M)
+    results={}
+    kwargs=dict(rounds=M_COMPARE_ROUNDS,initial_mu=INITIAL_MU,initial_variance=INITIAL_VARIANCE,
+                points=POINTS,max_L=MAX_L,show_plots=False,output_prefix=None,verbose=False)
+    reference=iterative_bayes(Measurement('exact',shots=None),case='exact',**kwargs)
+    try:
+        for pm in AVAILABLE_PREP_M:
+            for em in AVAILABLE_EVOLUTION_M:
+                select_circuits(pm,em)
+                results[(pm,em)]=iterative_bayes(Measurement('exact',shots=None),case='both',**kwargs)
+    finally:
+        select_circuits(*selected)
+    return results,reference
+
+M_BAYES_COMPARISON,M_BAYES_REFERENCE=compare_saved_m_bayes()
+header='| 準備M | 発展M | 完了round | 最終L | 最終平均 / Ha | Gaussian SD / Ha | 平均−FCI / Ha | 最終fit RMSE |\n|---|---|---|---|---|---|---|---|'
+lines=[]
+for (pm,em),rows in M_BAYES_COMPARISON.items():
+    if not rows:
+        lines.append(f'| {pm} | {em} | 0 | — | — | — | — | — |')
+        continue
+    r=rows[-1]
+    lines.append(f"| {pm} | {em} | {len(rows)} | {r['L']} | {r['posterior_mu']:.8f} | {np.sqrt(r['posterior_variance']):.3g} | {r['posterior_mu']-GAP:+.8f} | {r['residual_rmse']:.3g} |")
+display(Markdown(header+'\n'+'\n'.join(lines)))
+fig,axes=plt.subplots(1,3,figsize=(13,3.5),sharey=True)
+for ax,pm in zip(axes,AVAILABLE_PREP_M):
+    for em in AVAILABLE_EVOLUTION_M:
+        rows=M_BAYES_COMPARISON[(pm,em)]
+        ax.plot([r['round'] for r in rows],[r['posterior_mu']-GAP for r in rows],
+                'o-',label=f'evolution M={em}')
+    ax.plot([r['round'] for r in M_BAYES_REFERENCE],
+            [r['posterior_mu']-GAP for r in M_BAYES_REFERENCE],'k--',label='exact prep/evolution')
+    ax.axhline(0,color='gray',lw=.7)
+    ax.set(title=f'Preparation M={pm}',xlabel='Round',ylabel='Posterior mean - FCI / Ha')
+    ax.legend(fontsize=7)
+plt.tight_layout();plt.show();plt.close(fig)
+''')
+    md('''### 課題7補足：Mを増やした推定を評価する
+
+最終SDが最小のMを、最も偏りが小さいMとみなしてよいか。
+また、同じroundの各点は同じL・同じ測定予算での比較か。
+''')
+    answer('''どちらもいえません。SDは近似Gaussian更新の幅であり、FCIからのずれは表と図の符号付き誤差で別に比較します。
+厳密回路の破線にも有限反復やGaussianフィット由来のずれが残り得ます。
+各Mが測定結果に応じてLと探索点を選ぶため、同じroundでもL・回路費用は揃いません。
+上限によって完了round数が異なる場合は最終値の単純な順位付けも避け、共通のroundと各L・残差を確認します。
+固定LでMの信号を比較する対照は演習4の表と図です。''')
     md(r'''## 9．実機で反復するときの操作と、保存結果の読み方
 
 1ラウンドごとにPOINTS本を1ジョブで送り、countsを取得・フィットしてから次の条件を決めます。

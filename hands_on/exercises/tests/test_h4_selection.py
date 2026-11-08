@@ -111,8 +111,33 @@ def test_complete_notebook_with_nondefault_m(name,pm,em,tmp_path,monkeypatch):
     if name.startswith('04'):
         assert f'M{pm} prep + M{em} evolution L=1' in ns['COSTS']
         np.testing.assert_allclose(ns['L1_METRICS']['both']['peak'],ns['SELECTED_RESULTS']['fringe']['apparent_gap'],atol=1e-10)
+        assert len(ns['M_ASSESSMENT'])==9
+        for row in ns['M_ASSESSMENT']:
+            prep=ns['CIRCUIT_CATALOG']['preparation'][row['prep_m']]
+            evo=ns['CIRCUIT_CATALOG']['evolution'][row['evolution_m']]
+            assert row['cx_L1']==prep['resources']['A']['cx']+prep['resources']['inverse']['cx']+evo['resources']['cx']
+            assert row['state_S0']==prep['fidelities']['S0']
+            assert row['operator_fidelity']==evo['operator_fidelity']
+            assert row['curve'].shape==ns['M_SCAN'].shape
+        chosen=next(r for r in ns['M_ASSESSMENT'] if (r['prep_m'],r['evolution_m'])==(pm,em))
+        np.testing.assert_allclose(chosen['curve'],ns['probability']('both',1,ns['M_SCAN']),atol=0)
+
     else:
         assert ns['history']
         assert all(row['prep_m']==pm and row['evolution_m']==em for row in ns['history'])
         assert all(row['prep_m']==pm and row['evolution_m']==em
                    for rows in ns['comparison'].values() for row in rows)
+        assert set(ns['M_BAYES_COMPARISON'])=={(p,e) for p in [4,6,8] for e in [8,16,32]}
+        for pair,rows in ns['M_BAYES_COMPARISON'].items():
+            assert rows
+            assert all((r['prep_m'],r['evolution_m'])==pair and r['mode']=='exact' and r['case']=='both'
+                       and r['shots'] is None for r in rows)
+            assert rows[0]['prior_mu']==ns['INITIAL_MU']
+            assert rows[0]['prior_variance']==ns['INITIAL_VARIANCE']
+            for a,b in zip(rows,rows[1:]):
+                assert a['posterior_mu']==b['prior_mu'] and a['posterior_variance']==b['prior_variance']
+        assert ns['M_BAYES_REFERENCE']==ns['comparison']['exact']
+        assert ns['meter'].selection['circuit_digest']==ns['CIRCUIT_DIGEST']
+        import json
+        assert json.loads((tmp_path/'outputs/exercise5_updates.json').read_text())==ns['history']
+

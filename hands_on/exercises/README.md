@@ -34,10 +34,16 @@ python -m pip install -r hands_on/exercises/requirements.txt
 jupyter lab hands_on/exercises
 ```
 
-Colabでは各Notebookをアップロードして使えます。Colab UIとIBM実機での動作は未検証です。
+ColabではルートREADMEのリンク、またはNotebookのアップロードから開けます。
+検証済みコミットと条件は [Colab検証記録](../../docs/colab_validation_1203538.json) を参照してください。以降の改訂は記録ごとに検証範囲を区別します。IBM実機への送信はこの検証に含めません。
 本編にPySCF・Julia・Aerは不要です。分子積分の再生成や最適化は元の自習教材を参照してください。
 
 ## 演習4・5の測定モード
+
+準備の回路層数 `PREP_M=4/6/8` と発展の回路層数 `EVOLUTION_M=8/16/32` を独立に選べます。既定は6/16です。
+演習4・節5.2では9通りのstate fidelity・operator fidelity・回路費用・L=1信号を比較します。
+演習5・節8.1では同じ初期事前から9通りを反復し、推定平均のずれ・SD・L・フィット残差を比較します。更新上限は `M_COMPARE_ROUNDS` で指定します。
+これらの追加比較は常にshot noiseなしで、主実験の設定・履歴を保持し、実機には送信しません。Mは回路の層数で、MPS/MPOのボンド次元とは区別します。
 
 - `MODE='exact'`：選択した回路の厳密確率。shot noiseなし。
 - `MODE='shots'`：理想確率から二項分布で模擬測定。各探索点の`SHOTS`と`SEED`を指定。
