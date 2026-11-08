@@ -1,0 +1,68 @@
+{
+  "geometry_id": 4,
+  "orbital_representation": "boys",
+  "basis": "STO-3G",
+  "active_electrons": 4,
+  "spatial_orbitals": 4,
+  "system_qubits": 8,
+  "qpde_qubits": 9,
+  "coordinates_angstrom": [
+    [
+      -1.0,
+      1.0,
+      0.0
+    ],
+    [
+      1.0,
+      1.0,
+      0.0
+    ],
+    [
+      1.0,
+      -1.0,
+      0.0
+    ],
+    [
+      -1.0,
+      -1.0,
+      0.0
+    ]
+  ],
+  "geometry_source": "reconstructed linear interpolation from SI Fig S6; XYZ not published with author repository",
+  "mapping": "InterleavedQubitMapper(JordanWignerMapper), alpha/beta alternating; author molecular convention",
+  "orbital_order": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "exchange_cost": 2.6071821822305314,
+  "ga_exhaustive_min_cost": 2.6071821822305314,
+  "ga_seed": 1,
+  "ga_settings": {
+    "population": 50,
+    "generations": 100,
+    "crossover": 0.7,
+    "mutation": 0.2,
+    "shuffle_indpb": 0.05
+  },
+  "singlet_electronic_energy_hartree": -3.330388605150464,
+  "triplet_electronic_energy_hartree": -3.31325776890769,
+  "nuclear_energy_hartree": 1.432539216130916,
+  "gap_exact_hartree": 0.017130836242774006,
+  "triplet_s_squared": 2.0000000000000004,
+  "global_lowest_states_particle_numbers": [
+    3.9999999999999982,
+    3.9999999999999982
+  ],
+  "pauli_terms": 177,
+  "overlap_orthonormality_error": 9.638486562732634e-16,
+  "geometry_optimized": false,
+  "frozen_core": false,
+  "mapped_qubit_gap_hartree": 0.0171308362427669,
+  "mapping_energy_difference_vs_fci_hartree": [
+    8.881784197001252e-15,
+    1.7763568394002505e-15
+  ],
+  "mapping_threshold_note": "Qiskit Nature mapper internally simplifies intermediate Pauli operators at its default tolerance; tiny ~1e-8 Ha differences may remain."
+}

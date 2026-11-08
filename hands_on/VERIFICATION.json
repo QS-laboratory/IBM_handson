@@ -1,0 +1,57 @@
+{
+  "verified_date_jst": "2026-11-04",
+  "local_notebook_execution": [
+    {
+      "notebook": "overview/00_overview.ipynb",
+      "executed_code_cells": 4,
+      "saved_figures": 3,
+      "status": "passed_local_offline"
+    },
+    {
+      "notebook": "00_preparation.ipynb",
+      "executed_code_cells": 7,
+      "saved_figures": 4,
+      "status": "passed_local_offline"
+    },
+    {
+      "notebook": "01_circuits_and_ibm.ipynb",
+      "executed_code_cells": 9,
+      "saved_figures": 4,
+      "status": "passed_local_offline"
+    },
+    {
+      "notebook": "02_inference.ipynb",
+      "executed_code_cells": 8,
+      "saved_figures": 2,
+      "status": "passed_local_offline"
+    },
+    {
+      "notebook": "03_mps_mpo_advanced.ipynb",
+      "executed_code_cells": 15,
+      "saved_figures": 12,
+      "status": "passed_local_offline"
+    }
+  ],
+  "executed_code_cells": 43,
+  "saved_figures": 25,
+  "tests_passed": 13,
+  "test_scope": [
+    "molecular reference consistency and particle sector",
+    "Pauli-rotation gate identities",
+    "native Qiskit bit ordering",
+    "distributed-block QPDE vs independent likelihood",
+    "sequential inference and invalid-count rejection",
+    "job submission recovery, duplicate guard, and partial results"
+  ],
+  "limitations": {
+    "colab_runtime_tested": false,
+    "ibm_hardware_tested": false,
+    "github_uploaded": false,
+    "new_venv_install_tested": false,
+    "fire_opal_integrated": false,
+    "jupyter_ui_tested": false
+  },
+  "execution_method": "Python exec, shared process with fresh namespace for each notebook; IBM branches disabled",
+  "target_repository": "https://github.com/QS-laboratory/IBM_handson",
+  "hardware_default": "ethylene 5 qubits; butadiene 9-qubit hardware path held for benchmarking"
+}

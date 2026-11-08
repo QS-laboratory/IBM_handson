@@ -1,0 +1,10 @@
+numpy>=2,<3
+scipy>=1.12,<2
+matplotlib>=3.8,<4
+pyscf==2.13.1
+qiskit==2.4.1
+qiskit-algorithms==0.4.0
+qiskit-nature==0.7.2
+deap==1.4.3
+nbformat>=5.10,<6
+pytest>=8,<10

@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "molecule": "butadiene",
+  "variant": "compact",
+  "team": "example",
+  "rows": [
+    {
+      "iteration": 1,
+      "steps": 8,
+      "epsilon_hartree": 0.0,
+      "time_atomic_units": 1.2,
+      "shots": 1024,
+      "successes": 1012,
+      "simulated_probability": 0.9867700220871682
+    },
+    {
+      "iteration": 1,
+      "steps": 8,
+      "epsilon_hartree": 0.0625,
+      "time_atomic_units": 1.2,
+      "shots": 1024,
+      "successes": 1013,
+      "simulated_probability": 0.9914107127720808
+    },
+    {
+      "iteration": 1,
+      "steps": 8,
+      "epsilon_hartree": 0.125,
+      "time_atomic_units": 1.2,
+      "shots": 1024,
+      "successes": 1010,
+      "simulated_probability": 0.9932703017179603
+    },
+    {
+      "iteration": 1,
+      "steps": 8,
+      "epsilon_hartree": 0.1875,
+      "time_atomic_units": 1.2,
+      "shots": 1024,
+      "successes": 1017,
+      "simulated_probability": 0.9923383336392801
+    },
+    {
+      "iteration": 1,
+      "steps": 8,
+      "epsilon_hartree": 0.25,
+      "time_atomic_units": 1.2,
+      "shots": 1024,
+      "successes": 1010,
+      "simulated_probability": 0.988620048399606
+    },
+    {
+      "iteration": 1,
+      "steps": 8,
+      "epsilon_hartree": 0.3125,
+      "time_atomic_units": 1.2,
+      "shots": 1024,
+      "successes": 1002,
+      "simulated_probability": 0.9821363515511767
+    },
+    {
+      "iteration": 1,
+      "steps": 8,
+      "epsilon_hartree": 0.375,
+      "time_atomic_units": 1.2,
+      "shots": 1024,
+      "successes": 990,
+      "simulated_probability": 0.9729236967962849
+    },
+    {
+      "iteration": 1,
+      "steps": 8,
+      "epsilon_hartree": 0.4375,
+      "time_atomic_units": 1.2,
+      "shots": 1024,
+      "successes": 982,
+      "simulated_probability": 0.961033881031301
+    },
+    {
+      "iteration": 1,
+      "steps": 8,
+      "epsilon_hartree": 0.5,
+      "time_atomic_units": 1.2,
+      "shots": 1024,
+      "successes": 981,
+      "simulated_probability": 0.946533753125681
+    },
+    {
+      "iteration": 2,
+      "steps": 16,
+      "epsilon_hartree": 0.0,
+      "time_atomic_units": 2.4,
+      "shots": 1024,
+      "successes": 978,
+      "simulated_probability": 0.9577268814796169
+    },
+    {
+      "iteration": 2,
+      "steps": 16,
+      "epsilon_hartree": 0.0625,
+      "time_atomic_units": 2.4,
+      "shots": 1024,
+      "successes": 996,
+      "simulated_probability": 0.9763133681942054
+    },
+    {
+      "iteration": 2,
+      "steps": 16,
+      "epsilon_hartree": 0.125,
+      "time_atomic_units": 2.4,
+      "shots": 1024,
+      "successes": 999,
+      "simulated_probability": 0.9840281537753557
+    },
+    {
+      "iteration": 2,
+      "steps": 16,
+      "epsilon_hartree": 0.1875,
+      "time_atomic_units": 2.4,
+      "shots": 1024,
+      "successes": 1004,
+      "simulated_probability": 0.9806979807710065
+    },
+    {
+      "iteration": 2,
+      "steps": 16,
+      "epsilon_hartree": 0.25,
+      "time_atomic_units": 2.4,
+      "shots": 1024,
+      "successes": 990,
+      "simulated_probability": 0.9663976376874075
+    },
+    {
+      "iteration": 2,
+      "steps": 16,
+      "epsilon_hartree": 0.3125,
+      "time_atomic_units": 2.4,
+      "shots": 1024,
+      "successes": 964,
+      "simulated_probability": 0.9414482794005066
+    },
+    {
+      "iteration": 2,
+      "steps": 16,
+      "epsilon_hartree": 0.375,
+      "time_atomic_units": 2.4,
+      "shots": 1024,
+      "successes": 935,
+      "simulated_probability": 0.9064102147098025
+    },
+    {
+      "iteration": 2,
+      "steps": 16,
+      "epsilon_hartree": 0.4375,
+      "time_atomic_units": 2.4,
+      "shots": 1024,
+      "successes": 875,
+      "simulated_probability": 0.862070323010663
+    },
+    {
+      "iteration": 2,
+      "steps": 16,
+      "epsilon_hartree": 0.5,
+      "time_atomic_units": 2.4,
+      "shots": 1024,
+      "successes": 832,
+      "simulated_probability": 0.8094243826795154
+    },
+    {
+      "iteration": 3,
+      "steps": 32,
+      "epsilon_hartree": 0.0,
+      "time_atomic_units": 4.8,
+      "shots": 1024,
+      "successes": 914,
+      "simulated_probability": 0.883745819739828
+    },
+    {
+      "iteration": 3,
+      "steps": 32,
+      "epsilon_hartree": 0.0625,
+      "time_atomic_units": 4.8,
+      "shots": 1024,
+      "successes": 978,
+      "simulated_probability": 0.9551441286629432
+    },
+    {
+      "iteration": 3,
+      "steps": 32,
+      "epsilon_hartree": 0.125,
+      "time_atomic_units": 4.8,
+      "shots": 1024,
+      "successes": 1004,
+      "simulated_probability": 0.9852779782379776
+    },
+    {
+      "iteration": 3,
+      "steps": 32,
+      "epsilon_hartree": 0.1875,
+      "time_atomic_units": 4.8,
+      "shots": 1024,
+      "successes": 997,
+      "simulated_probability": 0.9714556014285668
+    },
+    {
+      "iteration": 3,
+      "steps": 32,
+      "epsilon_hartree": 0.25,
+      "time_atomic_units": 4.8,
+      "shots": 1024,
+      "successes": 931,
+      "simulated_probability": 0.9149117099885851
+    },
+    {
+      "iteration": 3,
+      "steps": 32,
+      "epsilon_hartree": 0.3125,
+      "time_atomic_units": 4.8,
+      "shots": 1024,
+      "successes": 848,
+      "simulated_probability": 0.8206972013384526
+    },
+    {
+      "iteration": 3,
+      "steps": 32,
+      "epsilon_hartree": 0.375,
+      "time_atomic_units": 4.8,
+      "shots": 1024,
+      "successes": 719,
+      "simulated_probability": 0.6972279769414119
+    },
+    {
+      "iteration": 3,
+      "steps": 32,
+      "epsilon_hartree": 0.4375,
+      "time_atomic_units": 4.8,
+      "shots": 1024,
+      "successes": 538,
+      "simulated_probability": 0.5555331748904823
+    },
+    {
+      "iteration": 3,
+      "steps": 32,
+      "epsilon_hartree": 0.5,
+      "time_atomic_units": 4.8,
+      "shots": 1024,
+      "successes": 429,
+      "simulated_probability": 0.4082699698501583
+    }
+  ],
+  "system_qubits": 8,
+  "total_qubits": 9,
+  "circuit_sha256": {
+    "prep_compact": "1d7289d949af490a145fd951eb476a8918e88970e5f1840b3ae81bb070588140",
+    "evol_compact": "cb388783fd86ed161c46fd3b65769525aa4b89805167b71c577f7fd5b5ed3d66"
+  },
+  "source": "simulated_counts",
+  "scan_range_hartree": [
+    0,
+    0.5
+  ],
+  "maximum_time_atomic_units": 4.8,
+  "seed": 20261109,
+  "noise_model": {
+    "name": "global_depolarization_after_circuit",
+    "rate": 0.0,
+    "not_ibm_measurements": true
+  },
+  "provenance": "Generated locally from distributed QPY circuits; synthetic counts, NOT IBM hardware results."
+}

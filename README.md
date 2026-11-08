@@ -9,7 +9,7 @@
 
 ## 教材を開く
 
-GitHubへ配置後、以下のボタンからGoogle Colabで開きます。現時点のローカル成果物だけではColabリンクはまだ利用できません。
+以下のボタンからGoogle Colabで開きます。非公開リポジトリの場合は、ColabでGitHubへのアクセス認証が必要です。
 各ノートで「ファイル → ドライブにコピーを保存」し、標準CPUランタイムで実行してください。
 
 | 時間 | 教材 | Colab |
@@ -24,6 +24,8 @@ GitHubへ配置後、以下のボタンからGoogle Colabで開きます。現�
 
 ## 事前準備
 
+- [① IBM Quantumの利用登録](docs/01_ibm_quantum_registration.md) / [PDF](output/pdf/01_ibm_quantum_registration.pdf)
+- [② Google Colabからの接続確認](docs/02_colab_connection.md) / [PDF](output/pdf/02_colab_connection.pdf)
 - GoogleアカウントでColabへログインできること、会社PC・社内規則でGitHub/Colabの利用が可能なことを確認してください。
 - IBM実機へのアクセスは各自のAPIキーを使用します。今回利用可能な所属企業の枠、または講師が案内するFlex枠の権限が必要です。
 - APIキーはColabのシークレット `IBM_QUANTUM_API_KEY` に登録します。教材セル・出力・GitHubへ記載しません。
@@ -39,6 +41,12 @@ IBM実機・Colab実環境での動作と授業全体の所要時間は未検証
 
 詳しい起動・再生成手順は [開発用README](hands_on/README.md)、当日の運営と未完了の確認項目は [講師用ガイド](hands_on/INSTRUCTOR.md) を参照してください。
 第一版は [versions/v1_2026-11-04](versions/v1_2026-11-04/) に独立保存しています。
+
+## 発展演習・追加計算
+
+- [H₄：著者のMPS/MPO回路最適化による発展演習](advanced_kanno_h4/README.md)
+- [直鎖H₄：Full-CIとDMRGのポテンシャルエネルギー曲線](advanced_kanno_h4/pec/README.md)
+- [非等間隔20点のFull-CIデータ](advanced_kanno_h4/pec/linear_stretch_20.csv) / [DMRGデータ](advanced_kanno_h4/pec/linear_dmrg_20.csv)
 
 ## 参考研究
 

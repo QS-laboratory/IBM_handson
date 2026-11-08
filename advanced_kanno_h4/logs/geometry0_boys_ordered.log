@@ -1,0 +1,2415 @@
+H4 0 boys_ordered; depth=8, sweeps=1000, dmrg_sweeps=200, Julia 1.11.1
+#sites: 8
+After sweep 0 energy=-2.009258574760106
+After sweep 1 energy=-3.0032760997928807  maxlinkdim=4 maxerr=2.39E-16 time=8.511
+After sweep 2 energy=-3.0232841163797746  maxlinkdim=10 maxerr=2.36E-08 time=0.008
+After sweep 3 energy=-3.0356375795643915  maxlinkdim=10 maxerr=2.99E-06 time=0.012
+After sweep 4 energy=-3.0430385065883114  maxlinkdim=15 maxerr=4.36E-10 time=0.012
+After sweep 5 energy=-3.044285727171249  maxlinkdim=16 maxerr=2.08E-09 time=0.011
+After sweep 6 energy=-3.0443306697820245  maxlinkdim=16 maxerr=2.71E-16 time=0.011
+After sweep 7 energy=-3.0443312451383293  maxlinkdim=16 maxerr=2.43E-16 time=0.010
+After sweep 8 energy=-3.044331289695533  maxlinkdim=16 maxerr=2.29E-16 time=0.011
+After sweep 9 energy=-3.0443312966211793  maxlinkdim=16 maxerr=5.27E-16 time=0.011
+After sweep 10 energy=-3.0443312977510764  maxlinkdim=16 maxerr=3.26E-16 time=0.117
+After sweep 11 energy=-3.0443312979370503  maxlinkdim=16 maxerr=3.82E-16 time=0.010
+After sweep 12 energy=-3.044331297967737  maxlinkdim=16 maxerr=3.94E-16 time=0.010
+After sweep 13 energy=-3.0443312979728203  maxlinkdim=16 maxerr=4.09E-16 time=0.010
+After sweep 14 energy=-3.044331297973658  maxlinkdim=16 maxerr=3.16E-16 time=0.010
+After sweep 15 energy=-3.0443312979737946  maxlinkdim=16 maxerr=3.91E-16 time=0.011
+After sweep 16 energy=-3.04433129797382  maxlinkdim=16 maxerr=2.38E-16 time=0.015
+After sweep 17 energy=-3.044331297973826  maxlinkdim=16 maxerr=2.69E-16 time=0.010
+After sweep 18 energy=-3.0443312979738226  maxlinkdim=16 maxerr=4.17E-16 time=0.012
+After sweep 19 energy=-3.044331297973825  maxlinkdim=16 maxerr=3.47E-16 time=0.010
+After sweep 20 energy=-3.0443312979738275  maxlinkdim=16 maxerr=2.91E-16 time=0.012
+After sweep 21 energy=-3.044331297973825  maxlinkdim=16 maxerr=3.51E-16 time=0.012
+After sweep 22 energy=-3.044331297973827  maxlinkdim=16 maxerr=2.97E-16 time=0.010
+After sweep 23 energy=-3.0443312979738257  maxlinkdim=16 maxerr=3.39E-16 time=0.011
+After sweep 24 energy=-3.0443312979738244  maxlinkdim=16 maxerr=3.44E-16 time=0.012
+After sweep 25 energy=-3.044331297973828  maxlinkdim=16 maxerr=3.66E-16 time=0.021
+After sweep 26 energy=-3.0443312979738217  maxlinkdim=16 maxerr=1.72E-16 time=0.012
+After sweep 27 energy=-3.0443312979738235  maxlinkdim=16 maxerr=3.70E-16 time=0.011
+After sweep 28 energy=-3.0443312979738253  maxlinkdim=16 maxerr=2.99E-16 time=0.012
+After sweep 29 energy=-3.044331297973828  maxlinkdim=16 maxerr=1.70E-16 time=0.010
+After sweep 30 energy=-3.0443312979738253  maxlinkdim=16 maxerr=3.62E-16 time=0.011
+After sweep 31 energy=-3.0443312979738186  maxlinkdim=16 maxerr=5.55E-16 time=0.011
+After sweep 32 energy=-3.0443312979738275  maxlinkdim=16 maxerr=3.12E-16 time=0.011
+After sweep 33 energy=-3.0443312979738257  maxlinkdim=16 maxerr=5.35E-16 time=0.010
+After sweep 34 energy=-3.0443312979738293  maxlinkdim=16 maxerr=7.08E-16 time=0.011
+After sweep 35 energy=-3.0443312979738226  maxlinkdim=16 maxerr=3.00E-16 time=0.009
+After sweep 36 energy=-3.0443312979738204  maxlinkdim=16 maxerr=8.17E-16 time=0.009
+After sweep 37 energy=-3.0443312979738235  maxlinkdim=16 maxerr=5.99E-16 time=0.010
+After sweep 38 energy=-3.044331297973828  maxlinkdim=16 maxerr=3.42E-16 time=0.009
+After sweep 39 energy=-3.044331297973824  maxlinkdim=16 maxerr=3.82E-16 time=0.009
+After sweep 40 energy=-3.044331297973827  maxlinkdim=16 maxerr=6.87E-16 time=0.009
+After sweep 41 energy=-3.0443312979738297  maxlinkdim=16 maxerr=3.78E-16 time=0.009
+After sweep 42 energy=-3.044331297973825  maxlinkdim=16 maxerr=5.55E-16 time=0.010
+After sweep 43 energy=-3.0443312979738253  maxlinkdim=16 maxerr=3.14E-16 time=0.006
+After sweep 44 energy=-3.044331297973822  maxlinkdim=16 maxerr=3.67E-16 time=0.008
+After sweep 45 energy=-3.0443312979738226  maxlinkdim=16 maxerr=2.20E-16 time=0.009
+After sweep 46 energy=-3.044331297973823  maxlinkdim=16 maxerr=4.86E-16 time=0.008
+After sweep 47 energy=-3.044331297973825  maxlinkdim=16 maxerr=2.37E-16 time=0.007
+After sweep 48 energy=-3.044331297973825  maxlinkdim=16 maxerr=2.90E-16 time=0.007
+After sweep 49 energy=-3.044331297973825  maxlinkdim=16 maxerr=1.80E-16 time=0.007
+After sweep 50 energy=-3.044331297973825  maxlinkdim=16 maxerr=3.47E-16 time=0.005
+After sweep 51 energy=-3.0443312979738235  maxlinkdim=16 maxerr=3.29E-16 time=0.006
+After sweep 52 energy=-3.044331297973819  maxlinkdim=16 maxerr=3.67E-16 time=0.006
+After sweep 53 energy=-3.0443312979738266  maxlinkdim=16 maxerr=6.15E-16 time=0.007
+After sweep 54 energy=-3.044331297973825  maxlinkdim=16 maxerr=8.50E-16 time=0.007
+After sweep 55 energy=-3.0443312979738244  maxlinkdim=16 maxerr=2.81E-16 time=0.007
+After sweep 56 energy=-3.044331297973825  maxlinkdim=16 maxerr=2.47E-16 time=0.007
+After sweep 57 energy=-3.0443312979738213  maxlinkdim=16 maxerr=2.92E-16 time=0.009
+After sweep 58 energy=-3.0443312979738235  maxlinkdim=16 maxerr=4.91E-16 time=0.007
+After sweep 59 energy=-3.0443312979738217  maxlinkdim=16 maxerr=3.51E-16 time=0.008
+After sweep 60 energy=-3.0443312979738284  maxlinkdim=16 maxerr=3.28E-16 time=0.007
+After sweep 61 energy=-3.0443312979738284  maxlinkdim=16 maxerr=2.61E-16 time=0.007
+After sweep 62 energy=-3.044331297973827  maxlinkdim=16 maxerr=3.00E-16 time=0.009
+After sweep 63 energy=-3.0443312979738257  maxlinkdim=16 maxerr=1.81E-16 time=0.008
+After sweep 64 energy=-3.044331297973827  maxlinkdim=16 maxerr=2.52E-16 time=0.009
+After sweep 65 energy=-3.0443312979738253  maxlinkdim=16 maxerr=2.45E-16 time=0.013
+After sweep 66 energy=-3.044331297973825  maxlinkdim=16 maxerr=6.48E-16 time=0.012
+After sweep 67 energy=-3.0443312979738226  maxlinkdim=16 maxerr=2.68E-16 time=0.013
+After sweep 68 energy=-3.0443312979738275  maxlinkdim=16 maxerr=2.98E-16 time=0.011
+After sweep 69 energy=-3.044331297973822  maxlinkdim=16 maxerr=3.73E-16 time=0.008
+After sweep 70 energy=-3.0443312979738266  maxlinkdim=16 maxerr=2.52E-16 time=0.009
+After sweep 71 energy=-3.0443312979738257  maxlinkdim=16 maxerr=4.06E-16 time=0.008
+After sweep 72 energy=-3.044331297973822  maxlinkdim=16 maxerr=4.10E-16 time=0.005
+After sweep 73 energy=-3.0443312979738244  maxlinkdim=16 maxerr=7.40E-16 time=0.008
+After sweep 74 energy=-3.0443312979738226  maxlinkdim=16 maxerr=2.26E-16 time=0.007
+After sweep 75 energy=-3.0443312979738213  maxlinkdim=16 maxerr=2.47E-16 time=0.007
+After sweep 76 energy=-3.0443312979738257  maxlinkdim=16 maxerr=6.72E-16 time=0.008
+After sweep 77 energy=-3.044331297973822  maxlinkdim=16 maxerr=4.28E-16 time=0.007
+After sweep 78 energy=-3.044331297973824  maxlinkdim=16 maxerr=6.11E-16 time=0.007
+After sweep 79 energy=-3.044331297973822  maxlinkdim=16 maxerr=5.47E-16 time=0.009
+After sweep 80 energy=-3.0443312979738275  maxlinkdim=16 maxerr=5.72E-16 time=0.007
+After sweep 81 energy=-3.0443312979738257  maxlinkdim=16 maxerr=2.42E-16 time=0.007
+After sweep 82 energy=-3.044331297973826  maxlinkdim=16 maxerr=3.15E-16 time=0.007
+After sweep 83 energy=-3.044331297973824  maxlinkdim=16 maxerr=6.84E-16 time=0.007
+After sweep 84 energy=-3.044331297973821  maxlinkdim=16 maxerr=6.35E-16 time=0.009
+After sweep 85 energy=-3.044331297973826  maxlinkdim=16 maxerr=3.34E-16 time=0.008
+After sweep 86 energy=-3.044331297973823  maxlinkdim=16 maxerr=2.98E-16 time=0.007
+After sweep 87 energy=-3.044331297973826  maxlinkdim=16 maxerr=4.25E-16 time=0.006
+After sweep 88 energy=-3.0443312979738275  maxlinkdim=16 maxerr=8.70E-16 time=0.010
+After sweep 89 energy=-3.044331297973825  maxlinkdim=16 maxerr=3.87E-16 time=0.009
+After sweep 90 energy=-3.0443312979738226  maxlinkdim=16 maxerr=6.07E-16 time=0.010
+After sweep 91 energy=-3.044331297973827  maxlinkdim=16 maxerr=8.01E-16 time=0.008
+After sweep 92 energy=-3.044331297973825  maxlinkdim=16 maxerr=1.98E-16 time=0.008
+After sweep 93 energy=-3.044331297973825  maxlinkdim=16 maxerr=1.84E-16 time=0.007
+After sweep 94 energy=-3.0443312979738217  maxlinkdim=16 maxerr=8.87E-16 time=0.010
+After sweep 95 energy=-3.0443312979738253  maxlinkdim=16 maxerr=2.48E-16 time=0.010
+After sweep 96 energy=-3.044331297973827  maxlinkdim=16 maxerr=2.64E-16 time=0.010
+After sweep 97 energy=-3.044331297973826  maxlinkdim=16 maxerr=6.03E-16 time=0.009
+After sweep 98 energy=-3.0443312979738164  maxlinkdim=16 maxerr=2.54E-16 time=0.008
+After sweep 99 energy=-3.0443312979738235  maxlinkdim=16 maxerr=6.83E-16 time=0.009
+After sweep 100 energy=-3.0443312979738217  maxlinkdim=16 maxerr=2.70E-16 time=0.008
+After sweep 101 energy=-3.044331297973825  maxlinkdim=16 maxerr=6.53E-16 time=0.007
+After sweep 102 energy=-3.044331297973824  maxlinkdim=16 maxerr=2.09E-16 time=0.009
+After sweep 103 energy=-3.044331297973825  maxlinkdim=16 maxerr=7.80E-16 time=0.009
+After sweep 104 energy=-3.0443312979738226  maxlinkdim=16 maxerr=2.99E-16 time=0.006
+After sweep 105 energy=-3.0443312979738244  maxlinkdim=16 maxerr=2.39E-16 time=0.007
+After sweep 106 energy=-3.044331297973826  maxlinkdim=16 maxerr=6.53E-16 time=0.009
+After sweep 107 energy=-3.0443312979738244  maxlinkdim=16 maxerr=2.87E-16 time=0.006
+After sweep 108 energy=-3.044331297973824  maxlinkdim=16 maxerr=6.09E-16 time=0.009
+After sweep 109 energy=-3.0443312979738244  maxlinkdim=16 maxerr=4.43E-16 time=0.007
+After sweep 110 energy=-3.0443312979738226  maxlinkdim=16 maxerr=2.11E-16 time=0.010
+After sweep 111 energy=-3.044331297973824  maxlinkdim=16 maxerr=8.33E-16 time=0.007
+After sweep 112 energy=-3.044331297973826  maxlinkdim=16 maxerr=6.55E-16 time=0.009
+After sweep 113 energy=-3.044331297973825  maxlinkdim=16 maxerr=2.42E-16 time=0.008
+After sweep 114 energy=-3.0443312979738275  maxlinkdim=16 maxerr=3.55E-16 time=0.008
+After sweep 115 energy=-3.0443312979738266  maxlinkdim=16 maxerr=3.84E-16 time=0.008
+After sweep 116 energy=-3.0443312979738235  maxlinkdim=16 maxerr=2.55E-16 time=0.007
+After sweep 117 energy=-3.044331297973825  maxlinkdim=16 maxerr=4.05E-16 time=0.006
+After sweep 118 energy=-3.0443312979738253  maxlinkdim=16 maxerr=2.31E-16 time=0.006
+After sweep 119 energy=-3.0443312979738204  maxlinkdim=16 maxerr=2.95E-16 time=0.008
+After sweep 120 energy=-3.044331297973823  maxlinkdim=16 maxerr=3.13E-16 time=0.005
+After sweep 121 energy=-3.044331297973816  maxlinkdim=16 maxerr=3.40E-16 time=0.009
+After sweep 122 energy=-3.044331297973825  maxlinkdim=16 maxerr=6.92E-16 time=0.011
+After sweep 123 energy=-3.0443312979738213  maxlinkdim=16 maxerr=1.80E-16 time=0.007
+After sweep 124 energy=-3.044331297973828  maxlinkdim=16 maxerr=4.32E-16 time=0.005
+After sweep 125 energy=-3.0443312979738266  maxlinkdim=16 maxerr=1.94E-16 time=0.008
+After sweep 126 energy=-3.0443312979738266  maxlinkdim=16 maxerr=6.13E-16 time=0.010
+After sweep 127 energy=-3.0443312979738235  maxlinkdim=16 maxerr=6.70E-16 time=0.011
+After sweep 128 energy=-3.044331297973829  maxlinkdim=16 maxerr=9.76E-16 time=0.012
+After sweep 129 energy=-3.044331297973824  maxlinkdim=16 maxerr=6.66E-16 time=0.009
+After sweep 130 energy=-3.0443312979738244  maxlinkdim=16 maxerr=3.80E-16 time=0.005
+After sweep 131 energy=-3.0443312979738275  maxlinkdim=16 maxerr=3.33E-16 time=0.007
+After sweep 132 energy=-3.0443312979738213  maxlinkdim=16 maxerr=5.78E-16 time=0.009
+After sweep 133 energy=-3.0443312979738217  maxlinkdim=16 maxerr=3.47E-16 time=0.009
+After sweep 134 energy=-3.0443312979738284  maxlinkdim=16 maxerr=3.09E-16 time=0.006
+After sweep 135 energy=-3.0443312979738257  maxlinkdim=16 maxerr=8.33E-16 time=0.008
+After sweep 136 energy=-3.0443312979738186  maxlinkdim=16 maxerr=3.15E-16 time=0.008
+After sweep 137 energy=-3.0443312979738244  maxlinkdim=16 maxerr=9.03E-16 time=0.010
+After sweep 138 energy=-3.0443312979738266  maxlinkdim=16 maxerr=2.63E-16 time=0.010
+After sweep 139 energy=-3.04433129797382  maxlinkdim=16 maxerr=2.53E-16 time=0.006
+After sweep 140 energy=-3.044331297973825  maxlinkdim=16 maxerr=2.11E-16 time=0.008
+After sweep 141 energy=-3.044331297973829  maxlinkdim=16 maxerr=1.87E-16 time=0.009
+After sweep 142 energy=-3.044331297973823  maxlinkdim=16 maxerr=3.38E-16 time=0.010
+After sweep 143 energy=-3.0443312979738266  maxlinkdim=16 maxerr=7.09E-16 time=0.010
+After sweep 144 energy=-3.044331297973826  maxlinkdim=16 maxerr=8.57E-16 time=0.010
+After sweep 145 energy=-3.044331297973823  maxlinkdim=16 maxerr=1.88E-16 time=0.010
+After sweep 146 energy=-3.044331297973818  maxlinkdim=16 maxerr=2.94E-16 time=0.009
+After sweep 147 energy=-3.0443312979738284  maxlinkdim=16 maxerr=4.05E-16 time=0.009
+After sweep 148 energy=-3.044331297973823  maxlinkdim=16 maxerr=3.27E-16 time=0.008
+After sweep 149 energy=-3.044331297973826  maxlinkdim=16 maxerr=7.28E-16 time=0.007
+After sweep 150 energy=-3.0443312979738253  maxlinkdim=16 maxerr=2.47E-16 time=0.006
+After sweep 151 energy=-3.0443312979738217  maxlinkdim=16 maxerr=3.68E-16 time=0.009
+After sweep 152 energy=-3.044331297973827  maxlinkdim=16 maxerr=2.09E-16 time=0.009
+After sweep 153 energy=-3.044331297973828  maxlinkdim=16 maxerr=3.82E-16 time=0.006
+After sweep 154 energy=-3.0443312979738284  maxlinkdim=16 maxerr=7.77E-16 time=0.007
+After sweep 155 energy=-3.044331297973823  maxlinkdim=16 maxerr=9.74E-16 time=0.008
+After sweep 156 energy=-3.044331297973821  maxlinkdim=16 maxerr=5.02E-16 time=0.007
+After sweep 157 energy=-3.0443312979738226  maxlinkdim=16 maxerr=3.05E-16 time=0.008
+After sweep 158 energy=-3.0443312979738226  maxlinkdim=16 maxerr=3.43E-16 time=0.006
+After sweep 159 energy=-3.0443312979738226  maxlinkdim=16 maxerr=5.97E-16 time=0.008
+After sweep 160 energy=-3.044331297973825  maxlinkdim=16 maxerr=2.94E-16 time=0.010
+After sweep 161 energy=-3.0443312979738235  maxlinkdim=16 maxerr=2.78E-16 time=0.009
+After sweep 162 energy=-3.0443312979738217  maxlinkdim=16 maxerr=2.63E-16 time=0.010
+After sweep 163 energy=-3.0443312979738266  maxlinkdim=16 maxerr=3.85E-16 time=0.007
+After sweep 164 energy=-3.0443312979738235  maxlinkdim=16 maxerr=2.96E-16 time=0.006
+After sweep 165 energy=-3.04433129797382  maxlinkdim=16 maxerr=4.74E-16 time=0.005
+After sweep 166 energy=-3.044331297973821  maxlinkdim=16 maxerr=3.19E-16 time=0.007
+After sweep 167 energy=-3.0443312979738244  maxlinkdim=16 maxerr=2.82E-16 time=0.008
+After sweep 168 energy=-3.044331297973825  maxlinkdim=16 maxerr=2.69E-16 time=0.006
+After sweep 169 energy=-3.044331297973824  maxlinkdim=16 maxerr=3.82E-16 time=0.007
+After sweep 170 energy=-3.044331297973828  maxlinkdim=16 maxerr=4.71E-16 time=0.008
+After sweep 171 energy=-3.044331297973825  maxlinkdim=16 maxerr=3.49E-16 time=0.010
+After sweep 172 energy=-3.044331297973822  maxlinkdim=16 maxerr=2.30E-16 time=0.008
+After sweep 173 energy=-3.0443312979738226  maxlinkdim=16 maxerr=6.66E-16 time=0.010
+After sweep 174 energy=-3.0443312979738253  maxlinkdim=16 maxerr=6.84E-16 time=0.009
+After sweep 175 energy=-3.0443312979738266  maxlinkdim=16 maxerr=2.78E-16 time=0.006
+After sweep 176 energy=-3.044331297973826  maxlinkdim=16 maxerr=4.06E-16 time=0.005
+After sweep 177 energy=-3.044331297973821  maxlinkdim=16 maxerr=4.48E-16 time=0.006
+After sweep 178 energy=-3.0443312979738257  maxlinkdim=16 maxerr=5.73E-16 time=0.008
+After sweep 179 energy=-3.044331297973823  maxlinkdim=16 maxerr=3.04E-16 time=0.007
+After sweep 180 energy=-3.0443312979738275  maxlinkdim=16 maxerr=3.51E-16 time=0.007
+After sweep 181 energy=-3.0443312979738253  maxlinkdim=16 maxerr=2.55E-16 time=0.006
+After sweep 182 energy=-3.044331297973824  maxlinkdim=16 maxerr=3.87E-16 time=0.007
+After sweep 183 energy=-3.0443312979738275  maxlinkdim=16 maxerr=6.36E-16 time=0.006
+After sweep 184 energy=-3.0443312979738257  maxlinkdim=16 maxerr=2.71E-16 time=0.006
+After sweep 185 energy=-3.044331297973821  maxlinkdim=16 maxerr=5.54E-16 time=0.008
+After sweep 186 energy=-3.0443312979738284  maxlinkdim=16 maxerr=7.63E-16 time=0.007
+After sweep 187 energy=-3.044331297973829  maxlinkdim=16 maxerr=3.11E-16 time=0.006
+After sweep 188 energy=-3.0443312979738266  maxlinkdim=16 maxerr=7.33E-16 time=0.008
+After sweep 189 energy=-3.0443312979738257  maxlinkdim=16 maxerr=2.76E-16 time=0.007
+After sweep 190 energy=-3.044331297973823  maxlinkdim=16 maxerr=1.03E-15 time=0.010
+After sweep 191 energy=-3.044331297973823  maxlinkdim=16 maxerr=3.92E-16 time=0.006
+After sweep 192 energy=-3.044331297973825  maxlinkdim=16 maxerr=5.27E-16 time=0.006
+After sweep 193 energy=-3.044331297973823  maxlinkdim=16 maxerr=2.90E-16 time=0.010
+After sweep 194 energy=-3.0443312979738257  maxlinkdim=16 maxerr=5.84E-16 time=0.008
+After sweep 195 energy=-3.0443312979738244  maxlinkdim=16 maxerr=4.50E-16 time=0.008
+After sweep 196 energy=-3.044331297973827  maxlinkdim=16 maxerr=1.84E-16 time=0.008
+After sweep 197 energy=-3.0443312979738244  maxlinkdim=16 maxerr=6.38E-16 time=0.009
+After sweep 198 energy=-3.044331297973822  maxlinkdim=16 maxerr=3.12E-16 time=0.008
+After sweep 199 energy=-3.044331297973822  maxlinkdim=16 maxerr=3.76E-16 time=0.007
+After sweep 200 energy=-3.0443312979738275  maxlinkdim=16 maxerr=3.69E-16 time=0.010
+Final energy = -3.0443312979738275
+magz ground -8.283643410968156e-17
+After sweep 0 energy=-2.009258574760106
+After sweep 1 energy=-3.001379913523174  maxlinkdim=4 maxerr=3.34E-16 time=0.319
+After sweep 2 energy=-3.0203896885127124  maxlinkdim=9 maxerr=4.20E-09 time=0.006
+After sweep 3 energy=-3.027340952093516  maxlinkdim=10 maxerr=1.51E-08 time=0.013
+After sweep 4 energy=-3.028397392810656  maxlinkdim=9 maxerr=6.69E-09 time=0.008
+After sweep 5 energy=-3.02842537888068  maxlinkdim=8 maxerr=5.13E-10 time=0.008
+After sweep 6 energy=-3.0284262627245466  maxlinkdim=8 maxerr=1.01E-09 time=0.009
+After sweep 7 energy=-3.028426308616865  maxlinkdim=8 maxerr=1.73E-10 time=0.009
+After sweep 8 energy=-3.0284263163330545  maxlinkdim=8 maxerr=6.95E-11 time=0.008
+After sweep 9 energy=-3.0284263175150676  maxlinkdim=8 maxerr=4.42E-09 time=0.009
+After sweep 10 energy=-3.028426317712171  maxlinkdim=8 maxerr=8.85E-12 time=0.008
+After sweep 11 energy=-3.0284263177493354  maxlinkdim=8 maxerr=1.07E-12 time=0.008
+After sweep 12 energy=-3.028426317756005  maxlinkdim=8 maxerr=2.43E-13 time=0.008
+After sweep 13 energy=-3.028426317757454  maxlinkdim=8 maxerr=1.03E-13 time=0.008
+After sweep 14 energy=-3.0284263177578494  maxlinkdim=8 maxerr=3.70E-14 time=0.008
+After sweep 15 energy=-3.0284263177579622  maxlinkdim=8 maxerr=1.11E-14 time=0.008
+After sweep 16 energy=-3.0284263177579978  maxlinkdim=8 maxerr=3.61E-15 time=0.008
+After sweep 17 energy=-3.0284263177580106  maxlinkdim=8 maxerr=1.36E-15 time=0.008
+After sweep 18 energy=-3.0284263177580093  maxlinkdim=8 maxerr=1.02E-15 time=0.008
+After sweep 19 energy=-3.0284263177580133  maxlinkdim=8 maxerr=3.24E-16 time=0.008
+After sweep 20 energy=-3.0284263177580173  maxlinkdim=8 maxerr=1.42E-16 time=0.008
+After sweep 21 energy=-3.028426317758026  maxlinkdim=8 maxerr=2.12E-16 time=0.008
+After sweep 22 energy=-3.028426317758024  maxlinkdim=8 maxerr=2.13E-16 time=0.008
+After sweep 23 energy=-3.0284263177580235  maxlinkdim=8 maxerr=8.82E-17 time=0.008
+After sweep 24 energy=-3.0284263177580266  maxlinkdim=8 maxerr=1.85E-16 time=0.008
+After sweep 25 energy=-3.028426317758033  maxlinkdim=8 maxerr=1.96E-16 time=0.008
+After sweep 26 energy=-3.0284263177580355  maxlinkdim=8 maxerr=8.38E-17 time=0.008
+After sweep 27 energy=-3.028426317758037  maxlinkdim=8 maxerr=1.84E-16 time=0.008
+After sweep 28 energy=-3.028426317758043  maxlinkdim=8 maxerr=1.31E-16 time=0.008
+After sweep 29 energy=-3.0284263177580466  maxlinkdim=8 maxerr=3.16E-16 time=0.008
+After sweep 30 energy=-3.0284263177580475  maxlinkdim=8 maxerr=1.62E-16 time=0.007
+After sweep 31 energy=-3.0284263177580506  maxlinkdim=8 maxerr=8.52E-17 time=0.008
+After sweep 32 energy=-3.0284263177580524  maxlinkdim=8 maxerr=2.05E-16 time=0.008
+After sweep 33 energy=-3.0284263177580555  maxlinkdim=8 maxerr=1.82E-16 time=0.008
+After sweep 34 energy=-3.02842631775806  maxlinkdim=8 maxerr=1.59E-16 time=0.008
+After sweep 35 energy=-3.028426317758063  maxlinkdim=8 maxerr=6.88E-17 time=0.009
+After sweep 36 energy=-3.028426317758064  maxlinkdim=8 maxerr=2.06E-16 time=0.008
+After sweep 37 energy=-3.0284263177580675  maxlinkdim=8 maxerr=3.53E-16 time=0.008
+After sweep 38 energy=-3.0284263177580693  maxlinkdim=8 maxerr=1.11E-16 time=0.008
+After sweep 39 energy=-3.028426317758069  maxlinkdim=8 maxerr=8.32E-17 time=0.008
+After sweep 40 energy=-3.0284263177580746  maxlinkdim=8 maxerr=2.37E-16 time=0.007
+After sweep 41 energy=-3.0284263177580755  maxlinkdim=8 maxerr=7.84E-17 time=0.008
+After sweep 42 energy=-3.0284263177580786  maxlinkdim=8 maxerr=2.44E-17 time=0.008
+After sweep 43 energy=-3.0284263177580817  maxlinkdim=8 maxerr=2.10E-16 time=0.009
+After sweep 44 energy=-3.028426317758086  maxlinkdim=8 maxerr=1.52E-16 time=0.008
+After sweep 45 energy=-3.02842631775809  maxlinkdim=8 maxerr=2.08E-16 time=0.008
+After sweep 46 energy=-3.028426317758092  maxlinkdim=8 maxerr=2.57E-16 time=0.008
+After sweep 47 energy=-3.0284263177580963  maxlinkdim=8 maxerr=2.91E-16 time=0.008
+After sweep 48 energy=-3.028426317758097  maxlinkdim=8 maxerr=2.20E-16 time=0.008
+After sweep 49 energy=-3.0284263177580995  maxlinkdim=8 maxerr=1.31E-16 time=0.008
+After sweep 50 energy=-3.028426317758106  maxlinkdim=8 maxerr=1.97E-16 time=0.008
+After sweep 51 energy=-3.0284263177581034  maxlinkdim=8 maxerr=1.75E-16 time=0.008
+After sweep 52 energy=-3.0284263177581097  maxlinkdim=8 maxerr=1.95E-16 time=0.008
+After sweep 53 energy=-3.028426317758114  maxlinkdim=8 maxerr=1.67E-16 time=0.008
+After sweep 54 energy=-3.0284263177581163  maxlinkdim=8 maxerr=1.83E-16 time=0.008
+After sweep 55 energy=-3.0284263177581145  maxlinkdim=8 maxerr=2.39E-16 time=0.008
+After sweep 56 energy=-3.0284263177581234  maxlinkdim=8 maxerr=1.72E-16 time=0.009
+After sweep 57 energy=-3.028426317758123  maxlinkdim=8 maxerr=2.88E-16 time=0.009
+After sweep 58 energy=-3.028426317758127  maxlinkdim=8 maxerr=2.91E-16 time=0.008
+After sweep 59 energy=-3.028426317758131  maxlinkdim=8 maxerr=2.02E-16 time=0.008
+After sweep 60 energy=-3.028426317758132  maxlinkdim=8 maxerr=1.44E-16 time=0.009
+After sweep 61 energy=-3.0284263177581385  maxlinkdim=8 maxerr=1.27E-16 time=0.008
+After sweep 62 energy=-3.0284263177581363  maxlinkdim=8 maxerr=1.00E-16 time=0.008
+After sweep 63 energy=-3.0284263177581474  maxlinkdim=8 maxerr=1.18E-16 time=0.008
+After sweep 64 energy=-3.0284263177581434  maxlinkdim=8 maxerr=1.57E-16 time=0.008
+After sweep 65 energy=-3.02842631775815  maxlinkdim=8 maxerr=9.38E-17 time=0.008
+After sweep 66 energy=-3.0284263177581505  maxlinkdim=8 maxerr=2.71E-16 time=0.009
+After sweep 67 energy=-3.028426317758152  maxlinkdim=8 maxerr=6.26E-17 time=0.009
+After sweep 68 energy=-3.028426317758152  maxlinkdim=8 maxerr=1.43E-16 time=0.007
+After sweep 69 energy=-3.0284263177581616  maxlinkdim=8 maxerr=2.27E-16 time=0.009
+After sweep 70 energy=-3.028426317758161  maxlinkdim=8 maxerr=1.73E-16 time=0.010
+After sweep 71 energy=-3.0284263177581625  maxlinkdim=8 maxerr=1.10E-16 time=0.008
+After sweep 72 energy=-3.0284263177581656  maxlinkdim=8 maxerr=1.58E-16 time=0.008
+After sweep 73 energy=-3.028426317758169  maxlinkdim=8 maxerr=2.65E-16 time=0.009
+After sweep 74 energy=-3.028426317758175  maxlinkdim=8 maxerr=2.80E-16 time=0.008
+After sweep 75 energy=-3.028426317758178  maxlinkdim=8 maxerr=2.22E-16 time=0.008
+After sweep 76 energy=-3.0284263177581807  maxlinkdim=8 maxerr=2.20E-16 time=0.008
+After sweep 77 energy=-3.028426317758181  maxlinkdim=8 maxerr=1.69E-16 time=0.008
+After sweep 78 energy=-3.0284263177581847  maxlinkdim=8 maxerr=1.14E-16 time=0.008
+After sweep 79 energy=-3.028426317758185  maxlinkdim=8 maxerr=1.21E-16 time=0.009
+After sweep 80 energy=-3.0284263177581856  maxlinkdim=8 maxerr=2.41E-16 time=0.009
+After sweep 81 energy=-3.028426317758198  maxlinkdim=8 maxerr=2.24E-16 time=0.009
+After sweep 82 energy=-3.0284263177581976  maxlinkdim=8 maxerr=1.59E-16 time=0.009
+After sweep 83 energy=-3.028426317758198  maxlinkdim=8 maxerr=1.83E-16 time=0.008
+After sweep 84 energy=-3.028426317758204  maxlinkdim=8 maxerr=1.57E-16 time=0.007
+After sweep 85 energy=-3.0284263177582087  maxlinkdim=8 maxerr=1.31E-16 time=0.008
+After sweep 86 energy=-3.02842631775821  maxlinkdim=8 maxerr=1.52E-16 time=0.008
+After sweep 87 energy=-3.0284263177582105  maxlinkdim=8 maxerr=1.50E-16 time=0.008
+After sweep 88 energy=-3.0284263177582154  maxlinkdim=8 maxerr=1.28E-16 time=0.007
+After sweep 89 energy=-3.028426317758216  maxlinkdim=8 maxerr=1.97E-16 time=0.009
+After sweep 90 energy=-3.02842631775822  maxlinkdim=8 maxerr=2.19E-16 time=0.008
+After sweep 91 energy=-3.028426317758226  maxlinkdim=8 maxerr=2.65E-16 time=0.008
+After sweep 92 energy=-3.0284263177582273  maxlinkdim=8 maxerr=1.72E-16 time=0.008
+After sweep 93 energy=-3.0284263177582345  maxlinkdim=8 maxerr=1.47E-16 time=0.008
+After sweep 94 energy=-3.0284263177582287  maxlinkdim=8 maxerr=1.35E-16 time=0.008
+After sweep 95 energy=-3.0284263177582327  maxlinkdim=8 maxerr=2.52E-16 time=0.008
+After sweep 96 energy=-3.028426317758239  maxlinkdim=8 maxerr=9.59E-17 time=0.007
+After sweep 97 energy=-3.02842631775824  maxlinkdim=8 maxerr=9.02E-17 time=0.008
+After sweep 98 energy=-3.028426317758246  maxlinkdim=8 maxerr=1.61E-16 time=0.008
+After sweep 99 energy=-3.028426317758242  maxlinkdim=8 maxerr=1.59E-16 time=0.008
+After sweep 100 energy=-3.0284263177582478  maxlinkdim=8 maxerr=2.73E-16 time=0.008
+After sweep 101 energy=-3.028426317758254  maxlinkdim=8 maxerr=1.85E-16 time=0.008
+After sweep 102 energy=-3.028426317758255  maxlinkdim=8 maxerr=1.33E-16 time=0.008
+After sweep 103 energy=-3.0284263177582535  maxlinkdim=8 maxerr=1.29E-16 time=0.008
+After sweep 104 energy=-3.028426317758263  maxlinkdim=8 maxerr=2.11E-16 time=0.009
+After sweep 105 energy=-3.02842631775826  maxlinkdim=8 maxerr=1.07E-16 time=0.007
+After sweep 106 energy=-3.028426317758271  maxlinkdim=8 maxerr=2.45E-16 time=0.008
+After sweep 107 energy=-3.028426317758268  maxlinkdim=8 maxerr=1.21E-16 time=0.008
+After sweep 108 energy=-3.028426317758275  maxlinkdim=8 maxerr=5.10E-17 time=0.008
+After sweep 109 energy=-3.028426317758276  maxlinkdim=8 maxerr=2.12E-16 time=0.008
+After sweep 110 energy=-3.028426317758277  maxlinkdim=8 maxerr=9.24E-17 time=0.008
+After sweep 111 energy=-3.0284263177582806  maxlinkdim=8 maxerr=2.50E-16 time=0.009
+After sweep 112 energy=-3.028426317758286  maxlinkdim=8 maxerr=2.40E-16 time=0.008
+After sweep 113 energy=-3.0284263177582846  maxlinkdim=8 maxerr=3.83E-16 time=0.007
+After sweep 114 energy=-3.028426317758289  maxlinkdim=8 maxerr=2.91E-16 time=0.008
+After sweep 115 energy=-3.0284263177582917  maxlinkdim=8 maxerr=3.11E-16 time=0.008
+After sweep 116 energy=-3.0284263177582975  maxlinkdim=8 maxerr=1.33E-16 time=0.008
+After sweep 117 energy=-3.0284263177582944  maxlinkdim=8 maxerr=1.63E-16 time=0.008
+After sweep 118 energy=-3.028426317758304  maxlinkdim=8 maxerr=2.72E-16 time=0.008
+After sweep 119 energy=-3.028426317758302  maxlinkdim=8 maxerr=9.16E-17 time=0.008
+After sweep 120 energy=-3.0284263177583046  maxlinkdim=8 maxerr=2.09E-16 time=0.009
+After sweep 121 energy=-3.0284263177583104  maxlinkdim=8 maxerr=2.34E-16 time=0.007
+After sweep 122 energy=-3.028426317758313  maxlinkdim=8 maxerr=5.00E-16 time=0.008
+After sweep 123 energy=-3.0284263177583153  maxlinkdim=8 maxerr=1.34E-16 time=0.008
+After sweep 124 energy=-3.02842631775832  maxlinkdim=8 maxerr=8.82E-18 time=0.009
+After sweep 125 energy=-3.0284263177583215  maxlinkdim=8 maxerr=2.55E-16 time=0.008
+After sweep 126 energy=-3.028426317758325  maxlinkdim=8 maxerr=1.85E-16 time=0.008
+After sweep 127 energy=-3.0284263177583237  maxlinkdim=8 maxerr=2.17E-16 time=0.008
+After sweep 128 energy=-3.028426317758326  maxlinkdim=8 maxerr=2.84E-16 time=0.008
+After sweep 129 energy=-3.028426317758332  maxlinkdim=8 maxerr=9.33E-17 time=0.007
+After sweep 130 energy=-3.0284263177583415  maxlinkdim=8 maxerr=2.27E-16 time=0.008
+After sweep 131 energy=-3.0284263177583357  maxlinkdim=8 maxerr=1.25E-16 time=0.008
+After sweep 132 energy=-3.0284263177583397  maxlinkdim=8 maxerr=4.33E-17 time=0.008
+After sweep 133 energy=-3.028426317758349  maxlinkdim=8 maxerr=1.41E-16 time=0.009
+After sweep 134 energy=-3.0284263177583477  maxlinkdim=8 maxerr=1.21E-16 time=0.008
+After sweep 135 energy=-3.0284263177583486  maxlinkdim=8 maxerr=2.23E-16 time=0.008
+After sweep 136 energy=-3.02842631775835  maxlinkdim=8 maxerr=1.03E-16 time=0.009
+After sweep 137 energy=-3.0284263177583535  maxlinkdim=8 maxerr=2.02E-16 time=0.009
+After sweep 138 energy=-3.0284263177583606  maxlinkdim=8 maxerr=1.66E-16 time=0.008
+After sweep 139 energy=-3.0284263177583606  maxlinkdim=8 maxerr=1.23E-16 time=0.008
+After sweep 140 energy=-3.0284263177583655  maxlinkdim=8 maxerr=1.80E-16 time=0.008
+After sweep 141 energy=-3.028426317758367  maxlinkdim=8 maxerr=2.67E-16 time=0.009
+After sweep 142 energy=-3.028426317758369  maxlinkdim=8 maxerr=1.91E-16 time=0.007
+After sweep 143 energy=-3.0284263177583757  maxlinkdim=8 maxerr=2.22E-16 time=0.008
+After sweep 144 energy=-3.028426317758376  maxlinkdim=8 maxerr=2.41E-16 time=0.008
+After sweep 145 energy=-3.028426317758374  maxlinkdim=8 maxerr=2.71E-16 time=0.008
+After sweep 146 energy=-3.0284263177583832  maxlinkdim=8 maxerr=3.29E-16 time=0.009
+After sweep 147 energy=-3.0284263177583854  maxlinkdim=8 maxerr=2.09E-16 time=0.009
+After sweep 148 energy=-3.028426317758386  maxlinkdim=8 maxerr=2.31E-17 time=0.009
+After sweep 149 energy=-3.028426317758389  maxlinkdim=8 maxerr=3.25E-16 time=0.008
+After sweep 150 energy=-3.0284263177583903  maxlinkdim=8 maxerr=1.33E-16 time=0.008
+After sweep 151 energy=-3.0284263177583983  maxlinkdim=8 maxerr=2.13E-16 time=0.008
+After sweep 152 energy=-3.0284263177583965  maxlinkdim=8 maxerr=1.97E-16 time=0.010
+After sweep 153 energy=-3.0284263177584005  maxlinkdim=8 maxerr=9.54E-17 time=0.008
+After sweep 154 energy=-3.0284263177584028  maxlinkdim=8 maxerr=2.60E-16 time=0.009
+After sweep 155 energy=-3.028426317758407  maxlinkdim=8 maxerr=3.08E-16 time=0.008
+After sweep 156 energy=-3.028426317758411  maxlinkdim=8 maxerr=2.37E-16 time=0.007
+After sweep 157 energy=-3.028426317758411  maxlinkdim=8 maxerr=1.89E-16 time=0.007
+After sweep 158 energy=-3.028426317758412  maxlinkdim=8 maxerr=2.30E-16 time=0.008
+After sweep 159 energy=-3.028426317758415  maxlinkdim=8 maxerr=2.19E-16 time=0.009
+After sweep 160 energy=-3.028426317758424  maxlinkdim=8 maxerr=8.26E-17 time=0.008
+After sweep 161 energy=-3.028426317758427  maxlinkdim=8 maxerr=2.29E-16 time=0.007
+After sweep 162 energy=-3.028426317758426  maxlinkdim=8 maxerr=2.65E-16 time=0.009
+After sweep 163 energy=-3.028426317758432  maxlinkdim=8 maxerr=1.86E-16 time=0.008
+After sweep 164 energy=-3.0284263177584316  maxlinkdim=8 maxerr=2.23E-16 time=0.007
+After sweep 165 energy=-3.028426317758436  maxlinkdim=8 maxerr=2.09E-16 time=0.008
+After sweep 166 energy=-3.0284263177584365  maxlinkdim=8 maxerr=2.67E-16 time=0.008
+After sweep 167 energy=-3.028426317758442  maxlinkdim=8 maxerr=1.17E-16 time=0.008
+After sweep 168 energy=-3.0284263177584436  maxlinkdim=8 maxerr=1.88E-16 time=0.008
+After sweep 169 energy=-3.0284263177584507  maxlinkdim=8 maxerr=4.22E-16 time=0.008
+After sweep 170 energy=-3.0284263177584485  maxlinkdim=8 maxerr=1.92E-16 time=0.007
+After sweep 171 energy=-3.0284263177584516  maxlinkdim=8 maxerr=1.42E-16 time=0.009
+After sweep 172 energy=-3.0284263177584556  maxlinkdim=8 maxerr=2.53E-16 time=0.008
+After sweep 173 energy=-3.0284263177584565  maxlinkdim=8 maxerr=3.55E-16 time=0.009
+After sweep 174 energy=-3.028426317758462  maxlinkdim=8 maxerr=1.24E-16 time=0.008
+After sweep 175 energy=-3.028426317758468  maxlinkdim=8 maxerr=1.47E-16 time=0.008
+After sweep 176 energy=-3.028426317758469  maxlinkdim=8 maxerr=1.62E-16 time=0.009
+After sweep 177 energy=-3.0284263177584734  maxlinkdim=8 maxerr=2.69E-16 time=0.007
+After sweep 178 energy=-3.0284263177584734  maxlinkdim=8 maxerr=2.18E-16 time=0.008
+After sweep 179 energy=-3.0284263177584747  maxlinkdim=8 maxerr=1.71E-16 time=0.008
+After sweep 180 energy=-3.0284263177584814  maxlinkdim=8 maxerr=4.07E-16 time=0.008
+After sweep 181 energy=-3.0284263177584863  maxlinkdim=8 maxerr=2.81E-16 time=0.008
+After sweep 182 energy=-3.028426317758482  maxlinkdim=8 maxerr=1.49E-16 time=0.008
+After sweep 183 energy=-3.028426317758485  maxlinkdim=8 maxerr=8.23E-17 time=0.009
+After sweep 184 energy=-3.0284263177584907  maxlinkdim=8 maxerr=1.18E-16 time=0.007
+After sweep 185 energy=-3.0284263177584974  maxlinkdim=8 maxerr=2.20E-16 time=0.008
+After sweep 186 energy=-3.0284263177584947  maxlinkdim=8 maxerr=1.96E-16 time=0.008
+After sweep 187 energy=-3.0284263177584982  maxlinkdim=8 maxerr=1.06E-16 time=0.008
+After sweep 188 energy=-3.0284263177585045  maxlinkdim=8 maxerr=1.38E-16 time=0.008
+After sweep 189 energy=-3.0284263177585045  maxlinkdim=8 maxerr=1.91E-16 time=0.008
+After sweep 190 energy=-3.0284263177585093  maxlinkdim=8 maxerr=1.82E-16 time=0.007
+After sweep 191 energy=-3.028426317758512  maxlinkdim=8 maxerr=3.08E-16 time=0.008
+After sweep 192 energy=-3.028426317758514  maxlinkdim=8 maxerr=1.94E-17 time=0.008
+After sweep 193 energy=-3.0284263177585165  maxlinkdim=8 maxerr=9.25E-17 time=0.008
+After sweep 194 energy=-3.02842631775852  maxlinkdim=8 maxerr=1.16E-16 time=0.009
+After sweep 195 energy=-3.0284263177585213  maxlinkdim=8 maxerr=1.58E-16 time=0.008
+After sweep 196 energy=-3.0284263177585267  maxlinkdim=8 maxerr=1.36E-16 time=0.009
+After sweep 197 energy=-3.028426317758529  maxlinkdim=8 maxerr=8.19E-17 time=0.007
+After sweep 198 energy=-3.0284263177585298  maxlinkdim=8 maxerr=1.45E-16 time=0.008
+After sweep 199 energy=-3.0284263177585378  maxlinkdim=8 maxerr=2.45E-16 time=0.008
+After sweep 200 energy=-3.0284263177585364  maxlinkdim=8 maxerr=2.61E-16 time=0.008
+Final energy of 1-th excited state = -3.0284263177585364
+Energy gap 0.015904980215290188
+magz excited 8.326672684688674e-16
+DMRG_AUDIT ground=-3.044331296158356 excited=-3.02842632159345 exact_ground=-3.0443312961583393 exact_excited=-3.02842632271246
+init env for test
+init cost for test
+Sweep Fidelity Time
+1 0.8198385682585675 20.006587028503418
+2 0.880313366362511 20.125847101211548
+3 0.9161768828405459 20.255999088287354
+4 0.9351413989723334 20.391725063323975
+5 0.9519564450613476 20.51432704925537
+6 0.9631031892595296 20.63627600669861
+7 0.9700770838823258 20.893971920013428
+8 0.9749666217054048 21.02362608909607
+9 0.9784444072824405 21.149375915527344
+10 0.9809453750766524 21.272501945495605
+11 0.9828219704472293 21.3989200592041
+12 0.9843065842518077 21.52584409713745
+13 0.9855301619565758 21.64416193962097
+14 0.9865696237525049 21.764549016952515
+15 0.9874731979605572 21.888705015182495
+16 0.988266920135443 22.010577917099
+17 0.9889609074098074 22.1349458694458
+18 0.9895590771967429 22.254381895065308
+19 0.9900669550110971 22.376261949539185
+20 0.9904942798759523 22.491024017333984
+21 0.9908536024730934 22.61011791229248
+22 0.9911577919073493 22.73265790939331
+23 0.9914182914776414 22.856580018997192
+24 0.9916444491027201 22.977906942367554
+25 0.991843556235593 23.093467950820923
+26 0.992021185763945 23.210211038589478
+27 0.9921815792136871 23.328124046325684
+28 0.9923279767486762 23.44998598098755
+29 0.9924628647217304 23.56613302230835
+30 0.9925881502670808 23.68329906463623
+31 0.9927052823892025 23.800241947174072
+32 0.9928153384513769 23.910420894622803
+33 0.9929190912060222 24.021955966949463
+34 0.9930170674227915 24.138916969299316
+35 0.9931096051378683 24.254080057144165
+36 0.9931969121775643 24.36420202255249
+37 0.9932791240954866 24.480467081069946
+38 0.9933563561754659 24.59745693206787
+39 0.9934287431607595 24.712267875671387
+40 0.9934964624352319 24.82699489593506
+41 0.9935597404469921 24.941953897476196
+42 0.9936188460949507 25.057195901870728
+43 0.9936740768161908 25.17381191253662
+44 0.9937257428306012 25.292540073394775
+45 0.9937741532697535 25.4077410697937
+46 0.9938196059116811 25.528285026550293
+47 0.9938623807273572 25.643161058425903
+48 0.9939027366212603 25.756610870361328
+49 0.9939409104786214 25.875845909118652
+50 0.993977117683969 25.990532875061035
+51 0.9940115534587057 26.10205888748169
+52 0.9940443945683789 26.215095043182373
+53 0.9940758011203411 26.327363967895508
+54 0.9941059182961681 26.43855595588684
+55 0.9941348779441355 26.553307056427002
+56 0.9941628000046767 26.6740779876709
+57 0.9941897937673814 26.792257070541382
+58 0.9942159589691847 26.9080810546875
+59 0.9942413867469111 27.025139093399048
+60 0.9942661604569742 27.1409969329834
+61 0.9942903563732728 27.257263898849487
+62 0.9943140442728496 27.37202501296997
+63 0.9943372879178918 27.4863760471344
+64 0.9943601454429827 27.60164999961853
+65 0.9943826696573879 27.713135957717896
+66 0.9944049082738733 27.827619075775146
+67 0.9944269040774644 27.941662073135376
+68 0.9944486950491607 28.056341886520386
+69 0.9944703144607225 28.168906927108765
+70 0.9944917909566903 28.28495192527771
+71 0.9945131486388552 28.401833057403564
+72 0.9945344071662378 28.665024995803833
+73 0.9945555818805791 28.794415950775146
+74 0.9945766839639035 28.926074981689453
+75 0.9945977206308934 29.052037954330444
+76 0.9946186953555252 29.180020093917847
+77 0.9946396081288167 29.297564029693604
+78 0.9946604557424568 29.424818992614746
+79 0.9946812320923434 29.550565004348755
+80 0.9947019284957678 29.67351198196411
+81 0.9947225340163812 29.803826093673706
+82 0.9947430357919933 29.927298069000244
+83 0.9947634193609002 30.0504469871521
+84 0.9947836689836859 30.166281938552856
+85 0.9948037679577487 30.28530502319336
+86 0.9948236989226426 30.40208601951599
+87 0.9948434441543498 30.52192497253418
+88 0.994862985846827 30.640815019607544
+89 0.9948823063789773 30.756952047348022
+90 0.9949013885651176 30.87895107269287
+91 0.9949202158868927 30.996593952178955
+92 0.9949387727043673 31.11658501625061
+93 0.9949570444441481 31.233279943466187
+94 0.9949750177624087 31.355565071105957
+95 0.9949926806810734 31.4752299785614
+96 0.9950100226957198 31.593409061431885
+97 0.9950270348543384 31.706297874450684
+98 0.9950437098068158 31.828866958618164
+99 0.9950600418254941 31.94836187362671
+100 0.9950760267980864 32.06409692764282
+101 0.9950916621947412 32.17831492424011
+102 0.995106947011693 32.292887926101685
+103 0.9951218816944694 32.41326093673706
+104 0.9951364680438732 32.52945804595947
+105 0.9951507091083261 32.64364504814148
+106 0.9951646090660753 32.76206994056702
+107 0.9951781731008194 32.8832790851593
+108 0.9951914072740543 33.00040888786316
+109 0.9952043183971846 33.11934304237366
+110 0.9952169139060962 33.2340350151062
+111 0.9952292017404323 33.354121923446655
+112 0.9952411902294509 33.47219109535217
+113 0.9952528879858452 33.59100604057312
+114 0.995264303808585 33.70743989944458
+115 0.9952754465952921 33.8266499042511
+116 0.9952863252645772 33.94318699836731
+117 0.9952969486882004 34.05720591545105
+118 0.995307325632851 34.16876006126404
+119 0.9953174647111342 34.28318786621094
+120 0.9953273743411506 34.396647930145264
+121 0.9953370627139828 34.51240801811218
+122 0.995346537768399 34.629103899002075
+123 0.9953558071719166 34.74423289299011
+124 0.995364878307584 34.86642789840698
+125 0.9953737582655924 34.98401689529419
+126 0.9953824538391791 35.10230207443237
+127 0.9953909715239213 35.21785306930542
+128 0.9953993175201293 35.33706593513489
+129 0.9954074977374676 35.46603798866272
+130 0.9954155178015687 35.578304052352905
+131 0.9954233830620762 35.68905186653137
+132 0.9954310986018097 35.802793979644775
+133 0.9954386692466802 35.91366791725159
+134 0.9954460995762066 36.025794982910156
+135 0.9954533939342384 36.135632038116455
+136 0.9954605564398897 36.39302086830139
+137 0.9954675909984407 36.53289294242859
+138 0.9954745013120735 36.6635799407959
+139 0.9954812908904531 36.79099988937378
+140 0.9954879630610078 36.91903805732727
+141 0.9954945209789058 37.043741941452026
+142 0.9955009676366762 37.17243695259094
+143 0.9955073058734862 37.289604902267456
+144 0.9955135383840528 37.423057079315186
+145 0.9955196677271739 37.548563957214355
+146 0.9955256963339288 37.668118953704834
+147 0.9955316265154793 37.79289388656616
+148 0.9955374604706367 37.909420013427734
+149 0.9955432002929678 38.03365206718445
+150 0.995548847977723 38.154879093170166
+151 0.995554405428398 38.27579593658447
+152 0.99555987446304 38.395379066467285
+153 0.9955652568202502 38.51711297035217
+154 0.9955705541650043 38.640098094940186
+155 0.9955757680941227 38.76294708251953
+156 0.9955809001415865 38.89686107635498
+157 0.995585951783537 39.02605700492859
+158 0.9955909244431085 39.1528480052948
+159 0.9955958194949679 39.27687191963196
+160 0.9956006382696734 39.397883892059326
+161 0.9956053820577517 39.518532037734985
+162 0.9956100521135905 39.651355028152466
+163 0.9956146496590408 39.77457308769226
+164 0.9956191758868698 39.89241600036621
+165 0.9956236319638728 40.01038694381714
+166 0.9956280190338477 40.130090951919556
+167 0.9956323382202628 40.24432992935181
+168 0.9956365906287332 40.36206889152527
+169 0.9956407773492577 40.48110890388489
+170 0.9956448994582129 40.61214900016785
+171 0.9956489580201376 40.74583387374878
+172 0.9956529540892866 40.874221086502075
+173 0.9956568887109956 40.998936891555786
+174 0.9956607629228187 41.115159034729004
+175 0.9956645777554471 41.24383902549744
+176 0.9956683342335373 41.37108087539673
+177 0.9956720333762265 41.48947191238403
+178 0.9956756761975961 41.61392092704773
+179 0.9956792637069384 41.73368501663208
+180 0.9956827969088825 41.85750198364258
+181 0.9956862768033844 41.977251052856445
+182 0.9956897043856441 42.098331928253174
+183 0.99569308064588 42.22527098655701
+184 0.9956964065690285 42.344090938568115
+185 0.9956996831343732 42.464016914367676
+186 0.9957029113151232 42.58962392807007
+187 0.9957060920778881 42.71032500267029
+188 0.9957092263822013 42.82413697242737
+189 0.9957123151799218 42.94709086418152
+190 0.9957153594146799 43.071600914001465
+191 0.9957183600212847 43.191956996917725
+192 0.9957213179251385 43.31412601470947
+193 0.9957242340416551 43.430108070373535
+194 0.9957271092756981 43.549561977386475
+195 0.995729944520996 43.66646695137024
+196 0.9957327406596705 43.78376603126526
+197 0.9957354985616789 43.90504598617554
+198 0.9957382190843832 44.02445602416992
+199 0.9957409030721018 44.14061093330383
+200 0.9957435513557014 44.392401933670044
+201 0.9957461647522456 44.52362895011902
+202 0.9957487440646848 44.64968299865723
+203 0.9957512900815418 44.77433109283447
+204 0.9957538035766831 44.899019956588745
+205 0.9957562853091305 45.0271999835968
+206 0.9957587360228657 45.167582988739014
+207 0.9957611564467244 45.29660987854004
+208 0.9957635472942853 45.43027997016907
+209 0.9957659092638398 45.55682587623596
+210 0.9957682430383266 45.684252977371216
+211 0.9957705492853776 45.807225942611694
+212 0.9957728286573404 45.928651094436646
+213 0.9957750817913378 46.046494007110596
+214 0.9957773093093678 46.168724060058594
+215 0.9957795118184187 46.2925078868866
+216 0.9957816899105948 46.42031192779541
+217 0.9957838441632936 46.55582308769226
+218 0.9957859751393596 46.67602586746216
+219 0.9957880833873035 46.800292015075684
+220 0.9957901694414799 46.924723863601685
+221 0.9957922338223347 47.046627044677734
+222 0.9957942770366237 47.17571187019348
+223 0.9957962995776495 47.302347898483276
+224 0.9957983019255353 47.42515993118286
+225 0.9958002845474482 47.54444193840027
+226 0.9958022478978961 47.66523599624634
+227 0.9958041924189861 47.7866370677948
+228 0.9958061185406806 47.90506291389465
+229 0.9958080266810941 48.028249979019165
+230 0.9958099172467669 48.14391303062439
+231 0.9958117906329305 48.2669780254364
+232 0.9958136472237931 48.39783191680908
+233 0.9958154873928164 48.51794195175171
+234 0.9958173115030027 48.6335129737854
+235 0.995819119907142 48.752516984939575
+236 0.9958209129481078 48.866482973098755
+237 0.9958226909591233 48.985384941101074
+238 0.995824454264016 49.12288188934326
+239 0.9958262031774833 49.25016498565674
+240 0.9958279380053686 49.376652002334595
+241 0.9958296590448855 49.49902391433716
+242 0.9958313665848905 49.61640405654907
+243 0.9958330609061224 49.73805594444275
+244 0.9958347422814301 49.85522198677063
+245 0.9958364109760378 49.97793197631836
+246 0.9958380672477455 50.10362386703491
+247 0.9958397113471664 50.226348876953125
+248 0.995841343517964 50.348721981048584
+249 0.9958429639970271 50.473679065704346
+250 0.9958445730147202 50.59322500228882
+251 0.9958461707950719 50.72040295600891
+252 0.995847757555974 50.8441948890686
+253 0.995849333509376 50.962799072265625
+254 0.9958508988614794 51.08268094062805
+255 0.9958524538129235 51.2059428691864
+256 0.9958539985589532 51.3202760219574
+257 0.9958555332896115 51.440088987350464
+258 0.9958570581898942 51.5620539188385
+259 0.9958585734399195 51.67558407783508
+260 0.9958600792150913 51.79133605957031
+261 0.9958615756862511 51.91496205329895
+262 0.9958630630198303 52.03439402580261
+263 0.995864541378 52.150527000427246
+264 0.9958660109188063 52.269834995269775
+265 0.9958674717963087 52.53024387359619
+266 0.9958689241607203 52.677366971969604
+267 0.9958703681585299 52.80734205245972
+268 0.9958718039326353 52.94007992744446
+269 0.9958732316224508 53.064857959747314
+270 0.99587465136404 53.189624071121216
+271 0.9958760632902097 53.31175398826599
+272 0.9958774675306551 53.43661904335022
+273 0.995878864212024 53.55608296394348
+274 0.9958802534580419 53.675570011138916
+275 0.9958816353896164 53.793801069259644
+276 0.9958830101249145 53.908255100250244
+277 0.9958843777794713 54.025017976760864
+278 0.995885738466272 54.14381289482117
+279 0.9958870922958438 54.2668890953064
+280 0.9958884393763281 54.40866208076477
+281 0.9958897798135721 54.54038596153259
+282 0.9958911137112092 54.67043709754944
+283 0.995892441170717 54.79674696922302
+284 0.9958937622914985 54.922921895980835
+285 0.9958950771709667 55.05415987968445
+286 0.9958963859045852 55.17524194717407
+287 0.9958976885859512 55.29767203330994
+288 0.9958989853068472 55.4260048866272
+289 0.9959002761573001 55.54576802253723
+290 0.9959015612256604 55.67128586769104
+291 0.9959028405986274 55.797839879989624
+292 0.995904114361316 55.92145395278931
+293 0.9959053825973018 56.04774594306946
+294 0.9959066453886997 56.16753101348877
+295 0.995907902816158 56.284038066864014
+296 0.9959091549589422 56.4081609249115
+297 0.995910401894983 56.528053998947144
+298 0.9959116437008796 56.64988589286804
+299 0.995912880451978 56.77359890937805
+300 0.9959141122223856 56.8934109210968
+301 0.995915339085033 57.00992488861084
+302 0.9959165611116667 57.12715792655945
+303 0.9959177783729317 57.24833798408508
+304 0.9959189909383657 57.37613797187805
+305 0.9959201988764547 57.495096921920776
+306 0.9959214022546343 57.61777591705322
+307 0.9959226011393545 57.73550200462341
+308 0.9959237955960689 57.85396695137024
+309 0.9959249856892914 57.97340798377991
+310 0.9959261714826051 58.08983087539673
+311 0.9959273530386676 58.2090790271759
+312 0.9959285304192758 58.32200503349304
+313 0.9959297036853483 58.44521903991699
+314 0.995930872896961 58.56770706176758
+315 0.9959320381133655 58.685389041900635
+316 0.9959331993929966 58.802260875701904
+317 0.9959343567935087 58.92678904533386
+318 0.9959355103717764 59.04784607887268
+319 0.9959366601839008 59.166653871536255
+320 0.9959378062852521 59.29245090484619
+321 0.9959389487304504 59.41171598434448
+322 0.9959400875734049 59.5281400680542
+323 0.9959412228673035 59.649636030197144
+324 0.99594235466464 59.763741970062256
+325 0.9959434830172069 59.879332065582275
+326 0.9959446079761306 59.99641704559326
+327 0.9959457295918516 60.110864877700806
+328 0.9959468479141482 60.224453926086426
+329 0.9959479629921437 60.354459047317505
+330 0.9959490748742994 60.60923504829407
+331 0.9959501836084468 60.74873995780945
+332 0.9959512892417566 60.87624502182007
+333 0.995952391820778 61.00236701965332
+334 0.995953491391422 61.12428402900696
+335 0.9959545879989763 61.260737895965576
+336 0.9959556816881019 61.39295291900635
+337 0.9959567725028293 61.52989101409912
+338 0.9959578604865839 61.66128087043762
+339 0.9959589456821624 61.791775941848755
+340 0.9959600281317399 61.925960063934326
+341 0.9959611078768935 62.048423051834106
+342 0.9959621849585678 62.1699800491333
+343 0.9959632594170978 62.294113874435425
+344 0.995964331292213 62.41583609580994
+345 0.9959654006230099 62.53952407836914
+346 0.9959664674479753 62.665395975112915
+347 0.9959675318049845 62.7850239276886
+348 0.995968593731287 62.90162205696106
+349 0.9959696532635163 63.01917290687561
+350 0.9959707104376783 63.13600492477417
+351 0.9959717652891604 63.25728797912598
+352 0.99597281785272 63.371854066848755
+353 0.9959738681624843 63.49570298194885
+354 0.9959749162519496 63.62051796913147
+355 0.9959759621539831 63.74286508560181
+356 0.9959770059008115 63.87026596069336
+357 0.99597804752402 63.98581600189209
+358 0.9959790870545467 64.10460591316223
+359 0.9959801245227008 64.22329688072205
+360 0.9959811599581263 64.34097409248352
+361 0.995982193389824 64.46289300918579
+362 0.9959832248461347 64.58310103416443
+363 0.9959842543547575 64.70149397850037
+364 0.9959852819427113 64.82139801979065
+365 0.9959863076363619 64.94065594673157
+366 0.9959873314614096 65.06443905830383
+367 0.9959883534428918 65.18142604827881
+368 0.9959893736051708 65.3017749786377
+369 0.9959903919719415 65.41688990592957
+370 0.9959914085662205 65.53070902824402
+371 0.9959924234103561 65.65089297294617
+372 0.9959934365260162 65.76920795440674
+373 0.9959944479341926 65.88329291343689
+374 0.9959954576552011 65.99934887886047
+375 0.9959964657086824 66.1150529384613
+376 0.995997472113593 66.23236298561096
+377 0.9959984768882203 66.34884405136108
+378 0.9959994800501706 66.4680609703064
+379 0.9960004816163738 66.58639907836914
+380 0.9960014816030902 66.7067608833313
+381 0.996002480025908 66.81913995742798
+382 0.996003476899747 66.93742799758911
+383 0.9960044722388608 67.05426907539368
+384 0.9960054660568485 67.17228507995605
+385 0.9960064583666338 67.29010701179504
+386 0.9960074491805118 67.40579509735107
+387 0.9960084385101092 67.53109002113342
+388 0.9960094263664131 67.64509391784668
+389 0.9960104127597944 67.76191902160645
+390 0.9960113976999752 67.88211989402771
+391 0.996012381196055 68.00078797340393
+392 0.9960133632565378 68.11387801170349
+393 0.9960143438893048 68.22739100456238
+394 0.9960153231016481 68.48989295959473
+395 0.9960163009002742 68.62322998046875
+396 0.9960172772913148 68.74790596961975
+397 0.9960182522803265 68.8784019947052
+398 0.9960192258723235 69.00127601623535
+399 0.996020198071776 69.12578201293945
+400 0.9960211688826213 69.2458119392395
+401 0.9960221383082732 69.37718892097473
+402 0.9960231063516515 69.50298500061035
+403 0.9960240730151856 69.62813305854797
+404 0.9960250383008199 69.74720191955566
+405 0.9960260022100489 69.86701703071594
+406 0.9960269647439258 69.99018907546997
+407 0.996027925903051 70.11713290214539
+408 0.9960288856876339 70.24265098571777
+409 0.9960298440974773 70.35798287391663
+410 0.9960308011320013 70.49712204933167
+411 0.9960317567902635 70.6298348903656
+412 0.9960327110709829 70.7551748752594
+413 0.9960336639725367 70.88349199295044
+414 0.996034615492996 71.01090097427368
+415 0.9960355656301467 71.14772486686707
+416 0.9960365143814834 71.27729797363281
+417 0.9960374617442628 71.406653881073
+418 0.9960384077154861 71.5325219631195
+419 0.9960393522919453 71.64931893348694
+420 0.9960402954702272 71.7764630317688
+421 0.996041237246728 71.9019730091095
+422 0.9960421776176973 72.02698707580566
+423 0.9960431165792152 72.14951801300049
+424 0.996044054127253 72.26651692390442
+425 0.9960449902576755 72.38692998886108
+426 0.9960459249662302 72.50597596168518
+427 0.9960468582486072 72.62636804580688
+428 0.9960477901004497 72.73622107505798
+429 0.9960487205173323 72.85458397865295
+430 0.9960496494948392 72.96862387657166
+431 0.9960505770285288 73.08342409133911
+432 0.9960515031139788 73.20650386810303
+433 0.9960524277467826 73.32303190231323
+434 0.9960533509225968 73.44934701919556
+435 0.9960542726371121 73.56765604019165
+436 0.9960551928861033 73.68220090866089
+437 0.9960561116654368 73.80236101150513
+438 0.9960570289710629 73.91997599601746
+439 0.9960579447990588 74.03667998313904
+440 0.9960588591456243 74.15297389030457
+441 0.9960597720071003 74.27358794212341
+442 0.9960606833799652 74.39455008506775
+443 0.996061593260875 74.51460695266724
+444 0.9960625016466512 74.6315529346466
+445 0.9960634085342898 74.75127005577087
+446 0.9960643139209923 74.87010598182678
+447 0.9960652178041416 74.9857850074768
+448 0.9960661201813517 75.10779094696045
+449 0.9960670210504271 75.22733092308044
+450 0.9960679204094152 75.35073900222778
+451 0.9960688182565816 75.47317290306091
+452 0.9960697145904209 75.589998960495
+453 0.9960706094096852 75.70534706115723
+454 0.9960715027133611 75.82342886924744
+455 0.9960723945006714 75.94166398048401
+456 0.9960732847711159 76.06418299674988
+457 0.9960741735244277 76.18357396125793
+458 0.9960750607606038 76.44580292701721
+459 0.9960759464799025 76.5807249546051
+460 0.9960768306828348 76.71228289604187
+461 0.9960777133701766 76.84308695793152
+462 0.9960785945429615 76.97083401679993
+463 0.9960794742024803 77.08980798721313
+464 0.9960803523502872 77.21245193481445
+465 0.9960812289881906 77.34253191947937
+466 0.996082104118251 77.4702479839325
+467 0.996082977742787 77.59773087501526
+468 0.9960838498643644 77.73011708259583
+469 0.996084720485793 77.84880089759827
+470 0.9960855896101275 77.9746310710907
+471 0.9960864572406591 78.10234689712524
+472 0.9960873233809234 78.22944808006287
+473 0.9960881880346726 78.35301089286804
+474 0.9960890512058835 78.47909593582153
+475 0.9960899128987739 78.60640406608582
+476 0.9960907731177404 78.72368288040161
+477 0.9960916318674161 78.84607601165771
+478 0.9960924891526146 78.97340607643127
+479 0.996093344978366 79.09460186958313
+480 0.9960941993498746 79.21625399589539
+481 0.9960950522725239 79.33888506889343
+482 0.9960959037518718 79.46300601959229
+483 0.9960967537936647 79.58339095115662
+484 0.9960976024037747 79.70578002929688
+485 0.9960984495882533 79.83020901679993
+486 0.9960992953532817 79.95164895057678
+487 0.9961001397051845 80.07359600067139
+488 0.996100982650417 80.20002007484436
+489 0.996101824195545 80.31713604927063
+490 0.9961026643472624 80.43786787986755
+491 0.9961035031123595 80.55881309509277
+492 0.9961043404977266 80.68364787101746
+493 0.996105176510338 80.804044008255
+494 0.9961060111572584 80.92514491081238
+495 0.996106844445619 81.04349899291992
+496 0.996107676382619 81.16464900970459
+497 0.9961085069755118 81.28399109840393
+498 0.9961093362316088 81.40025997161865
+499 0.9961101641582556 81.51957297325134
+500 0.9961109907628324 81.64017987251282
+501 0.9961118160527437 81.75268697738647
+502 0.9961126400354224 81.8706259727478
+503 0.9961134627183014 81.98706197738647
+504 0.996114284108824 82.10695004463196
+505 0.9961151042144237 82.22451400756836
+506 0.9961159230425302 82.34440493583679
+507 0.9961167406005471 82.46888709068298
+508 0.9961175568958658 82.58849596977234
+509 0.9961183719358389 82.70776391029358
+510 0.9961191857277708 82.82432198524475
+511 0.9961199982789434 82.94983386993408
+512 0.9961208095965641 83.07330203056335
+513 0.9961216196877986 83.1900749206543
+514 0.9961224285597465 83.3128719329834
+515 0.9961232362194378 83.44223594665527
+516 0.9961240426738154 83.56047797203064
+517 0.9961248479297655 83.68510794639587
+518 0.9961256519940715 83.80807709693909
+519 0.9961264548734298 83.92630100250244
+520 0.9961272565744377 84.04691100120544
+521 0.9961280571036049 84.16427993774414
+522 0.9961288564673245 84.28305506706238
+523 0.99612965467188 84.54407787322998
+524 0.9961304517234424 84.68512296676636
+525 0.9961312476280662 84.81634593009949
+526 0.9961320423916913 84.95407605171204
+527 0.9961328360201211 85.08506202697754
+528 0.9961336285190313 85.21944403648376
+529 0.9961344198939763 85.3486008644104
+530 0.9961352101503658 85.47661304473877
+531 0.9961359992934686 85.60560202598572
+532 0.9961367873284246 85.73435401916504
+533 0.9961375742602253 85.8571469783783
+534 0.9961383600937121 85.97460007667542
+535 0.9961391448335946 86.09312701225281
+536 0.9961399284844191 86.21540689468384
+537 0.996140711050576 86.3398048877716
+538 0.996141492536323 86.45649695396423
+539 0.9961422729457532 86.5787980556488
+540 0.9961430522828075 86.70800995826721
+541 0.9961438305512692 86.83484292030334
+542 0.9961446077547732 86.96385407447815
+543 0.9961453838967862 87.0875449180603
+544 0.9961461589806302 87.21387887001038
+545 0.9961469330094658 87.3419280052185
+546 0.9961477059862986 87.46512293815613
+547 0.9961484779139801 87.58713889122009
+548 0.9961492487951996 87.70606708526611
+549 0.9961500186325027 87.82477307319641
+550 0.9961507874282697 87.94344186782837
+551 0.9961515551847406 88.07025790214539
+552 0.9961523219039923 88.18865990638733
+553 0.9961530875879676 88.30958294868469
+554 0.9961538522384464 88.4299910068512
+555 0.9961546158570717 88.54253101348877
+556 0.9961553784453354 88.66208791732788
+557 0.9961561400045964 88.78209805488586
+558 0.9961569005360782 88.9075059890747
+559 0.996157660040855 89.0234010219574
+560 0.9961584185198786 89.13716101646423
+561 0.9961591759739584 89.25791501998901
+562 0.9961599324037994 89.37360095977783
+563 0.996160687809959 89.48754501342773
+564 0.996161442192895 89.60554790496826
+565 0.9961621955529346 89.72551608085632
+566 0.9961629478903007 89.84303402900696
+567 0.9961636992051068 89.95876908302307
+568 0.9961644494973687 90.07681393623352
+569 0.9961651987669888 90.19254398345947
+570 0.9961659470137966 90.30987000465393
+571 0.9961666942375188 90.42840003967285
+572 0.9961674404378038 90.54814505577087
+573 0.9961681856142148 90.66850209236145
+574 0.9961689297662562 90.79042792320251
+575 0.9961696728933503 90.90575289726257
+576 0.9961704149948671 91.02183890342712
+577 0.9961711560701246 91.14451503753662
+578 0.9961718961183852 91.26635909080505
+579 0.9961726351388646 91.3901879787445
+580 0.9961733731307523 91.50765490531921
+581 0.9961741100932113 91.62392497062683
+582 0.9961748460253759 91.74409604072571
+583 0.9961755809263592 91.85790586471558
+584 0.9961763147952785 91.97495102882385
+585 0.9961770476312488 92.09280395507812
+586 0.9961777794333875 92.20813703536987
+587 0.9961785102008318 92.3506269454956
+588 0.9961792399327409 92.59667205810547
+589 0.9961799686283018 92.72632098197937
+590 0.9961806962867453 92.85127592086792
+591 0.9961814229073461 92.98480296134949
+592 0.9961821484894449 93.11217999458313
+593 0.9961828730324391 93.2369589805603
+594 0.9961835965358001 93.36179399490356
+595 0.9961843189990829 93.49393391609192
+596 0.9961850404219432 93.6265640258789
+597 0.9961857608041267 93.76276302337646
+598 0.9961864801454967 93.8893449306488
+599 0.9961871984460361 94.01424407958984
+600 0.996187915705861 94.14245510101318
+601 0.9961886319252188 94.2724359035492
+602 0.9961893471045118 94.40561699867249
+603 0.9961900612443053 94.53833103179932
+604 0.9961907743453284 94.67270803451538
+605 0.9961914864084935 94.79844808578491
+606 0.9961921974349027 94.92922806739807
+607 0.9961929074258518 95.04969096183777
+608 0.9961936163828569 95.17325091362
+609 0.9961943243076445 95.3056149482727
+610 0.9961950312021771 95.4371600151062
+611 0.9961957370686574 95.55839204788208
+612 0.9961964419095376 95.68205189704895
+613 0.9961971457275249 95.80320906639099
+614 0.9961978485256138 95.92184495925903
+615 0.9961985503070534 96.04695796966553
+616 0.9961992510753995 96.16455698013306
+617 0.9961999508345103 96.28204107284546
+618 0.9962006495885362 96.40170693397522
+619 0.996201347341966 96.52618288993835
+620 0.9962020440995932 96.65472388267517
+621 0.9962027398665549 96.77660393714905
+622 0.9962034346483385 96.895761013031
+623 0.9962041284507674 97.018630027771
+624 0.9962048212800315 97.13790988922119
+625 0.9962055131426859 97.25885796546936
+626 0.996206204045643 97.37995600700378
+627 0.9962068939962018 97.50148892402649
+628 0.9962075830020417 97.61881589889526
+629 0.9962082710712187 97.73673987388611
+630 0.9962089582121771 97.86454701423645
+631 0.9962096444337643 97.98748087882996
+632 0.996210329745201 98.10416102409363
+633 0.9962110141561017 98.22706007957458
+634 0.9962116976764843 98.34193992614746
+635 0.9962123803167469 98.4704110622406
+636 0.9962130620876603 98.59836196899414
+637 0.996213743000395 98.71902298927307
+638 0.9962144230664864 98.84066486358643
+639 0.9962151022978437 98.96466493606567
+640 0.9962157807067088 99.0919508934021
+641 0.9962164583056975 99.21303296089172
+642 0.9962171351077429 99.3406388759613
+643 0.996217811126097 99.46944689750671
+644 0.9962184863743118 99.58588695526123
+645 0.9962191608662154 99.70507192611694
+646 0.9962198346159004 99.8224229812622
+647 0.9962205076376818 99.94173002243042
+648 0.9962211799460952 100.06183409690857
+649 0.996221851555844 100.17718195915222
+650 0.99622252248177 100.2973210811615
+651 0.9962231927388381 100.41933608055115
+652 0.9962238623420756 100.68189692497253
+653 0.9962245313065418 100.81350994110107
+654 0.996225199647286 100.93881297111511
+655 0.9962258673792869 101.05702900886536
+656 0.9962265345174216 101.18641209602356
+657 0.9962272010764055 101.32000994682312
+658 0.9962278670707225 101.45665001869202
+659 0.996228532514581 101.58529901504517
+660 0.9962291974218562 101.73486590385437
+661 0.9962298618060025 101.87277793884277
+662 0.996230525680005 102.00127291679382
+663 0.9962311890562972 102.13115787506104
+664 0.9962318519467047 102.25678706169128
+665 0.9962325143623456 102.38094091415405
+666 0.9962331763135692 102.51714491844177
+667 0.9962338378098727 102.644033908844
+668 0.996234498859812 102.77347087860107
+669 0.9962351594709312 102.90408897399902
+670 0.9962358196496847 103.04787588119507
+671 0.9962364794013192 103.17696809768677
+672 0.9962371387298425 103.30804586410522
+673 0.9962377976378884 103.44028902053833
+674 0.9962384561266758 103.55691289901733
+675 0.9962391141959059 103.68156409263611
+676 0.9962397718436862 103.8049910068512
+677 0.996240429066465 103.93017506599426
+678 0.9962410858589545 104.05419492721558
+679 0.996241742214057 104.18129396438599
+680 0.9962423981228126 104.31146287918091
+681 0.9962430535743387 104.43484902381897
+682 0.9962437085557753 104.56188702583313
+683 0.9962443630522438 104.69570088386536
+684 0.9962450170468031 104.8232638835907
+685 0.9962456705204313 104.94859504699707
+686 0.9962463234520061 105.06454205513
+687 0.9962469758182695 105.18668508529663
+688 0.9962476275938532 105.30536699295044
+689 0.9962482787512847 105.42147302627563
+690 0.9962489292609801 105.54213500022888
+691 0.9962495790912906 105.657310962677
+692 0.9962502282085499 105.77398204803467
+693 0.9962508765771005 105.89259696006775
+694 0.9962515241593741 106.01146292686462
+695 0.996252170915949 106.1350679397583
+696 0.9962528168056515 106.2536370754242
+697 0.9962534617856059 106.37255597114563
+698 0.9962541058113898 106.49303007125854
+699 0.9962547488370916 106.6116590499878
+700 0.9962553908154748 106.73278307914734
+701 0.9962560316980704 106.85313987731934
+702 0.9962566714353231 106.97161602973938
+703 0.9962573099767351 107.08860301971436
+704 0.9962579472710033 107.20779991149902
+705 0.9962585832661737 107.33247709274292
+706 0.9962592179097882 107.45218586921692
+707 0.996259851149043 107.57068109512329
+708 0.996260482930954 107.69433689117432
+709 0.9962611132024916 107.81810307502747
+710 0.9962617419107547 107.93809199333191
+711 0.9962623690031245 108.05680894851685
+712 0.9962629944274016 108.17720293998718
+713 0.9962636181319613 108.29485297203064
+714 0.9962642400658994 108.41725993156433
+715 0.9962648601791686 108.53342294692993
+716 0.9962654784226956 108.65635395050049
+717 0.9962660947485305 108.92913007736206
+718 0.99626670910993 109.06145000457764
+719 0.9962673214615005 109.21583700180054
+720 0.9962679317592679 109.35304808616638
+721 0.9962685399607853 109.48759508132935
+722 0.9962691460252054 109.62124800682068
+723 0.9962697499133559 109.75204396247864
+724 0.9962703515878008 109.88542795181274
+725 0.9962709510129051 110.01956605911255
+726 0.9962715481548514 110.14928388595581
+727 0.9962721429817026 110.27353405952454
+728 0.9962727354634104 110.40237092971802
+729 0.9962733255718378 110.52776098251343
+730 0.9962739132807679 110.65257787704468
+731 0.9962744985659039 110.77972793579102
+732 0.9962750814048649 110.89942288398743
+733 0.9962756617771615 111.0240569114685
+734 0.9962762396641953 111.14630794525146
+735 0.9962768150492054 111.27193593978882
+736 0.9962773879172709 111.39578795433044
+737 0.9962779582552379 111.51420593261719
+738 0.9962785260517005 111.63460302352905
+739 0.996279091296949 111.75349807739258
+740 0.9962796539829213 111.87201309204102
+741 0.9962802141031598 111.99457001686096
+742 0.996280771652735 112.11691689491272
+743 0.9962813266282138 112.23663806915283
+744 0.9962818790275932 112.35333895683289
+745 0.9962824288502314 112.47727298736572
+746 0.9962829760968035 112.59580206871033
+747 0.996283520769227 112.71682095527649
+748 0.9962840628706221 112.84218788146973
+749 0.9962846024052345 112.96605086326599
+750 0.9962851393783729 113.08504986763
+751 0.9962856737963737 113.20357608795166
+752 0.9962862056665281 113.31870794296265
+753 0.9962867349970136 113.44269394874573
+754 0.996287261796867 113.55954694747925
+755 0.9962877860759161 113.67852902412415
+756 0.9962883078447199 113.7963559627533
+757 0.99628882711454 113.91848587989807
+758 0.9962893438972658 114.03995108604431
+759 0.9962898582054075 114.15943193435669
+760 0.9962903700520006 114.2789568901062
+761 0.9962908794506063 114.3958249092102
+762 0.9962913864152523 114.52018308639526
+763 0.9962918909603965 114.63971996307373
+764 0.9962923931008918 114.76178097724915
+765 0.996292892851948 114.88277006149292
+766 0.996293390229102 115.00447702407837
+767 0.9962938852481925 115.1285719871521
+768 0.9962943779253214 115.252690076828
+769 0.9962948682768158 115.37371587753296
+770 0.9962953563192405 115.49508690834045
+771 0.9962958420693301 115.61670899391174
+772 0.9962963255439937 115.73796010017395
+773 0.9962968067602799 115.8575918674469
+774 0.9962972857353675 115.9817259311676
+775 0.996297762486535 116.09934592247009
+776 0.9962982370311559 116.22250008583069
+777 0.9962987093866684 116.34300208091736
+778 0.9962991795705767 116.46296191215515
+779 0.9962996476004288 116.58324790000916
+780 0.9963001134937977 116.70622086524963
+781 0.9963005772682796 116.97202396392822
+782 0.9963010389414768 117.10486102104187
+783 0.9963014985309929 117.2377769947052
+784 0.9963019560544186 117.37132596969604
+785 0.9963024115293216 117.50837707519531
+786 0.9963028649732485 117.63928699493408
+787 0.9963033164037027 117.77447295188904
+788 0.9963037658381573 117.89967107772827
+789 0.9963042132940227 118.02302598953247
+790 0.996304658788671 118.1518828868866
+791 0.9963051023394026 118.28520488739014
+792 0.996305543963461 118.4207808971405
+793 0.9963059836780224 118.54917192459106
+794 0.9963064215001846 118.67976307868958
+795 0.9963068574469762 118.80938196182251
+796 0.9963072915353478 118.93272805213928
+797 0.9963077237821634 119.064297914505
+798 0.9963081542041989 119.19559597969055
+799 0.9963085828181519 119.32318496704102
+800 0.9963090096406307 119.44589686393738
+801 0.9963094346881378 119.57874703407288
+802 0.9963098579770997 119.70661687850952
+803 0.996310279523831 119.83950805664062
+804 0.9963106993445681 119.97382998466492
+805 0.9963111174554322 120.09698700904846
+806 0.99631153387245 120.226233959198
+807 0.9963119486115508 120.35097098350525
+808 0.9963123616885499 120.47961592674255
+809 0.9963127731191787 120.6063768863678
+810 0.9963131829190491 120.72818303108215
+811 0.9963135911036687 120.84918308258057
+812 0.9963139976884522 120.9738838672638
+813 0.9963144026886925 121.09923386573792
+814 0.9963148061195848 121.22754907608032
+815 0.9963152079962104 121.35681009292603
+816 0.9963156083335534 121.48352694511414
+817 0.9963160071464803 121.6067750453949
+818 0.9963164044497468 121.72968196868896
+819 0.9963168002580088 121.85692596435547
+820 0.996317194585809 121.97912096977234
+821 0.9963175874475806 122.10594606399536
+822 0.9963179788576424 122.22715401649475
+823 0.9963183688302104 122.35061693191528
+824 0.9963187573793955 122.48084998130798
+825 0.9963191445191845 122.6055018901825
+826 0.9963195302634675 122.7252049446106
+827 0.9963199146260244 122.84973788261414
+828 0.9963202976205069 122.97484588623047
+829 0.996320679260491 123.095862865448
+830 0.9963210595594117 123.22211408615112
+831 0.9963214385306184 123.34167504310608
+832 0.9963218161873338 123.46258807182312
+833 0.9963221925426922 123.5826199054718
+834 0.9963225676097027 123.70270109176636
+835 0.9963229414012792 123.82902789115906
+836 0.9963233139302201 123.9522500038147
+837 0.9963236852092248 124.07818508148193
+838 0.9963240552508832 124.20030093193054
+839 0.9963244240676795 124.3189959526062
+840 0.9963247916719957 124.43980002403259
+841 0.9963251580761081 124.55875205993652
+842 0.9963255232921927 124.68077087402344
+843 0.9963258873323205 124.80989909172058
+844 0.9963262502084584 124.92962002754211
+845 0.9963266119324867 125.18022298812866
+846 0.9963269725161645 125.31428909301758
+847 0.9963273319711698 125.44434189796448
+848 0.9963276903090682 125.57657504081726
+849 0.9963280475413332 125.6991639137268
+850 0.9963284036793496 125.83941888809204
+851 0.9963287587344012 125.98130989074707
+852 0.9963291127176721 126.12020087242126
+853 0.9963294656402599 126.2539849281311
+854 0.9963298175131693 126.3785150051117
+855 0.9963301683473095 126.50672101974487
+856 0.996330518153507 126.62863993644714
+857 0.9963308669424943 126.756422996521
+858 0.9963312147249137 126.8863890171051
+859 0.9963315615113316 127.01698708534241
+860 0.9963319073122138 127.13939309120178
+861 0.9963322521379531 127.25765609741211
+862 0.9963325959988627 127.39378190040588
+863 0.9963329389051598 127.51917600631714
+864 0.9963332808669926 127.64158201217651
+865 0.9963336218944339 127.7693350315094
+866 0.9963339619974612 127.90323996543884
+867 0.9963343011859949 128.0258948802948
+868 0.9963346394698627 128.1407859325409
+869 0.9963349768588387 128.2624590396881
+870 0.9963353133626007 128.3870279788971
+871 0.996335648990776 128.5131049156189
+872 0.9963359837529039 128.63574504852295
+873 0.9963363176584785 128.76020908355713
+874 0.9963366507168949 128.88405895233154
+875 0.9963369829375077 129.00973105430603
+876 0.9963373143296008 129.13390803337097
+877 0.9963376449023835 129.26018905639648
+878 0.9963379746650197 129.3842408657074
+879 0.9963383036265948 129.50636100769043
+880 0.996338631796148 129.63276290893555
+881 0.9963389591826444 129.7633559703827
+882 0.9963392857950151 129.8860559463501
+883 0.9963396116421114 130.00517892837524
+884 0.996339936732745 130.12778496742249
+885 0.9963402610756621 130.2513620853424
+886 0.9963405846795734 130.37669205665588
+887 0.9963409075531136 130.49846696853638
+888 0.9963412297048825 130.6207149028778
+889 0.9963415511434348 130.74550104141235
+890 0.9963418718772685 130.86160707473755
+891 0.9963421919148335 130.9786388874054
+892 0.9963425112645312 131.09855794906616
+893 0.9963428299347314 131.21913194656372
+894 0.9963431479337471 131.3384690284729
+895 0.9963434652698546 131.457200050354
+896 0.9963437819512796 131.58251404762268
+897 0.9963440979862146 131.70782709121704
+898 0.996344413382812 131.8289930820465
+899 0.9963447281491801 131.94680309295654
+900 0.996345042293395 132.0636649131775
+901 0.9963453558234759 132.20087599754333
+902 0.9963456687474387 132.34410309791565
+903 0.9963459810732371 132.47840905189514
+904 0.9963462928087923 132.6102430820465
+905 0.9963466039620013 132.7307629585266
+906 0.9963469145407178 132.85242009162903
+907 0.9963472245527695 132.98278903961182
+908 0.9963475340059429 133.10296297073364
+909 0.9963478429080072 133.36439204216003
+910 0.9963481512666843 133.49661898612976
+911 0.9963484590896755 133.67359399795532
+912 0.9963487663846451 133.8339810371399
+913 0.9963490731592386 133.99006295204163
+914 0.9963493794210685 134.1313500404358
+915 0.9963496851777107 134.27637696266174
+916 0.996349990436723 134.43666887283325
+917 0.9963502952056383 134.57234406471252
+918 0.9963505994919587 134.7058970928192
+919 0.9963509033031536 134.84925293922424
+920 0.9963512066466791 135.0015149116516
+921 0.9963515095299613 135.1387619972229
+922 0.9963518119603966 135.26991891860962
+923 0.996352113945364 135.41262006759644
+924 0.9963524154922161 135.57155203819275
+925 0.9963527166082802 135.70964789390564
+926 0.9963530173008698 135.84359288215637
+927 0.9963533175772598 135.96883487701416
+928 0.9963536174447145 136.1070098876953
+929 0.9963539169104764 136.23655200004578
+930 0.9963542159817586 136.368812084198
+931 0.9963545146657592 136.50847005844116
+932 0.9963548129696536 136.64442205429077
+933 0.9963551109005888 136.77610206604004
+934 0.9963554084657078 136.90651392936707
+935 0.9963557056721202 137.03505992889404
+936 0.9963560025269169 137.1602339744568
+937 0.9963562990371755 137.29166102409363
+938 0.9963565952099444 137.41886496543884
+939 0.9963568910522593 137.545716047287
+940 0.9963571865711354 137.66995000839233
+941 0.996357481773567 137.79560208320618
+942 0.996357776666536 137.92033100128174
+943 0.9963580712569902 138.04494404792786
+944 0.9963583655518791 138.1709189414978
+945 0.996358659558118 138.2979919910431
+946 0.9963589532826096 138.426265001297
+947 0.9963592467322445 138.55519104003906
+948 0.996359539913881 138.6869580745697
+949 0.9963598328343741 138.8248279094696
+950 0.9963601255005495 138.95877695083618
+951 0.9963604179192213 139.09888887405396
+952 0.9963607100971839 139.2258129119873
+953 0.9963610020412197 139.35452795028687
+954 0.996361293758083 139.47471690177917
+955 0.9963615852545173 139.5985460281372
+956 0.9963618765372549 139.7235460281372
+957 0.996362167612989 139.84146809577942
+958 0.9963624584884191 139.9646019935608
+959 0.9963627491702268 140.08065104484558
+960 0.9963630396650474 140.2017638683319
+961 0.9963633299795301 140.31866908073425
+962 0.9963636201202994 140.44028401374817
+963 0.9963639100939481 140.5603950023651
+964 0.9963641999070713 140.68661999702454
+965 0.9963644895662302 140.80756998062134
+966 0.9963647790779809 140.93131494522095
+967 0.9963650684488561 141.05018496513367
+968 0.9963653576853678 141.1752700805664
+969 0.996365646794014 141.29664492607117
+970 0.9963659357812806 141.413556098938
+971 0.996366224653629 141.5369598865509
+972 0.9963665134174958 141.65526509284973
+973 0.996366802079315 141.77299189567566
+974 0.9963670906454857 142.037663936615
+975 0.9963673791224057 142.17348098754883
+976 0.9963676675164381 142.31558203697205
+977 0.996367955833939 142.4582040309906
+978 0.9963682440812474 142.58688497543335
+979 0.996368532264671 142.72181797027588
+980 0.996368820390501 142.86529994010925
+981 0.996369108465018 143.0001940727234
+982 0.9963693964944771 143.13846898078918
+983 0.9963696844851178 143.27679586410522
+984 0.9963699724431472 143.4076669216156
+985 0.9963702603747677 143.53767108917236
+986 0.9963705482861495 143.66917991638184
+987 0.996370836183452 143.7874310016632
+988 0.9963711240727999 143.9337658882141
+989 0.9963714119603098 144.08068895339966
+990 0.9963716998520672 144.20223307609558
+991 0.9963719877541433 144.33267092704773
+992 0.9963722756725811 144.4549400806427
+993 0.9963725636134014 144.57855701446533
+994 0.9963728515825983 144.70066595077515
+995 0.9963731395861553 144.83213806152344
+996 0.9963734276300118 144.95687794685364
+997 0.9963737157201096 145.0842900276184
+998 0.9963740038623379 145.2087390422821
+999 0.9963742920625729 145.33087301254272
+1000 0.9963745803266724 145.45269203186035
+Sweep Cost Time
+1 0.012187396104299692 9.368237018585205
+2 0.011330933884795195 9.568954944610596
+3 0.010727188291712162 9.763321876525879
+4 0.010284192525659723 9.95412802696228
+5 0.009948870095963477 10.169585943222046
+6 0.009688585517122504 10.378300905227661
+7 0.009482266506932084 10.574420928955078
+8 0.00931576658579545 10.793569803237915
+9 0.009179282147626274 11.015347003936768
+10 0.009065837364224805 11.241269826889038
+11 0.008970356649347155 11.462682008743286
+12 0.008889076042026711 11.680275917053223
+13 0.008819158021648732 11.882956981658936
+14 0.008758432661039326 12.12950587272644
+15 0.008705219591867683 12.366806983947754
+16 0.00865820301852194 12.596831798553467
+17 0.008616342363025931 12.834548950195312
+18 0.00857880733641379 13.074988842010498
+19 0.008544930067048722 13.301671028137207
+20 0.00851416933732754 13.538081884384155
+21 0.008486083547289509 13.746555805206299
+22 0.008460310054159162 13.953728914260864
+23 0.008436549228941992 14.326973915100098
+24 0.008414552042992239 14.586215019226074
+25 0.008394110325030742 14.827225923538208
+26 0.008375049057469566 15.069473028182983
+27 0.008357220245057605 15.308640956878662
+28 0.00834049800581367 15.550968885421753
+29 0.008324774620679275 15.79351282119751
+30 0.008309957338900636 16.034523010253906
+31 0.008295965786312696 16.282570838928223
+32 0.00828272985470216 16.534973859786987
+33 0.008270187979419374 16.78295087814331
+34 0.008258285731507095 17.030656814575195
+35 0.008246974664518918 17.27173089981079
+36 0.008236211370749855 17.52161979675293
+37 0.008225956708046359 17.757438898086548
+38 0.008216175166514636 17.999897956848145
+39 0.008206834350293384 18.234145879745483
+40 0.008197904554188324 18.480568885803223
+41 0.00818935841695395 18.71587586402893
+42 0.008181170638074805 18.955740928649902
+43 0.008173317746451567 19.193249940872192
+44 0.008165777909979053 19.42464590072632
+45 0.008158530779452059 19.671416997909546
+46 0.00815155735930078 19.911228895187378
+47 0.008144839899108799 20.161695957183838
+48 0.008138361802832901 20.42061996459961
+49 0.008132107550879723 20.666977882385254
+50 0.008126062631855547 20.903910875320435
+51 0.0081202134833614 21.14169192314148
+52 0.008114547437667355 21.38365888595581
+53 0.00810905267255215 21.61887788772583
+54 0.008103718165638986 21.866212844848633
+55 0.008098533651361869 22.11210584640503
+56 0.008093489579835179 22.35451102256775
+57 0.008088577078233681 22.595805883407593
+58 0.008083787912760087 22.836493015289307
+59 0.008079114452423323 23.07151699066162
+60 0.008074549634325807 23.309846878051758
+61 0.008070086929560709 23.539276838302612
+62 0.008065720311028757 23.776577949523926
+63 0.008061444222076473 24.017413854599
+64 0.00805725354637948 24.254297971725464
+65 0.008053143579797145 24.49506187438965
+66 0.008049110002856316 24.740978002548218
+67 0.008045148854915637 24.979718923568726
+68 0.008041256509780255 25.228821992874146
+69 0.00803742965261703 25.466054916381836
+70 0.008033665258363774 25.7049458026886
+71 0.008029960571023578 25.938879013061523
+72 0.008026313085002467 26.182187795639038
+73 0.008022720526994799 26.422433853149414
+74 0.008019180839143549 26.666339874267578
+75 0.00801569216412138 26.89962887763977
+76 0.008012252830064022 27.129004955291748
+77 0.008008861337369211 27.367589950561523
+78 0.008005516345996966 27.6036159992218
+79 0.00800221666402461 27.842419862747192
+80 0.00799896123624122 28.089062929153442
+81 0.007995749134561006 28.333343982696533
+82 0.007992579547790113 28.575608015060425
+83 0.007989451773150682 28.8136248588562
+84 0.007986365207691803 29.04192280769348
+85 0.00798331934010285 29.276378870010376
+86 0.007980313743348824 29.500264883041382
+87 0.007977348067518592 29.734632968902588
+88 0.007974422032817835 29.967795848846436
+89 0.007971535423209395 30.210433959960938
+90 0.007968688079881402 30.449833869934082
+91 0.007965879895644547 30.688172817230225
+92 0.007963110808686016 30.934401988983154
+93 0.007960380797241174 31.16509485244751
+94 0.007957689874153453 31.396126985549927
+95 0.007955038081685559 31.63429284095764
+96 0.007952425486359785 31.879918813705444
+97 0.00794985217423302 32.12351393699646
+98 0.007947318246132967 32.360957860946655
+99 0.00794482381323329 32.601970911026
+100 0.007942368992619435 32.83859181404114
+101 0.007939953903195143 33.073431968688965
+102 0.007937578661902853 33.312081813812256
+103 0.007935243379811338 33.550840854644775
+104 0.007932948158532602 33.80041790008545
+105 0.007930693087109019 34.04436492919922
+106 0.00792847823890998 34.27612781524658
+107 0.007926303668692477 34.507834911346436
+108 0.00792416941007841 34.7438600063324
+109 0.007922075473295601 34.97524380683899
+110 0.007920021843099138 35.205237865448
+111 0.007918008476831545 35.4382529258728
+112 0.007916035303099091 35.67269802093506
+113 0.007914102220181721 35.91423487663269
+114 0.007912209095439117 36.157843828201294
+115 0.007910355764255077 36.392740964889526
+116 0.00790854202972677 36.62793302536011
+117 0.007906767662131288 36.864908933639526
+118 0.007905032399419108 37.08893895149231
+119 0.007903335947008192 37.319652795791626
+120 0.007901677978395057 37.7217698097229
+121 0.0079000581359375 37.981343030929565
+122 0.007898476031359342 38.22686791419983
+123 0.0078969312470873 38.482051849365234
+124 0.00789542333756327 38.7302668094635
+125 0.007893951829912954 38.97687602043152
+126 0.007892516226262736 39.220088958740234
+127 0.007891116004498907 39.47131681442261
+128 0.007889750620464384 39.75980997085571
+129 0.007888419509525577 40.0082049369812
+130 0.007887122088170035 40.28178691864014
+131 0.007885857756211917 40.53795599937439
+132 0.007884625898070957 40.78034996986389
+133 0.00788342588513758 41.02888298034668
+134 0.007882257077450402 41.273645877838135
+135 0.007881118825305023 41.52113080024719
+136 0.007880010471399716 41.777047872543335
+137 0.007878931352334709 42.03807997703552
+138 0.007877880800323948 42.29041385650635
+139 0.007876858145077086 42.53647184371948
+140 0.007875862714907285 42.77394199371338
+141 0.00787489383876986 43.01944899559021
+142 0.007873950847258495 43.27029991149902
+143 0.00787303307417973 43.52218580245972
+144 0.007872139857747066 43.76293587684631
+145 0.007871270541648217 43.99710988998413
+146 0.00787042447623924 44.24308395385742
+147 0.007869601019414151 44.48331379890442
+148 0.007868799537742312 44.729928970336914
+149 0.007868019407027124 44.97285580635071
+150 0.00786726001301941 45.21074295043945
+151 0.007866520752285576 45.459677934646606
+152 0.007865801032609606 45.70422983169556
+153 0.007865100273464987 45.94932198524475
+154 0.007864417906528354 46.19042992591858
+155 0.007863753375980815 46.43815898895264
+156 0.00786310613872384 46.67909097671509
+157 0.007862475664636829 46.92553400993347
+158 0.00786186143667867 47.17037796974182
+159 0.007861262951271038 47.41254901885986
+160 0.007860679717932554 47.66271996498108
+161 0.007860111259491204 47.91360402107239
+162 0.00785955711215489 48.15463900566101
+163 0.007859016825214072 48.399643898010254
+164 0.007858489961125106 48.64954996109009
+165 0.007857976095268044 48.9018919467926
+166 0.007857474815830948 49.141165018081665
+167 0.007856985723566443 49.38373780250549
+168 0.007856508431688973 49.64616394042969
+169 0.007856042565531279 49.8933470249176
+170 0.007855587762313371 50.13352394104004
+171 0.007855143671052308 50.37667798995972
+172 0.007854709952118177 50.608452796936035
+173 0.00785428627691676 50.854174852371216
+174 0.007853872327840298 51.09544801712036
+175 0.007853467797807955 51.333231925964355
+176 0.007853072390046128 51.57806587219238
+177 0.007852685817628057 51.813902854919434
+178 0.007852307803578557 52.05206894874573
+179 0.007851938080059444 52.28662395477295
+180 0.007851576388558436 52.526202917099
+181 0.007851222479356684 52.76830291748047
+182 0.007850876111208065 53.00823903083801
+183 0.007850537051329308 53.24711585044861
+184 0.007850205074725211 53.491883993148804
+185 0.007849879964206538 53.745014905929565
+186 0.007849561510209728 53.9884397983551
+187 0.00784924951010721 54.22126889228821
+188 0.007848943768578271 54.456403970718384
+189 0.00784864409681994 54.69123697280884
+190 0.00784835031240829 54.92119002342224
+191 0.007848062239527394 55.1594398021698
+192 0.007847779708108881 55.39772081375122
+193 0.007847502553961556 55.63348889350891
+194 0.007847230618632108 55.86765003204346
+195 0.007846963748841258 56.09929800033569
+196 0.0078467017967545 56.33505392074585
+197 0.00784644461943213 56.57029485702515
+198 0.007846192078760203 56.80683088302612
+199 0.007845944041353102 57.05058193206787
+200 0.007845700378300357 57.28962683677673
+201 0.007845460964870918 57.529637813568115
+202 0.007845225680740905 57.78004503250122
+203 0.007844994409400546 58.01979184150696
+204 0.007844767038282721 58.25706100463867
+205 0.007844543458565981 58.494364976882935
+206 0.007844323564949159 58.72791385650635
+207 0.007844107255652388 58.96665287017822
+208 0.00784389443207836 59.21015191078186
+209 0.007843684999011379 59.44923496246338
+210 0.007843478864306827 59.6883180141449
+211 0.00784327593863718 59.92811894416809
+212 0.007843076135690923 60.157394886016846
+213 0.007842879371861858 60.390137910842896
+214 0.007842685566179005 60.62583589553833
+215 0.007842494640278919 60.861119985580444
+216 0.0078423065182789 61.25387787818909
+217 0.007842121126692624 61.52330303192139
+218 0.007841938394175855 61.776500940322876
+219 0.007841758251824257 62.02198386192322
+220 0.007841580632735008 62.27200198173523
+221 0.007841405472148835 62.52571702003479
+222 0.00784123270713896 62.78213095664978
+223 0.00784106227685222 63.025233030319214
+224 0.00784089412222627 63.27746295928955
+225 0.007840728186004132 63.52426290512085
+226 0.007840564412564623 63.76885986328125
+227 0.007840402748078441 64.02537989616394
+228 0.00784024314019698 64.26314902305603
+229 0.00784008553825086 64.50611400604248
+230 0.007839929892924539 64.74721002578735
+231 0.007839776156398167 64.9970428943634
+232 0.007839624282220415 65.23874187469482
+233 0.007839474225436176 65.49275398254395
+234 0.007839325942119448 65.730299949646
+235 0.00783917938986924 65.96849298477173
+236 0.007839034527299938 66.20867586135864
+237 0.007838891314239779 66.44502186775208
+238 0.007838749711759373 66.68760895729065
+239 0.007838609681902788 66.93758201599121
+240 0.007838471187843523 67.18070888519287
+241 0.007838334193672218 67.42260885238647
+242 0.007838198664510116 67.66163301467896
+243 0.007838064566537553 67.90513181686401
+244 0.00783793186672498 68.14105296134949
+245 0.007837800533045561 68.37962579727173
+246 0.00783767053419202 68.61669182777405
+247 0.007837541839817557 68.85465502738953
+248 0.007837414420365995 69.12287902832031
+249 0.007837288246986901 69.36168479919434
+250 0.007837163291719846 69.60325479507446
+251 0.00783703952718286 69.84317588806152
+252 0.00783691692679919 70.08047795295715
+253 0.007836795464599065 70.31975793838501
+254 0.007836675115474782 70.55394196510315
+255 0.007836555854642472 70.78748893737793
+256 0.007836437658251337 71.02599596977234
+257 0.007836320502873738 71.254478931427
+258 0.007836204365661091 71.49357581138611
+259 0.00783608922447146 71.72653794288635
+260 0.00783597505761461 71.96289491653442
+261 0.007835861843866225 72.19475483894348
+262 0.007835749562680516 72.43611693382263
+263 0.007835638193878567 72.67791986465454
+264 0.007835527717875086 72.9130699634552
+265 0.00783541811538093 73.14979195594788
+266 0.007835309367729037 73.38587498664856
+267 0.0078352014566336 73.6223828792572
+268 0.007835094364275146 73.85723686218262
+269 0.007834988073187213 74.08780789375305
+270 0.007834882566313083 74.31957197189331
+271 0.00783477782700582 74.55614280700684
+272 0.007834673839085005 74.79428386688232
+273 0.007834570586624208 75.02506589889526
+274 0.00783446805400772 75.26032495498657
+275 0.00783436622612897 75.50019192695618
+276 0.00783426508809298 75.7326979637146
+277 0.007834164625414796 75.96680283546448
+278 0.007834064823962834 76.19867992401123
+279 0.007833965669647135 76.43809199333191
+280 0.007833867148986269 76.68399000167847
+281 0.007833769248668035 76.91631603240967
+282 0.007833671955691214 77.15820097923279
+283 0.007833575257280553 77.39451479911804
+284 0.007833479141000188 77.62550282478333
+285 0.007833383594569407 77.8538589477539
+286 0.007833288606018585 78.08766198158264
+287 0.00783319416373173 78.32122802734375
+288 0.007833100256148865 78.55829095840454
+289 0.007833006871978649 78.79879403114319
+290 0.007832914000325961 79.03242301940918
+291 0.007832821630337586 79.2625470161438
+292 0.007832729751429004 79.49222803115845
+293 0.007832638353185201 79.73664402961731
+294 0.007832547425516596 79.96493792533875
+295 0.007832456958304708 80.20391082763672
+296 0.007832366941912446 80.43436598777771
+297 0.0078322773666455 80.67007994651794
+298 0.00783218822319177 80.91390085220337
+299 0.007832099502181953 81.1507179737091
+300 0.007832011194600644 81.38782382011414
+301 0.007831923291559543 81.6264488697052
+302 0.007831835784396703 81.86249995231628
+303 0.007831748664478074 82.09362602233887
+304 0.007831661923268403 82.32713079452515
+305 0.007831575552657287 82.56237983703613
+306 0.007831489544434675 82.8002598285675
+307 0.007831403890701994 83.0380609035492
+308 0.007831318583560272 83.27103090286255
+309 0.007831233615294447 83.49654388427734
+310 0.007831148978359202 83.72406697273254
+311 0.007831064665336444 83.95666193962097
+312 0.007830980668892786 84.36234188079834
+313 0.007830896981836259 84.62577295303345
+314 0.007830813597059618 84.877445936203
+315 0.007830730507667945 85.1380820274353
+316 0.00783064770679435 85.3833498954773
+317 0.007830565187727581 85.6420578956604
+318 0.007830482943826962 85.89299082756042
+319 0.007830400968564938 86.13315296173096
+320 0.007830319255597969 86.39862084388733
+321 0.007830237798454619 86.66106486320496
+322 0.007830156591131053 86.91007494926453
+323 0.00783007562736795 87.15350794792175
+324 0.00782999490123182 87.39451384544373
+325 0.007829914406703829 87.63092494010925
+326 0.007829834138005932 87.87364888191223
+327 0.007829754089274742 88.11293196678162
+328 0.007829674255015288 88.35986089706421
+329 0.007829594629491303 88.60696387290955
+330 0.007829515207249867 88.85441493988037
+331 0.00782943598288036 89.10731601715088
+332 0.007829356950971929 89.34478688240051
+333 0.007829278106283658 89.57789993286133
+334 0.007829199443602759 89.82316994667053
+335 0.007829120957787133 90.0732319355011
+336 0.007829042643807904 90.31983280181885
+337 0.007828964496664348 90.56346201896667
+338 0.007828886511383887 90.81139302253723
+339 0.007828808683107194 91.06182193756104
+340 0.007828731007088181 91.30907487869263
+341 0.007828653478538027 91.55645799636841
+342 0.007828576092766975 91.8010139465332
+343 0.007828498845269444 92.04627990722656
+344 0.007828421731355305 92.2883129119873
+345 0.007828344746532776 92.53118181228638
+346 0.007828267886437545 92.77778387069702
+347 0.007828191146591652 93.01912093162537
+348 0.007828114522658787 93.25326180458069
+349 0.007828038010444292 93.49575185775757
+350 0.007827961605568961 93.728590965271
+351 0.007827885303951254 93.96962690353394
+352 0.007827809101339274 94.22619080543518
+353 0.007827732993778798 94.47648882865906
+354 0.00782765697707433 94.7180528640747
+355 0.007827581047313879 94.9561378955841
+356 0.007827505200500197 95.19900393486023
+357 0.007827429432692611 95.43194389343262
+358 0.007827353740049585 95.66762900352478
+359 0.007827278118686873 95.90861487388611
+360 0.00782720256484774 96.14639592170715
+361 0.007827127074761119 96.39043998718262
+362 0.007827051644641609 96.63680601119995
+363 0.007826976270987355 96.88523197174072
+364 0.007826900950012672 97.12126183509827
+365 0.007826825678016838 97.35809087753296
+366 0.007826750451596868 97.60009479522705
+367 0.007826675267151056 97.84201002120972
+368 0.007826600121105932 98.08140897750854
+369 0.007826525010086476 98.34123086929321
+370 0.007826449930561502 98.5813000202179
+371 0.0078263748791841 98.82261085510254
+372 0.007826299852493744 99.06131196022034
+373 0.007826224847157453 99.300283908844
+374 0.00782614985988467 99.53297781944275
+375 0.00782607488737053 99.7663688659668
+376 0.007825999926324224 100.00773096084595
+377 0.007825924973525755 100.24788188934326
+378 0.007825850025726621 100.49549102783203
+379 0.007825775079763326 100.73859000205994
+380 0.007825700132372935 100.99112391471863
+381 0.007825625180632883 101.2336778640747
+382 0.00782555022122325 101.47453093528748
+383 0.007825475251136109 101.71511387825012
+384 0.007825400267320858 101.94311690330505
+385 0.00782532526668421 102.18094491958618
+386 0.007825250246189519 102.41980981826782
+387 0.007825175202899326 102.6552460193634
+388 0.007825100133776753 102.88963580131531
+389 0.007825025035898305 103.12816095352173
+390 0.007824949906269432 103.35328483581543
+391 0.007824874742008983 103.59127593040466
+392 0.007824799540235688 103.82622194290161
+393 0.007824724298039792 104.0571608543396
+394 0.007824649012582372 104.2903778553009
+395 0.007824573681010203 104.52299499511719
+396 0.00782449830046995 104.76303100585938
+397 0.007824422868207498 104.99960494041443
+398 0.00782434738139767 105.23609685897827
+399 0.007824271837243558 105.47456002235413
+400 0.00782419623307586 105.71405386924744
+401 0.007824120565998124 105.95249581336975
+402 0.007824044833468534 106.19305086135864
+403 0.007823969032689759 106.44726490974426
+404 0.00782389316090692 106.6862268447876
+405 0.007823817215577891 106.92447686195374
+406 0.00782374119390501 107.15719795227051
+407 0.007823665093331754 107.39131784439087
+408 0.007823588911216345 107.80725002288818
+409 0.007823512644874329 108.06059002876282
+410 0.007823436291706292 108.30270099639893
+411 0.007823359849240437 108.54309892654419
+412 0.007823283314749423 108.78936886787415
+413 0.00782320668573286 109.03081488609314
+414 0.007823129959633494 109.28328680992126
+415 0.007823053133964922 109.52983593940735
+416 0.007822976206070342 109.77955198287964
+417 0.007822899173534101 110.03076696395874
+418 0.007822822033741763 110.28180193901062
+419 0.00782274478437682 110.52912402153015
+420 0.007822667422810433 110.77877283096313
+421 0.007822589946640736 111.02653098106384
+422 0.007822512353394801 111.27256798744202
+423 0.00782243464057121 111.51523399353027
+424 0.007822356805867141 111.75350189208984
+425 0.007822278846695816 112.0010039806366
+426 0.007822200760782593 112.23505187034607
+427 0.007822122545668225 112.47813081741333
+428 0.007822044198893357 112.7240538597107
+429 0.007821965718183048 112.95699000358582
+430 0.00782188710107774 113.19691395759583
+431 0.007821808345302288 113.43419480323792
+432 0.007821729448467896 113.6733148097992
+433 0.00782165040815728 113.91242599487305
+434 0.007821571222180152 114.14971995353699
+435 0.007821491888090636 114.38875198364258
+436 0.007821412403641464 114.6301338672638
+437 0.007821332766528494 114.87919497489929
+438 0.007821252974447484 115.11881995201111
+439 0.007821173025051496 115.35411286354065
+440 0.007821092916163836 115.58604001998901
+441 0.00782101264547995 115.82237386703491
+442 0.007820932210751962 116.07099986076355
+443 0.007820851609746087 116.30612182617188
+444 0.007820770840157464 116.54659295082092
+445 0.007820689899837275 116.78082299232483
+446 0.007820608786537233 117.01758193969727
+447 0.007820527498008944 117.25120496749878
+448 0.007820446032160073 117.50347900390625
+449 0.007820364386699431 117.73076891899109
+450 0.007820282559435097 117.97301983833313
+451 0.007820200548274427 118.19674897193909
+452 0.007820118350996903 118.4420428276062
+453 0.007820035965438683 118.68630385398865
+454 0.007819953389535212 118.92557001113892
+455 0.00781987062113664 119.17716693878174
+456 0.00781978765800783 119.41632890701294
+457 0.007819704498126504 119.66624689102173
+458 0.007819621139356695 119.90772294998169
+459 0.007819537579548137 120.15002989768982
+460 0.007819453816706633 120.39327692985535
+461 0.007819369848695903 120.6302318572998
+462 0.007819285673478948 120.8685998916626
+463 0.007819201288961873 121.09624195098877
+464 0.007819116693107468 121.3291289806366
+465 0.007819031883892616 121.56699895858765
+466 0.007818946859223104 121.81291890144348
+467 0.0078188616171182 122.05074095726013
+468 0.00781877615559707 122.2895028591156
+469 0.007818690472607774 122.532066822052
+470 0.007818604566155067 122.7757248878479
+471 0.007818518434257795 123.01244282722473
+472 0.007818432074906295 123.25318598747253
+473 0.007818345486275401 123.49175786972046
+474 0.007818258666270039 123.72195982933044
+475 0.007818171613022227 123.95670485496521
+476 0.00781808432453608 124.18101191520691
+477 0.0078179967989576 124.41648697853088
+478 0.007817909034276486 124.65293979644775
+479 0.007817821028752137 124.88380694389343
+480 0.00781773278035983 125.11521291732788
+481 0.00781764428721674 125.34934186935425
+482 0.007817555547581956 125.58156490325928
+483 0.007817466559444623 125.82143092155457
+484 0.007817377321077816 126.06236600875854
+485 0.007817287830555674 126.30015993118286
+486 0.007817198086136854 126.53271794319153
+487 0.007817108085923685 126.77300190925598
+488 0.007817017828174606 127.01079893112183
+489 0.007816927311105348 127.2555718421936
+490 0.007816836532959934 127.49091982841492
+491 0.007816745491882864 127.72269701957703
+492 0.00781665418614635 127.96038579940796
+493 0.00781656261412192 128.19684386253357
+494 0.00781647077396795 128.43057799339294
+495 0.007816378663970528 128.6637589931488
+496 0.007816286282529273 128.8974108695984
+497 0.007816193627901652 129.14298701286316
+498 0.007816100698302414 129.37910985946655
+499 0.007816007492272894 129.6164698600769
+500 0.007815914008013415 129.85156297683716
+501 0.00781582024396567 130.0839478969574
+502 0.007815726198486016 130.31671690940857
+503 0.007815631869930697 130.5550889968872
+504 0.007815537256769497 130.93766403198242
+505 0.00781544235740106 131.18088483810425
+506 0.007815347170238133 131.43362283706665
+507 0.007815251693792788 131.6780469417572
+508 0.007815155926463351 131.92277193069458
+509 0.007815059866704856 132.17373180389404
+510 0.00781496351314271 132.4147880077362
+511 0.007814866864203325 132.65290880203247
+512 0.00781476991839824 132.89952993392944
+513 0.007814672674324131 133.14377093315125
+514 0.007814575130506535 133.39357590675354
+515 0.007814477285527708 133.64881682395935
+516 0.007814379137927176 133.89536690711975
+517 0.007814280686372233 134.13754987716675
+518 0.007814181929487438 134.37255597114563
+519 0.007814082865939875 134.60926699638367
+520 0.007813983494282856 134.84493279457092
+521 0.0078138838132685 135.08487486839294
+522 0.007813783821606201 135.3282070159912
+523 0.007813683517948415 135.56483483314514
+524 0.00781358290107537 135.79636883735657
+525 0.007813481969667736 136.0239839553833
+526 0.00781338072254816 136.2613389492035
+527 0.007813279158425522 136.495609998703
+528 0.007813177276193317 136.7289309501648
+529 0.00781307507457443 136.96674990653992
+530 0.007812972552518995 137.20483994483948
+531 0.007812869708778114 137.44117879867554
+532 0.007812766542287516 137.6912829875946
+533 0.007812663051869147 137.93102383613586
+534 0.007812559236501173 138.16405487060547
+535 0.007812455095062187 138.3996889591217
+536 0.007812350626601214 138.64233493804932
+537 0.007812245829996651 138.88373494148254
+538 0.007812140704283123 139.1439609527588
+539 0.007812035248438313 139.38182497024536
+540 0.007811929461468229 139.62802696228027
+541 0.007811823342506695 139.86262798309326
+542 0.007811716890630595 140.09394598007202
+543 0.007811610104845658 140.33189392089844
+544 0.007811502984384919 140.55927181243896
+545 0.007811395528225495 140.8036229610443
+546 0.007811287735671306 141.04044198989868
+547 0.007811179605741924 141.28268194198608
+548 0.007811071137869012 141.51651787757874
+549 0.0078109623310435375 141.75419402122498
+550 0.007810853184654353 142.00183391571045
+551 0.0078107436978912355 142.24683380126953
+552 0.007810633870071803 142.49266982078552
+553 0.007810523700542017 142.73935890197754
+554 0.007810413188505613 142.97532486915588
+555 0.007810302333436316 143.21626901626587
+556 0.007810191134722487 143.45963501930237
+557 0.007810079591695546 143.70003080368042
+558 0.007809967703743692 143.93725490570068
+559 0.007809855470397198 144.16953086853027
+560 0.007809742891058323 144.4061210155487
+561 0.007809629965257189 144.6348249912262
+562 0.007809516692452763 144.86601185798645
+563 0.007809403072331402 145.10955691337585
+564 0.0078092891042239754 145.35021495819092
+565 0.007809174787873562 145.58893585205078
+566 0.007809060122809919 145.82804489135742
+567 0.0078089451087191225 146.05473494529724
+568 0.007808829745173441 146.2912859916687
+569 0.0078087140319441205 146.52012085914612
+570 0.007808597968603294 146.75694584846497
+571 0.007808481554950515 146.9945249557495
+572 0.0078083647907994935 147.23569202423096
+573 0.007808247675707948 147.474937915802
+574 0.007808130209702743 147.71362781524658
+575 0.007808012392455223 147.95067691802979
+576 0.007807894223835733 148.18245196342468
+577 0.007807775703700346 148.41228795051575
+578 0.007807656831961953 148.65717792510986
+579 0.007807537608490738 148.8944878578186
+580 0.007807418033242144 149.13145899772644
+581 0.007807298106072028 149.36831092834473
+582 0.007807177827163258 149.60071182250977
+583 0.007807057196286266 149.8372118473053
+584 0.007806936213581168 150.06910395622253
+585 0.00780681487908849 150.29896593093872
+586 0.007806693192848717 150.5311679840088
+587 0.007806571154959171 150.77448987960815
+588 0.0078064487655455815 151.01873683929443
+589 0.007806326024733634 151.25899481773376
+590 0.007806202932776977 151.4987030029297
+591 0.0078060794896021085 151.7323179244995
+592 0.007805955695675942 151.96865892410278
+593 0.007805831551109794 152.20514702796936
+594 0.007805707056142955 152.439279794693
+595 0.007805582211000456 152.6778998374939
+596 0.007805457016063758 152.91308188438416
+597 0.007805331471557835 153.14883685112
+598 0.007805205577892543 153.3899998664856
+599 0.0078050793353212486 153.62254786491394
+600 0.007804952744339109 154.02330899238586
+601 0.007804825805270565 154.27989602088928
+602 0.0078046985185253855 154.54830288887024
+603 0.007804570884499092 154.79991483688354
+604 0.007804442903700991 155.04995203018188
+605 0.007804314576640376 155.28566098213196
+606 0.007804185903670041 155.53789687156677
+607 0.0078040568854130556 155.7787070274353
+608 0.007803927522407128 156.0235629081726
+609 0.007803797815118823 156.26898884773254
+610 0.0078036677641711814 156.51138591766357
+611 0.007803537370130338 156.7634048461914
+612 0.007803406633576646 157.0032398700714
+613 0.007803275555104676 157.24756503105164
+614 0.007803144135451278 157.48879098892212
+615 0.007803012375196795 157.73636484146118
+616 0.007802880274992706 157.97588992118835
+617 0.007802747835518945 158.21797394752502
+618 0.007802615057555055 158.46550989151
+619 0.007802481941681377 158.71302485466003
+620 0.007802348488734375 158.9584619998932
+621 0.007802214699436692 159.192626953125
+622 0.007802080574510976 159.43526983261108
+623 0.007801946114751033 159.67716002464294
+624 0.007801811320865296 159.91713690757751
+625 0.007801676193832587 160.16094589233398
+626 0.007801540734233289 160.40423583984375
+627 0.007801404943032023 160.63467597961426
+628 0.007801268821036888 160.87624192237854
+629 0.007801132368999072 161.1276400089264
+630 0.007800995587925949 161.37630891799927
+631 0.007800858478526043 161.61677885055542
+632 0.007800721041821003 161.86290884017944
+633 0.007800583278547854 162.1033480167389
+634 0.007800445189657124 162.34104084968567
+635 0.007800306776085136 162.57923889160156
+636 0.007800168038625905 162.8261640071869
+637 0.007800028978372367 163.06626296043396
+638 0.007799889596090119 163.30390095710754
+639 0.007799749892800983 163.54167890548706
+640 0.007799609869341772 163.77537202835083
+641 0.007799469526663194 164.01692581176758
+642 0.007799328865772926 164.25481581687927
+643 0.007799187887564798 164.49431681632996
+644 0.007799046592975371 164.73277401924133
+645 0.007798904983069358 164.97528100013733
+646 0.007798763058683736 165.21857690811157
+647 0.007798620820769393 165.45749688148499
+648 0.007798478270405375 165.69382190704346
+649 0.007798335408400278 165.9277868270874
+650 0.007798192235847452 166.17184782028198
+651 0.007798048753612497 166.42417287826538
+652 0.007797904962689181 166.6812620162964
+653 0.007797760864071302 166.93225598335266
+654 0.00779761645868151 167.1739239692688
+655 0.007797471747442484 167.4089868068695
+656 0.007797326731376607 167.6590428352356
+657 0.007797181411392391 167.90224289894104
+658 0.007797035788455337 168.1358699798584
+659 0.007796889863516743 168.37206196784973
+660 0.007796743637442506 168.62027096748352
+661 0.007796597111269429 168.86108899116516
+662 0.007796450285877721 169.10509991645813
+663 0.007796303162133378 169.3522298336029
+664 0.007796155741044837 169.5940239429474
+665 0.007796008023449686 169.8340358734131
+666 0.007795860010285227 170.0740668773651
+667 0.007795711702446079 170.31730794906616
+668 0.00779556310078417 170.55282998085022
+669 0.007795414206151458 170.78905582427979
+670 0.00779526501949963 171.0233609676361
+671 0.007795115541581019 171.253084897995
+672 0.007794965773318892 171.48565793037415
+673 0.007794815715479885 171.71815180778503
+674 0.007794665368916119 171.95772194862366
+675 0.007794514734422774 172.19912886619568
+676 0.007794363812837793 172.44219493865967
+677 0.007794212604856707 172.68367290496826
+678 0.007794061111303273 172.91976881027222
+679 0.00779390933288732 173.16363096237183
+680 0.007793757270404172 173.40243887901306
+681 0.007793604924506732 173.6363549232483
+682 0.0077934522959903765 173.8713698387146
+683 0.007793299385536549 174.10451197624207
+684 0.007793146193726992 174.34104299545288
+685 0.007792992721285926 174.57970190048218
+686 0.007792838968866368 174.8146059513092
+687 0.007792684937050117 175.04462599754333
+688 0.007792530626575713 175.2826030254364
+689 0.007792376037839779 175.55249190330505
+690 0.007792221171495402 175.78906393051147
+691 0.007792066028138699 176.02938389778137
+692 0.007791910608223321 176.26976084709167
+693 0.007791754912316914 176.5096299648285
+694 0.0077915989409443965 176.7428159713745
+695 0.007791442694502452 176.98197197914124
+696 0.007791286173430518 177.3987958431244
+697 0.007791129378310535 177.64738392829895
+698 0.00779097230936821 177.90429091453552
+699 0.007790814967071496 178.15714287757874
+700 0.0077906573518171 178.40975785255432
+701 0.007790499463958981 178.6613929271698
+702 0.007790341303680081 178.91290092468262
+703 0.007790182871448363 179.16354990005493
+704 0.007790024167518018 179.41182398796082
+705 0.007789865192057718 179.65370392799377
+706 0.007789705945378644 179.8944399356842
+707 0.007789546427692207 180.13759303092957
+708 0.007789386639110034 180.37162685394287
+709 0.007789226579900518 180.6148989200592
+710 0.007789066250089739 180.85796880722046
+711 0.007788905649846286 181.10806488990784
+712 0.007788744779310226 181.351970911026
+713 0.007788583638493321 181.60482788085938
+714 0.007788422227450067 181.85371685028076
+715 0.00778826054623494 182.09584784507751
+716 0.007788098594774091 182.34281587600708
+717 0.007787936373107683 182.60159301757812
+718 0.007787773881090529 182.85886883735657
+719 0.007787611118748472 183.09743785858154
+720 0.007787448085936254 183.3379669189453
+721 0.007787284782508577 183.5877809524536
+722 0.0077871212083201 183.82895588874817
+723 0.007786957363168413 184.07927584648132
+724 0.0077867932469508645 184.32829880714417
+725 0.007786628859322381 184.57032299041748
+726 0.007786464200066154 184.82156991958618
+727 0.007786299268936813 185.06549096107483
+728 0.007786134065646159 185.3004059791565
+729 0.007785968589749091 185.53618693351746
+730 0.007785802841057112 185.78516387939453
+731 0.007785636819067961 186.0196418762207
+732 0.0077854705233791335 186.2567138671875
+733 0.007785303953702137 186.49572086334229
+734 0.007785137109448955 186.73149394989014
+735 0.007784969990159839 186.96257901191711
+736 0.007784802595374972 187.1981430053711
+737 0.007784634924677253 187.43953490257263
+738 0.007784466977235918 187.67576479911804
+739 0.007784298752719284 187.9072709083557
+740 0.007784130250381991 188.14371585845947
+741 0.007783961469806635 188.37036681175232
+742 0.007783792410105056 188.61141991615295
+743 0.007783623070702788 188.84322595596313
+744 0.007783453451025282 189.06980395317078
+745 0.0077832835501841 189.30432891845703
+746 0.007783113367533189 189.53921794891357
+747 0.007782942902240969 189.76536202430725
+748 0.007782772153618405 190.00154781341553
+749 0.007782601120805188 190.239266872406
+750 0.0077824298029979646 190.47364497184753
+751 0.00778225819927915 190.71490097045898
+752 0.007782086308830911 190.95837497711182
+753 0.00778191413067838 191.20348000526428
+754 0.007781741663960703 191.44524598121643
+755 0.007781568907788388 191.68523383140564
+756 0.007781395861100614 191.92111086845398
+757 0.00778122252297912 192.16800689697266
+758 0.007781048892377109 192.40988492965698
+759 0.007780874968290467 192.63569593429565
+760 0.0077807007496150755 192.88464999198914
+761 0.007780526235375103 193.1195788383484
+762 0.007780351424380558 193.36063885688782
+763 0.007780176315612544 193.59846901893616
+764 0.007780000907880796 193.83003902435303
+765 0.007779825200023451 194.06318283081055
+766 0.007779649190921315 194.30696082115173
+767 0.007779472879369433 194.54365992546082
+768 0.007779296264091349 194.77898383140564
+769 0.0077791193439389 195.01353096961975
+770 0.007778942117621063 195.2556858062744
+771 0.007778764583889476 195.49094581604004
+772 0.007778586741481358 195.72772598266602
+773 0.00777840858903386 195.96064496040344
+774 0.007778230125269615 196.19730687141418
+775 0.007778051348782634 196.4363980293274
+776 0.007777872258323781 196.66739201545715
+777 0.007777692852386821 196.89713883399963
+778 0.0077775131297365685 197.13490200042725
+779 0.007777333088866455 197.373929977417
+780 0.007777152728269733 197.615886926651
+781 0.007776972046667891 197.85374283790588
+782 0.007776791042482458 198.09314680099487
+783 0.007776609714291818 198.32718086242676
+784 0.007776428060588521 198.56737899780273
+785 0.007776246079807829 198.80009984970093
+786 0.007776063770499033 199.03843092918396
+787 0.007775881131154138 199.27312779426575
+788 0.007775698160079347 199.51330184936523
+789 0.007775514855809118 199.7525119781494
+790 0.007775331216692105 199.99126291275024
+791 0.007775147241176715 200.2272469997406
+792 0.0077749629276683265 200.63186287879944
+793 0.007774778274415047 200.88477396965027
+794 0.007774593279907531 201.12983798980713
+795 0.007774407942422043 201.37841391563416
+796 0.007774222260277476 201.6235728263855
+797 0.007774036231792519 201.87356781959534
+798 0.007773849855271371 202.12526893615723
+799 0.00777366312898946 202.37554788589478
+800 0.0077734760511934346 202.61953783035278
+801 0.007773288620258271 202.86841082572937
+802 0.007773100834230234 203.1083948612213
+803 0.0077729126914838674 203.3575439453125
+804 0.007772724190250669 203.6009340286255
+805 0.007772535328647649 203.84548091888428
+806 0.007772346104891569 204.08260083198547
+807 0.007772156517198971 204.32712602615356
+808 0.007771966563714745 204.56482195854187
+809 0.007771776242569264 204.80346298217773
+810 0.007771585551935523 205.0432949066162
+811 0.00777139448995771 205.29261994361877
+812 0.007771203054765496 205.53396201133728
+813 0.007771011244374016 205.77801084518433
+814 0.007770819056998176 206.0158178806305
+815 0.007770626490666915 206.25991988182068
+816 0.007770433543423208 206.4934048652649
+817 0.0077702402133955056 206.732568025589
+818 0.007770046498597714 206.970960855484
+819 0.007769852397072058 207.20893001556396
+820 0.007769657906874799 207.45373487472534
+821 0.007769463026004788 207.69875383377075
+822 0.0077692677524606145 207.9455599784851
+823 0.007769072084226321 208.1768958568573
+824 0.007768876019357137 208.41288685798645
+825 0.007768679555736543 208.64967799186707
+826 0.00776848269139066 208.88091588020325
+827 0.0077682854242738875 209.11523699760437
+828 0.007768087752340354 209.35686087608337
+829 0.007767889673443869 209.5937578678131
+830 0.007767691185652356 209.83709383010864
+831 0.007767492286776191 210.06865096092224
+832 0.007767292974754113 210.30230283737183
+833 0.007767093247467398 210.53329181671143
+834 0.00776689310281134 210.77060079574585
+835 0.007766692538623764 211.0023069381714
+836 0.007766491552885159 211.23623180389404
+837 0.007766290143318417 211.47068691253662
+838 0.0077660883078605625 211.7021939754486
+839 0.007765886044419742 211.94085884094238
+840 0.007765683350574993 212.17226600646973
+841 0.00776548022441972 212.39904880523682
+842 0.007765276663575242 212.62745690345764
+843 0.007765072665905621 212.86531591415405
+844 0.007764868229274617 213.1020278930664
+845 0.007764663351388409 213.34613585472107
+846 0.0077644580299814575 213.58659100532532
+847 0.007764252263002395 213.81787991523743
+848 0.007764046048013472 214.0477888584137
+849 0.0077638393828912 214.27851796150208
+850 0.007763632265297285 214.51461482048035
+851 0.007763424692921702 214.749107837677
+852 0.007763216663640016 214.98166489601135
+853 0.007763008175041454 215.21823596954346
+854 0.0077627992248722215 215.44969296455383
+855 0.007762589810863899 215.6788718700409
+856 0.007762379930604714 215.90679287910461
+857 0.007762169581825576 216.131844997406
+858 0.007761958762242763 216.35965490341187
+859 0.007761747469457791 216.5906059741974
+860 0.00776153570120056 216.82103180885315
+861 0.007761323455028988 217.04572081565857
+862 0.007761110728600767 217.27581691741943
+863 0.007760897519616162 217.50451397895813
+864 0.00776068382558912 217.73673701286316
+865 0.007760469644219202 217.96755480766296
+866 0.007760254972991029 218.1986768245697
+867 0.007760039809717908 218.4358389377594
+868 0.007759824151740669 218.66769981384277
+869 0.007759607996814676 218.90417289733887
+870 0.0077593913423658605 219.13733887672424
+871 0.007759174186091633 219.38030099868774
+872 0.0077589565255030335 219.6188039779663
+873 0.007758738358110723 219.8511528968811
+874 0.007758519681496534 220.07660698890686
+875 0.007758300493184684 220.30742692947388
+876 0.0077580807906417705 220.5356960296631
+877 0.007757860571434175 220.76318502426147
+878 0.007757639833127903 220.99093389511108
+879 0.007757418573059589 221.22185683250427
+880 0.007757196788808767 221.46002197265625
+881 0.0077569744779116484 221.68767499923706
+882 0.007756751637775241 221.91990089416504
+883 0.007756528265863397 222.15383291244507
+884 0.0077563043596825115 222.37792992591858
+885 0.007756079916624068 222.60988593101501
+886 0.0077558549341650235 222.85309982299805
+887 0.007755629409767614 223.09073400497437
+888 0.007755403340779145 223.50039887428284
+889 0.007755176724675341 223.7394678592682
+890 0.007754949558859935 223.9851198196411
+891 0.0077547218407076025 224.2291738986969
+892 0.007754493567692819 224.48155784606934
+893 0.007754264737089192 224.74043798446655
+894 0.007754035346356025 224.98659086227417
+895 0.007753805392794695 225.24512791633606
+896 0.007753574873877964 225.50107383728027
+897 0.007753343786849061 225.75571990013123
+898 0.007753112129179877 225.99976992607117
+899 0.007752879898026835 226.24611592292786
+900 0.0077526470909325415 226.4944109916687
+901 0.007752413705052515 226.74267196655273
+902 0.007752179737856874 226.9917619228363
+903 0.007751945186457255 227.23691391944885
+904 0.007751710048365835 227.4806308746338
+905 0.007751474320693322 227.72927689552307
+906 0.0077512380008507254 227.96575093269348
+907 0.007751001086076718 228.2013819217682
+908 0.007750763573666797 228.44563698768616
+909 0.007750525460858691 228.6932978630066
+910 0.007750286744832351 228.93948984146118
+911 0.007750047422924817 229.17723393440247
+912 0.007749807492458336 229.4297559261322
+913 0.007749566950496806 229.66651797294617
+914 0.007749325794318516 229.90332198143005
+915 0.0077490840212012715 230.13799786567688
+916 0.0077488416282504614 230.37273287773132
+917 0.00774859861280021 230.61117482185364
+918 0.007748354971940575 230.84357500076294
+919 0.007748110702904386 231.0758638381958
+920 0.007747865802866654 231.3099799156189
+921 0.00774762026895889 231.54947590827942
+922 0.007747374098412398 231.80773901939392
+923 0.007747127288343325 232.04578590393066
+924 0.007746879835809972 232.28716897964478
+925 0.007746631738171069 232.5208239555359
+926 0.007746382992412208 232.76986289024353
+927 0.007746133595719092 233.00614500045776
+928 0.00774588354511923 233.24706196784973
+929 0.007745632837854591 233.48329186439514
+930 0.007745381470937271 233.7126669883728
+931 0.007745129441421815 233.9472188949585
+932 0.007744876746519901 234.18142580986023
+933 0.007744623383299315 234.41094088554382
+934 0.007744369348755611 234.6434679031372
+935 0.0077441146400271344 234.87166285514832
+936 0.007743859254108314 235.1050808429718
+937 0.007743603188093364 235.34011697769165
+938 0.0077433464390759335 235.56989002227783
+939 0.007743089004020067 235.8029079437256
+940 0.007742830879946573 236.0418679714203
+941 0.007742572063961718 236.28287386894226
+942 0.007742312553056478 236.52182698249817
+943 0.0077420523442068975 236.7585928440094
+944 0.007741791434445791 237.0009047985077
+945 0.007741529820690652 237.23488998413086
+946 0.007741267500102176 237.46754789352417
+947 0.007741004469481926 237.70470094680786
+948 0.007740740725946372 237.93823885917664
+949 0.007740476266367563 238.16689491271973
+950 0.007740211087760359 238.4106090068817
+951 0.007739945187081633 238.64421892166138
+952 0.007739678561244605 238.8804008960724
+953 0.0077394112071762135 239.1167278289795
+954 0.0077391431219175294 239.35203289985657
+955 0.007738874302250779 239.58400702476501
+956 0.007738604745244463 239.8119559288025
+957 0.007738334447665176 240.04610180854797
+958 0.007738063406565801 240.284343957901
+959 0.007737791618783373 240.52426099777222
+960 0.007737519081182961 240.7634949684143
+961 0.007737245790643329 241.0053629875183
+962 0.007736971744099976 241.23870491981506
+963 0.0077366969385164455 241.4715859889984
+964 0.007736421370568618 241.70218086242676
+965 0.007736145037247396 241.94195890426636
+966 0.007735867935370809 242.1767499446869
+967 0.007735590061770554 242.40734100341797
+968 0.00773531141333505 242.63806796073914
+969 0.007735031986894627 242.86659288406372
+970 0.007734751779264565 243.09386801719666
+971 0.007734470787316867 243.32623291015625
+972 0.007734189007808004 243.5575909614563
+973 0.00773390643759422 243.78939580917358
+974 0.0077336230734592806 244.0274360179901
+975 0.00773333891224366 244.25804901123047
+976 0.007733053950700982 244.49626088142395
+977 0.007732768185670288 244.7317659854889
+978 0.007732481613961187 244.96279287338257
+979 0.007732194232224618 245.2004578113556
+980 0.007731906037412311 245.4278209209442
+981 0.007731617026159373 245.6605188846588
+982 0.0077313271952724714 245.89166593551636
+983 0.007731036541543173 246.12357783317566
+984 0.007730745061690497 246.51266288757324
+985 0.007730452752432701 246.74952101707458
+986 0.007730159610630905 246.99631595611572
+987 0.007729865632930039 247.2367398738861
+988 0.007729570816089162 247.4702877998352
+989 0.007729275156852201 247.71676993370056
+990 0.007728978651890488 247.96163392066956
+991 0.0077286812980325815 248.20289301872253
+992 0.007728383091876426 248.4515118598938
+993 0.0077280840302202825 248.70158100128174
+994 0.007727784109732334 248.94318294525146
+995 0.0077274833270655945 249.18051385879517
+996 0.007727181679073418 249.41699481010437
+997 0.007726879162277902 249.6560559272766
+998 0.00772657577347332 249.8896038532257
+999 0.007726271509323822 250.13212490081787
+1000 0.007725966366507103 250.3662829399109
+COMPLETED boys_ordered

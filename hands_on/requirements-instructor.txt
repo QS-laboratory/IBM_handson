@@ -1,0 +1,7 @@
+-r requirements.txt
+pyscf==2.13.1
+nbformat>=5.10,<6
+nbconvert>=7,<8
+ipykernel>=6.29,<7
+jupyterlab>=4,<5
+pytest>=8,<10

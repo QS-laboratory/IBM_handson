@@ -1,0 +1,108 @@
+{
+  "name": "ethylene",
+  "formula": "C2H4",
+  "basis": "STO-3G",
+  "geometry_source": "fixed idealized planar teaching geometry; not optimized",
+  "atoms_angstrom": [
+    [
+      "C",
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      "C",
+      [
+        1.34,
+        0.0,
+        0.0
+      ]
+    ],
+    [
+      "H",
+      [
+        -0.5449999999999998,
+        0.9439676901250382,
+        0.0
+      ]
+    ],
+    [
+      "H",
+      [
+        -0.5450000000000005,
+        -0.9439676901250379,
+        0.0
+      ]
+    ],
+    [
+      "H",
+      [
+        1.8850000000000002,
+        0.9439676901250381,
+        0.0
+      ]
+    ],
+    [
+      "H",
+      [
+        1.8850000000000002,
+        -0.9439676901250381,
+        0.0
+      ]
+    ]
+  ],
+  "bonds": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      0,
+      3,
+      1
+    ],
+    [
+      1,
+      4,
+      1
+    ],
+    [
+      1,
+      5,
+      1
+    ]
+  ],
+  "charge": 0,
+  "active_electrons": 2,
+  "active_spatial_orbitals": 2,
+  "frozen_doubly_occupied_orbitals": 7,
+  "active_mo_indices_zero_based": [
+    7,
+    8
+  ],
+  "qubit_mapping": "Jordan-Wigner; q0..q(norb-1)=alpha, q(norb)..q(2*norb-1)=beta",
+  "array_order": "Qiskit native little endian; bit q is (index >> q) & 1",
+  "system_qubits": 4,
+  "total_qpde_qubits": 5,
+  "singlet_energy_hartree": -77.11553008190211,
+  "triplet_energy_hartree": -76.93973222173187,
+  "gap_hartree": 0.1757978601702348,
+  "gap_ev": 4.783703474310449,
+  "s_squared": [
+    0.0,
+    2.0
+  ],
+  "nuclear_and_frozen_core_energy_hartree": -75.91981614329308,
+  "removed_active_identity_shift_hartree": -0.6761423657888306,
+  "pauli_terms_without_identity": 14,
+  "reference_validation": "JW fixed-particle S=0/1 eigenvalues match independent PySCF FCI solvers within 1e-8 Ha",
+  "scope": "Vertical S0-T1 gap of this fixed-geometry CASCI model; not optical absorption energy or experimental prediction"
+}

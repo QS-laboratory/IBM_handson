@@ -1,0 +1,73 @@
+{
+  "molecule": "ethylene",
+  "dt_atomic_units": 0.5,
+  "evolution_parameters": [
+    0.4997209093168825,
+    0.49603153034901304
+  ],
+  "preparation": {
+    "layers": 5,
+    "fidelity": 0.9999999999996247,
+    "optimizer_success": true,
+    "iterations": 61,
+    "squared_amplitude_error": 3.74859508537606e-13
+  },
+  "evolution": {
+    "layers": 1,
+    "probe_columns": 16,
+    "training_error": 2.194981369546438e-05,
+    "initial_training_error": 2.2074704996673076e-05,
+    "optimizer_success": true,
+    "relative_operator_error": 0.0046850628272696706,
+    "reference_relative_operator_error": 0.0007817307040315708
+  },
+  "circuits": {
+    "prep_reference": {
+      "qubits": 5,
+      "depth": 84,
+      "cx_count": 24,
+      "operations": {
+        "rz": 39,
+        "sx": 32,
+        "cx": 24,
+        "x": 1
+      }
+    },
+    "prep_compact": {
+      "qubits": 5,
+      "depth": 45,
+      "cx_count": 20,
+      "operations": {
+        "rz": 49,
+        "sx": 45,
+        "cx": 20
+      }
+    },
+    "evol_reference": {
+      "qubits": 4,
+      "depth": 422,
+      "cx_count": 188,
+      "operations": {
+        "rz": 263,
+        "cx": 188,
+        "sx": 154,
+        "x": 12
+      }
+    },
+    "evol_compact": {
+      "qubits": 4,
+      "depth": 72,
+      "cx_count": 33,
+      "operations": {
+        "rz": 48,
+        "cx": 33,
+        "sx": 24,
+        "x": 2
+      }
+    }
+  },
+  "method": "Dense real RY/CX state fitting; grouped Pauli-product time optimization. Independent teaching implementation, not Kanno tensor-network sweeps.",
+  "hardware_validation": "NOT RUN; gate counts here assume all-to-all connectivity and rz/sx/x/cx basis; actual ISA costs depend on selected backend.",
+  "reference_evolution": "6-step first-order product formula; matrix exponential is separate ideal reference",
+  "version_order": "Qiskit native little endian; ancilla is highest-index qubit"
+}

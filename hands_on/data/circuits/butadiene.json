@@ -1,0 +1,71 @@
+{
+  "molecule": "butadiene",
+  "dt_atomic_units": 0.15,
+  "evolution_parameters": [
+    0.1499529721950119,
+    0.1498875686453618
+  ],
+  "preparation": {
+    "layers": 12,
+    "fidelity": 0.9926364829919925,
+    "optimizer_success": true,
+    "iterations": 1517,
+    "squared_amplitude_error": 0.007377122492073333
+  },
+  "evolution": {
+    "layers": 1,
+    "probe_columns": 12,
+    "training_error": 7.384193833321822e-07,
+    "initial_training_error": 7.395009276610214e-07,
+    "optimizer_success": true,
+    "relative_operator_error": 0.0008642860679544394,
+    "reference_relative_operator_error": 0.00014402877930156283
+  },
+  "circuits": {
+    "prep_reference": {
+      "qubits": 9,
+      "depth": 2609,
+      "cx_count": 502,
+      "operations": {
+        "rz": 1263,
+        "sx": 862,
+        "cx": 502,
+        "x": 6
+      }
+    },
+    "prep_compact": {
+      "qubits": 9,
+      "depth": 142,
+      "cx_count": 96,
+      "operations": {
+        "sx": 160,
+        "rz": 160,
+        "cx": 96
+      }
+    },
+    "evol_reference": {
+      "qubits": 8,
+      "depth": 9994,
+      "cx_count": 6210,
+      "operations": {
+        "cx": 6210,
+        "rz": 5027,
+        "sx": 3144
+      }
+    },
+    "evol_compact": {
+      "qubits": 8,
+      "depth": 1674,
+      "cx_count": 1035,
+      "operations": {
+        "cx": 1035,
+        "rz": 842,
+        "sx": 524
+      }
+    }
+  },
+  "method": "Dense real RY/CX state fitting; grouped Pauli-product time optimization. Independent teaching implementation, not Kanno tensor-network sweeps.",
+  "hardware_validation": "NOT RUN; gate counts here assume all-to-all connectivity and rz/sx/x/cx basis; actual ISA costs depend on selected backend.",
+  "reference_evolution": "6-step first-order product formula; matrix exponential is separate ideal reference",
+  "version_order": "Qiskit native little endian; ancilla is highest-index qubit"
+}

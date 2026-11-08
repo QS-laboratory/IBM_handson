@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+outputs/
+hands_on/output/
+.DS_Store
+.pytest_cache/
+
+# Local administration files and reference publications are not teaching sources.
+/IBM_Quantum/
+/AdminOnboardingFlex.pdf
+/kanno-et-al-2025-tensor-based-quantum-phase-difference-estimation-for-large-scale-demonstration.pdf
+/pnas.2425026122.sapp.pdf
+/tmp/
+/output/
+/advanced_kanno_h4/output/

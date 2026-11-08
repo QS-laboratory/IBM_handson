@@ -1,0 +1,17 @@
+.julia_depot/
+.python_deps/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+upstream/.git/
+output/qa/
+*.tmp
+
+.upstream_git_metadata/
+upstream/*
+!upstream/src/
+!upstream/examples/
+!upstream/README.md
+!upstream/LICENCE
+
+data/geometry_*/*.dat

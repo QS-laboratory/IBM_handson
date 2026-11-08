@@ -1,0 +1,10 @@
+{
+  "source": "hands_on",
+  "saved_on": "2026-11-04",
+  "sha256": {
+    "01_mps_mpo_circuits.ipynb": "4487cdde8c64155f6b7c4e3dba7167c03150dc8fe90302a62abe874b37d6d302",
+    "README.md": "c0bca1325bdb03c355ca3808c163fbe99db76af5b6e983ac4f94dc3e8def6bbb",
+    "demo_core.py": "daadab0479b12833c4ae22503e4ff1a623ecfe713a9342bd13a0507724d289d3",
+    "requirements.txt": "6f4780a07d12415889df88d70a8a75e297409ee94e7b283b0e827f5f24b88679"
+  }
+}

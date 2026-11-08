@@ -1,0 +1,64 @@
+{
+  "method": "Full-CI in the complete 4-electron/4-spatial-orbital STO-3G space; no frozen core, no active-space truncation",
+  "basis": "STO-3G",
+  "states": [
+    "lowest S=0 singlet",
+    "lowest S=1 triplet"
+  ],
+  "energies_include_nuclear_repulsion": true,
+  "geometry_optimized": false,
+  "linear_geometry": "positions (0,1.5R,0),(0,0.5R,0),(0,-0.5R,0),(0,-1.5R,0), Angstrom",
+  "orbital_basis": "symmetric orthogonalized complete AO basis; FCI is invariant to orbital rotations",
+  "spin_resolution": "diagonalize S^2 in full Ms=0 determinant space (dimension 36), then Hamiltonian in S=0 (20) and S=1 (15) subspaces",
+  "independent_validation": "standard PySCF direct_spin0 and direct_spin1(Ms=1) energies at every point; R=2 compared to the stored author-method exercise reference",
+  "pyscf_version": "2.13.1",
+  "hydrogen_atom_energy_hartree": -0.4665818495572752,
+  "four_hydrogen_dissociation_limit_hartree": -1.8663273982291009,
+  "linear_at_2_angstrom": {
+    "distance_angstrom": 2.0,
+    "nuclear_repulsion_hartree": 1.14655062366,
+    "minimum_ao_overlap_eigenvalue": 0.8086834373059031,
+    "singlet_electronic_hartree": -3.0443312696498728,
+    "singlet_total_hartree": -1.8977806459898727,
+    "singlet_s_squared": 6.902532920683853e-31,
+    "singlet_fci_residual": 1.6441184503464333e-15,
+    "triplet_electronic_hartree": -3.0284263117336874,
+    "triplet_total_hartree": -1.8818756880736873,
+    "triplet_s_squared": 2.0,
+    "triplet_fci_residual": 2.26190089143373e-15,
+    "gap_hartree": 0.015904957916185403,
+    "gap_ev": 0.43279595308350544
+  },
+  "sampled_linear_minima": {
+    "singlet": {
+      "distance_angstrom": 0.9,
+      "nuclear_repulsion_hartree": 2.5478902748000007,
+      "minimum_ao_overlap_eigenvalue": 0.23229115138903084,
+      "singlet_electronic_hartree": -4.728206889123859,
+      "singlet_total_hartree": -2.1803166143238584,
+      "singlet_s_squared": -4.4981918797773335e-18,
+      "singlet_fci_residual": 4.4980520055654344e-15,
+      "triplet_electronic_hartree": -4.43950039840958,
+      "triplet_total_hartree": -1.891610123609579,
+      "triplet_s_squared": 1.9999999999999991,
+      "triplet_fci_residual": 5.2279675940103946e-15,
+      "gap_hartree": 0.28870649071427934,
+      "gap_ev": 7.856103830550003
+    },
+    "triplet": {
+      "distance_angstrom": 1.15,
+      "nuclear_repulsion_hartree": 1.9940010846260874,
+      "minimum_ao_overlap_eigenvalue": 0.3930867517034044,
+      "singlet_electronic_hartree": -4.1148036604125195,
+      "singlet_total_hartree": -2.120802575786432,
+      "singlet_s_squared": -2.3274270787208736e-17,
+      "singlet_fci_residual": 4.246790143092597e-15,
+      "triplet_electronic_hartree": -3.9476603880749295,
+      "triplet_total_hartree": -1.953659303448842,
+      "triplet_s_squared": 2.000000000000001,
+      "triplet_fci_residual": 3.754523815571169e-15,
+      "gap_hartree": 0.16714327233759008,
+      "gap_ev": 4.548200141996525
+    }
+  }
+}

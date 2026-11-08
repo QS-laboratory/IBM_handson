@@ -1,0 +1,37 @@
+{
+  "format_version": 1,
+  "molecular_scope": "fixed planar teaching geometries; STO-3G; pi-CASCI; vertical S0-T1 gaps",
+  "software": {
+    "qiskit": "2.4.1",
+    "qiskit-ibm-runtime": "0.43.1",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0",
+    "matplotlib": "3.10.0",
+    "pyscf": "2.13.1"
+  },
+  "hardware_results_included": false,
+  "sha256": {
+    "data/circuits/butadiene.json": "8d7eaeefe5d6e7c565a94f4a698ff2fee9d7097d753fff0bc2d2543a337170f4",
+    "data/circuits/butadiene_evol_compact.qpy": "cb388783fd86ed161c46fd3b65769525aa4b89805167b71c577f7fd5b5ed3d66",
+    "data/circuits/butadiene_evol_reference.qpy": "e7ec54ab4b0b5426e181b4d6c13b5a8f0d3aef157ae6dc05661dd39e73806f5f",
+    "data/circuits/butadiene_prep_compact.qpy": "1d7289d949af490a145fd951eb476a8918e88970e5f1840b3ae81bb070588140",
+    "data/circuits/butadiene_prep_parameters.npy": "67326bdd6bf36feaed6f64bc78d981fd764b26b591d29950e7663164adcdf56b",
+    "data/circuits/butadiene_prep_reference.qpy": "ca8a27ef4dee470ed8424523b8c35bc3875e79717aefea45d9cdc2304f184f78",
+    "data/circuits/ethylene.json": "165febb403255b888fd99ea5cbe3569e6a509c34b43d82da5cf3cb5016fbf77b",
+    "data/circuits/ethylene_evol_compact.qpy": "05721ce5ac53eba0879d16e9ef59bf73ea4ed9302d118fcceab4eaef901be907",
+    "data/circuits/ethylene_evol_reference.qpy": "19ff2a014129946ed1c890e42aa3d26eed00ded94b113332cd44a8f7fd5ddf35",
+    "data/circuits/ethylene_prep_compact.qpy": "d074b4304be9e84ac4c26c7d158fd8aff2b44591acdca10c5990f2860786bb35",
+    "data/circuits/ethylene_prep_parameters.npy": "76b48c0cbf4a08bc1acf7e9f8dbb9b70f9d7520f41c949fe74a8f093a84aa2d3",
+    "data/circuits/ethylene_prep_reference.qpy": "cabe2a4dd95400e48119091108a13f28bf1503a8820d682301c5ac8f379aac33",
+    "data/example_results/butadiene_compact_depolarized.json": "d5495c1fa707309dbb0d51d732d94801171778a1e41c9a2659b500b2dae57862",
+    "data/example_results/butadiene_compact_ideal.json": "432b0c8abcce2851e4d1b8709c84894811de599eb89e094c04bf815c71915e4f",
+    "data/example_results/ethylene_compact_depolarized.json": "4c1befed6a8e05cd73632f7e70bc69cd09377ca17abc413c22e15c116dc547fb",
+    "data/example_results/ethylene_compact_ideal.json": "bd18bcb0a60e35a31dc1401c7954b846d453ee03d636e2710904dc32b2c16537",
+    "data/example_results/ethylene_reference_depolarized.json": "c3f1b0225f98bb7c7f086bd26d11521edaa8103f76c4ccadf57e52f086812d8d",
+    "data/example_results/ethylene_reference_ideal.json": "d94c05fc399d157ed7736b37ad200ec1b57852f9a273bcc6152447a3759015f7",
+    "data/reference/butadiene.json": "10b6809428b255afb3f2cb5522ae95c0a8558bd32570d36b0159de53be17825c",
+    "data/reference/butadiene.npz": "32f938f71d91eeb190068d5ff7a03c13de909b34679b3445304cd49197499b8d",
+    "data/reference/ethylene.json": "a8c0d2ab2e7a53a77260cc74fe940a575092c8fb129e1faf4be0c7fe9092ab51",
+    "data/reference/ethylene.npz": "a639a946631182cbd5522c16e52bb7d94c5ef3eb2841825e47ac7f1654bfeddb"
+  }
+}

@@ -1,0 +1,7 @@
+numpy==2.4.6
+scipy==1.18.0
+matplotlib==3.10.0
+qiskit==2.4.1
+pylatexenc==2.10
+ipykernel==6.29.5
+jupyterlab==4.6.1

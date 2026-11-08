@@ -1,0 +1,7 @@
+# Participant runtime. Colab bootstrap installs the three non-default packages.
+qiskit==2.4.1
+qiskit-ibm-runtime==0.43.1
+pylatexenc==2.10
+numpy>=2.0,<3
+scipy>=1.12,<2
+matplotlib>=3.8,<4

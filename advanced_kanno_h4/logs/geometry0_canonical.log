@@ -1,0 +1,148 @@
+H4 0 canonical; depth=8, sweeps=1000, Julia 1.11.1
+#sites: 8
+After sweep 0 energy=-2.0867771484742415
+After sweep 1 energy=-2.986612824602735  maxlinkdim=4 maxerr=1.74E-16 time=7.401
+After sweep 2 energy=-2.986648352458303  maxlinkdim=7 maxerr=9.75E-09 time=0.005
+After sweep 3 energy=-2.9866717409242853  maxlinkdim=8 maxerr=5.87E-09 time=0.018
+After sweep 4 energy=-2.9870042364220546  maxlinkdim=11 maxerr=5.55E-09 time=0.079
+After sweep 5 energy=-2.993082027216426  maxlinkdim=13 maxerr=4.04E-09 time=0.007
+After sweep 6 energy=-3.024302079602252  maxlinkdim=12 maxerr=8.82E-09 time=0.007
+After sweep 7 energy=-3.028234972225444  maxlinkdim=11 maxerr=7.79E-09 time=0.007
+After sweep 8 energy=-3.0283625316160467  maxlinkdim=11 maxerr=2.72E-10 time=0.007
+After sweep 9 energy=-3.028402161908385  maxlinkdim=11 maxerr=7.06E-11 time=0.010
+After sweep 10 energy=-3.028419987122254  maxlinkdim=11 maxerr=7.86E-11 time=0.007
+After sweep 11 energy=-3.0284316585884  maxlinkdim=11 maxerr=1.19E-10 time=0.008
+After sweep 12 energy=-3.028443432602706  maxlinkdim=11 maxerr=2.12E-10 time=0.007
+After sweep 13 energy=-3.0284596517897677  maxlinkdim=11 maxerr=4.28E-10 time=0.008
+After sweep 14 energy=-3.028485426589861  maxlinkdim=11 maxerr=9.61E-10 time=0.007
+After sweep 15 energy=-3.0285284732883873  maxlinkdim=11 maxerr=2.36E-09 time=0.008
+After sweep 16 energy=-3.0286014203832674  maxlinkdim=11 maxerr=6.19E-09 time=0.007
+After sweep 17 energy=-3.0287237910213998  maxlinkdim=12 maxerr=6.87E-09 time=0.007
+After sweep 18 energy=-3.0289254693698098  maxlinkdim=13 maxerr=8.46E-09 time=0.008
+After sweep 19 energy=-3.029255053713482  maxlinkdim=13 maxerr=6.73E-09 time=0.007
+After sweep 20 energy=-3.0297868545738034  maxlinkdim=15 maxerr=6.25E-09 time=0.008
+Final energy = -3.0297868545738034
+magz ground -5.133543330948509e-5
+After sweep 0 energy=-2.0867771484742415
+After sweep 1 energy=-2.986597377010963  maxlinkdim=4 maxerr=7.71E-17 time=0.250
+After sweep 2 energy=-2.986652216311569  maxlinkdim=9 maxerr=8.51E-09 time=0.005
+After sweep 3 energy=-2.986669788980106  maxlinkdim=10 maxerr=1.32E-08 time=0.012
+After sweep 4 energy=-2.9867287059523613  maxlinkdim=13 maxerr=1.15E-09 time=0.010
+After sweep 5 energy=-2.9871639666392866  maxlinkdim=14 maxerr=5.51E-09 time=0.008
+After sweep 6 energy=-2.989792655363641  maxlinkdim=16 maxerr=5.79E-09 time=0.009
+After sweep 7 energy=-3.005353047620085  maxlinkdim=16 maxerr=2.43E-16 time=0.009
+After sweep 8 energy=-3.029538871624306  maxlinkdim=16 maxerr=1.80E-16 time=0.009
+After sweep 9 energy=-3.0382974056916003  maxlinkdim=16 maxerr=1.28E-16 time=0.009
+After sweep 10 energy=-3.0410345307417312  maxlinkdim=16 maxerr=2.69E-16 time=0.009
+After sweep 11 energy=-3.042047579772584  maxlinkdim=16 maxerr=1.05E-16 time=0.009
+After sweep 12 energy=-3.042480432334398  maxlinkdim=16 maxerr=2.09E-16 time=0.009
+After sweep 13 energy=-3.042687182457824  maxlinkdim=16 maxerr=7.94E-17 time=0.009
+After sweep 14 energy=-3.042794956310779  maxlinkdim=16 maxerr=1.78E-16 time=0.009
+After sweep 15 energy=-3.0428549447035107  maxlinkdim=16 maxerr=2.00E-16 time=0.009
+After sweep 16 energy=-3.0428898931949315  maxlinkdim=16 maxerr=1.81E-16 time=0.009
+After sweep 17 energy=-3.0429108635676094  maxlinkdim=16 maxerr=1.83E-16 time=0.009
+After sweep 18 energy=-3.042923676425628  maxlinkdim=16 maxerr=6.90E-17 time=0.009
+After sweep 19 energy=-3.0429315895475444  maxlinkdim=16 maxerr=1.78E-16 time=0.009
+After sweep 20 energy=-3.04293650728152  maxlinkdim=16 maxerr=2.05E-16 time=0.009
+Final energy of 1-th excited state = -3.04293650728152
+Energy gap -0.013169542812171198
+magz excited -2.4090509226359913e-7
+init env for test
+init cost for test
+Sweep Fidelity Time
+1 0.7389567225955986 17.484088897705078
+2 0.760562061340125 17.579460859298706
+3 0.7792344877074439 17.66915488243103
+4 0.8073742791238798 17.75664782524109
+5 0.8324028265622363 17.842198848724365
+6 0.8490688263363819 17.925859928131104
+7 0.8590384979505965 18.006675958633423
+8 0.8663404062722376 18.088189840316772
+9 0.8734611655949207 18.169776916503906
+10 0.8802487007584064 18.253569841384888
+11 0.8860734296161549 18.336607933044434
+12 0.8907357228161943 18.418360948562622
+13 0.8943007409005503 18.500425815582275
+14 0.8970785271621717 18.57946491241455
+15 0.899354056111953 18.66212797164917
+16 0.9013135109173268 18.74576187133789
+17 0.9030777661471256 18.83901596069336
+18 0.9047267034570978 18.926055908203125
+19 0.9063080708725793 19.01638102531433
+20 0.9078473210776273 19.100514888763428
+21 0.9093677865721608 19.183169841766357
+22 0.9109175447568815 19.26605200767517
+23 0.9125832969769928 19.348049879074097
+24 0.9144539656265857 19.428931951522827
+25 0.9165134255525961 19.51161289215088
+26 0.9185838696643794 19.603603839874268
+27 0.9204613240678555 19.715627908706665
+28 0.922065304569784 19.817644834518433
+29 0.9234265459281337 19.904645919799805
+30 0.924608694495161 19.99243688583374
+31 0.9256679893856908 20.075357913970947
+32 0.9266473303391942 20.1608989238739
+33 0.9275788284539519 20.25163984298706
+34 0.9284868494045542 20.341336011886597
+35 0.9293912720380175 20.441833019256592
+36 0.930310205095909 20.53420901298523
+37 0.931260362096684 20.624325037002563
+38 0.9322535540955843 20.717636823654175
+39 0.9332895966276691 20.814080953598022
+40 0.9343496773111942 20.903548002243042
+41 0.9353980431747927 20.99957299232483
+42 0.9363961802940259 21.099807024002075
+
+[88708] signal 2: Interrupt: 2
+in expression starting at /Users/sato/project/FTQC_HandsOn/advanced_kanno_h4/julia/run_author.jl:24
+__psynch_cvwait at /usr/lib/system/libsystem_kernel.dylib (unknown line)
+unknown function (ip: 0x0)
+jl_alloc_genericmemory at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-R17H3W25T9.0/build/default-honeycrisp-R17H3W25T9-0/julialang/julia-release-1-dot-11/src/genericmemory.c:99
+GenericMemory at ./boot.jl:516 [inlined]
+new_as_memoryref at ./boot.jl:535 [inlined]
+Array at ./boot.jl:588 [inlined]
+Array at ./boot.jl:594 [inlined]
+similar at /Users/sato/project/FTQC_HandsOn/advanced_kanno_h4/.julia_depot/packages/NDTensors/F4sTz/src/abstractarray/similar.jl:11 [inlined]
+similar at /Users/sato/project/FTQC_HandsOn/advanced_kanno_h4/.julia_depot/packages/NDTensors/F4sTz/src/tensorstorage/similar.jl:42 [inlined]
+similar at /Users/sato/project/FTQC_HandsOn/advanced_kanno_h4/.julia_depot/packages/NDTensors/F4sTz/src/tensor/similar.jl:24 [inlined]
+contraction_output at /Users/sato/project/FTQC_HandsOn/advanced_kanno_h4/.julia_depot/packages/NDTensors/F4sTz/src/dense/tensoralgebra/contract.jl:5 [inlined]
+contraction_output at /Users/sato/project/FTQC_HandsOn/advanced_kanno_h4/.julia_depot/packages/NDTensors/F4sTz/src/tensoroperations/generic_tensor_operations.jl:62
+contract at /Users/sato/project/FTQC_HandsOn/advanced_kanno_h4/.julia_depot/packages/NDTensors/F4sTz/src/tensoroperations/generic_tensor_operations.jl:108
+unknown function (ip: 0x35691816b)
+contract at /Users/sato/project/FTQC_HandsOn/advanced_kanno_h4/.julia_depot/packages/NDTensors/F4sTz/src/tensoroperations/generic_tensor_operations.jl:91
+contract at /Users/sato/project/FTQC_HandsOn/advanced_kanno_h4/.julia_depot/packages/SimpleTraits/nEtvW/src/SimpleTraits.jl:332 [inlined]
+_contract at /Users/sato/project/FTQC_HandsOn/advanced_kanno_h4/.julia_depot/packages/ITensors/oOwvi/src/tensor_operations/tensor_algebra.jl:3
+unknown function (ip: 0x3556e0093)
+_contract at /Users/sato/project/FTQC_HandsOn/advanced_kanno_h4/.julia_depot/packages/ITensors/oOwvi/src/tensor_operations/tensor_algebra.jl:9
+contract at /Users/sato/project/FTQC_HandsOn/advanced_kanno_h4/.julia_depot/packages/ITensors/oOwvi/src/tensor_operations/tensor_algebra.jl:74
+* at /Users/sato/project/FTQC_HandsOn/advanced_kanno_h4/.julia_depot/packages/ITensors/oOwvi/src/tensor_operations/tensor_algebra.jl:61
+unknown function (ip: 0x34373004f)
+get_gate_dag_MPSBW at /Users/sato/project/FTQC_HandsOn/advanced_kanno_h4/runtime/Gate_generation_from_MPS_MPO.jl:1924
+unknown function (ip: 0x3551fd12b)
+#get_sweeped_gate_list_MPSBW#81 at /Users/sato/project/FTQC_HandsOn/advanced_kanno_h4/runtime/Gate_generation_from_MPS_MPO.jl:2220
+get_sweeped_gate_list_MPSBW at /Users/sato/project/FTQC_HandsOn/advanced_kanno_h4/runtime/Gate_generation_from_MPS_MPO.jl:2212 [inlined]
+#get_and_save_prep_MPSBW_2d_list#88 at /Users/sato/project/FTQC_HandsOn/advanced_kanno_h4/runtime/Gate_generation_from_MPS_MPO.jl:2530
+get_and_save_prep_MPSBW_2d_list at /Users/sato/project/FTQC_HandsOn/advanced_kanno_h4/runtime/Gate_generation_from_MPS_MPO.jl:2478
+unknown function (ip: 0x35235c09f)
+jl_apply at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-R17H3W25T9.0/build/default-honeycrisp-R17H3W25T9-0/julialang/julia-release-1-dot-11/src/./julia.h:2157 [inlined]
+do_call at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-R17H3W25T9.0/build/default-honeycrisp-R17H3W25T9-0/julialang/julia-release-1-dot-11/src/interpreter.c:126
+eval_stmt_value at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-R17H3W25T9.0/build/default-honeycrisp-R17H3W25T9-0/julialang/julia-release-1-dot-11/src/interpreter.c:174
+eval_body at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-R17H3W25T9.0/build/default-honeycrisp-R17H3W25T9-0/julialang/julia-release-1-dot-11/src/interpreter.c:663
+jl_interpret_toplevel_thunk at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-R17H3W25T9.0/build/default-honeycrisp-R17H3W25T9-0/julialang/julia-release-1-dot-11/src/interpreter.c:821
+jl_toplevel_eval_flex at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-R17H3W25T9.0/build/default-honeycrisp-R17H3W25T9-0/julialang/julia-release-1-dot-11/src/toplevel.c:943
+jl_toplevel_eval_flex at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-R17H3W25T9.0/build/default-honeycrisp-R17H3W25T9-0/julialang/julia-release-1-dot-11/src/toplevel.c:886
+ijl_toplevel_eval at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-R17H3W25T9.0/build/default-honeycrisp-R17H3W25T9-0/julialang/julia-release-1-dot-11/src/toplevel.c:952 [inlined]
+ijl_toplevel_eval_in at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-R17H3W25T9.0/build/default-honeycrisp-R17H3W25T9-0/julialang/julia-release-1-dot-11/src/toplevel.c:994
+eval at ./boot.jl:430 [inlined]
+include_string at ./loading.jl:2643
+_include at ./loading.jl:2703
+include at ./Base.jl:557
+jfptr_include_46929.1 at /Users/sato/.julia/juliaup/julia-1.11.1+0.aarch64.apple.darwin14/lib/julia/sys.dylib (unknown line)
+exec_options at ./client.jl:323
+_start at ./client.jl:531
+jfptr__start_72559.1 at /Users/sato/.julia/juliaup/julia-1.11.1+0.aarch64.apple.darwin14/lib/julia/sys.dylib (unknown line)
+jl_apply at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-R17H3W25T9.0/build/default-honeycrisp-R17H3W25T9-0/julialang/julia-release-1-dot-11/src/./julia.h:2157 [inlined]
+true_main at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-R17H3W25T9.0/build/default-honeycrisp-R17H3W25T9-0/julialang/julia-release-1-dot-11/src/jlapi.c:900
+jl_repl_entrypoint at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-R17H3W25T9.0/build/default-honeycrisp-R17H3W25T9-0/julialang/julia-release-1-dot-11/src/jlapi.c:1059
+unknown function (ip: 0x0)
+Allocations: 360898311 (Pool: 360793735; Big: 104576); GC: 1277

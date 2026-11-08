@@ -1,0 +1,41 @@
+{
+  "upstream_repository": "https://github.com/sk888ks/TQPDE_open",
+  "upstream_commit": "9cd88464c5c50dda783150661813609092d7f2b6",
+  "upstream_julia_core_modified": false,
+  "core_sha256": "4b643396638cd85cbddef616d8fdfc6b663ed2bbea39e3eee4e2ffa4381423a8",
+  "software": {
+    "numpy": "2.4.6",
+    "scipy": "1.18.0",
+    "qiskit": "2.4.1",
+    "qiskit-nature": "0.7.2",
+    "pyscf": "2.13.1"
+  },
+  "julia_version": "1.11.1",
+  "ITensors": "0.6.16",
+  "PyCall": "1.96.4",
+  "Infiltrator": "1.7.0",
+  "python_compatibility_packages": {
+    "deap": "1.4.3",
+    "qiskit-algorithms": "0.4.0"
+  },
+  "dmrg_sweeps": 200,
+  "preparation_optimization_sweeps": 1000,
+  "evolution_optimization_sweeps": 1000,
+  "depth_preparation": 8,
+  "depth_evolution": 8,
+  "dt": 0.1,
+  "reference_trotter_slices": 100,
+  "all_paper_h4_exact_gaps_match_printed_precision": true,
+  "hardware_executed": false,
+  "fire_opal_executed": false,
+  "colab_tested": false,
+  "existing_materials_unchanged": true,
+  "notebook_execution": {
+    "local_offline_execution": true,
+    "method": "sequential Python exec with figure capture",
+    "code_cells": 9,
+    "figures": 6,
+    "colab_tested": false,
+    "ibm_executed": false
+  }
+}
