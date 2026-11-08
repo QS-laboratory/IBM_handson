@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Asia/Tokyo",
+  "validated_commit": "1203538505603edeb66b2dc9a99fe3681f0a3701",
+  "method": "Actual Google Colab browser UI; each notebook opened from the validated GitHub commit and executed on a newly allocated CPU runtime. Test runtimes disconnected and deleted after verification.",
+  "initial_setup": "Enabled the supplied first-cell pip installation command; remaining cells executed in order with default settings. No Drive mount, IBM API key or repository checkout required.",
+  "pip_command": "%pip -q install \"numpy>=1.26,<3\" \"scipy>=1.12,<2\" \"matplotlib>=3.8,<4\" \"qiskit==2.4.1\" \"pylatexenc>=2.10,<3\"",
+  "observed_environment_in_exercise_01": {
+    "python": "3.13.18",
+    "numpy": "2.4.6",
+    "matplotlib": "3.10.0",
+    "qiskit": "2.4.1"
+  },
+  "results": [
+    {
+      "notebook": "01_matrix_phase_estimation.ipynb",
+      "status": "passed_colab_new_runtime",
+      "executed_code_cells": 12
+    },
+    {
+      "notebook": "02_h2_one_qubit.ipynb",
+      "status": "passed_colab_new_runtime",
+      "executed_code_cells": 13
+    },
+    {
+      "notebook": "03_h2_jw_bpde.ipynb",
+      "status": "passed_colab_new_runtime",
+      "executed_code_cells": 13
+    },
+    {
+      "notebook": "04_h4_circuit_assessment.ipynb",
+      "status": "passed_colab_new_runtime",
+      "executed_code_cells": 13
+    },
+    {
+      "notebook": "05_h4_iterative_bayes.ipynb",
+      "status": "passed_colab_new_runtime",
+      "executed_code_cells": 14
+    }
+  ],
+  "ibm_jobs_submitted": false,
+  "limitations": [
+    "Default simulation settings tested; IBM hardware execution not tested.",
+    "Additional edits from other active chats after the validated commit are not covered.",
+    "The first installation cell must be enabled before running all cells."
+  ]
+}
