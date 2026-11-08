@@ -15,3 +15,11 @@ hands_on/output/
 /tmp/
 /output/
 /advanced_kanno_h4/output/
+
+# Archived local execution artifacts
+/archive/**/output/
+/archive/**/outputs/
+
+# Only the explicit regeneration inputs in SOURCE_FILES.json are published.
+# Those files are tracked; remaining local self-study research stays private.
+/hands_on/self_study/

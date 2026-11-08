@@ -1,0 +1,58 @@
+{
+  "R_angstrom": 2.0,
+  "M": 32,
+  "dt": 0.1,
+  "reference_cutoff": 1e-18,
+  "reference_sha256": "4008bee6b41dd48d0f4bf9af969cb6658eaf3f63bde7d8efd08574eca40bb95f",
+  "reference_path": "/Users/sato/project/FTQC_HandsOn/hands_on/self_study/h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_2p00000000/reference/boys_ordered_c18_reference_adjoint.npy",
+  "mode_order": "interleaved alpha/beta; blocked_blocks.qpy includes exact FSWAP conversion",
+  "initial_maxiter": 1500,
+  "refinement_cap": 10000,
+  "actual_refinement_iterations": 10000,
+  "full_convergence_claimed": false,
+  "reused_existing": {
+    "path": "/Users/sato/project/FTQC_HandsOn/hands_on/self_study/h4_mpo_orbital_study/corrected_mpo/budget10000_total_refinement/boys_ordered/M32/results.json",
+    "sha256": "becff9b17650e3605cef23a01389e77b5e0214ca288016142785c411ae4b5882",
+    "gates_path": "/Users/sato/project/FTQC_HandsOn/hands_on/self_study/h4_mpo_orbital_study/corrected_mpo/continuation_M32/results/boys_ordered/stage1_iter5000_gates.npy",
+    "no_fit_rerun": true
+  },
+  "runs": [],
+  "two_qubit_blocks": 112,
+  "CX_evolution_only": 336,
+  "depth_before": 32,
+  "depth_after": 736,
+  "gate_counts_after": {
+    "rz": 2577,
+    "sx": 1792,
+    "cx": 336
+  },
+  "basic_operator_error": 8.398259490405766e-13,
+  "mpo_error": 4.4510303081657684e-05,
+  "vs_exact": 4.4507373016762456e-05,
+  "S0_overlap": [
+    0.9540157723684111,
+    0.29975640490020306
+  ],
+  "T_overlap": [
+    0.9544908297934613,
+    0.29824025783400776
+  ],
+  "B_coefficient": [
+    0.9999987345779492,
+    -0.0015888297267573903
+  ],
+  "apparent_Ha": {
+    "BPE": -3.0443730781172933,
+    "BPDE B": 0.01588830400360446,
+    "BPDE C": 0.015888303952504026
+  },
+  "bias_Ha": {
+    "BPE": -4.178195895088166e-05,
+    "BPDE B": -1.6739390514119296e-05,
+    "BPDE C": -1.673944161455221e-05
+  },
+  "S0_output_norm_squared": 1.0000000000000095,
+  "T_output_norm_squared": 1.0000000000000082,
+  "BPE_total_energy_Ha": -1.8978224544572933,
+  "BPE_total_error_vs_FCI_Ha": -4.180846742096733e-05
+}

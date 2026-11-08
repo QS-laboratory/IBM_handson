@@ -1,0 +1,58 @@
+{
+  "R_angstrom": 2.0,
+  "M": 8,
+  "dt": 0.1,
+  "reference_cutoff": 1e-18,
+  "reference_sha256": "4008bee6b41dd48d0f4bf9af969cb6658eaf3f63bde7d8efd08574eca40bb95f",
+  "reference_path": "/Users/sato/project/FTQC_HandsOn/hands_on/self_study/h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_2p00000000/reference/boys_ordered_c18_reference_adjoint.npy",
+  "mode_order": "interleaved alpha/beta; blocked_blocks.qpy includes exact FSWAP conversion",
+  "initial_maxiter": 1500,
+  "refinement_cap": 10000,
+  "actual_refinement_iterations": 1425,
+  "full_convergence_claimed": false,
+  "reused_existing": {
+    "path": "/Users/sato/project/FTQC_HandsOn/hands_on/self_study/h4_mpo_orbital_study/corrected_mpo/budget10000_total_refinement/boys_ordered/M8/results.json",
+    "sha256": "30c9900963002fb6d3f55b766a96240c3cd193018358e73da06272c478b45ddf",
+    "gates_path": "/Users/sato/project/FTQC_HandsOn/hands_on/self_study/h4_mpo_orbital_study/corrected_mpo/budget10000_total_refinement/boys_ordered/M8/iter1_gates.npy",
+    "no_fit_rerun": true
+  },
+  "runs": [],
+  "two_qubit_blocks": 28,
+  "CX_evolution_only": 84,
+  "depth_before": 8,
+  "depth_after": 184,
+  "gate_counts_after": {
+    "rz": 636,
+    "sx": 436,
+    "cx": 84
+  },
+  "basic_operator_error": 1.0725351498587297e-13,
+  "mpo_error": 0.012277229834298497,
+  "vs_exact": 0.01227722861623843,
+  "S0_overlap": [
+    0.9533729106022483,
+    0.30172837805044583
+  ],
+  "T_overlap": [
+    0.9527273181742186,
+    0.3038092768856364
+  ],
+  "B_coefficient": [
+    0.9999849639901199,
+    0.002178087133371809
+  ],
+  "apparent_Ha": {
+    "BPE": -3.065113462858112,
+    "BPDE B": -0.02178116439130398,
+    "BPDE C": -0.021787230459500585
+  },
+  "bias_Ha": {
+    "BPE": -0.020782166699769622,
+    "BPDE B": -0.03768620778542256,
+    "BPDE C": -0.03769227385361916
+  },
+  "S0_output_norm_squared": 1.0000000000000013,
+  "T_output_norm_squared": 1.0000000000000016,
+  "BPE_total_energy_Ha": -1.918562839198112,
+  "BPE_total_error_vs_FCI_Ha": -0.020782193208239708
+}

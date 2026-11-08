@@ -1,0 +1,234 @@
+{
+  "settings": {
+    "R_angstrom": 2.0,
+    "orbitals": "Boys+ordering",
+    "chi": 6,
+    "prep_M": 6,
+    "evolution_M": 16,
+    "L": 1,
+    "dt": 0.1,
+    "branches": "both S0 and T use independent chi6/M6 approximations",
+    "coherent_preparation": "same-input, same-topology paired-block factorization: G0 + ctrl(GT G0^dagger)",
+    "inverse": "inverse of the actual coherent preparation",
+    "readout": "C only: unconditioned all-nine-qubits-zero probability",
+    "beta": "trial gap * dt",
+    "shots": false,
+    "hardware_noise": false,
+    "basis": [
+      "rz",
+      "sx",
+      "x",
+      "cx"
+    ],
+    "optimization_level": 1,
+    "transpiler_seed": 7,
+    "hardware_routing": false,
+    "resources_note": "one concrete coherent implementation, including both preparations, inverse, phase gate, and signed mode conversion; not a minimum-cost claim",
+    "evolution_note": "same adopted 10000-refinement-cap M16 circuit; no evolution refit"
+  },
+  "exact": {
+    "S0": -3.0443312696498723,
+    "T": -3.028426311733687,
+    "gap": 0.015904957916185403
+  },
+  "fidelities": {
+    "S0_MPS": 0.9999999999999996,
+    "S0": 0.9385998057176962,
+    "T_MPS": 1.0,
+    "T": 0.9995639803397377,
+    "T_overlap_with_S0": 5.8339920969810796e-08,
+    "branch_state_overlap_squared": 6.090321654845643e-07
+  },
+  "fringe": {
+    "apparent_gap": 0.009228876538812986,
+    "peak_error": -0.006676081377372417,
+    "Pmax": 0.9999733219281953,
+    "ground_survival": 0.9999492615483149,
+    "triplet_survival": 0.9999973825975378,
+    "ag": [
+      0.954174673275342,
+      0.29916542986817385
+    ],
+    "at": [
+      0.954473328437675,
+      0.29829188372908166
+    ]
+  },
+  "resources": {
+    "S0_alone": {
+      "qubits": 8,
+      "cx": 60,
+      "depth": 60,
+      "cx_depth": 18,
+      "counts": {
+        "rz": 138,
+        "sx": 88,
+        "cx": 60,
+        "x": 7
+      }
+    },
+    "T_alone": {
+      "qubits": 8,
+      "cx": 60,
+      "depth": 62,
+      "cx_depth": 18,
+      "counts": {
+        "rz": 135,
+        "sx": 92,
+        "cx": 60,
+        "x": 10
+      }
+    },
+    "coherent_A": {
+      "qubits": 9,
+      "cx": 258,
+      "depth": 378,
+      "cx_depth": 99,
+      "counts": {
+        "rz": 880,
+        "sx": 523,
+        "cx": 258,
+        "x": 36
+      }
+    },
+    "coherent_A_inverse": {
+      "qubits": 9,
+      "cx": 258,
+      "depth": 375,
+      "cx_depth": 99,
+      "counts": {
+        "rz": 879,
+        "sx": 521,
+        "cx": 258,
+        "x": 43
+      }
+    },
+    "evolution_only": {
+      "qubits": 8,
+      "cx": 168,
+      "depth": 368,
+      "cx_depth": 48,
+      "counts": {
+        "rz": 1288,
+        "sx": 896,
+        "cx": 168
+      }
+    },
+    "evolution_with_mode_conversion": {
+      "qubits": 8,
+      "cx": 216,
+      "depth": 353,
+      "cx_depth": 72,
+      "counts": {
+        "rz": 1024,
+        "sx": 712,
+        "cx": 216
+      }
+    },
+    "full_BPDE_C": {
+      "qubits": 9,
+      "cx": 732,
+      "depth": 1077,
+      "cx_depth": 262,
+      "counts": {
+        "rz": 2769,
+        "sx": 1750,
+        "cx": 732,
+        "x": 76
+      }
+    },
+    "full_BPDE_C_including_measurement": {
+      "qubits": 9,
+      "cx": 732,
+      "depth": 1078,
+      "cx_depth": 262,
+      "counts": {
+        "rz": 2769,
+        "sx": 1750,
+        "cx": 732,
+        "x": 76,
+        "measure": 9,
+        "barrier": 1
+      }
+    }
+  },
+  "validations": {
+    "pair_operator_error": 2.5019846393292684e-14,
+    "A_decomposition_error": 8.074178524095104e-14,
+    "A_inverse_error": 1.0858767276554601e-13,
+    "full_circuit_probability_checks": [
+      {
+        "trial_minus_exact": -0.05,
+        "error": 1.2656542480726785e-14,
+        "resources": {
+          "qubits": 9,
+          "cx": 732,
+          "depth": 1077,
+          "cx_depth": 262,
+          "counts": {
+            "rz": 2769,
+            "sx": 1750,
+            "cx": 732,
+            "x": 76
+          }
+        }
+      },
+      {
+        "trial_minus_exact": -0.006676081377372417,
+        "error": 1.6209256159527285e-14,
+        "resources": {
+          "qubits": 9,
+          "cx": 732,
+          "depth": 1077,
+          "cx_depth": 262,
+          "counts": {
+            "rz": 2769,
+            "sx": 1750,
+            "cx": 732,
+            "x": 76
+          }
+        }
+      },
+      {
+        "trial_minus_exact": 0.0,
+        "error": 1.4432899320127035e-14,
+        "resources": {
+          "qubits": 9,
+          "cx": 732,
+          "depth": 1077,
+          "cx_depth": 262,
+          "counts": {
+            "rz": 2769,
+            "sx": 1750,
+            "cx": 732,
+            "x": 76
+          }
+        }
+      },
+      {
+        "trial_minus_exact": 0.05,
+        "error": 1.6653345369377348e-14,
+        "resources": {
+          "qubits": 9,
+          "cx": 732,
+          "depth": 1077,
+          "cx_depth": 262,
+          "counts": {
+            "rz": 2769,
+            "sx": 1750,
+            "cx": 732,
+            "x": 76
+          }
+        }
+      }
+    ]
+  },
+  "provenance": {
+    "/Users/sato/project/FTQC_HandsOn/hands_on/self_study/h4_mps_preparation_study/results/pec_20/R_2p00000000/model.npz": "31ac805e0a4b74fa6ecb189e2371f927f321ed329c4f74ba827f3209cbfe52a0",
+    "/Users/sato/project/FTQC_HandsOn/hands_on/self_study/h4_mps_preparation_study/results/pec_20/R_2p00000000/M6_state.npz": "cc09cab947dd866976b37b8b7dd9fbabec2f895a19809cedabd62491d8043855",
+    "/Users/sato/project/FTQC_HandsOn/hands_on/self_study/h4_mps_preparation_study/results/pec_20/R_2p00000000/M6_basic.qpy": "9813bdca7341af0b0dc216df0b449dcbc3248f8dceeac1ff05cdbc305cf0acca",
+    "/Users/sato/project/FTQC_HandsOn/hands_on/self_study/h4_mps_preparation_study/results/both_states_M6_evolution_M16_L1/T_M6_basic.qpy": "309d9ad0d20f536281a85026b8677c81f12aa4e62f501a98bd912224ac5adc31",
+    "/Users/sato/project/FTQC_HandsOn/hands_on/self_study/h4_mps_preparation_study/results/both_states_M6_evolution_M16_L1/T_M6_gates.npy": "b259cf9c28b9ee28a8e02a551e346b195d0111f1d9a53aaf6f52ec5c6d91ec97",
+    "/Users/sato/project/FTQC_HandsOn/hands_on/self_study/h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_2p00000000/M16/basic.qpy": "f0ad06c8fcf0d58fcf87c65c7f110a0c9794e53ffb67f2785822a4d09332d7ab"
+  }
+}
