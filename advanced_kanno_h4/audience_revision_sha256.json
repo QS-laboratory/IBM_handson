@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-08",
+  "reason": "User-requested separation of participant explanations and instructor guidance. Executable participant cells retained; original snapshot unchanged.",
+  "previous_repository_commit": "5d247e8",
+  "sha256": {
+    "hands_on/03_mps_mpo_advanced.ipynb": "e1455cb4a2de806761f4d44cb1814aaa2c5d13dd5f8d54425d0fc12b892a333a",
+    "hands_on/02_inference.ipynb": "09b4c9ce364e0d531598dcc23cf5408cb98d4f7cc1fe6d683ce8e79f9c2e7360",
+    "hands_on/README.md": "a06d495484417191be0de5f03ea9b39546759a5f3ee0828fba7aee2575856156",
+    "hands_on/01_circuits_and_ibm.ipynb": "b8e44baef43e3454140077207583bab029618b55e31c19a8e6b46b4ff96bd974",
+    "hands_on/INSTRUCTOR.md": "34314038150fff8a089a2aed4bb3ec52a7b664479b65e0d91714fcc95a8761d1",
+    "hands_on/00_preparation.ipynb": "8520feda83bb577a62ee8e4cc41d1850b84c5dbf0a7a4e07672afec7cd53395d",
+    "hands_on/tools/build_notebooks.py": "3d7c5e1361371f0aa013dcf329e2cbd941f5be4d081fbe591dfa7e6e729125ac",
+    "hands_on/overview/00_overview.ipynb": "7235b1fd932410dea400f0979096d7f1661aa8c5a97d123bdbef44cb4bec3ce2"
+  }
+}

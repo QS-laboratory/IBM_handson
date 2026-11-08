@@ -39,7 +39,8 @@ Pauli項数・交換積分コスト・MPSの重なり・回路近似誤差を別
 
 NotebookをColabまたはJupyterで開き、上から実行してください。保存済みの数値と図も読めます。
 重いJulia最適化は最初から再実行せず、配布されたNumPyゲート・最適化履歴・推定履歴を読み込みます。
-`REGENERATE_...`の3フラグは初期状態でFalseです。APIキーも不要で、QPU時間は使いません。
+受講者版には再生成セルを含めません。APIキーも不要で、QPU時間は使いません。
+進行・解説は [講師用ガイド](instructor/GUIDE.md)、再生成は [講師用ノート](instructor/H4_regeneration.ipynb) に分離しています。
 
 本編の追加30〜60分程度の読み解き、または別日の上級演習を想定しています。再生成の時間は含みません。
 
@@ -84,8 +85,9 @@ python -m pytest tests -q
 python tools/check_preservation.py
 ```
 
-`tools/check_preservation.py`は元の教材本体78ファイルとJuliaコアの一致を確認します。
-保存時の80ファイルのハッシュは保持していますが、公開時に更新するルートの`README.md`と`.gitignore`は一致確認の対象外です。
+`tools/check_preservation.py`は教材本体78ファイルとJuliaコアを確認します。
+保存時の80ファイルのハッシュを保持し、今回の対象読者の分離で変更した文書・生成スクリプトは`audience_revision_sha256.json`の改訂ハッシュで照合します。
+数値計算のソース・分子データ・第一版は元のハッシュで照合します。公開用のルート`README.md`と`.gitignore`は対象外です。
 単独配布のため元教材を置かない場合は、元教材の照合部分だけ実行できません。これは生成した計算の検証とは別の確認です。
 `tools/build_notebook.py`は本文を再生成して出力を消すので、修正後は`run_notebook.py`で保存済み出力を更新してください。
 

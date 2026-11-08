@@ -9,6 +9,8 @@
 
 ## 教材を開く
 
+以下は受講者版です。進行・問いの回答例・実機運用の判断は [講師用ガイド](hands_on/INSTRUCTOR.md) と [ノートブック別解説](hands_on/instructor/NOTEBOOK_GUIDE.md) に分けています。
+
 以下のボタンからGoogle Colabで開きます。非公開リポジトリの場合は、ColabでGitHubへのアクセス認証が必要です。
 各ノートで「ファイル → ドライブにコピーを保存」し、標準CPUランタイムで実行してください。
 

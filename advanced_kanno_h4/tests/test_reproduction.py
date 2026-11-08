@@ -28,6 +28,8 @@ def test_orbital_invariance_and_table_s1(geometry):
 def test_upstream_code_and_existing_materials_unchanged():
     assert (ROOT/'runtime/Gate_generation_from_MPS_MPO.jl').read_bytes()==(ROOT/'upstream/src/Gate_generation_from_MPS_MPO.jl').read_bytes()
     old=json.loads((ROOT/'existing_materials_sha256.json').read_text())
+    revision=ROOT/'audience_revision_sha256.json'
+    if revision.exists():old.update(json.loads(revision.read_text())['sha256'])
     for name,digest in old.items():
         if name in {'README.md','.gitignore'}:continue  # Repository publication metadata.
         assert hashlib.sha256((ROOT.parent/name).read_bytes()).hexdigest()==digest

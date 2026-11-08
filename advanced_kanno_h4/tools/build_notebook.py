@@ -221,6 +221,26 @@ md('''### 推定の偏りを調べる
 - 深さを増やす、最適化を増やす、時間を短くする、ショットを増やす、それぞれ何の誤差に効くか。
 
 特定の表現で必ず改善するとは仮定しません。Boys局在化や局所最適化には初期値依存があり、正方形のような高対称構造では特に注意します。''')
+md('''## 出典・再現範囲
+
+- Kanno et al., PNAS 122, e2425026122 (2025)： https://doi.org/10.1073/pnas.2425026122
+- 補足資料S1（推定）、S2（圧縮）、S7/Fig. S6/Table S1（H₄）。
+- 著者コード： https://github.com/sk888ks/TQPDE_open 、固定コミット `9cd88464c5c50dda783150661813609092d7f2b6`。
+- 出所・版・設定変更の詳細：このフォルダの `UPSTREAM.md`。
+
+著者のJuliaコアは未変更ですが、実行環境はJulia 1.11.1 / Python 3.12.7 / Qiskit 2.4.1です。
+ITensors 0.6.16、PyCall 1.96.4、Infiltrator 1.7.0は著者と同じ版を固定しています。
+同じアルゴリズムをH₄で実行する演習であり、未公開の乱数列・元XYZ・ハードウェア条件・表S1の推定値まで完全同一という主張ではありません。
+
+''')
+notebook=nb.v4.new_notebook(cells=cells,metadata={'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'language_info':{'name':'python','version':'3.12'},'audience':'participant','reproduction':{'upstream_commit':'9cd88464c5c50dda783150661813609092d7f2b6','author_julia_core_modified':False,'hardware_executed':False}})
+nb.write(notebook,ROOT/'H4_author_method.ipynb')
+print('Created independent H4 notebook')
+
+# Instructor-only regeneration is emitted separately from participant material.
+participant_cells = cells
+cells = [nb.v4.new_markdown_cell('# 講師用：H₄の計算結果を再生成する\n受講者版では保存済み結果を使います。このノートは講師が専用環境で使用します。'), participant_cells[1]]
+code('GEOMETRY = 0\nNAMES = ["canonical", "boys", "boys_ordered"]')
 md('''## 5. 自分で再生成する（講師・上級者向け）
 
 重い最適化は通常の本編時間に含めません。Colabでは配布結果の比較を標準とします。
@@ -243,18 +263,11 @@ if REGENERATE_QPDE:
         result=run_qpde(name,GEOMETRY,exact_probabilities=False)
         print(name,result["status"])
 print("Regeneration flags:",REGENERATE_HAMILTONIANS,REGENERATE_TENSORS,REGENERATE_QPDE)''')
-md('''## 出典・再現範囲
 
-- Kanno et al., PNAS 122, e2425026122 (2025)： https://doi.org/10.1073/pnas.2425026122
-- 補足資料S1（推定）、S2（圧縮）、S7/Fig. S6/Table S1（H₄）。
-- 著者コード： https://github.com/sk888ks/TQPDE_open 、固定コミット `9cd88464c5c50dda783150661813609092d7f2b6`。
-- 出所・版・設定変更の詳細：このフォルダの `UPSTREAM.md`。
-
-著者のJuliaコアは未変更ですが、実行環境はJulia 1.11.1 / Python 3.12.7 / Qiskit 2.4.1です。
-ITensors 0.6.16、PyCall 1.96.4、Infiltrator 1.7.0は著者と同じ版を固定しています。
-同じアルゴリズムをH₄で実行する演習であり、未公開の乱数列・元XYZ・ハードウェア条件・表S1の推定値まで完全同一という主張ではありません。
-
-既存の本編・第一版は変更せず、`tools/check_preservation.py`でハッシュを照合しています。''')
-notebook=nb.v4.new_notebook(cells=cells,metadata={'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'language_info':{'name':'python','version':'3.12'},'reproduction':{'upstream_commit':'9cd88464c5c50dda783150661813609092d7f2b6','author_julia_core_modified':False,'hardware_executed':False}})
-nb.write(notebook,ROOT/'H4_author_method.ipynb')
-print('Created independent H4 notebook')
+for cell in cells:
+    if cell.cell_type == 'code':
+        cell.execution_count = None
+        cell.outputs = []
+teacher = nb.v4.new_notebook(cells=cells, metadata={'audience':'instructor','kernelspec':notebook.metadata.kernelspec})
+(ROOT/'instructor').mkdir(exist_ok=True)
+nb.write(teacher, ROOT/'instructor/H4_regeneration.ipynb')
