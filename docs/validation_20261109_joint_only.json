@@ -1,0 +1,164 @@
+{
+  "notebook": "09_h4_joint_preparation_demo.ipynb",
+  "status": "passed",
+  "code_cells": 13,
+  "images": 3,
+  "stderr": [],
+  "elapsed_seconds": 23.44,
+  "qpu_used": false,
+  "colab_tested": false,
+  "method": "Fresh Python/IPython process, temporary cwd; no Jupyter kernel/UI test",
+  "validation_date": "2026-11-09",
+  "tests": {
+    "passed": 16,
+    "new_joint_only_tests_passed": 8,
+    "targets": [
+      "hands_on/exercises/tests/test_h4_joint_preparation_demo.py",
+      "hands_on/exercises/tests/test_h4_download.py",
+      "hands_on/exercises/tests/test_current_materials.py::test_complete_nine_notebook_collection_and_navigation"
+    ],
+    "real_measurements_mocked": true
+  },
+  "joint_fidelity": 0.9976757425611849,
+  "fake_signal": {
+    "beta": [
+      -3.141592653589793,
+      -2.6179938779914944,
+      -2.0943951023931957,
+      -1.5707963267948966,
+      -1.0471975511965979,
+      -0.5235987755982991,
+      0.0,
+      0.5235987755982987,
+      1.0471975511965974,
+      1.5707963267948966,
+      2.094395102393195,
+      2.617993877991494
+    ],
+    "counts_all_zero": [
+      2,
+      6,
+      9,
+      18,
+      15,
+      21,
+      18,
+      21,
+      16,
+      6,
+      9,
+      7
+    ],
+    "actual_shots": [
+      1024,
+      1024,
+      1024,
+      1024,
+      1024,
+      1024,
+      1024,
+      1024,
+      1024,
+      1024,
+      1024,
+      1024
+    ],
+    "observed": [
+      0.001953125,
+      0.005859375,
+      0.0087890625,
+      0.017578125,
+      0.0146484375,
+      0.0205078125,
+      0.017578125,
+      0.0205078125,
+      0.015625,
+      0.005859375,
+      0.0087890625,
+      0.0068359375
+    ],
+    "lower_95": [
+      0.0005357808273540998,
+      0.002688088875029842,
+      0.004630758161902825,
+      0.011147506606701729,
+      0.008896970926209183,
+      0.013451953263233687,
+      0.011147506606701729,
+      0.013451953263233687,
+      0.00964032654076094,
+      0.002688088875029842,
+      0.004630758161902825,
+      0.003315209271509724
+    ],
+    "upper_95": [
+      0.007093273978132259,
+      0.01272426746139388,
+      0.01661907432272392,
+      0.027614754322534085,
+      0.02402781385482361,
+      0.031147783814205146,
+      0.027614754322534085,
+      0.031147783814205146,
+      0.025230283623006194,
+      0.01272426746139388,
+      0.01661907432272392,
+      0.01404297244764834
+    ],
+    "coefficients": [
+      0.012044270833333336,
+      0.007749794386352324,
+      -0.0017307901361027951
+    ],
+    "amplitude": 0.007940714547568672,
+    "constant_probability": 0.012044270833333334,
+    "statistic": 0.38740959759955246,
+    "p_value": 0.0002,
+    "monte_carlo_samples": 4999
+  },
+  "fake_resources": {
+    "depth": 665,
+    "two_qubit_gates": 408,
+    "operations": {
+      "rz": 1881,
+      "sx": 1272,
+      "ecr": 408,
+      "x": 54,
+      "measure": 9,
+      "barrier": 1
+    },
+    "initial_layout": [
+      60,
+      61,
+      62,
+      72,
+      81,
+      80,
+      79,
+      78,
+      53
+    ],
+    "final_layout": [
+      60,
+      61,
+      62,
+      72,
+      81,
+      80,
+      79,
+      78,
+      53
+    ]
+  },
+  "changes_from_06": [
+    "Joint preparation and matched inverse",
+    "L=1 and full-period 12-point scan",
+    "Exact joint-state noiseless probabilities and signal diagnosis for device counts"
+  ],
+  "unchanged_recipe": [
+    "M16 evolution",
+    "Optimization level 1",
+    "Fake gate/readout noise",
+    "No calibrated layout search, DD, twirling, or extra idle noise"
+  ]
+}

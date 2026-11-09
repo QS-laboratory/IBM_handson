@@ -12,11 +12,11 @@ def load(number):
     return nbformat.read(paths[0],4)
 
 
-def test_complete_six_notebook_collection_and_navigation():
-    assert len(list(ROOT.glob('0[1-6]_*.ipynb')))==6
+def test_complete_nine_notebook_collection_and_navigation():
+    assert len(list(ROOT.glob('0[1-9]_*.ipynb')))==9
     assert not list(ROOT.glob('tmp_0*.ipynb'))
     readme=(ROOT/'README.md').read_text()
-    for number in range(1,7):
+    for number in range(1,10):
         book=load(number);nbformat.validate(book)
         path=next(ROOT.glob(f'{number:02d}_*.ipynb'))
         assert path.name in readme

@@ -1,0 +1,149 @@
+{
+  "notebook": "08_h4_joint_compression_suppression.ipynb",
+  "status": "passed",
+  "code_cells": 13,
+  "images": 3,
+  "stderr": [],
+  "elapsed_seconds": 220.56,
+  "qpu_used": false,
+  "colab_tested": false,
+  "method": "Fresh Python/IPython process, temporary cwd; no Jupyter kernel/UI test",
+  "validation_date": "2026-11-09",
+  "tests": {
+    "passed": 20,
+    "new_joint_hardware_tests_passed": 12,
+    "targets": [
+      "hands_on/exercises/tests/test_h4_joint_hardware.py",
+      "hands_on/exercises/tests/test_h4_download.py",
+      "hands_on/exercises/tests/test_current_materials.py::test_complete_eight_notebook_collection_and_navigation"
+    ],
+    "real_jobs_mocked": true
+  },
+  "joint_fidelity": 0.9976757425611849,
+  "fake_resource_reports": [
+    {
+      "arm": "paired",
+      "depth": 2613,
+      "two_qubit_gates": 1260,
+      "x_gates": 178,
+      "delay_instructions": 19,
+      "active_physical_qubits": [
+        109,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121
+      ],
+      "initial_layout": [
+        120,
+        119,
+        118,
+        117,
+        116,
+        115,
+        114,
+        109,
+        121
+      ],
+      "calibration_cost": 11.130837275506542,
+      "missing_calibration_entries": 0,
+      "ideal_probability_max_error": 1.3455903058456897e-13
+    },
+    {
+      "arm": "joint",
+      "depth": 638,
+      "two_qubit_gates": 406,
+      "x_gates": 30,
+      "delay_instructions": 10,
+      "active_physical_qubits": [
+        109,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121
+      ],
+      "initial_layout": [
+        120,
+        119,
+        118,
+        117,
+        116,
+        115,
+        114,
+        109,
+        121
+      ],
+      "calibration_cost": 3.9650672696335,
+      "missing_calibration_entries": 0,
+      "ideal_probability_max_error": 4.080846771614688e-12
+    },
+    {
+      "arm": "suppressed",
+      "depth": 781,
+      "two_qubit_gates": 369,
+      "x_gates": 782,
+      "delay_instructions": 39,
+      "active_physical_qubits": [
+        54,
+        62,
+        63,
+        64,
+        72,
+        78,
+        79,
+        80,
+        81
+      ],
+      "initial_layout": [
+        79,
+        80,
+        81,
+        72,
+        62,
+        63,
+        64,
+        54,
+        78
+      ],
+      "calibration_cost": 3.2227679250872088,
+      "missing_calibration_entries": 0,
+      "ideal_probability_max_error": 3.4205960286470827e-10
+    }
+  ],
+  "fake_phase_tests": [
+    {
+      "arm": "paired",
+      "counts_all_zero": 26,
+      "actual_shots": 12288,
+      "amplitude": 0.001257918504707187,
+      "p_adjusted": 0.3036
+    },
+    {
+      "arm": "joint",
+      "counts_all_zero": 100,
+      "actual_shots": 12288,
+      "amplitude": 0.0055278452522357574,
+      "p_adjusted": 0.0006000000000000001
+    },
+    {
+      "arm": "suppressed",
+      "counts_all_zero": 176,
+      "actual_shots": 12288,
+      "amplitude": 0.01069587193559018,
+      "p_adjusted": 0.0006000000000000001
+    }
+  ],
+  "limitations": [
+    "Historical 127-qubit FakeKawasaki snapshot; not current CZ device calibration.",
+    "Portable Qiskit suppression; no FireOpal pulse optimization or readout mitigation.",
+    "Actual real-device execution and Colab UI are untested."
+  ]
+}

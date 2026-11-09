@@ -1,6 +1,6 @@
-# 演習01〜06
+# 演習01〜09
 
-行列 → H₂の1 qubit模型 → H₂の4 qubit JW表現 → H₄のPEC → Gaussian更新 → 実機デモの順に進みます。
+行列 → H₂の1 qubit模型 → H₂の4 qubit JW表現 → H₄のPEC → Gaussian更新 → 実機デモ → 回路長の実機比較の順に進みます。
 各冊は独立したNotebookです。前の冊の変数・出力ファイルは必要ありません。
 
 | 順番 | 教材 | 内容 | Google Colab |
@@ -11,6 +11,9 @@
 | 04 | [H₄のポテンシャル曲線](04_h4_circuit_assessment.ipynb) | 保存回路の表、期待値のPEC、Lを増やす位相実験 | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/04_h4_circuit_assessment.ipynb) |
 | 05 | [H₄のGaussian更新](05_h4_iterative_bayes.ipynb) | シミュレーションで測定・フィット・事後更新を反復 | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/05_h4_iterative_bayes.ipynb) |
 | 06 | [H₄の実機デモ](06_h4_hardware_demo.ipynb) | 同じ9点で理想確率・有限shots・IBM実機を比較 | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/06_h4_hardware_demo.ipynb) |
+| 07 | [H₄の実機信号と回路長](07_h4_hardware_depth_scan.ipynb) | L=1・2・4の位相走査で信号の減衰を調べる | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/07_h4_hardware_depth_scan.ipynb) |
+| 08 | [H₄のjoint-state圧縮と誤り抑制](08_h4_joint_compression_suppression.ipynb) | joint準備・較正配置・twirling・DDをfakeと実機で比較 | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/08_h4_joint_compression_suppression.ipynb) |
+| 09 | [H₄のjoint準備だけの実機デモ](09_h4_joint_preparation_demo.ipynb) | 06をjoint準備・L=1・位相一周期へ最小変更 | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/09_h4_joint_preparation_demo.ipynb) |
 
 ## 実行方法
 
@@ -24,7 +27,8 @@ python -m pip install -r hands_on/exercises/requirements.txt
 jupyter lab hands_on/exercises
 ```
 
-本編にPySCF・Julia・Aerは不要です。06の実機利用時は接続準備セルで `qiskit-ibm-runtime` も導入します。
+PySCF・Juliaは不要です。08・09および06のfakeモードでは `qiskit-ibm-runtime` と `qiskit-aer` を導入します。
+08・09は冒頭のインストール行を使ってください。06・07の実機利用時は接続準備セルでRuntimeも導入します。
 
 ## 冊ごとの変数と時間
 
@@ -35,6 +39,7 @@ jupyter lab hands_on/exercises
 | 03 | H₂/JW、4 qubit | 二次Trotter・分割数1、Δt=0.1 a.u. | T₀−S₀、コードGAPは位相差 |
 | 04 | H₄/JW、8 qubit | 保存発展または厳密発展、Δt=0.1 a.u. | S₀・T₀のPECと正のエネルギー差 |
 | 05・06 | H₄/JW、8＋補助1 qubit | Δt=0.1 a.u. | 正のT₀−S₀差、Ha単位 |
+| 07 | H₄/JW、8＋補助1 qubit | Δt=0.1 a.u.、L=1・2・4 | 位相走査の信号検出、ギャップ推定なし |
 
 物理時間は t=LΔt、分子の固有位相は φ=−E_elΔt/(2π) mod 1です。
 位相候補ではβ=−2πLε、電子エネルギー／エネルギー差の候補ではβ=ε_E tを使います。
@@ -83,15 +88,59 @@ R=2 Å、準備M6、発展M16、L=4、候補9点、初期事前μ=0・v=4に固�
 初期設定では接続・送信を行いません。ジョブID・counts・更新結果は `outputs/exercise6/` に保存します。
 同条件の再実行では保存済みジョブを利用します。Colabの切断に備え、必要な記録をDrive等へ保存してください。
 
+06の第3a節では、`qiskit-aer` とRuntimeを導入して `USE_FAKE_KAWASAKI=True` にすると、
+APIキーなしでFakeKawasakiのノイズ付き模擬測定を実行できます。この間は後のIBM接続・実機送信をスキップします。
+127 qubit・ECRゲートの過去のスナップショットを使うため、現在のCZ装置の較正とは異なります。
+全countsとスナップショット情報は `outputs/exercise6/fake_kawasaki_measurements.json` に保存します。
+
+## 07：回路長と実機信号の比較
+
+06と同じH₄・準備M6・発展M16で、L=1・2・4を比較します。位相角を同じ一周期の12点に揃え、
+短い時間による理想曲線の平坦化と、実機ノイズによる干渉の減衰を区別します。
+各点2回、既定1024 shots、合計72回路・73,728 shotsを1ジョブにまとめます。
+
+`USE_IBM=True`で接続し、同じ初期配置で各Lの回路費用をプレビューした後、`RUN_HARDWARE=True`で送信します。
+既定ではシミュレーションのみです。生counts・ジョブID・送信したISA回路を `outputs/exercise7/ibm_jobs/` に保存し、
+同条件の再実行では保存結果を利用します。独立に測定し直す場合は `RUN_LABEL` を変えてください。
+
+全0頻度の95%区間と、一定確率に対する位相依存性の検査を表示します。Gaussian更新やギャップ推定は行いません。
+保存JSONを `RESULT_FILE` に指定すると、再接続せずに解析できます。
+[07のローカル実行・模擬ジョブ検証](../../docs/validation_20261109_depth_scan.json)では、実機へ送信していません。
+
+## 08：joint-state圧縮とhardware-awareな誤り抑制
+
+06のjoint-stateをMPSへ変換し、分岐制御を使わない9-qubitの局所回路へ直接圧縮します。
+paired準備、joint準備、joint＋較正配置・level 3・Pauli twirling・XX-DDの3条件を比較します。
+FireOpalの再実装ではなく、読み出し誤り緩和や独自パルス最適化は含みません。
+
+既定はL=1、各armの各位相1024 shots、12位相・2回で、1 backendあたり合計36,864 shotsです。
+L=4へ変えると06と同じ発展時間になります。joint標的とのfidelityが0.99未満なら送信を止めます。
+
+FakeKawasakiではゲート・読出し・明示的DelayのT1/T2ノイズを含めて、既定でローカル実行します。
+実機では `USE_IBM=True` で接続し、3条件の費用をプレビューした後 `RUN_HARDWARE=True` で実行します。
+送信回路・ジョブID・全countsは `outputs/exercise8/` に保存します。実機接続・送信は既定で無効です。
+[08の検証記録](../../docs/validation_20261109_joint_compression.json)にはfake実行と模擬実機ジョブの結果を記録しています。
+
+## 09：06をjoint準備だけへ最小変更
+
+06の読み込み・M16発展・level 1・fake/実機インターフェースを残し、AとA†を08のjoint準備へ置き換えます。
+追加の配置探索・level 3・twirling・DDは行いません。検出できた条件に合わせ、既定はL=1・位相一周期の12点です。
+各点1024 shots、1走査12,288 shotsです。L=4への変更も可能です。
+
+既定はFakeKawasakiを実行します。実機では `USE_FAKE_KAWASAKI=False`、`USE_IBM=True` で接続し、
+プレビュー後に `RUN_HARDWARE=True` にします。保存先は `outputs/exercise9/` で、06のジョブと混同しません。
+06のGaussian表示はシミュレーション参考用に残し、fakeと実機はcountsと位相依存性を診断します。
+[09の検証記録](../../docs/validation_20261109_joint_only.json)では、実機へ送信せずにfakeの信号検出と回路の整合性を確認しています。
+
 ## H₄の固定データ
 
 [全20構造の固定データ集](data/h4_pec_v1/README.md)を使います。近似準備はχ=6・M=4/6/8、近似発展はM=8/16/32です。
 厳密発展はシミュレーション参照です。Mは回路の層数で、MPS/MPOのボンド次元とは別です。
 
-04〜06は固定コミット `4ab6ef3d06f4256b5c818feb8c3fa2af4381dd43` を使い、`H4_DATA_DIR` → `H4_CACHE_DIR` → 取得済みリポジトリ → `~/.cache/ftqc_handson/h4_pec_v1` の順で保存先を決めます。
+04〜09は固定コミット `4ab6ef3d06f4256b5c818feb8c3fa2af4381dd43` を使い、`H4_DATA_DIR` → `H4_CACHE_DIR` → 取得済みリポジトリ → `~/.cache/ftqc_handson/h4_pec_v1` の順で保存先を決めます。
 指定した場所に不足ファイルをダウンロードし、同じ場所を指定すれば再起動後も再利用します。04の従来の保存先を使う場合は `H4_CACHE_DIR = 'outputs/h4_pec_v1'` と指定できます。
 各ファイルはSHA-256で検証して再利用します。Google Driveを使う場合は先にmountし、`H4_CACHE_DIR`へパスを指定してください。
-05・06でオフライン使用する範囲を先に取得するには `download_h4_data()`、取得禁止には `H4_OFFLINE=True` を使います。
+05〜09でオフライン使用する範囲を先に取得するには `download_h4_data()`、取得禁止には `H4_OFFLINE=True` を使います。
 
 ## 開発・検証・旧版
 

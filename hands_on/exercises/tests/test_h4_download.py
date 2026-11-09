@@ -36,7 +36,7 @@ def test_lazy_download_reuse_and_offline_restart(tmp_path,monkeypatch):
 
 
 def test_notebooks_contain_bootstrap_not_binary_payloads():
-    for path in ROOT.glob('0[56]*.ipynb'):
+    for path in ROOT.glob('0[56789]*.ipynb'):
         book=nbformat.read(path,4)
         init=next(c for c in book.cells if c.cell_type=='code' and c.source.startswith('H4_DATA_COMMIT ='))
         assert len(init.source)<10000

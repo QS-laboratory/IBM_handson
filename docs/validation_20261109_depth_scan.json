@@ -1,0 +1,28 @@
+{
+  "notebook": "07_h4_hardware_depth_scan.ipynb",
+  "status": "passed",
+  "code_cells": 10,
+  "images": 1,
+  "stderr": [],
+  "elapsed_seconds": 6.48,
+  "qpu_used": false,
+  "colab_tested": false,
+  "method": "Fresh Python/IPython process, temporary cwd; no Jupyter kernel/UI test",
+  "validation_date": "2026-11-09",
+  "tests": {
+    "passed": 18,
+    "new_depth_scan_tests_passed": 9,
+    "targets": [
+      "hands_on/exercises/tests/test_h4_depth_scan.py",
+      "hands_on/exercises/tests/test_h4_download.py",
+      "hands_on/exercises/tests/test_current_materials.py::test_complete_seven_notebook_collection_and_navigation",
+      "hands_on/exercises/tests/test_current_materials.py::test_h2_jw_version_keeps_the_same_gaussian_update_as_one_qubit"
+    ],
+    "hardware_mocked": true,
+    "known_existing_failures": [
+      "06: test_hardware_setup_skips_authentication_by_default",
+      "06: test_hardware_submit_guard_rejects_missing_preview"
+    ],
+    "existing_failures_reason": "Notebook 06 has user-enabled USE_IBM/RUN_HARDWARE switches; not modified."
+  }
+}
