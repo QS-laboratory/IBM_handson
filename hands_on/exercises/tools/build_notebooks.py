@@ -17,7 +17,7 @@ parser.add_argument("--only",choices=["01","02","03","04","05"])
 args=parser.parse_args()
 
 ROOT = Path(__file__).resolve().parents[1]
-STUDY = ROOT.parent/'self_study'
+STUDY = ROOT.parents[1]/'archive/self_study'
 
 def md(s): return nb.v4.new_markdown_cell(s.strip())
 def code(s): return nb.v4.new_code_cell(s.strip())
@@ -50,7 +50,7 @@ INSTALL = code('''# 初回だけ必要に応じてコメントを外して実行
 from matrix_notebook import build_matrix_cells
 write('01_matrix_phase_estimation.ipynb',
       build_matrix_cells(read('phase_estimation_comparison.ipynb'), INSTALL),
-      ['self_study/phase_estimation_comparison.ipynb'])
+      ['archive/self_study/phase_estimation_comparison.ipynb'])
 
 # 2: configuration/spin blocks, exact one-qubit encoding and molecular phase estimation.
 from h2_notebook import build_h2_cells
@@ -58,7 +58,7 @@ with np.load(STUDY/'molecular_jw/data/h2.npz',allow_pickle=False) as fixture:
     ms0_block=fixture['hamiltonian'][np.ix_([5,10,6,9],[5,10,6,9])].real.tolist()
 write('02_h2_one_qubit.ipynb',
       build_h2_cells(read('molecular/molecular_phase_estimation.ipynb'),INSTALL,ms0_block),
-      ['self_study/molecular/molecular_phase_estimation.ipynb','self_study/molecular_jw/data/h2.npz'])
+      ['archive/self_study/molecular/molecular_phase_estimation.ipynb','archive/self_study/molecular_jw/data/h2.npz'])
 
 # 3: use the audited H2 core and molecular fixture, without author optimization or BPE/QPE sections.
 fixture = base64.b64encode((STUDY/'molecular_jw/data/h2.npz').read_bytes()).decode()
@@ -77,8 +77,8 @@ from h2_jw_notebook import build_h2_jw_cells
 write('03_h2_jw_bpde.ipynb',
       build_h2_jw_cells(read('molecular_jw/h2_jw_phase_estimation.ipynb'),INSTALL,init,
                        (STUDY/'molecular_jw/tools/jw_core.py').read_text()),
-      ['self_study/molecular_jw/tools/jw_core.py','self_study/molecular_jw/data/h2.npz',
-       'self_study/molecular_jw/h2_jw_phase_estimation.ipynb'])
+      ['archive/self_study/molecular_jw/tools/jw_core.py','archive/self_study/molecular_jw/data/h2.npz',
+       'archive/self_study/molecular_jw/h2_jw_phase_estimation.ipynb'])
 
 # 4/5 consume only the immutable teaching snapshot, never live research outputs.
 DATA=ROOT/'data/h4_pec_v1'

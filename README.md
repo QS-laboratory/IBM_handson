@@ -37,6 +37,8 @@ S. Kanno et al., *Tensor-based quantum phase difference estimation for large-sca
 
 <details><summary>旧版・開発資料</summary>
 
-[旧教材の保存場所](archive/README.md)。新本編の元教材・再生成用データは `hands_on/self_study/` に保持しています。
+[旧教材の保存場所](archive/README.md)。新本編の元教材・再生成用データは `archive/self_study/` に保持しています。
 
 </details>
+
+参考論文・補足資料は [資料一覧](docs/README.md) を参照してください。

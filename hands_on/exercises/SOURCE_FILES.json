@@ -385,10 +385,10 @@
     "hands_on/exercises/data/h4_pec_v1/UPSTREAM_LICENSE": "9ccf26cfe845e0eb8bb58053e47366e7ab6b697ae010f7650978d4b71b7d1fc1",
     "hands_on/exercises/data/h4_pec_v1/exact_preparation.py": "03701f86f02e82918f05219e1b2aedc6bc9d069ebb8ccd4cc391bcfb720a06d2",
     "hands_on/exercises/data/h4_pec_v1/manifest.json": "6910f1f0aa7d0f2e43499683ba3a50f83db7aee09f3c64b07c91a6815ebdd4b3",
-    "hands_on/self_study/molecular/molecular_phase_estimation.ipynb": "bf36da8405e0c5baa9e20a6b67986275d84034128abfb1439149e5d3931ae802",
-    "hands_on/self_study/molecular_jw/data/h2.npz": "dee8fa4d7b11673bec70cbf8e9dc2fc010ce922ae7b5f4d0a5b58a9a3a4b07ae",
-    "hands_on/self_study/molecular_jw/h2_jw_phase_estimation.ipynb": "e9be380ba3ee5e826685f7acaa294b2da66ecfc359ebd002590312e56fcb2fd8",
-    "hands_on/self_study/molecular_jw/tools/jw_core.py": "fb6b27407cb7ff26eeb40bd9800025110aebeb5a3bb77c208b857890b3127dd4",
-    "hands_on/self_study/phase_estimation_comparison.ipynb": "e3442cd7e3164a241b84aade7777fe5f0e8ff3963338b42df2bbd707580b1758"
+    "archive/self_study/molecular/molecular_phase_estimation.ipynb": "bf36da8405e0c5baa9e20a6b67986275d84034128abfb1439149e5d3931ae802",
+    "archive/self_study/molecular_jw/data/h2.npz": "dee8fa4d7b11673bec70cbf8e9dc2fc010ce922ae7b5f4d0a5b58a9a3a4b07ae",
+    "archive/self_study/molecular_jw/h2_jw_phase_estimation.ipynb": "e9be380ba3ee5e826685f7acaa294b2da66ecfc359ebd002590312e56fcb2fd8",
+    "archive/self_study/molecular_jw/tools/jw_core.py": "fb6b27407cb7ff26eeb40bd9800025110aebeb5a3bb77c208b857890b3127dd4",
+    "archive/self_study/phase_estimation_comparison.ipynb": "e3442cd7e3164a241b84aade7777fe5f0e8ff3963338b42df2bbd707580b1758"
   }
 }

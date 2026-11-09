@@ -224,14 +224,14 @@ def h2_complete():
 def test_h2_spin_and_configuration_block_against_jw(h2_complete):
     """Independently derive spin from fermionic operators, not the teaching 4x4 S²."""
     import importlib.util
-    path=ROOT.parent/'self_study/molecular_jw/tools/jw_core.py'
+    path=ROOT.parents[1]/'archive/self_study/molecular_jw/tools/jw_core.py'
     spec=importlib.util.spec_from_file_location('h2_jw_spin_check',path)
     core=importlib.util.module_from_spec(spec);spec.loader.exec_module(core)
     number,sz,s2=core.spin_operators()
     indices=[5,10,6,9]
     ns=h2_complete
     np.testing.assert_allclose(s2[np.ix_(indices,indices)],ns['S2_MS0'],atol=1e-12)
-    with np.load(ROOT.parent/'self_study/molecular_jw/data/h2.npz') as data:
+    with np.load(ROOT.parents[1]/'archive/self_study/molecular_jw/data/h2.npz') as data:
         full=data['hamiltonian']
     np.testing.assert_allclose(full[np.ix_(indices,indices)],ns['H_MS0'],atol=1e-12)
     for name,psi in ns['STATES_MS0'].items():

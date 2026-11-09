@@ -5,7 +5,7 @@ import numpy as np
 from h4_catalog import build_catalog
 
 ROOT=Path(__file__).resolve().parents[1]
-STUDY=ROOT.parent/'self_study'
+STUDY=ROOT.parents[1]/'archive/self_study'
 DEST=ROOT/'data/h4_pec_v1'
 
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()

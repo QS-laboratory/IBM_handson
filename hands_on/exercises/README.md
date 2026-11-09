@@ -1,7 +1,7 @@
 # 新本編：5つの演習
 
 既存の自習教材を使い、行列→H₂の2状態部分空間→H₂/JW→H₄/JW→反復的な推定へ進みます。
-旧本編は `archive/pre_revision_2026-11-08/` に保存し、元の自習教材・再生成用データは `hands_on/self_study/` に保持しています。授業の時間割はまだ割り当てていません。
+旧本編は `archive/pre_revision_2026-11-08/` に保存し、元の自習教材・再生成用データは `archive/self_study/` に保持しています。授業の時間割はまだ割り当てていません。
 
 | 順番 | Notebook | 内容 |
 |---|---|---|
@@ -112,11 +112,11 @@ python -m pytest hands_on/exercises/tests -q
 
 ## 出所
 
-元の教材は[自習教材](../self_study/README.md)と、そのH₂/JW・H₄/JWの各冊です。
-M6/M16回路は`self_study/h4_mps_preparation_study/results/both_states_M6_evolution_M16_L1/`を使用します。
+元の教材は[自習教材](../../archive/self_study/phase_estimation_comparison.ipynb)と、そのH₂/JW・H₄/JWの各冊です。
+M6/M16回路は`archive/self_study/h4_mps_preparation_study/results/both_states_M6_evolution_M16_L1/`を使用します。
 参考：[Kanno et al., PNAS (2025)](https://doi.org/10.1073/pnas.2425026122)、
 [著者コード（固定コミット）](https://github.com/sk888ks/TQPDE_open/tree/9cd88464c5c50dda783150661813609092d7f2b6)、
-[原著コードのLGPL-3.0ライセンス](../self_study/molecular_h4_jw/UPSTREAM_LICENSE)。
+[原著コードのLGPL-3.0ライセンス](../../archive/self_study/molecular_h4_jw/UPSTREAM_LICENSE)。
 論文の分子・実機実験全体の再現ではありません。
 
 ## 全20構造の固定版データ
