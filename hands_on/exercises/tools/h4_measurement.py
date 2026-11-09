@@ -31,8 +31,9 @@ GAP = float(MODEL['energy_T'] - MODEL['energy_S0'])
 EXACT_STATES = [MODEL['S0'], MODEL['T']]
 U_EXACT = expm(-1j * H * DT)
 A_EXACT = prepare_pair(*EXACT_STATES)
-AVAILABLE_PREP_M = tuple(CIRCUIT_CATALOG['preparation'])
-AVAILABLE_EVOLUTION_M = tuple(CIRCUIT_CATALOG['evolution'])
+SELECTED_GEOMETRY = 'R_2p00000000'
+AVAILABLE_PREP_M = (4,6,8)
+AVAILABLE_EVOLUTION_M = (8,16,32)
 
 
 def select_circuits(prep_m=6, evolution_m=16):
@@ -42,11 +43,11 @@ def select_circuits(prep_m=6, evolution_m=16):
     global A_APPROX, EVOLUTION_APPROX, U_APPROX, APPROX_STATES, CASES, SPECTRA
     for value, choices, name in [(prep_m, AVAILABLE_PREP_M, 'PREP_M'),
                                   (evolution_m, AVAILABLE_EVOLUTION_M, 'EVOLUTION_M')]:
-        if (not isinstance(value, (int, np.integer)) or isinstance(value, (bool, np.bool_))
+        if value != 'exact' and (not isinstance(value, (int, np.integer)) or isinstance(value, (bool, np.bool_))
                 or value not in choices):
-            raise ValueError(f'{name} must be one of {choices}; received {value!r}')
-    prep = CIRCUIT_CATALOG['preparation'][int(prep_m)]
-    evo = CIRCUIT_CATALOG['evolution'][int(evolution_m)]
+            raise ValueError(f'{name} must be exact or one of {choices}; received {value!r}')
+    prep = CIRCUIT_CATALOG['preparation'][prep_m]
+    evo = CIRCUIT_CATALOG['evolution'][evolution_m]
     pair = CIRCUIT_CATALOG['pairs'][f'{prep_m}/{evolution_m}']
     keys = dict(prep['keys'], evolution=evo['key'])
     circuits = {k:qpy.load(io.BytesIO(base64.b64decode(ASSETS[v])))[0] for k,v in keys.items()}
@@ -63,17 +64,19 @@ def select_circuits(prep_m=6, evolution_m=16):
         phases = np.angle(np.diag(vectors.conj().T@u@vectors))
         np.testing.assert_allclose((vectors*np.exp(1j*phases))@vectors.conj().T,u,atol=1e-10)
         spectra[label] = (phases, vectors)
-    SELECTED_PREP_M, SELECTED_EVOLUTION_M = int(prep_m), int(evolution_m)
+    SELECTED_PREP_M, SELECTED_EVOLUTION_M = prep_m, evolution_m
     ACTIVE_ASSET_KEYS = keys
     PREP_INFO, EVOLUTION_INFO = prep, evo
     SELECTED_RESULTS = dict(fidelities=prep['fidelities'], fringe=pair['fringe'])
+    PROVENANCE['results'] = SELECTED_RESULTS  # legacy teaching diagnostics
     CIRCUIT_DIGEST = pair['digest']
     SERIAL_CX = dict(preparation=prep['resources']['A']['cx']+prep['resources']['inverse']['cx'],
                      evolution=evo['resources']['cx'])
     A_APPROX, EVOLUTION_APPROX = circuits['A'], circuits['evolution']
     APPROX_STATES, U_APPROX, CASES, SPECTRA = states, uapp, cases, spectra
-    print(f'Selected PREP_M={prep_m} (S0/T), EVOLUTION_M={evolution_m}; '
-          f"serial CX = {SERIAL_CX['preparation']} + {SERIAL_CX['evolution']} L")
+    cost = ('native evolution CX not synthesized (dense exact reference)' if SERIAL_CX['evolution'] is None
+            else f"serial CX = {SERIAL_CX['preparation']} + {SERIAL_CX['evolution']} L")
+    print(f'{SELECTED_GEOMETRY}: PREP_M={prep_m} (S0/T), EVOLUTION_M={evolution_m}; {cost}')
 
 
 select_circuits()
@@ -120,10 +123,12 @@ def connect_ibm(backend_name, instance=''):
     return service, service.backend(backend_name)
 
 def hardware_preview(backend, L=1):
+    if SELECTED_EVOLUTION_M == 'exact':
+        raise ValueError('Dense exact evolution is a simulation reference; select EVOLUTION_M=8/16/32 for IBM')
     qc = experiment_circuit(L, GAP)
     qc.measure_all()
     isa = transpile(qc, backend=backend, optimization_level=1, seed_transpiler=7)
-    report = {'prep_m': SELECTED_PREP_M, 'evolution_m': SELECTED_EVOLUTION_M, 'backend': backend.name, 'L': L, 'depth': isa.depth(),
+    report = {'geometry': SELECTED_GEOMETRY, 'prep_m': SELECTED_PREP_M, 'evolution_m': SELECTED_EVOLUTION_M, 'backend': backend.name, 'L': L, 'depth': isa.depth(),
               'two_qubit_gates': sum(i.operation.num_qubits == 2 for i in isa.data),
               'operations': dict(isa.count_ops())}
     print(report)
@@ -143,7 +148,7 @@ class Measurement:
         self.run_hardware, self.max_hardware_L = run_hardware, max_hardware_L
         self.directory = Path(directory)
         self.records = []
-        self.selection = dict(prep_m=SELECTED_PREP_M, evolution_m=SELECTED_EVOLUTION_M,
+        self.selection = dict(geometry=SELECTED_GEOMETRY, prep_m=SELECTED_PREP_M, evolution_m=SELECTED_EVOLUTION_M,
                               circuit_digest=CIRCUIT_DIGEST)
 
     def measure(self, case, L, trial_gaps, label):
@@ -165,6 +170,8 @@ class Measurement:
                 shots=None if counts is None else self.shots,
                 counts_all_zero=None if counts is None else counts.tolist(), values=values.tolist()))
             return values
+        if SELECTED_EVOLUTION_M == 'exact':
+            raise ValueError('Dense exact evolution is a simulation reference; select EVOLUTION_M=8/16/32 for IBM')
         if case != 'both':
             raise ValueError('IBM mode uses the selected both circuit; set CASE=both')
         if self.backend is None or self.service is None:
@@ -294,7 +301,7 @@ def plot_bayes_round(row, case, mode):
     for ax in axes.flat:
         ax.axvline(GAP, color='black', ls=':', label='FCI gap (diagnostic)')
         ax.set_xlabel('Trial gap / Ha'); ax.legend(fontsize=7)
-    fig.suptitle(f'Round {row["round"]}: MODE={mode}, CASE={case}, M={row["prep_m"]}/{row["evolution_m"]}')
+    fig.suptitle(f'Round {row["round"]}: MODE={mode}, CASE={case}, R={row["geometry"]}, M={row["prep_m"]}/{row["evolution_m"]}')
     plt.tight_layout();plt.show();plt.close(fig)
 
 

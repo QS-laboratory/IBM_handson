@@ -14,9 +14,9 @@ from qiskit.quantum_info import Operator, Statevector
 BASIS=['rz','sx','x','cx']
 
 
-def build_catalog(study, assets, provenance):
-    prep=study/'h4_mps_preparation_study/results/pec_20/R_2p00000000'
-    evo=study/'h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_2p00000000'
+def build_catalog(study, assets, provenance, geometry='R_2p00000000', include_exact=False):
+    prep=study/'h4_mps_preparation_study/results/pec_20'/geometry
+    evo=study/'h4_mpo_orbital_study/corrected_mpo/pec_evolution_20'/geometry
     source_hashes={}
     def digest(path):
         value=hashlib.sha256(path.read_bytes()).hexdigest()
@@ -75,7 +75,7 @@ def build_catalog(study, assets, provenance):
         psi=[Statevector.from_instruction(q).data for q in [p0,pt]]
         fid=[float(abs(np.vdot(x,y))**2) for x,y in zip(states_exact,psi)]
         np.testing.assert_allclose(fid,[report0['fidelity_S0'],reportt['fidelity_T']],atol=1e-10)
-        if m==6:
+        if m==6 and geometry=='R_2p00000000':
             paired=qpy.load(io.BytesIO(base64.b64decode(assets['A'])))[0]
         else:
             with np.load(prep/f'M{m}_state.npz') as data:g0=data['gates'].copy()
@@ -108,7 +108,7 @@ def build_catalog(study, assets, provenance):
             current[position-1],current[position]=current[position],current[position-1];position-=1
     for m in [8,16,32]:
         report=metadata(evo/f'M{m}/results.json')
-        if m==16:
+        if m==16 and geometry=='R_2p00000000':
             qc=qpy.load(io.BytesIO(base64.b64decode(assets['evolution'])))[0]
         else:
             raw=loadq(evo/f'M{m}/basic.qpy')
@@ -117,13 +117,39 @@ def build_catalog(study, assets, provenance):
             qc=compileq(qc)
         reference=loadq(evo/f'M{m}/blocked_blocks.qpy')
         u=Operator(qc).data
-        np.testing.assert_allclose(u,Operator(reference).data,atol=1e-10,rtol=0)
+        block_error=float(np.max(abs(u-Operator(reference).data)))
+        # Saved native synthesis error is recorded as relative Frobenius norm.
+        assert block_error <= max(1e-10,32*report['basic_operator_error'])
+        report['native_vs_saved_blocks_max_error']=block_error
         np.testing.assert_allclose(u.conj().T@u,np.eye(256),atol=1e-10)
         fidelity=float(abs(np.trace(exact.conj().T@u)/256)**2)
         catalog['evolution'][m]=dict(key=encode(f'evolution_{m}',qc),report=report,
             resources=resources(qc),operator_fidelity=fidelity,
             sources=dict(basic=digest(evo/f'M{m}/basic.qpy'),blocked=digest(evo/f'M{m}/blocked_blocks.qpy')))
         evolutions[m]=u
+    if include_exact:
+        helpers={}
+        core=(study/'molecular_h4_jw/tools/h4_core.py').read_text()
+        exec(core[:core.index('class Propagator:')],helpers)
+        p0,pt=[compileq(helpers['prepare_real'](psi)) for psi in states_exact]
+        paired=compileq(helpers['prepare_pair'](*states_exact))
+        np.testing.assert_allclose(Statevector.from_instruction(paired).data,
+                                   np.r_[states_exact[0],states_exact[1]]/np.sqrt(2),atol=1e-10)
+        for q,psi in zip([p0,pt],states_exact):
+            np.testing.assert_allclose(Statevector.from_instruction(q).data,psi,atol=1e-10)
+        keys=dict(S0=encode('prep_exact_S0',p0),T=encode('prep_exact_T',pt),A=encode('prep_exact_A',paired))
+        catalog['preparation']['exact']=dict(keys=keys,reports={'S0':{'chi':None},'T':{'chi':None}},
+            fidelities={'S0':1.,'T':1.,'S0_MPS':1.,'T_MPS':1.},
+            resources={'S0':resources(p0),'T':resources(pt),'A':resources(paired),'inverse':resources(paired.inverse())},
+            sources={'model':model_hash,'method':'exact real-amplitude Ry/CX'})
+        preps['exact']=states_exact
+        qc=QuantumCircuit(8,name='exact_evolution_reference');qc.unitary(exact,range(8))
+        np.testing.assert_allclose(Operator(qc).data,exact,atol=1e-12)
+        catalog['evolution']['exact']=dict(key=encode('evolution_exact',qc),
+            report={'refinement_cap':None,'full_convergence_claimed':None},
+            resources={'qubits':8,'cx':None,'depth':None,'scope':'dense reference; not native synthesis'},
+            operator_fidelity=1.,sources={'model':model_hash,'method':'scipy.linalg.expm; DT=0.1; electronic H'})
+        evolutions['exact']=exact
     for pm,psi in preps.items():
         for em,u in evolutions.items():
             a0,at=[np.vdot(v,u@v) for v in psi]
@@ -135,7 +161,8 @@ def build_catalog(study, assets, provenance):
                 fringe=dict(apparent_gap=-float(np.angle(a0.conjugate()*at))/.1,
                     Pmax=float((abs(a0)+abs(at))**2/4)))
     # The original 6/16 default is a fixed numerical regression reference.
-    np.testing.assert_allclose(catalog['pairs']['6/16']['fringe']['apparent_gap'],
-        provenance['results']['fringe']['apparent_gap'],atol=1e-10)
+    if geometry=='R_2p00000000':
+        np.testing.assert_allclose(catalog['pairs']['6/16']['fringe']['apparent_gap'],
+            provenance['results']['fringe']['apparent_gap'],atol=1e-10)
     provenance['catalog_sources']=source_hashes
     return catalog

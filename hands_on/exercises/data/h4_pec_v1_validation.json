@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "snapshot_sha256": "6910f1f0aa7d0f2e43499683ba3a50f83db7aee09f3c64b07c91a6815ebdd4b3",
+  "geometries": 20,
+  "qpy_circuits": 320,
+  "signal_checks": 640,
+  "max_errors": {
+    "state": 1.1810065237919277e-11,
+    "operator": 0.0,
+    "signal": 3.4638958368304884e-14,
+    "eigenstate": 4.9960036108132044e-15
+  },
+  "qpu_used": false
+}

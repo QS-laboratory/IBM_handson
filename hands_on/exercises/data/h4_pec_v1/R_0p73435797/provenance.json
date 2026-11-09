@@ -1,0 +1,33 @@
+{
+  "catalog_sources": {
+    "self_study/h4_mps_preparation_study/results/pec_20/R_0p73435797/model.npz": "6b426a456c66d84551c3cc0c8159e74052f9840ef26ba6a71b61416e9cf3cf2f",
+    "self_study/h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_0p73435797/chemistry.npz": "fbd4bf069b8addd900a82fd60f718337eca6e943004d81d3329a5275bed83b9a",
+    "self_study/h4_mps_preparation_study/results/pec_20/R_0p73435797/M4.json": "eb22e669bbdc10646fe5135529cf3f9f2772f36801a90501fe670c0e78457348",
+    "self_study/h4_mps_preparation_study/results/pec_20/R_0p73435797/T_M4.json": "5ba72c4b0527e47d3e1f7c37c20ba9c9fa2341bea8c59df26d612d4bfe44b363",
+    "self_study/h4_mps_preparation_study/results/pec_20/R_0p73435797/M4_basic.qpy": "5f14b7898fd9e379fbca25bfa78b3600a1a2875e367d1cb5d0fdd2cd3568e3b4",
+    "self_study/h4_mps_preparation_study/results/pec_20/R_0p73435797/T_M4_basic.qpy": "c3169d71bb4367f113b7bb11cfb81baad542e30eaba6b8241dceb1d3c454b731",
+    "self_study/h4_mps_preparation_study/results/pec_20/R_0p73435797/M4_state.npz": "cb62073289ef43e2ebc1d31b636fc6d171e589cb00a2768c8a694fb755c400ea",
+    "self_study/h4_mps_preparation_study/results/pec_20/R_0p73435797/T_M4_state.npz": "c4c04e8fae87e2e5202114a0cae16b10280e553a9ac02f2c150e3909657c519c",
+    "self_study/h4_mps_preparation_study/results/pec_20/R_0p73435797/M6.json": "ff7fdb3f01461c0ab372cd4d823315a503ec0cbb96292360f71f459f554967af",
+    "self_study/h4_mps_preparation_study/results/pec_20/R_0p73435797/T_M6.json": "7e9e38494c93b93de31353fa713e6ca20a37b3c00b9f0f4e89ae24e2c4817ac8",
+    "self_study/h4_mps_preparation_study/results/pec_20/R_0p73435797/M6_basic.qpy": "c1415120a84c2d02eae7a54b9b4c0933e91b41174b3be3e877b1b4b9ce15e607",
+    "self_study/h4_mps_preparation_study/results/pec_20/R_0p73435797/T_M6_basic.qpy": "b731f92f5ce613bcf943ab2573e7bd5a94cd486591eb1820bf271aa6a42a83d5",
+    "self_study/h4_mps_preparation_study/results/pec_20/R_0p73435797/M6_state.npz": "b79d228be3517bd299a710bd11a07330ff4a7f8b1eaa8e38eeebb3b2b1c6cc71",
+    "self_study/h4_mps_preparation_study/results/pec_20/R_0p73435797/T_M6_state.npz": "b498a5730fe30d24ef037996160974939bb0c530c230a59b168dd692862a87c1",
+    "self_study/h4_mps_preparation_study/results/pec_20/R_0p73435797/M8.json": "72154f8c4fc3ac9d66fbc7e16f420b634b5e566760422a5ae31dd7352a87aed4",
+    "self_study/h4_mps_preparation_study/results/pec_20/R_0p73435797/T_M8.json": "efec04723bd2e85a05a921dd50024c3c64c4318f36ab959c01fa46415f5f5c2b",
+    "self_study/h4_mps_preparation_study/results/pec_20/R_0p73435797/M8_basic.qpy": "8146f01ad32e760b7b6562fb6b2e369b6cb4b84f9fdaa2acd2b2f8cde764257c",
+    "self_study/h4_mps_preparation_study/results/pec_20/R_0p73435797/T_M8_basic.qpy": "1110ff4053b0a445f15cf4e4f98ce98824f249c3b538b836dd63a25163536285",
+    "self_study/h4_mps_preparation_study/results/pec_20/R_0p73435797/M8_state.npz": "ae126f8b93f88be7ad4670a5ae9224477bfe7d56b8d6942fa01460c7a84434c8",
+    "self_study/h4_mps_preparation_study/results/pec_20/R_0p73435797/T_M8_state.npz": "9d967f4cba3e20eaca152a362046d4b6fde84c9060f21142bc5736724d0f6a48",
+    "self_study/h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_0p73435797/M8/results.json": "9f06339f57cf423f25b78b84863173b4affa106081ac28690faf931f01ba7b52",
+    "self_study/h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_0p73435797/M8/basic.qpy": "f2fccbcb7291b3312914a804f7a40e81479857c7e994b27e1efb7d5ac0c7331b",
+    "self_study/h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_0p73435797/M8/blocked_blocks.qpy": "06183759aa5923861c745b0091c776074b3b69a6f779f4f06e1cdd248cb9d41f",
+    "self_study/h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_0p73435797/M16/results.json": "d97156dcef69046134b23ddeb123a1d3cabe80b61259af6a331188744f16a120",
+    "self_study/h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_0p73435797/M16/basic.qpy": "2aab73f828fc84f15f47e982456df06a4deef7d1c8e1cae733a4ecc4cc473406",
+    "self_study/h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_0p73435797/M16/blocked_blocks.qpy": "6253b9004c874fb05a8d763616d718274680571d9383fbc93869fc651083131b",
+    "self_study/h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_0p73435797/M32/results.json": "e7abbb50eeca7bbce4f03d3c0321fde045ea581cc255026ab678079225020263",
+    "self_study/h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_0p73435797/M32/basic.qpy": "711bdf2472aa6bbf54a8f7ee65442355ba18af80bd9608e9823fdf3f208b1814",
+    "self_study/h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_0p73435797/M32/blocked_blocks.qpy": "768d1ce6ef25d45e71331a0b871b06b69f42f219c34f033deabefcfb069a1e68"
+  }
+}

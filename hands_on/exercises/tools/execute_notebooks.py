@@ -28,6 +28,7 @@ else:
     from IPython.utils.capture import capture_output
     from traitlets.config import Config
     path=args.worker.resolve()
+    os.environ.setdefault('H4_DATA_DIR',str(ROOT/'data/h4_pec_v1'))
     qa=ROOT/'outputs/qa'/path.stem
     qa.mkdir(parents=True,exist_ok=True)
     os.environ['MPLCONFIGDIR']=str(qa/'mplconfig')

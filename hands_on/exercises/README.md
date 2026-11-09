@@ -8,10 +8,11 @@
 | 1 | [2×2行列の位相推定](01_matrix_phase_estimation.ipynb) | diag(1/4,3/4)、IQFT型QPE・BPE・BPDE |
 | 2 | [H₂・1 qubit](02_h2_one_qubit.ipynb) | 化学への入口、S₀/S₁/S₂/T₀、S₀–S₂部分空間 |
 | 3 | [H₂・JW・4 qubit](03_h2_jw_bpde.ipynb) | 厳密状態準備、BPDE、Trotter分解 |
-| 4 | [H₄の回路評価](04_h4_circuit_assessment.ipynb) | 厳密準備/Trotterの費用、準備M6/発展M16、fidelity、L=1曲線、実機接続 |
+| 4 | [H₄の回路評価](04_h4_circuit_assessment.ipynb) | 厳密準備/Trotterの費用、全20構造・厳密/近似選択、fidelity、費用、L=1曲線、実機接続 |
 | 5 | [H₄の反復的Bayesian推定](05_h4_iterative_bayes.ipynb) | 測定条件の選択、事前→測定→事後を繰り返す |
 
-各Notebookはデータ・補助関数を内蔵し、前のNotebookの実行状態やリポジトリの配置に依存しません。
+各Notebookは前のNotebookの実行状態に依存しません。01〜03と04・05の既定R=2 Åはデータ・補助関数を内蔵します。
+04・05の全20構造を使うときは、同じコミットの [固定データ集](data/h4_pec_v1/README.md) を含めてリポジトリを取得してください。
 カーネルを再起動して上から実行します。必要なインストール例は冒頭にあります。
 予想・課題・確認問題には、その場で開ける解答例を付けています。
 演習1は模式回路、式、測定例、BPE／BPDE B／BPDE Cのベイズ更新を単独で確認できます。
@@ -40,7 +41,9 @@ ColabではルートREADMEのリンク、またはNotebookのアップロード�
 
 ## 演習4・5の測定モード
 
-準備の回路層数 `PREP_M=4/6/8` と発展の回路層数 `EVOLUTION_M=8/16/32` を独立に選べます。既定は6/16です。
+構造ID `GEOMETRY` と、準備 `PREP_M='exact'/4/6/8`、発展 `EVOLUTION_M='exact'/8/16/32` を選べます。既定はR=2 Å・6/16です。
+`list_geometries()`で全20構造を確認できます。設定後は選択セル以降を再実行してください。
+厳密発展は密行列を持つシミュレーション参照回路で、ネイティブCX数は未評価です。IBMには発展M=8/16/32を選びます。
 演習4・節5.2では9通りのstate fidelity・operator fidelity・回路費用・L=1信号を比較します。
 演習5・節8.1では同じ初期事前から9通りを反復し、推定平均のずれ・SD・L・フィット残差を比較します。更新上限は `M_COMPARE_ROUNDS` で指定します。
 これらの追加比較は常にshot noiseなしで、主実験の設定・履歴を保持し、実機には送信しません。Mは回路の層数で、MPS/MPOのボンド次元とは区別します。
@@ -50,7 +53,8 @@ ColabではルートREADMEのリンク、またはNotebookのアップロード�
 - `MODE='ibm'`：IBM SamplerV2で全9ビット0の頻度を取得。`CASE='both'`を使用。
 
 `CASE='exact'/'prep_only'/'evolution_only'/'both'`で、準備・発展の近似を切り替えます。
-MODEとCASEは独立です。MODEがexactでもCASEがbothなら回路近似は残ります。
+CASE=bothは指定した両部品を使い、CASE=exactは選択構造の厳密準備・厳密発展です。
+MODEとCASEは独立です。MODE=exactでも、指定部品が近似ならその誤差は残ります。
 模擬測定にゲートノイズや読み出しノイズは加えていません。
 
 実機を使う場合だけ追加でインストールします。
@@ -114,3 +118,9 @@ M6/M16回路は`self_study/h4_mps_preparation_study/results/both_states_M6_evolu
 [著者コード（固定コミット）](https://github.com/sk888ks/TQPDE_open/tree/9cd88464c5c50dda783150661813609092d7f2b6)、
 [原著コードのLGPL-3.0ライセンス](../self_study/molecular_h4_jw/UPSTREAM_LICENSE)。
 論文の分子・実機実験全体の再現ではありません。
+
+## 全20構造の固定版データ
+
+[データ集と読み込み方](data/h4_pec_v1/README.md) に、S₀・T₀の厳密/近似準備、BPDE用A、厳密/近似発展、模型・参照エネルギー・ハッシュをまとめています。
+研究側の最適化を再実行せずに利用できます。ファイルを改訂するときは別バージョンへ書き出します。
+全データの独立検証は `python hands_on/exercises/tools/validate_h4_snapshot.py` で実行できます。

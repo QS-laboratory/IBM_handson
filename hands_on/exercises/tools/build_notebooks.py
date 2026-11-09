@@ -80,25 +80,28 @@ write('03_h2_jw_bpde.ipynb',
       ['self_study/molecular_jw/tools/jw_core.py','self_study/molecular_jw/data/h2.npz',
        'self_study/molecular_jw/h2_jw_phase_estimation.ipynb'])
 
-# 4/5 embed exactly the matched Boys+ordering artifacts (not the canonical H4 notebook fixtures).
-folder=STUDY/'h4_mps_preparation_study/results/both_states_M6_evolution_M16_L1'
-prep=STUDY/'h4_mps_preparation_study/results/pec_20/R_2p00000000'
-paths={'model':prep/'model.npz','S0':prep/'M6_basic.qpy','T':folder/'T_M6_basic.qpy',
-       'A':folder/'A_basic.qpy','evolution':folder/'evolution_M16_blocked_basic.qpy'}
-assets={k:base64.b64encode(p.read_bytes()).decode() for k,p in paths.items()}
-provenance={str(p.relative_to(ROOT.parent)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths.values()}
-provenance['results']=json.loads((folder/'results.json').read_text())
-from h4_catalog import build_catalog
-catalog=build_catalog(STUDY,assets,provenance)
-digest=hashlib.sha256(json.dumps(provenance,sort_keys=True).encode()).hexdigest()
-core=(STUDY/'molecular_h4_jw/tools/h4_core.py').read_text()
-# Keep only the generic exact-preparation helpers; the remaining runtime is specific to matched assets.
-core=core[:core.index('class Propagator:')]
-h4init=code(f'ASSETS={assets!r}\nASSET_DIGEST={digest!r}\nPROVENANCE={provenance!r}\nCIRCUIT_CATALOG={catalog!r}\n'+core+'\n'+(ROOT/'tools/h4_measurement.py').read_text())
+# 4/5 consume only the immutable teaching snapshot, never live research outputs.
+DATA=ROOT/'data/h4_pec_v1'
+manifest_bytes=(DATA/'manifest.json').read_bytes()
+snapshot_digest=hashlib.sha256(manifest_bytes).hexdigest()
+index=json.loads(manifest_bytes)
+def frozen_bytes(relative):
+    raw=(DATA/relative).read_bytes()
+    if hashlib.sha256(raw).hexdigest()!=index['files'][relative]:
+        raise ValueError(f'Snapshot checksum mismatch: {relative}')
+    return raw
+row=next(r for r in index['geometries'] if r['id']=='R_2p00000000')
+assets={k:base64.b64encode(frozen_bytes(row['id']+'/'+v)).decode() for k,v in row['assets'].items()}
+catalog=json.loads(frozen_bytes(row['id']+'/catalog.json'))
+for name in ['preparation','evolution']:
+    catalog[name]={int(k) if k!='exact' else k:v for k,v in catalog[name].items()}
+provenance=json.loads(frozen_bytes(row['id']+'/provenance.json'))
+core=frozen_bytes('exact_preparation.py').decode()
+h4init=code(f'ASSETS={assets!r}\nASSET_DIGEST={snapshot_digest!r}\nPROVENANCE={provenance!r}\nCIRCUIT_CATALOG={catalog!r}\nSNAPSHOT_INDEX={index!r}\nSNAPSHOT_DIGEST={snapshot_digest!r}\n'+core+'\n'+(ROOT/'tools/h4_measurement.py').read_text()+'\n'+(ROOT/'tools/h4_snapshot.py').read_text())
 h4init.metadata['jupyter']={'source_hidden':True}
 modeltext=md('''## 共通条件と測定方式
 
-直鎖H₄、隣接距離2 Å、STO-3G、全4電子・4空間軌道、**Boys局在化＋軌道順最適化**。
+直鎖H₄、選択した隣接距離R（既定2 Å）、STO-3G、全4電子・4空間軌道、**Boys局在化＋軌道順最適化**。
 系8＋補助1 qubit、モード順α₀…α₃,β₀…β₃、補助q₈です。
 S₀と最低三重項T₀のMₛ=0成分（コードT）を使います。Δt=0.1、t=LΔt、β=εt。
 準備・発展とも同じ軌道の保存済み回路を内蔵し、符号付きFock順変換も発展回路に含みます。
@@ -111,7 +114,7 @@ S₀・Tの両枝に共通の準備Mと時間発展Mを、冒頭の設定セル�
 | `shots` | 理想確率からの二項模擬測定 | 各探索点のshots |
 | `ibm` | 実回路の全9ビット0の頻度 | 各探索点の実機shots |
 
-`exact`はshot noiseがないという意味です。CASE=`both`なら回路近似は残ります。
+`exact`はshot noiseがないという意味です。CASE=`both`で近似部品を指定した場合は、その回路近似が残ります。
 `shots`にゲートノイズは含みません。全0頻度は全shotsを分母とします。
 実機では選択したMの実回路を使用します。厳密回路との対照はシミュレーションです。
 ''')
@@ -125,6 +128,8 @@ RUN_HARDWARE = False  # 実機の費用を確認後、送信する場合にTrue
 MAX_HARDWARE_L = 8    # 実機の反復上限。増やす前に回路費用を確認する
 service = backend = None
 if MODE == 'ibm':
+    if SELECTED_EVOLUTION_M == 'exact':
+        raise ValueError('厳密発展の密行列回路はシミュレーション参照です。実機にはEVOLUTION_M=8/16/32を選びます')
     if CASE != 'both':
         raise ValueError("MODE='ibm'ではCASE='both'を選んでください（選択した実回路）")
     if not BACKEND_NAME:
@@ -156,21 +161,16 @@ for eps in [GAP, GAP+.25]:
     np.testing.assert_allclose(actual,probability('both',1,eps),atol=1e-10)
 np.testing.assert_allclose(probability('exact',3,np.array([GAP,GAP+.1])),
     (1+np.cos(np.array([0,.1])*3*DT))/2,atol=1e-10)
-assert abs(GAP-.015904957916)<1e-9
+assert GAP>0
+np.testing.assert_allclose(GAP,float(MODEL['energy_T']-MODEL['energy_S0']),atol=1e-12)
 print('Circuit / amplitude / exact cosine checks passed')
 ''')
-sources=['self_study/h4_mps_preparation_study/results/both_states_M6_evolution_M16_L1',
-         'self_study/h4_mps_preparation_study/results/pec_20/R_2p00000000',
-         'self_study/molecular_h4_jw/tools/h4_core.py',
-         'advanced_kanno_h4/upstream/src/QPDE_Bayes_session_MPSBWMPO_RD.py']
-sources.append('exercises/tools/ibm_setup.py')
+sources=['exercises/data/h4_pec_v1/manifest.json','exercises/data/h4_pec_v1/exact_preparation.py',
+         'exercises/tools/h4_measurement.py','exercises/tools/h4_snapshot.py','exercises/tools/ibm_setup.py']
 from h4_assessment_notebook import build_h4_assessment_cells
-mpo_info=json.loads((STUDY/'h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_2p00000000/M16/results.json').read_text())
-mps_info=json.loads((prep/'M6.json').read_text())
-fit_info={'chi':mps_info['chi'],'S0_MPS_bonds':mps_info['MPS_bonds'],
-          'mpo_microsteps':100,'mpo_cutoff':mpo_info['reference_cutoff'],
-          'refinement_cap':mpo_info['refinement_cap'],
-          'full_convergence_claimed':mpo_info['full_convergence_claimed']}
+fit_info={'chi':6,'mpo_microsteps':100,'mpo_cutoff':catalog['evolution'][16]['report']['reference_cutoff'],
+          'refinement_cap':catalog['evolution'][16]['report']['refinement_cap'],
+          'full_convergence_claimed':catalog['evolution'][16]['report']['full_convergence_claimed']}
 write('04_h4_circuit_assessment.ipynb',
       build_h4_assessment_cells(INSTALL,h4init,modeltext,config,hardwaretext,checks,fit_info),sources)
 

@@ -41,8 +41,27 @@ BPDEを各εで測定 → 全0確率または頻度
     cells.append(copy.deepcopy(install))
     cells.extend(ibm_setup_cells())
     cells.append(copy.deepcopy(init))
-    md('### 回路層数Mを選ぶ\n\n準備はS₀・T₀の両枝に共通の `PREP_M`（4・6・8）、時間発展は独立な `EVOLUTION_M`（8・16・32）を選びます。\n同じ模型で保存済みの9通りを利用します。任意の整数の回路を新規最適化するセルではありません。\n既定値は6と16です。変更したら、この設定セル以降を上から再実行してください。\nCASE=`exact`はMによらない対照、他のCASEは指定した部品を使います。Mと時間反復Lは別です。\n実機モードも同じ選択回路を使います。Mの異なるジョブを再利用せず、保存履歴にもMを記録します。\n演習4と5を比較するときは両冊で同じMを指定します。')
-    code("PREP_M = 6         # 4, 6, 8（S0/T0共通）\nEVOLUTION_M = 16   # 8, 16, 32\nselect_circuits(PREP_M, EVOLUTION_M)")
+    md(r'''### 構造と、厳密／近似の回路を選ぶ
+
+`GEOMETRY`は固定済み全20構造のIDです。`list_geometries()`で隣接距離RとFCI参照値の一覧を表示できます。
+`PREP_M`はS₀・T₀共通で `'exact'` または4・6・8、`EVOLUTION_M`は独立に `'exact'` または8・16・32を選びます。
+既定はR=2 Å・準備6・発展16です。Mは層数、Lは時間反復数であり、別の量です。
+変更後はこのセル以降を上から再実行します。04と05を比較するときは同じ構造・Mを指定します。
+
+全20構造にはリポジトリ内の `hands_on/exercises/data/h4_pec_v1/` が必要です。
+カーネルの作業場所から自動検索します。別の場所へ置く場合は、初期化後に
+`os.environ['H4_DATA_DIR'] = '/取得先/hands_on/exercises/data/h4_pec_v1'` を設定します。
+R=2のデータはNotebookにも内蔵しています。他構造が見つからない場合は明示的に停止し、別の構造へ代用しません。
+ファイルは固定manifestのハッシュで検証し、研究用データや最適化には依存しません。
+
+CASE=`exact`は選択構造の厳密準備・厳密発展の対照です。CASE=`both`で指定した両部品を使い、
+`prep_only`は指定準備＋厳密発展、`evolution_only`は厳密準備＋指定発展を使います。
+したがってPREP_MやEVOLUTION_Mがexactなら、CASE=bothでもその側の回路近似はありません。
+MODE=exactはshot noiseがないという別の意味です。
+厳密発展は電子Hの exp(−iHΔt) を密行列で保持した参照回路で、基底ゲートへ分解した費用は数えていません。
+IBMには発展M=8・16・32を選びます。準備は厳密／近似を選べます。実機ジョブと推定履歴は構造と両Mを識別して保存します。
+''')
+    code("PREP_M = 6         # 'exact', 4, 6, 8（S0/T0共通）\nEVOLUTION_M = 16   # 'exact', 8, 16, 32\nGEOMETRY = 'R_2p00000000'  # list_geometries() のIDを選択\n# list_geometries()\nselect_geometry(GEOMETRY)\nselect_circuits(PREP_M, EVOLUTION_M)")
     molecule_intro=copy.deepcopy(modeltext)
     molecule_intro.source=molecule_intro.source.split('| MODE |')[0].rstrip()
     molecule_intro.source=molecule_intro.source.replace('## 共通条件と測定方式','## 共通の分子・回路条件')
@@ -63,7 +82,7 @@ a=q8: |0> ──┌─────┐────────P(εt)──┌─�
 s=q0..7: ───└─────┘──[U]^L─────────└─────┘──M──┘
 ```
 
-本冊のFCIギャップ≈0.01590496 Haは、図・誤差の診断のためだけに使います。
+選択構造のFCIギャップ（R=2 Åでは約0.01590496 Ha）は、図・誤差の診断のためだけに使います。
 測定計画の関数には正解を渡しません。演習4の9点を初期事前へ自動変換することもありません。
 ''')
     md(r'''## 1．事前分布と測定モードを設定する
@@ -115,7 +134,7 @@ TARGET_SD = None       # 例: 0.001。GaussianのSDによる停止条件
 2. MODE=ibmへ変更するとき、CASE=exactを残してよいか。
 3. POINTS=21、SHOTS=1024の1ラウンドは合計何shotsか。
 ''')
-    answer('''1. shot noiseはありませんが、選択した準備・発展の回路近似は残ります。
+    answer('''1. shot noiseはありません。指定部品が近似ならその回路近似が残り、厳密部品ならその側の近似はありません。
 2. 実機では選択したMの実回路を使うため、CASE=bothへ変えます。不適合なCASEは接続前に止めます。
 3. 21×1024=21504 shotsです。ラウンドが増えれば合計shotsと発展の総回数も増えます。''')
     md(r'''## 2．事前(μ,v)から測定時間と探索点を選ぶ
@@ -315,7 +334,7 @@ Lと、選択回路の概算CX費用 CX(A)+CX(A†)+L×CX(Uapp)も確認しま�
     plt.tight_layout();plt.show();plt.close(fig)
     print('Posterior -> next prior checked. Source:',MODE,'CASE:',CASE)
     print(f'M{SELECTED_PREP_M}/M{SELECTED_EVOLUTION_M} serial CX estimates:',
-          [SERIAL_CX['preparation']+SERIAL_CX['evolution']*row['L'] for row in history])
+          [None if SERIAL_CX['evolution'] is None else SERIAL_CX['preparation']+SERIAL_CX['evolution']*row['L'] for row in history])
 else:
     print('No updates. Check preview-only mode, fit failure or iteration limits above.')
 ''')
@@ -388,7 +407,7 @@ if RUN_COMPARISON:
 各Mの測定結果から独立に次のL・探索点を選ぶため、途中から測定計画や完了回数が異なり得ます。
 M_COMPARE_ROUNDSを変更すると比較の更新上限を変えられます。
 
-表の「平均−FCI」は、この有限反復の結果の符号付き誤差です。
+この比較は現在選んだ構造で実行します。表の「平均−FCI」は、この有限反復の結果の符号付き誤差です。
 ここで比較する偏りには回路近似だけでなくGaussian近似・有限反復・フィットの影響も含まれます。
 厳密準備・厳密発展の対照も同じ初期条件で計算し、図の破線で示します。
 SDはGaussian更新の幅で、全誤差を覆う保証ではありません。L=1のピークずれとも区別します。

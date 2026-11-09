@@ -31,8 +31,51 @@ def build_h4_assessment_cells(install, init, modeltext, config, hardwaretext, ch
     cells.append(copy.deepcopy(install))
     cells.extend(ibm_setup_cells())
     cells.append(copy.deepcopy(init))
-    md('### 回路層数Mを選ぶ\n\n準備はS₀・T₀の両枝に共通の `PREP_M`（4・6・8）、時間発展は独立な `EVOLUTION_M`（8・16・32）を選びます。\n同じ模型で保存済みの9通りを利用します。任意の整数の回路を新規最適化するセルではありません。\n既定値は6と16です。変更したら、この設定セル以降を上から再実行してください。\nCASE=`exact`はMによらない対照、他のCASEは指定した部品を使います。Mと時間反復Lは別です。\n実機モードも同じ選択回路を使います。Mの異なるジョブを再利用せず、保存履歴にもMを記録します。\n演習4と5を比較するときは両冊で同じMを指定します。')
-    code("PREP_M = 6         # 4, 6, 8（S0/T0共通）\nEVOLUTION_M = 16   # 8, 16, 32\nselect_circuits(PREP_M, EVOLUTION_M)")
+    md(r'''### 構造と、厳密／近似の回路を選ぶ
+
+`GEOMETRY`は固定済み全20構造のIDです。`list_geometries()`で隣接距離RとFCI参照値の一覧を表示できます。
+`PREP_M`はS₀・T₀共通で `'exact'` または4・6・8、`EVOLUTION_M`は独立に `'exact'` または8・16・32を選びます。
+既定はR=2 Å・準備6・発展16です。Mは層数、Lは時間反復数であり、別の量です。
+変更後はこのセル以降を上から再実行します。04と05を比較するときは同じ構造・Mを指定します。
+
+全20構造にはリポジトリ内の `hands_on/exercises/data/h4_pec_v1/` が必要です。
+カーネルの作業場所から自動検索します。別の場所へ置く場合は、初期化後に
+`os.environ['H4_DATA_DIR'] = '/取得先/hands_on/exercises/data/h4_pec_v1'` を設定します。
+R=2のデータはNotebookにも内蔵しています。他構造が見つからない場合は明示的に停止し、別の構造へ代用しません。
+ファイルは固定manifestのハッシュで検証し、研究用データや最適化には依存しません。
+
+CASE=`exact`は選択構造の厳密準備・厳密発展の対照です。CASE=`both`で指定した両部品を使い、
+`prep_only`は指定準備＋厳密発展、`evolution_only`は厳密準備＋指定発展を使います。
+したがってPREP_MやEVOLUTION_Mがexactなら、CASE=bothでもその側の回路近似はありません。
+MODE=exactはshot noiseがないという別の意味です。
+厳密発展は電子Hの exp(−iHΔt) を密行列で保持した参照回路で、基底ゲートへ分解した費用は数えていません。
+IBMには発展M=8・16・32を選びます。準備は厳密／近似を選べます。実機ジョブと推定履歴は構造と両Mを識別して保存します。
+''')
+    code("PREP_M = 6         # 'exact', 4, 6, 8（S0/T0共通）\nEVOLUTION_M = 16   # 'exact', 8, 16, 32\nGEOMETRY = 'R_2p00000000'  # list_geometries() のIDを選択\n# list_geometries()\nselect_geometry(GEOMETRY)\nselect_circuits(PREP_M, EVOLUTION_M)")
+    md(r'''### 全20構造の参照ポテンシャル曲線
+
+Rは隣り合うH原子の距離（Å）です。S₀/T₀は各構造の同じHの固有状態です。
+縦軸には核反発E_nucを加えた全エネルギーを使います。時間発展のHは電子Hamiltonianなので、
+BPEの電子エネルギーからポテンシャル曲線へ戻すときはE_nucを加えます。BPDEの差ではE_nucは相殺します。
+これは正解の参照曲線で、05の初期事前や測定計画には渡しません。
+''')
+    code('''list_geometries()
+fig,ax=plt.subplots(figsize=(7,3.5))
+pec=SNAPSHOT_INDEX['geometries']
+for key,label in [('energy_S0','FCI S0'),('energy_T','FCI T0')]:
+    ax.plot([r['R'] for r in pec],[r[key]+r['enuc'] for r in pec],'o-',ms=3,label=label)
+ax.axvline(float(MODEL['R']),color='gray',ls=':',label='Selected R')
+ax.set(xlabel='Adjacent H-H distance / Angstrom',ylabel='Total energy / Ha');ax.legend()
+plt.tight_layout();plt.show();plt.close(fig)
+''')
+    md('''### 課題0：構造と厳密参照
+
+Rを変えても、前の構造の準備回路と新しい構造の発展回路を混ぜてよいか。
+厳密発展回路のCX数が未表示なら、費用が0と考えてよいか。
+''')
+    answer('''混ぜてはいけません。構造ごとにH・軌道・状態の振幅が対応します。この教材ではselect_geometryで一式を切り替えます。
+厳密発展の密行列は基底ゲートへ分解していないため、CX数は未評価です。0ではありません。
+実機用の費用比較には保存された近似発展を使います。''')
     molecule_intro=copy.deepcopy(modeltext)
     molecule_intro.source=molecule_intro.source.split('| MODE |')[0].rstrip()
     molecule_intro.source=molecule_intro.source.replace('## 共通条件と測定方式','## 共通の分子・回路条件')
@@ -43,7 +86,7 @@ STO-3GのH₄では4空間軌道×2スピンで8スピン軌道です。
 削減なしJWは8占有qubit、Fock空間は256次元です。4電子の空間は70次元、Nα=Nβ=2は36次元です。
 補助q₈を加え、回路は9 qubitで動かします。
 
-本冊は等間隔直鎖、隣接距離2 Åで、Boys局在化と軌道順の最適化を施した軌道を使います。
+本冊は等間隔直鎖、選択した隣接距離Rで、Boys局在化と軌道順の最適化を施した軌道を使います。
 H₂の正準軌道や別のH₄データの振幅・回路を混ぜず、**同じ軌道のH・準備・発展**を組み合わせます。
 全軌道を活性に含めた同じ模型内の軌道回転はFCIエネルギーを変えませんが、配置振幅・Pauli係数・回路費用は変わります。
 符号付きのFock順変換も保存発展回路に含まれています。普通のビットSWAPだけではフェルミオンの符号を表せません。
@@ -67,7 +110,7 @@ print('FCI gap / Ha:',GAP,'DT:',DT,'system dimension:',len(H))
 2. 本冊のS₀とT₀の差を、H₂のS₀とS₂の差と同じ値だと考えてよいか。
 ''')
     answer('''1. 電子は4個です。qubit数は8スピン軌道の占有を残すことから決まります。
-2. 分子・構造・二つの状態が異なるので同じ値ではありません。本模型の正のT₀−S₀差は約0.01590496 Haです。
+2. 分子・構造・二つの状態が異なるので同じ値ではありません。R=2 Åの例の正のT₀−S₀差は約0.01590496 Haです。他構造では表示されたFCI差を使います。
 状態・軌道・Hamiltonianを揃えた上で、その模型内の参照値と比較します。''')
     md(r'''## 1．厳密準備とTrotter発展は、どこが重くなるか
 
@@ -84,7 +127,8 @@ H₄では各状態を256成分の振幅として与え、多重化Ry回転で$P
 
 発展は演習3と同じ、$H=\sum_jc_jP_j$からPauli回転を並べる二次Trotterです。
 Pauli項数は次セルで表示します（I項を含む）。一歩Δt=0.1を分割数sで近似します。
-小さい係数を既定の相対許容誤差で落とさないよう、展開時はrtol=0を指定し、Hへ戻ることを照合します。
+小さい係数を既定の相対許容誤差で落とさないよう、展開時はatol=10⁻¹⁴、rtol=0を指定し、Hへ戻ることを照合します。
+長距離の構造では小さな係数も残し、構造を変えても同じHを使います。
 Trotterは厳密なexp(−iHΔt)そのものではありません。分割数を増やすと誤差を減らせますが回路は長くなります。
 
 費用を比較する際は、**個別状態の準備P₀**と、**二つの枝を作る9 qubitのA**を分けます。
@@ -96,6 +140,11 @@ COSTS={}
 COMPILED_CIRCUITS={}
 
 def record_cost(name,qc):
+    if any(i.operation.name=='unitary' and i.operation.num_qubits==8 for i in qc.data):
+        COSTS[name]=dict(qubits=qc.num_qubits,cx=None,depth=None)
+        COMPILED_CIRCUITS[name]=qc
+        print(name,': dense exact reference; native CX/depth not synthesized')
+        return qc
     native=transpile(qc,basis_gates=BASIS,optimization_level=1,seed_transpiler=7)
     row=dict(qubits=qc.num_qubits,cx=int(native.count_ops().get('cx',0)),depth=native.depth())
     COSTS[name]=row
@@ -104,7 +153,7 @@ def record_cost(name,qc):
     return native
 
 EXACT_PREPS=[prepare_real(psi) for psi in EXACT_STATES]
-pauli=SparsePauliOp.from_operator(Operator(H),atol=1e-12,rtol=0)
+pauli=SparsePauliOp.from_operator(Operator(H),atol=1e-14,rtol=0)
 np.testing.assert_allclose(pauli.to_matrix(),H,atol=1e-12)
 TROTTER_SLICES=1  # 1, 2, 4で一歩DTの費用を比較
 qc_trotter=QuantumCircuit(8)
@@ -168,7 +217,6 @@ M4/M8の枝回路は小さい成分も保つ厳密な局所分解で合成して
 ''')
     code(f'FIT_INFO={fit_info!r}\n'+'''
 print('Preparation M, chi:',SELECTED_PREP_M,PREP_INFO['reports']['S0']['chi'],'evolution M:',SELECTED_EVOLUTION_M)
-print('Ground-state MPS bonds:',FIT_INFO['S0_MPS_bonds'])
 print('MPO target microsteps/cutoff:',FIT_INFO['mpo_microsteps'],FIT_INFO['mpo_cutoff'])
 print('Evolution fit iteration cap:',EVOLUTION_INFO['report']['refinement_cap'],
       'full convergence claimed:',EVOLUTION_INFO['report']['full_convergence_claimed'])
@@ -183,10 +231,11 @@ F_opは全Fock空間の指標で、目的の二状態だけの位相差誤差で
 F_op=1なら大域位相を除いて一致しますが、一般に1に近いだけではギャップの精度を保証しません。
 
 次セルでは**MPS目標のfidelity**と**実際の回路状態のfidelity**を並べます。
+厳密準備を選んだ場合はMPSを経ず、目標欄にはFCIそのものへのfidelity=1を表示します。
 準備回路のNα,Nβは2を保ちますが、S²を厳密に固定する最適化ではないことも確認します。
 ''')
     code('''STATE_FIDELITIES={}
-print('State  MPS fidelity         circuit fidelity      energy error/Ha    <S^2>')
+print('State  target fidelity      circuit fidelity      energy error/Ha    <S^2>')
 for name,exact,approx,key in zip(['S0','T'],EXACT_STATES,APPROX_STATES,['energy_S0','energy_T']):
     fidelity=float(abs(np.vdot(exact,approx))**2)
     STATE_FIDELITIES[name]=fidelity
@@ -208,8 +257,8 @@ np.testing.assert_allclose(U_APPROX.conj().T@U_APPROX,np.eye(256),atol=1e-10)
 3. 準備回路がユニタリで、粒子数が正しければ、参照S₀そのものを作れているか。
 ''')
     answer('''1. いえません。MPSから限られた層数の回路へフィットする段階が別にあります。
-既定M6/M16の例ではMPS目標は両方ほぼ1ですが、回路はS₀≈0.93860、T≈0.999564です。
-2. 指標の対象が違うため、その数値だけでは順位付けできません。既定M16のF_op≈0.999999858でも、目的の相対位相を別に調べます。
+既定R=2 Å・M6/M16の例ではMPS目標は両方ほぼ1ですが、回路はS₀≈0.93860、T≈0.999564です。
+2. 指標の対象が違うため、その数値だけでは順位付けできません。R=2 Å・M16のF_op≈0.999999858でも、目的の相対位相を別に調べます。
 3. ユニタリ性と粒子数は必要な検証ですが、特定の固有状態への一致を保証しません。重なり・S²・エネルギーなどを確認します。''')
     md(r'''## 4．近似回路の費用：単独準備、枝制御、逆準備を数える
 
@@ -226,7 +275,7 @@ a=q8: |0> ──┌─────┐────────P(εt)──┌─�
 s=q0..7: ───└─────┘──[Uapp]^L──────└─────┘──M──┘
 ```
 
-既定の発展M16の基底ゲート列だけは168 CXですが、モード順変換を前後に含めると216 CXです。
+既定R=2 Åの発展M16の基底ゲート列だけは168 CXですが、モード順変換を前後に含めると216 CXです。
 次セルは実際に本冊で使う部品を同じ条件で再コンパイルし、**同じ役割同士**を比較します。
 最後の表では、厳密準備＋Trotterと、指定Mの準備＋発展の全回路を比べます。
 前者の発展もTrotter近似で、完全に厳密なexp(−iHt)回路の資源とは区別します。
@@ -253,7 +302,7 @@ native_both=record_cost(f'M{SELECTED_PREP_M} prep + M{SELECTED_EVOLUTION_M} evol
 3. Lを増やすと、準備もL回になるか。
 ''')
     answer('''1. 呼べません。枝を作るcoherent A、逆準備、発展、位相補正が必要です。
-既定M6/M16ではAとA†は各258 CX、変換込みの発展は216 CXで、L=1の全体は732 CXです。
+既定R=2 Å・M6/M16ではAとA†は各258 CX、変換込みの発展は216 CXで、L=1の全体は732 CXです。
 2. 準備と発展のモード順を合わせる符号付き変換の費用を含めるためです。
 3. 各ショットの準備と逆準備は1回ずつ、発展だけがL回です。直列計数はCX(A)+CX(A†)+L×CX(Uapp)です。既定6/16では516+216L CXです。
 全体最適化や実機ルーティングにより実際の値は変わるので、これは費用の見積もりです。''')
@@ -322,13 +371,13 @@ np.testing.assert_allclose(L1_METRICS['both']['pmax'],SELECTED_RESULTS['fringe']
     cells.append(copy.deepcopy(checks))
     md('''### 課題5：高い信号が意味すること
 
-1. 既定M6/M16でS₀のstate fidelity≈0.9386なのに、L=1のPmax≈0.99997となるのは矛盾か。
+1. 既定R=2 Å・M6/M16でS₀のstate fidelity≈0.9386なのに、L=1のPmax≈0.99997となるのは矛盾か。
 2. `both`のL=1のピークは、FCIギャップと一致しているか。
 3. operator fidelityが1に近いことと、ギャップの相対誤差が小さいことは同じか。
 ''')
     answer('''1. 矛盾しません。前者は参照固有状態との重なり、後者は短時間発展後に近似準備状態へ戻る干渉信号です。
 短時間では異なる固有成分もまだ大きく位相が離れていないことがあります。
-2. 既定M6/M16ではFCI≈0.01590496 Haに対し、bothのピークは約0.00922888 Ha、ずれは約−0.00667608 Haです。
+2. 既定R=2 Å・M6/M16ではFCI≈0.01590496 Haに対し、bothのピークは約0.00922888 Ha、ずれは約−0.00667608 Haです。
 高いPmaxだけから「正しいエネルギー差が得られた」とは判断できません。
 3. 同じではありません。小さなギャップでは、小さな位相の偏りも大きな相対誤差になり得ます。
 演算子・準備・信号・推定をそれぞれ確認します。''')
@@ -417,8 +466,8 @@ CASEは「どの状態と発展を使うか」、MODEは「その回路をどう
 | 設定例 | 得る値 | 含まれる誤差 |
 |---|---|---|
 | CASE=exact, MODE=exact | 厳密準備・厳密発展の確率 | この模型内の参照 |
-| CASE=both, MODE=exact | 選択したMの回路の厳密確率 | 回路近似、shot noiseなし |
-| CASE=both, MODE=shots | 二項模擬測定の全0頻度 | 回路近似とshot noise（実機ノイズなし） |
+| CASE=both, MODE=exact | 選択したMの回路の厳密確率 | 指定部品の近似、shot noiseなし |
+| CASE=both, MODE=shots | 二項模擬測定の全0頻度 | 指定部品の近似とshot noise（実機ノイズなし） |
 | CASE=both, MODE=ibm | 実機の全0頻度 | 回路近似、shots、実機での影響 |
 
 MODE=shotsでは$n_{0^9}\sim\mathrm{Binomial}(R,P)$、表示値は$n_{0^9}/R$です。
@@ -473,7 +522,7 @@ else:
 3. MODE=ibm、RUN_HARDWARE=Falseでは送信されるか。
 4. 同じ保存先で同条件のIBM測定を再実行すると、新しいショットが追加されるか。
 ''')
-    answer('''1. SHOTSを使わないので確率は変わりません。CASE=bothなら回路近似は残っています。
+    answer('''1. SHOTSを使わないので確率は変わりません。指定部品が近似なら回路近似は残っています。
 2. 各探索点の頻度の標準偏差√[P(1−P)/SHOTS]が減ります。9点の総shotsは1152から73728へ増えます。
    実機ノイズを加えたシミュレーションにはならず、回路近似の偏りも残ります。
 3. 設定セルは接続・コンパイルのプレビューを行いますが、測定セルは送信せずスキップします。

@@ -1,0 +1,606 @@
+{
+  "preparation": {
+    "4": {
+      "keys": {
+        "S0": "prep_4_S0",
+        "T": "prep_4_T",
+        "A": "prep_4_A"
+      },
+      "reports": {
+        "S0": {
+          "M": 4,
+          "chi": 6,
+          "R_angstrom": 0.7851571147392099,
+          "determinant": 165,
+          "fidelity_S0": 0.9854843754626385,
+          "energy": -5.061133483595108,
+          "variance": 0.040498482983003514,
+          "sector_leakage": 0.0,
+          "Nalpha": 2.0000000000000044,
+          "Nbeta": 2.0000000000000044,
+          "S2": 0.00675048475695864,
+          "total_energy": -2.140569937429377,
+          "energy_error": 0.0217033422169699,
+          "fidelity_after_MPS": 1.0,
+          "fidelity_after_basic": 0.9854843754626362,
+          "fidelity_to_MPS": 0.9854843754626387,
+          "MPS_retained_norm_squared": 0.9999999999999993,
+          "two_qubit_blocks": 14,
+          "depth_before": 5,
+          "depth_after": 42,
+          "cx": 40,
+          "synthesis_amplitude_error": 1.5085991565960777e-15,
+          "seconds": 3.722082540858537,
+          "optimizer_max_sweeps": 600,
+          "selected_start": "neighbor_R0.81563660",
+          "optimization_target": "normalized chi-truncated MPS only"
+        },
+        "T": {
+          "state": "T",
+          "fidelity_target": 0.7595752195371356,
+          "M": 4,
+          "chi": 6,
+          "R_angstrom": 0.7851571147392099,
+          "determinant": 165,
+          "energy": -4.4546410635586415,
+          "variance": 0.2955434280803764,
+          "sector_leakage": 0.0,
+          "Nalpha": 1.9999999999999956,
+          "Nbeta": 1.9999999999999956,
+          "S2": 1.7072544108948606,
+          "fidelity_T": 0.7595752195371356,
+          "total_energy": -1.5340775173929107,
+          "energy_error": 0.2563547845811396,
+          "fidelity_after_MPS": 1.0,
+          "fidelity_after_basic": 0.7595752195371375,
+          "fidelity_to_MPS": 0.7595752195371354,
+          "MPS_retained_norm_squared": 1.0000000000000013,
+          "two_qubit_blocks": 14,
+          "depth_before": 5,
+          "depth_after": 51,
+          "cx": 41,
+          "synthesis_amplitude_error": 1.5632082117998628e-15,
+          "seconds": 5.015131209045649,
+          "optimizer_max_sweeps": 600,
+          "selected_start": "seed1",
+          "optimization_target": "normalized chi-truncated MPS only",
+          "reused": false,
+          "model_sha256": "a8f0a20f2da1e0c1ddb0c8d4702824ce0a8b37fbf400ee743a59b8863da39a4e"
+        }
+      },
+      "fidelities": {
+        "S0": 0.9854843754626362,
+        "T": 0.7595752195371375,
+        "S0_MPS": 1.0,
+        "T_MPS": 1.0
+      },
+      "resources": {
+        "S0": {
+          "cx": 40,
+          "depth": 42,
+          "qubits": 8
+        },
+        "T": {
+          "cx": 41,
+          "depth": 51,
+          "qubits": 8
+        },
+        "A": {
+          "cx": 172,
+          "depth": 261,
+          "qubits": 9
+        },
+        "inverse": {
+          "cx": 172,
+          "depth": 261,
+          "qubits": 9
+        }
+      },
+      "sources": {
+        "model": "a8f0a20f2da1e0c1ddb0c8d4702824ce0a8b37fbf400ee743a59b8863da39a4e",
+        "S0": "f5be6f4223b5e682c5b17f673b47d780c23c01e708a1d9fa471f4213d2f92b11",
+        "T": "38186701cefd90fae10c23b742ba22885038141c6f6f83501f5e34b7f64a879e"
+      }
+    },
+    "6": {
+      "keys": {
+        "S0": "prep_6_S0",
+        "T": "prep_6_T",
+        "A": "prep_6_A"
+      },
+      "reports": {
+        "S0": {
+          "M": 6,
+          "chi": 6,
+          "R_angstrom": 0.7851571147392099,
+          "determinant": 165,
+          "fidelity_S0": 0.9990595574144538,
+          "energy": -5.080040513129059,
+          "variance": 0.008898170036080849,
+          "sector_leakage": 0.0,
+          "Nalpha": 2.0000000000000027,
+          "Nbeta": 2.0000000000000027,
+          "S2": 0.0006835339561446748,
+          "total_energy": -2.159476966963328,
+          "energy_error": 0.0027963126830190532,
+          "fidelity_after_MPS": 1.0,
+          "fidelity_after_basic": 0.9990595574144521,
+          "fidelity_to_MPS": 0.9990595574144538,
+          "MPS_retained_norm_squared": 0.9999999999999993,
+          "two_qubit_blocks": 21,
+          "depth_before": 7,
+          "depth_after": 62,
+          "cx": 60,
+          "synthesis_amplitude_error": 7.303092710345707e-15,
+          "seconds": 6.93662091717124,
+          "optimizer_max_sweeps": 600,
+          "selected_start": "neighbor_R0.81563660",
+          "optimization_target": "normalized chi-truncated MPS only"
+        },
+        "T": {
+          "state": "T",
+          "fidelity_target": 0.9995040113446543,
+          "M": 6,
+          "chi": 6,
+          "R_angstrom": 0.7851571147392099,
+          "determinant": 165,
+          "energy": -4.709783530213042,
+          "variance": 0.0031941934815461737,
+          "sector_leakage": 0.0,
+          "Nalpha": 1.9999999999999993,
+          "Nbeta": 1.9999999999999993,
+          "S2": 1.999546288911478,
+          "fidelity_T": 0.9995040113446543,
+          "total_energy": -1.7892199840473113,
+          "energy_error": 0.0012123179267389261,
+          "fidelity_after_MPS": 1.0,
+          "fidelity_after_basic": 0.9995040113446538,
+          "fidelity_to_MPS": 0.9995040113446543,
+          "MPS_retained_norm_squared": 1.0000000000000013,
+          "two_qubit_blocks": 21,
+          "depth_before": 7,
+          "depth_after": 62,
+          "cx": 60,
+          "synthesis_amplitude_error": 2.709298211168913e-15,
+          "seconds": 10.3890496250242,
+          "optimizer_max_sweeps": 600,
+          "selected_start": "existing_T_R2_M6",
+          "optimization_target": "normalized chi-truncated MPS only",
+          "reused": false,
+          "model_sha256": "a8f0a20f2da1e0c1ddb0c8d4702824ce0a8b37fbf400ee743a59b8863da39a4e"
+        }
+      },
+      "fidelities": {
+        "S0": 0.9990595574144521,
+        "T": 0.9995040113446538,
+        "S0_MPS": 1.0,
+        "T_MPS": 1.0
+      },
+      "resources": {
+        "S0": {
+          "cx": 60,
+          "depth": 62,
+          "qubits": 8
+        },
+        "T": {
+          "cx": 60,
+          "depth": 62,
+          "qubits": 8
+        },
+        "A": {
+          "cx": 258,
+          "depth": 377,
+          "qubits": 9
+        },
+        "inverse": {
+          "cx": 258,
+          "depth": 377,
+          "qubits": 9
+        }
+      },
+      "sources": {
+        "model": "a8f0a20f2da1e0c1ddb0c8d4702824ce0a8b37fbf400ee743a59b8863da39a4e",
+        "S0": "254645c81d53f58e5292f446166b8975453ee1c316e2192a619fddce60969a8e",
+        "T": "4b885198b58b41b7add754fdb00a4cec64111c5e12708e317c8add46acd3f526"
+      }
+    },
+    "8": {
+      "keys": {
+        "S0": "prep_8_S0",
+        "T": "prep_8_T",
+        "A": "prep_8_A"
+      },
+      "reports": {
+        "S0": {
+          "M": 8,
+          "chi": 6,
+          "R_angstrom": 0.7851571147392099,
+          "determinant": 165,
+          "fidelity_S0": 0.9999047114985091,
+          "energy": -5.082573345907262,
+          "variance": 0.0008147762282364174,
+          "sector_leakage": 0.0,
+          "Nalpha": 2.000000000000001,
+          "Nbeta": 2.000000000000001,
+          "S2": 7.854619319281212e-05,
+          "total_energy": -2.162009799741531,
+          "energy_error": 0.00026347990481578876,
+          "fidelity_after_MPS": 1.0,
+          "fidelity_after_basic": 0.9999047114985105,
+          "fidelity_to_MPS": 0.9999047114985091,
+          "MPS_retained_norm_squared": 0.9999999999999993,
+          "two_qubit_blocks": 28,
+          "depth_before": 9,
+          "depth_after": 79,
+          "cx": 80,
+          "synthesis_amplitude_error": 5.222917932755674e-15,
+          "seconds": 9.148215459194034,
+          "optimizer_max_sweeps": 600,
+          "selected_start": "neighbor_R0.81563660",
+          "optimization_target": "normalized chi-truncated MPS only"
+        },
+        "T": {
+          "state": "T",
+          "fidelity_target": 0.9999475779387005,
+          "M": 8,
+          "chi": 6,
+          "R_angstrom": 0.7851571147392099,
+          "determinant": 165,
+          "energy": -4.710866143268539,
+          "variance": 0.00035820060732843844,
+          "sector_leakage": 0.0,
+          "Nalpha": 2.000000000000001,
+          "Nbeta": 2.000000000000001,
+          "S2": 1.9999308833439915,
+          "fidelity_T": 0.9999475779387005,
+          "total_energy": -1.7903025971028077,
+          "energy_error": 0.00012970487124253083,
+          "fidelity_after_MPS": 1.0,
+          "fidelity_after_basic": 0.9999475779386983,
+          "fidelity_to_MPS": 0.9999475779387005,
+          "MPS_retained_norm_squared": 1.0000000000000013,
+          "two_qubit_blocks": 28,
+          "depth_before": 9,
+          "depth_after": 82,
+          "cx": 80,
+          "synthesis_amplitude_error": 6.87510986531297e-15,
+          "seconds": 13.888494125101715,
+          "optimizer_max_sweeps": 600,
+          "selected_start": "existing_T_R2_M8",
+          "optimization_target": "normalized chi-truncated MPS only",
+          "reused": false,
+          "model_sha256": "a8f0a20f2da1e0c1ddb0c8d4702824ce0a8b37fbf400ee743a59b8863da39a4e"
+        }
+      },
+      "fidelities": {
+        "S0": 0.9999047114985105,
+        "T": 0.9999475779386983,
+        "S0_MPS": 1.0,
+        "T_MPS": 1.0
+      },
+      "resources": {
+        "S0": {
+          "cx": 80,
+          "depth": 79,
+          "qubits": 8
+        },
+        "T": {
+          "cx": 80,
+          "depth": 82,
+          "qubits": 8
+        },
+        "A": {
+          "cx": 344,
+          "depth": 493,
+          "qubits": 9
+        },
+        "inverse": {
+          "cx": 344,
+          "depth": 493,
+          "qubits": 9
+        }
+      },
+      "sources": {
+        "model": "a8f0a20f2da1e0c1ddb0c8d4702824ce0a8b37fbf400ee743a59b8863da39a4e",
+        "S0": "caab67505a16ffa4aff9aaa424aec7d4dafa03648850fac797a1d0b346921198",
+        "T": "c35d83abf9f9fcc214ec0f15deabcbb7ff6e4c54e3a1fa2f8ff74612e2a6f81b"
+      }
+    },
+    "exact": {
+      "keys": {
+        "S0": "prep_exact_S0",
+        "T": "prep_exact_T",
+        "A": "prep_exact_A"
+      },
+      "reports": {
+        "S0": {
+          "chi": null
+        },
+        "T": {
+          "chi": null
+        }
+      },
+      "fidelities": {
+        "S0": 1.0,
+        "T": 1.0,
+        "S0_MPS": 1.0,
+        "T_MPS": 1.0
+      },
+      "resources": {
+        "S0": {
+          "cx": 254,
+          "depth": 990,
+          "qubits": 8
+        },
+        "T": {
+          "cx": 254,
+          "depth": 1246,
+          "qubits": 8
+        },
+        "A": {
+          "cx": 510,
+          "depth": 2490,
+          "qubits": 9
+        },
+        "inverse": {
+          "cx": 510,
+          "depth": 2490,
+          "qubits": 9
+        }
+      },
+      "sources": {
+        "model": "a8f0a20f2da1e0c1ddb0c8d4702824ce0a8b37fbf400ee743a59b8863da39a4e",
+        "method": "exact real-amplitude Ry/CX"
+      }
+    }
+  },
+  "evolution": {
+    "8": {
+      "key": "evolution_8",
+      "report": {
+        "R_angstrom": 0.7851571147392099,
+        "M": 8,
+        "dt": 0.1,
+        "reference_cutoff": 1e-18,
+        "reference_sha256": "8ed07676bcc39a7d0220facd7448444a79ce8803301db1a8dc3e9179ef3ab703",
+        "reference_path": "hands_on/self_study/h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_0p78515711/reference/boys_ordered_c18_reference_adjoint.npy",
+        "mode_order": "interleaved alpha/beta; blocked_blocks.qpy includes exact FSWAP conversion",
+        "initial_maxiter": 1500,
+        "refinement_cap": 10000,
+        "actual_refinement_iterations": 2,
+        "full_convergence_claimed": false,
+        "reused_existing": null,
+        "two_qubit_blocks": 28,
+        "CX_evolution_only": 84,
+        "depth_before": 8,
+        "depth_after": 184,
+        "basic_operator_error": 3.123623092156224e-11,
+        "mpo_error": 0.030877012910209056,
+        "vs_exact": 0.03087701341010624,
+        "BPE_total_energy_Ha": -2.2128348836896023,
+        "BPE_total_error_vs_FCI_Ha": -0.05056160404325549,
+        "S0_output_norm_squared": 0.9999999999999973,
+        "T_output_norm_squared": 0.9999999999999999
+      },
+      "resources": {
+        "cx": 132,
+        "depth": 209,
+        "qubits": 8
+      },
+      "operator_fidelity": 0.9990468372809744,
+      "sources": {
+        "basic": "ade67e774c3641695ae1398924fe650c8cde5476940f3e69107082a00ee69ec4",
+        "blocked": "5740eaa071ac0bc6e38919b800e09b1058696a663a9b3f5578b5f6fc26c277a8"
+      }
+    },
+    "16": {
+      "key": "evolution_16",
+      "report": {
+        "R_angstrom": 0.7851571147392099,
+        "M": 16,
+        "dt": 0.1,
+        "reference_cutoff": 1e-18,
+        "reference_sha256": "8ed07676bcc39a7d0220facd7448444a79ce8803301db1a8dc3e9179ef3ab703",
+        "reference_path": "hands_on/self_study/h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_0p78515711/reference/boys_ordered_c18_reference_adjoint.npy",
+        "mode_order": "interleaved alpha/beta; blocked_blocks.qpy includes exact FSWAP conversion",
+        "initial_maxiter": 1500,
+        "refinement_cap": 10000,
+        "actual_refinement_iterations": 7907,
+        "full_convergence_claimed": false,
+        "reused_existing": null,
+        "two_qubit_blocks": 56,
+        "CX_evolution_only": 168,
+        "depth_before": 16,
+        "depth_after": 368,
+        "basic_operator_error": 2.738487947376355e-13,
+        "mpo_error": 0.0019569110027668883,
+        "vs_exact": 0.0019569117425193533,
+        "BPE_total_energy_Ha": -2.1935175946933567,
+        "BPE_total_error_vs_FCI_Ha": -0.031244315047009863,
+        "S0_output_norm_squared": 1.0000000000000242,
+        "T_output_norm_squared": 1.0000000000000175
+      },
+      "resources": {
+        "cx": 216,
+        "depth": 353,
+        "qubits": 8
+      },
+      "operator_fidelity": 0.999996170500096,
+      "sources": {
+        "basic": "f1c5b844737631a5eba35bdfdeac1b79b57d9df3a1dd5dd4a14ed4f7a1768dbf",
+        "blocked": "9819c602a6933b69e6425d98daf3890116eff8022b2bcfbb52579cb09c6c6eca"
+      }
+    },
+    "32": {
+      "key": "evolution_32",
+      "report": {
+        "R_angstrom": 0.7851571147392099,
+        "M": 32,
+        "dt": 0.1,
+        "reference_cutoff": 1e-18,
+        "reference_sha256": "8ed07676bcc39a7d0220facd7448444a79ce8803301db1a8dc3e9179ef3ab703",
+        "reference_path": "hands_on/self_study/h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_0p78515711/reference/boys_ordered_c18_reference_adjoint.npy",
+        "mode_order": "interleaved alpha/beta; blocked_blocks.qpy includes exact FSWAP conversion",
+        "initial_maxiter": 1500,
+        "refinement_cap": 10000,
+        "actual_refinement_iterations": 10000,
+        "full_convergence_claimed": false,
+        "reused_existing": null,
+        "two_qubit_blocks": 112,
+        "CX_evolution_only": 336,
+        "depth_before": 32,
+        "depth_after": 736,
+        "basic_operator_error": 4.4840280039994717e-13,
+        "mpo_error": 0.0004215090200758562,
+        "vs_exact": 0.0004215073848252349,
+        "BPE_total_energy_Ha": -2.160476753237335,
+        "BPE_total_error_vs_FCI_Ha": 0.001796526409012067,
+        "S0_output_norm_squared": 1.0000000000000313,
+        "T_output_norm_squared": 1.000000000000031
+      },
+      "resources": {
+        "cx": 384,
+        "depth": 641,
+        "qubits": 8
+      },
+      "operator_fidelity": 0.9999998223318093,
+      "sources": {
+        "basic": "4b2b78599776e5a06024554d75d7382a4186728aa4f7cd34500bb02e2c5971c5",
+        "blocked": "70c72ba22d36bdff4f7d9a898313c32e45f67ae690fb918d94a50c1991583210"
+      }
+    },
+    "exact": {
+      "key": "evolution_exact",
+      "report": {
+        "refinement_cap": null,
+        "full_convergence_claimed": null
+      },
+      "resources": {
+        "qubits": 8,
+        "cx": null,
+        "depth": null,
+        "scope": "dense reference; not native synthesis"
+      },
+      "operator_fidelity": 1.0,
+      "sources": {
+        "model": "a8f0a20f2da1e0c1ddb0c8d4702824ce0a8b37fbf400ee743a59b8863da39a4e",
+        "method": "scipy.linalg.expm; DT=0.1; electronic H"
+      }
+    }
+  },
+  "pairs": {
+    "4/8": {
+      "digest": "6beb77467c17240ac14054e918804025d8a1b40269f52f31f4473e741bd7e6eb",
+      "fringe": {
+        "apparent_gap": 0.7967358768725775,
+        "Pmax": 0.9969340253382115
+      }
+    },
+    "4/16": {
+      "digest": "eff75d94ca5853b512959507e0d240748eda6dc834103742fcefc676817dffd8",
+      "fringe": {
+        "apparent_gap": 0.6302742322722175,
+        "Pmax": 0.9983158835936438
+      }
+    },
+    "4/32": {
+      "digest": "ae21aa47c539fd29656968e46173cc43b9a9e77b65b1261eae1fa94964c3565f",
+      "fringe": {
+        "apparent_gap": 0.6051082528259155,
+        "Pmax": 0.9983285208422962
+      }
+    },
+    "4/exact": {
+      "digest": "632391ec19c5ca58abfb3a130b44d8b7133bdf92a41f7951ff1f530367909df2",
+      "fringe": {
+        "apparent_gap": 0.6060577423284824,
+        "Pmax": 0.9983242156247766
+      }
+    },
+    "6/8": {
+      "digest": "67a5fef046f135a341ebda8bbf818119ee518733e79c8e20c4dbcab076987674",
+      "fringe": {
+        "apparent_gap": 0.445490616019878,
+        "Pmax": 0.9993813153131331
+      }
+    },
+    "6/16": {
+      "digest": "c526a360de1fba6e6d1a368bb671fcd8a2f24db671de4e1fd2bae4aecd56c71e",
+      "fringe": {
+        "apparent_gap": 0.39407630862569465,
+        "Pmax": 0.9999389479521672
+      }
+    },
+    "6/32": {
+      "digest": "4ada23e9968c55f20ab18b6c02da704d70e6e414199855fdb5e9acbe8dc7bcce",
+      "fringe": {
+        "apparent_gap": 0.3694566978051981,
+        "Pmax": 0.9999403506493945
+      }
+    },
+    "6/exact": {
+      "digest": "ec514a2cdfb4f2363783d590276e4ef364fb5616645c0307f62935f734d27628",
+      "fringe": {
+        "apparent_gap": 0.3702911484461311,
+        "Pmax": 0.9999400702894193
+      }
+    },
+    "8/8": {
+      "digest": "57642b7b60707a45ed7b3c65150b6d3ee12284b5fed19b867c8305d44658eb0e",
+      "fringe": {
+        "apparent_gap": 0.4468789629736531,
+        "Pmax": 0.9994848158117853
+      }
+    },
+    "8/16": {
+      "digest": "0f7725875b2dabc876361f135ad50d660b363ce0460d5374debb5d0f50c19ab6",
+      "fringe": {
+        "apparent_gap": 0.3952527231413096,
+        "Pmax": 0.999988432889076
+      }
+    },
+    "8/32": {
+      "digest": "9ea6efa428f6abb69457a7a629277700b67af6dcfadc2c4964558399c21cc9bd",
+      "fringe": {
+        "apparent_gap": 0.3708981600491646,
+        "Pmax": 0.9999939772729238
+      }
+    },
+    "8/exact": {
+      "digest": "88f36d493f4f86c6df1be8192e24b765d48562bbcbe23cbc8ed006c00c37abf5",
+      "fringe": {
+        "apparent_gap": 0.3717099066780869,
+        "Pmax": 0.999994187726235
+      }
+    },
+    "exact/8": {
+      "digest": "b57045d15ef2604daa04c0e09bf3b6ef082fb0ebdc73d4747552f1fefd8d9569",
+      "fringe": {
+        "apparent_gap": 0.44684480895292567,
+        "Pmax": 0.9994919402362817
+      }
+    },
+    "exact/16": {
+      "digest": "91b22c8cc063438edbd1497d4d4c4a9dc91c420ee5ea92aa98e40c32845f1c56",
+      "fringe": {
+        "apparent_gap": 0.39536204050987156,
+        "Pmax": 0.9999944437360553
+      }
+    },
+    "exact/32": {
+      "digest": "19d3eb4f8d13cd8d076e79e6602440d297f376972a7b26a5a4cd30cc575e4533",
+      "fringe": {
+        "apparent_gap": 0.3710442270182722,
+        "Pmax": 0.9999997250761212
+      }
+    },
+    "exact/exact": {
+      "digest": "248e22724c9cee6e4da8f675ff32141331332474d6bba4ffe5c5cea3c914cce9",
+      "fringe": {
+        "apparent_gap": 0.37184097767229946,
+        "Pmax": 1.0
+      }
+    }
+  },
+  "model_sha256": "a8f0a20f2da1e0c1ddb0c8d4702824ce0a8b37fbf400ee743a59b8863da39a4e"
+}
