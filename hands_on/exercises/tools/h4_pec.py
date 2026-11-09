@@ -3,6 +3,7 @@ import hashlib
 import io
 import json
 import os
+import tempfile
 from pathlib import Path
 from urllib.request import urlopen
 import numpy as np
@@ -19,29 +20,46 @@ DATA_URL = f'https://raw.githubusercontent.com/QS-laboratory/IBM_handson/{DATA_C
 _MODEL_CACHE, _STATE_CACHE, _SPECTRUM_CACHE = {}, {}, {}
 
 
+def data_root():
+    # Same destination priority as 05/06, including downloads into explicit paths.
+    explicit = os.environ.get('H4_DATA_DIR') or globals().get('H4_CACHE_DIR')
+    root = Path(explicit).expanduser().resolve() if explicit else None
+    if root is None:
+        for parent in [Path.cwd(), *Path.cwd().parents]:
+            for candidate in [parent/'data/h4_pec_v1', parent/'hands_on/exercises/data/h4_pec_v1']:
+                if (candidate/'manifest.json').is_file():
+                    root = candidate
+                    break
+            if root is not None:
+                break
+    if root is None:
+        root = Path.home()/'.cache/ftqc_handson/h4_pec_v1'
+    if str(root).startswith('/content/drive/MyDrive/') and not Path('/content/drive/MyDrive').is_dir():
+        raise FileNotFoundError('先に drive.mount("/content/drive") でGoogle Driveを接続してください')
+    return root
+
+
 def data_bytes(relative):
     if relative not in H4_INDEX['files']:
         raise ValueError('Unknown snapshot file: ' + relative)
-    roots = []
-    if os.environ.get('H4_DATA_DIR'):
-        roots.append(Path(os.environ['H4_DATA_DIR']).expanduser())
-    for parent in [Path.cwd(), *Path.cwd().parents]:
-        roots.extend([parent/'data/h4_pec_v1', parent/'hands_on/exercises/data/h4_pec_v1'])
-    cache = Path('outputs/h4_pec_v1')
-    roots.append(cache)
-    for root in roots:
-        path = root/relative
-        if path.is_file():
-            raw = path.read_bytes()
-            break
+    path = data_root()/relative
+    if path.is_file():
+        raw = path.read_bytes()
     else:
         with urlopen(DATA_URL + relative, timeout=90) as response:
             raw = response.read()
         if hashlib.sha256(raw).hexdigest() != H4_INDEX['files'][relative]:
             raise ValueError('Downloaded snapshot checksum mismatch: ' + relative)
-        path = cache/relative
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_bytes(raw)
+        tmp = None
+        try:
+            with tempfile.NamedTemporaryFile(dir=path.parent, delete=False) as stream:
+                tmp = Path(stream.name)
+                stream.write(raw)
+            os.replace(tmp, path)
+        finally:
+            if tmp is not None:
+                tmp.unlink(missing_ok=True)
     if hashlib.sha256(raw).hexdigest() != H4_INDEX['files'][relative]:
         raise ValueError('Snapshot checksum mismatch: ' + relative)
     return raw
