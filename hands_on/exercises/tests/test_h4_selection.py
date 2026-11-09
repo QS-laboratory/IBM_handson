@@ -9,7 +9,7 @@ ROOT=Path(__file__).resolve().parents[1]
 @pytest.fixture(scope='module')
 def runtime():
     ns={}
-    exec(nbformat.read(ROOT/'04_h4_circuit_assessment.ipynb',4).cells[2].source,ns)
+    exec(next(c.source for c in nbformat.read(ROOT/'04_h4_circuit_assessment.ipynb',4).cells if c.cell_type == 'code' and c.source.startswith('ASSETS=')),ns)
     return ns
 
 @pytest.mark.parametrize('pm',[4,6,8])
@@ -56,7 +56,7 @@ def test_selection_controls_and_embedded_catalog_match_between_notebooks():
     notebooks=[nbformat.read(ROOT/name,4) for name in ['04_h4_circuit_assessment.ipynb','05_h4_iterative_bayes.ipynb']]
     namespaces=[]
     for book in notebooks:
-        ns={};exec(book.cells[2].source,ns);namespaces.append(ns)
+        ns={};exec(next(c.source for c in book.cells if c.cell_type == 'code' and c.source.startswith('ASSETS=')),ns);namespaces.append(ns)
     assert namespaces[0]['CIRCUIT_CATALOG']==namespaces[1]['CIRCUIT_CATALOG']
     assert namespaces[0]['ASSET_DIGEST']==namespaces[1]['ASSET_DIGEST']
     for book in notebooks:

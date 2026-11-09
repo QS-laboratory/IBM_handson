@@ -62,12 +62,12 @@ def test_all_explicit_questions_have_answers():
 @pytest.fixture(scope='module')
 def h4():
     ns={}
-    exec(cells('04_h4_circuit_assessment.ipynb')[2].source,ns)
+    exec(next(c.source for c in cells('04_h4_circuit_assessment.ipynb') if c.cell_type == 'code' and c.source.startswith('ASSETS=')),ns)
     return ns
 
 
 def test_h4_same_assets_and_formula_for_both_notebooks(h4):
-    other={};exec(cells('05_h4_iterative_bayes.ipynb')[2].source,other)
+    other={};exec(next(c.source for c in cells('05_h4_iterative_bayes.ipynb') if c.cell_type == 'code' and c.source.startswith('ASSETS=')),other)
     assert h4['ASSET_DIGEST']==other['ASSET_DIGEST']
     for case in h4['CASES']:
         for L in [1,9,64]:

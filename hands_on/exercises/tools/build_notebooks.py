@@ -119,8 +119,8 @@ config=code('''MODE = 'exact'     # 'exact', 'shots', 'ibm'
 CASE = 'both'      # 'exact', 'prep_only', 'evolution_only', 'both'; ibmはbothのみ
 SHOTS = 1024       # 各探索点のshots。MODE='exact'では使わない
 SEED = 42
-BACKEND_NAME = ''  # 自分の利用可能なIBM backend名
-INSTANCE = ''      # 必要ならインスタンスCRN
+BACKEND_NAME = '' or globals().get('IBM_BACKEND_NAME', '')  # 冒頭の選択を引き継ぐ
+INSTANCE = '' or globals().get('IBM_INSTANCE', '')  # 冒頭のCRNを引き継ぐ
 RUN_HARDWARE = False  # 実機の費用を確認後、送信する場合にTrue
 MAX_HARDWARE_L = 8    # 実機の反復上限。増やす前に回路費用を確認する
 service = backend = None
@@ -139,8 +139,8 @@ if not MEASUREMENT_READY:
 ''')
 hardwaretext=md('''### 実機モードの使い方
 
-MODE=`ibm`、CASE=`both`、backend名を設定します。APIキーはColabシークレット
-`IBM_QUANTUM_API_KEY`または環境変数から読み、なければ非表示入力します。
+冒頭の接続準備を実行してから、MODE=`ibm`、CASE=`both`へ変更します。
+CRN・backend名・認証は引き継ぎます。接続準備をスキップした場合は先に戻って実行してください。
 `hardware_preview(backend,L=...)`で接続制約を含む回路費用を確認してから、
 RUN_HARDWAREをTrueにして設定セル以降を実行します。
 ジョブIDは送信直後に`outputs/ibm_jobs/`へ保存し、同条件の再実行では再投入せず結果を回収します。
@@ -163,6 +163,7 @@ sources=['self_study/h4_mps_preparation_study/results/both_states_M6_evolution_M
          'self_study/h4_mps_preparation_study/results/pec_20/R_2p00000000',
          'self_study/molecular_h4_jw/tools/h4_core.py',
          'advanced_kanno_h4/upstream/src/QPDE_Bayes_session_MPSBWMPO_RD.py']
+sources.append('exercises/tools/ibm_setup.py')
 from h4_assessment_notebook import build_h4_assessment_cells
 mpo_info=json.loads((STUDY/'h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_2p00000000/M16/results.json').read_text())
 mps_info=json.loads((prep/'M6.json').read_text())

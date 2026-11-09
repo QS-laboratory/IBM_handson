@@ -1,6 +1,7 @@
 """Exercise 5: expose every step of the Gaussian-fit adaptive measurement loop."""
 import copy
 import nbformat as nb
+from ibm_setup import ibm_setup_cells
 
 
 def build_h4_bayes_cells(install, init, modeltext, config, hardwaretext, checks):
@@ -38,6 +39,7 @@ BPDEを各εで測定 → 全0確率または頻度
 全ての問いに解答を付けています。Notebook単独で動き、最適化は再実行しません。
 ''')
     cells.append(copy.deepcopy(install))
+    cells.extend(ibm_setup_cells())
     cells.append(copy.deepcopy(init))
     md('### 回路層数Mを選ぶ\n\n準備はS₀・T₀の両枝に共通の `PREP_M`（4・6・8）、時間発展は独立な `EVOLUTION_M`（8・16・32）を選びます。\n同じ模型で保存済みの9通りを利用します。任意の整数の回路を新規最適化するセルではありません。\n既定値は6と16です。変更したら、この設定セル以降を上から再実行してください。\nCASE=`exact`はMによらない対照、他のCASEは指定した部品を使います。Mと時間反復Lは別です。\n実機モードも同じ選択回路を使います。Mの異なるジョブを再利用せず、保存履歴にもMを記録します。\n演習4と5を比較するときは両冊で同じMを指定します。')
     code("PREP_M = 6         # 4, 6, 8（S0/T0共通）\nEVOLUTION_M = 16   # 8, 16, 32\nselect_circuits(PREP_M, EVOLUTION_M)")
@@ -84,8 +86,8 @@ MODE・CASE・SHOTS・SEEDを変えたら、**設定セルから下を再実行*
 ''')
     md('''### 実機の認証とプレビュー
 
-APIキーはColabシークレット`IBM_QUANTUM_API_KEY`または環境変数から読み、なければ非表示入力します。
-MODE=ibm、CASE=both、BACKEND_NAMEと必要ならINSTANCEを指定します。
+冒頭の接続準備で指定したCRN・バックエンドと認証を引き継ぎます。
+MODE=ibm、CASE=bothに変更します。BACKEND_NAMEとINSTANCEは必要な場合だけ変更します。
 まずRUN_HARDWARE=Falseで接続し、第2節で初回Lの費用を確認してから送信を選びます。
 ジョブの再利用・保存・停止後の復旧は第9節で説明します。
 

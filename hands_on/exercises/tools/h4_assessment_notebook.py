@@ -1,6 +1,7 @@
 """Exercise 4: preparation/evolution costs, tensor-derived circuits and C-readout."""
 import copy
 import nbformat as nb
+from ibm_setup import ibm_setup_cells
 
 
 def build_h4_assessment_cells(install, init, modeltext, config, hardwaretext, checks, fit_info):
@@ -28,6 +29,7 @@ def build_h4_assessment_cells(install, init, modeltext, config, hardwaretext, ch
 各課題の直後に解答を付けています。
 ''')
     cells.append(copy.deepcopy(install))
+    cells.extend(ibm_setup_cells())
     cells.append(copy.deepcopy(init))
     md('### 回路層数Mを選ぶ\n\n準備はS₀・T₀の両枝に共通の `PREP_M`（4・6・8）、時間発展は独立な `EVOLUTION_M`（8・16・32）を選びます。\n同じ模型で保存済みの9通りを利用します。任意の整数の回路を新規最適化するセルではありません。\n既定値は6と16です。変更したら、この設定セル以降を上から再実行してください。\nCASE=`exact`はMによらない対照、他のCASEは指定した部品を使います。Mと時間反復Lは別です。\n実機モードも同じ選択回路を使います。Mの異なるジョブを再利用せず、保存履歴にもMを記録します。\n演習4と5を比較するときは両冊で同じMを指定します。')
     code("PREP_M = 6         # 4, 6, 8（S0/T0共通）\nEVOLUTION_M = 16   # 8, 16, 32\nselect_circuits(PREP_M, EVOLUTION_M)")
@@ -430,7 +432,7 @@ MODE=exactではSHOTSを変えても結果は変わりません。SHOTSを増や
     cells.append(copy.deepcopy(hardwaretext))
     md('''### 6.1．実機モードの実行順
 
-1. MODE=ibm、CASE=both、BACKEND_NAMEと必要ならINSTANCEを設定する。
+1. 冒頭の接続準備を実行し、MODE=ibm、CASE=bothへ変更する。BACKEND_NAMEとINSTANCEは接続準備の値を引き継ぐ。
 2. RUN_HARDWARE=Falseで設定セルを実行し、L=1の配置後回路の費用を確認する。この状態では測定をスキップする。
 3. 送信する場合はRUN_HARDWARE=Trueへ変更し、設定セルと次の測定セルを再実行する。
 4. ジョブIDとcountsを保存し、結果を回収する。同じ条件の再実行は保存結果を使う。

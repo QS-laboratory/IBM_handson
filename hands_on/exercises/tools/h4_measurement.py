@@ -99,6 +99,9 @@ def experiment_circuit(L, trial_gap):
     return qc
 
 def connect_ibm(backend_name, instance=''):
+    prepared = globals().get('IBM_SERVICE')
+    if prepared is not None and instance == globals().get('IBM_INSTANCE'):
+        return prepared, prepared.backend(backend_name)
     from getpass import getpass
     from qiskit_ibm_runtime import QiskitRuntimeService
     token = os.environ.get('IBM_QUANTUM_API_KEY')

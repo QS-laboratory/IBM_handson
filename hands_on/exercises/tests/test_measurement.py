@@ -12,7 +12,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def runtime():
     notebook=nbformat.read(ROOT/'04_h4_circuit_assessment.ipynb',4)
     ns={}
-    exec(notebook.cells[2].source,ns)
+    exec(next(c.source for c in notebook.cells if c.cell_type == 'code' and c.source.startswith('ASSETS=')),ns)
     return ns
 
 @pytest.mark.parametrize('L',[1,3,16])
