@@ -62,12 +62,12 @@ def test_all_explicit_questions_have_answers():
 @pytest.fixture(scope='module')
 def h4():
     ns={}
-    exec(next(c.source for c in cells('04_h4_circuit_assessment.ipynb') if c.cell_type == 'code' and c.source.startswith('ASSETS=')),ns)
+    exec(next(c.source for c in cells('04_h4_circuit_assessment.ipynb') if c.cell_type == 'code' and c.source.startswith('H4_DATA_COMMIT =')),ns)
     return ns
 
 
 def test_h4_same_assets_and_formula_for_both_notebooks(h4):
-    other={};exec(next(c.source for c in cells('05_h4_iterative_bayes.ipynb') if c.cell_type == 'code' and c.source.startswith('ASSETS=')),other)
+    other={};exec(next(c.source for c in cells('05_h4_iterative_bayes.ipynb') if c.cell_type == 'code' and c.source.startswith('H4_DATA_COMMIT =')),other)
     assert h4['ASSET_DIGEST']==other['ASSET_DIGEST']
     for case in h4['CASES']:
         for L in [1,9,64]:
@@ -325,6 +325,7 @@ def h4_assessed(tmp_path_factory):
     import matplotlib.pyplot as plt
     with pytest.MonkeyPatch.context() as patch:
         patch.chdir(tmp_path_factory.mktemp('h4-assessed'))
+        patch.setenv('H4_DATA_DIR',str(ROOT/'data/h4_pec_v1'))
         patch.setattr(plt,'show',lambda:None)
         ns={}
         for cell in cells('04_h4_circuit_assessment.ipynb'):
@@ -385,6 +386,7 @@ def h4_bayes_complete(tmp_path_factory):
     work=tmp_path_factory.mktemp('h4-bayes-complete')
     with pytest.MonkeyPatch.context() as patch:
         patch.chdir(work);patch.setattr(plt,'show',lambda:None)
+        patch.setenv('H4_DATA_DIR',str(ROOT/'data/h4_pec_v1'))
         ns={}
         for cell in cells('05_h4_iterative_bayes.ipynb'):
             if cell.cell_type=='code':exec(cell.source,ns)

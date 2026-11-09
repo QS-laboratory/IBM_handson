@@ -12,7 +12,7 @@ INDEX=json.loads((DATA/'manifest.json').read_text())
 def runtime():
     ns={}
     book=nbformat.read(ROOT/'04_h4_circuit_assessment.ipynb',4)
-    exec(next(c.source for c in book.cells if c.cell_type=='code' and c.source.startswith('ASSETS=')),ns)
+    exec(next(c.source for c in book.cells if c.cell_type=='code' and c.source.startswith('H4_DATA_COMMIT =')),ns)
     return ns
 
 @pytest.mark.parametrize('geometry',[r['id'] for r in INDEX['geometries']])
@@ -72,6 +72,8 @@ def test_full_notebook_other_geometry_and_exact_choices(book,pm,em,tmp_path,monk
         if source.startswith('PREP_M ='):
             source=source.replace('PREP_M = 6',f'PREP_M = {pm!r}').replace('EVOLUTION_M = 16',f'EVOLUTION_M = {em!r}')
             source=source.replace("GEOMETRY = 'R_2p00000000'","GEOMETRY = 'R_3p00000000'")
+        if source.startswith('RUN_PEC_SCAN =') and (pm,em)!=('exact',32):
+            source=source.replace('RUN_PEC_SCAN = True','RUN_PEC_SCAN = False')
         exec(source,ns)
     assert (ns['SELECTED_GEOMETRY'],ns['SELECTED_PREP_M'],ns['SELECTED_EVOLUTION_M'])==('R_3p00000000',pm,em)
     if book.startswith('05'):

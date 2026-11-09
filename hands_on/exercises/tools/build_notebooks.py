@@ -80,24 +80,13 @@ write('03_h2_jw_bpde.ipynb',
       ['archive/self_study/molecular_jw/tools/jw_core.py','archive/self_study/molecular_jw/data/h2.npz',
        'archive/self_study/molecular_jw/h2_jw_phase_estimation.ipynb'])
 
-# 4/5 consume only the immutable teaching snapshot, never live research outputs.
+# Lightweight bootstrap: pinned data and runtime files are cached on demand.
 DATA=ROOT/'data/h4_pec_v1'
-manifest_bytes=(DATA/'manifest.json').read_bytes()
-snapshot_digest=hashlib.sha256(manifest_bytes).hexdigest()
-index=json.loads(manifest_bytes)
-def frozen_bytes(relative):
-    raw=(DATA/relative).read_bytes()
-    if hashlib.sha256(raw).hexdigest()!=index['files'][relative]:
-        raise ValueError(f'Snapshot checksum mismatch: {relative}')
-    return raw
-row=next(r for r in index['geometries'] if r['id']=='R_2p00000000')
-assets={k:base64.b64encode(frozen_bytes(row['id']+'/'+v)).decode() for k,v in row['assets'].items()}
-catalog=json.loads(frozen_bytes(row['id']+'/catalog.json'))
+index=json.loads((DATA/'manifest.json').read_text())
+catalog=json.loads((DATA/'R_2p00000000/catalog.json').read_text())
 for name in ['preparation','evolution']:
     catalog[name]={int(k) if k!='exact' else k:v for k,v in catalog[name].items()}
-provenance=json.loads(frozen_bytes(row['id']+'/provenance.json'))
-core=frozen_bytes('exact_preparation.py').decode()
-h4init=code(f'ASSETS={assets!r}\nASSET_DIGEST={snapshot_digest!r}\nPROVENANCE={provenance!r}\nCIRCUIT_CATALOG={catalog!r}\nSNAPSHOT_INDEX={index!r}\nSNAPSHOT_DIGEST={snapshot_digest!r}\n'+core+'\n'+(ROOT/'tools/h4_measurement.py').read_text()+'\n'+(ROOT/'tools/h4_snapshot.py').read_text())
+h4init=code((ROOT/'tools/h4_bootstrap.py').read_text())
 h4init.metadata['jupyter']={'source_hidden':True}
 modeltext=md('''## 共通条件と測定方式
 
@@ -166,13 +155,15 @@ np.testing.assert_allclose(GAP,float(MODEL['energy_T']-MODEL['energy_S0']),atol=
 print('Circuit / amplitude / exact cosine checks passed')
 ''')
 sources=['exercises/data/h4_pec_v1/manifest.json','exercises/data/h4_pec_v1/exact_preparation.py',
-         'exercises/tools/h4_measurement.py','exercises/tools/h4_snapshot.py','exercises/tools/ibm_setup.py']
+         'exercises/tools/h4_measurement.py','exercises/tools/h4_snapshot.py','exercises/tools/h4_bootstrap.py','exercises/tools/ibm_setup.py']
 from h4_assessment_notebook import build_h4_assessment_cells
 fit_info={'chi':6,'mpo_microsteps':100,'mpo_cutoff':catalog['evolution'][16]['report']['reference_cutoff'],
           'refinement_cap':catalog['evolution'][16]['report']['refinement_cap'],
           'full_convergence_claimed':catalog['evolution'][16]['report']['full_convergence_claimed']}
 write('04_h4_circuit_assessment.ipynb',
-      build_h4_assessment_cells(INSTALL,h4init,modeltext,config,hardwaretext,checks,fit_info),sources)
+      build_h4_assessment_cells(INSTALL,h4init,modeltext,config,hardwaretext,checks,fit_info),
+      sources+['exercises/tools/h4_inventory.py','exercises/tools/h4_pec_exercise.py',
+               'exercises/tools/h4_pec_scan.py','exercises/data/h4_inventory_reference.json'])
 
 from h4_bayes_notebook import build_h4_bayes_cells
 write('05_h4_iterative_bayes.ipynb',

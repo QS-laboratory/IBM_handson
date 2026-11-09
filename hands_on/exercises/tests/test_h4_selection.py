@@ -9,7 +9,7 @@ ROOT=Path(__file__).resolve().parents[1]
 @pytest.fixture(scope='module')
 def runtime():
     ns={}
-    exec(next(c.source for c in nbformat.read(ROOT/'04_h4_circuit_assessment.ipynb',4).cells if c.cell_type == 'code' and c.source.startswith('ASSETS=')),ns)
+    exec(next(c.source for c in nbformat.read(ROOT/'04_h4_circuit_assessment.ipynb',4).cells if c.cell_type == 'code' and c.source.startswith('H4_DATA_COMMIT =')),ns)
     return ns
 
 @pytest.mark.parametrize('pm',[4,6,8])
@@ -56,7 +56,7 @@ def test_selection_controls_and_embedded_catalog_match_between_notebooks():
     notebooks=[nbformat.read(ROOT/name,4) for name in ['04_h4_circuit_assessment.ipynb','05_h4_iterative_bayes.ipynb']]
     namespaces=[]
     for book in notebooks:
-        ns={};exec(next(c.source for c in book.cells if c.cell_type == 'code' and c.source.startswith('ASSETS=')),ns);namespaces.append(ns)
+        ns={};exec(next(c.source for c in book.cells if c.cell_type == 'code' and c.source.startswith('H4_DATA_COMMIT =')),ns);namespaces.append(ns)
     assert namespaces[0]['CIRCUIT_CATALOG']==namespaces[1]['CIRCUIT_CATALOG']
     assert namespaces[0]['ASSET_DIGEST']==namespaces[1]['ASSET_DIGEST']
     for book in notebooks:
@@ -99,6 +99,7 @@ def test_hardware_cache_separates_m_and_reuses_same_selection(runtime,tmp_path,m
 def test_complete_notebook_with_nondefault_m(name,pm,em,tmp_path,monkeypatch):
     import matplotlib.pyplot as plt
     monkeypatch.chdir(tmp_path)
+    monkeypatch.setenv('H4_DATA_DIR',str(ROOT/'data/h4_pec_v1'))
     monkeypatch.setattr(plt,'show',lambda:None)
     ns={}
     for cell in nbformat.read(ROOT/name,4).cells:
@@ -106,6 +107,8 @@ def test_complete_notebook_with_nondefault_m(name,pm,em,tmp_path,monkeypatch):
         source=cell.source
         if source.startswith('PREP_M ='):
             source=source.replace('PREP_M = 6',f'PREP_M = {pm}').replace('EVOLUTION_M = 16',f'EVOLUTION_M = {em}')
+        if source.startswith('RUN_PEC_SCAN ='):
+            source=source.replace('RUN_PEC_SCAN = True','RUN_PEC_SCAN = False')
         exec(source,ns)
     assert ns['SELECTED_PREP_M']==pm and ns['SELECTED_EVOLUTION_M']==em
     if name.startswith('04'):

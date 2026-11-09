@@ -1,0 +1,53 @@
+{
+  "geometry": "R_2p00000000",
+  "reference_sha256": "4008bee6b41dd48d0f4bf9af969cb6658eaf3f63bde7d8efd08574eca40bb95f",
+  "source_path": "archive/self_study/h4_mpo_orbital_study/corrected_mpo/pec_evolution_20/R_2p00000000/reference/boys_ordered_c18_reference_adjoint.npy",
+  "mpo_operator_fidelity_normalized_HS": 0.9999999999996607,
+  "mpo_relative_error_vs_frozen_H": 5.822626240316515e-07,
+  "definition": "abs(Tr(U_exact dagger V_MPO))^2 / (Tr(U_exact dagger U_exact) Tr(V_MPO dagger V_MPO)); forward MPO converted to blocked order",
+  "preparation_availability": {
+    "frozen_all_20": {
+      "chi": [
+        6
+      ],
+      "M": [
+        4,
+        6,
+        8
+      ],
+      "states": [
+        "S0",
+        "T"
+      ],
+      "exact": true
+    },
+    "archived_R2_S0": {
+      "chi4_M": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "chi5_M": [],
+      "note": "not part of the public v1 circuit choices"
+    }
+  },
+  "archived_chi4_reference": {
+    "source_path": "archive/self_study/h4_mps_preparation_study/results/preparation.json",
+    "sha256": "bbede095c3e86e829889d8e04f9593f88b0cc0b88c781aa3274e50043821cb7c",
+    "rows": [
+      {
+        "M": 4,
+        "mps_fidelity": 0.9682703246399913,
+        "circuit_fidelity": 0.7470871908578978,
+        "native_cx": 41
+      },
+      {
+        "M": 8,
+        "mps_fidelity": 0.9682703246399913,
+        "circuit_fidelity": 0.9681853843969697,
+        "native_cx": 80
+      }
+    ]
+  }
+}

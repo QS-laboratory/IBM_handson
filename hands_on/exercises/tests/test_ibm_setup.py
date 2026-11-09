@@ -46,8 +46,10 @@ def test_prepared_connection_reused_in_both_exercises(monkeypatch):
     assert len(auth) == 1
     for path in ROOT.glob('0[45]*ipynb'):
         book = nbformat.read(path, 4)
-        source = next(c.source for c in book.cells if c.cell_type == 'code' and c.source.startswith('ASSETS='))
-        function = next(n for n in ast.parse(source).body if isinstance(n, ast.FunctionDef) and n.name == 'connect_ibm')
+        source = next(c.source for c in book.cells if c.cell_type == 'code' and c.source.startswith('H4_DATA_COMMIT ='))
+        assert 'h4_measurement.py' in source
+        runtime_source=(ROOT/'tools/h4_measurement.py').read_text()
+        function = next(n for n in ast.parse(runtime_source).body if isinstance(n, ast.FunctionDef) and n.name == 'connect_ibm')
         exec(compile(ast.Module(body=[function], type_ignores=[]), '<connection>', 'exec'), ns)
         service, result = ns['connect_ibm'](ns['IBM_BACKEND_NAME'], ns['IBM_INSTANCE'])
         assert service is ns['IBM_SERVICE'] and result is backend

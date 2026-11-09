@@ -2,6 +2,8 @@
 import copy
 import nbformat as nb
 from ibm_setup import ibm_setup_cells
+from h4_inventory import circuit_inventory
+from h4_pec_exercise import pec_exercise_cells
 
 
 def build_h4_assessment_cells(install, init, modeltext, config, hardwaretext, checks, fit_info):
@@ -30,6 +32,26 @@ def build_h4_assessment_cells(install, init, modeltext, config, hardwaretext, ch
 ''')
     cells.append(copy.deepcopy(install))
     cells.extend(ibm_setup_cells())
+    md(r'''### データの取得先とキャッシュ
+
+巨大な保存配列はNotebookへ埋め込みません。次セルは固定コミットから必要な回路・参照データを取得し、SHA-256を確認して再利用します。
+リポジトリを取得済みなら、その中の固定データを優先します。なければローカルの `~/.cache/ftqc_handson/h4_pec_v1` へ保存します。
+次セル先頭の `H4_CACHE_DIR` にパスを指定すると保存先を変えられます（環境変数 `H4_DATA_DIR` があればそちらが優先）。
+
+Google Driveへ保存する場合は、先に別セルで次を実行し、その後 `H4_CACHE_DIR` を下記のパスに変更してください。
+
+```python
+from google.colab import drive
+drive.mount('/content/drive')
+# 次の初期化セルで指定:
+# H4_CACHE_DIR = '/content/drive/MyDrive/FTQC_HandsOn/h4_pec_v1'
+```
+
+初回はネット接続が必要です。構造やMを変えたときは不足ファイルだけを取得し、既存ファイルは再ダウンロードしません。
+オフラインで全選択肢を使う場合は、接続中に `download_h4_data()` で全20構造を事前取得します（約40 MiB）。
+その後は `H4_OFFLINE=True` を選べます。補助コードも保存先の隣のruntimeフォルダへキャッシュします。
+初期化セルは補助関数のため折り畳んであります。通常は先頭の設定だけを変更して実行してください。
+''')
     cells.append(copy.deepcopy(init))
     md(r'''### 構造と、厳密／近似の回路を選ぶ
 
@@ -38,10 +60,10 @@ def build_h4_assessment_cells(install, init, modeltext, config, hardwaretext, ch
 既定はR=2 Å・準備6・発展16です。Mは層数、Lは時間反復数であり、別の量です。
 変更後はこのセル以降を上から再実行します。04と05を比較するときは同じ構造・Mを指定します。
 
-全20構造にはリポジトリ内の `hands_on/exercises/data/h4_pec_v1/` が必要です。
-カーネルの作業場所から自動検索します。別の場所へ置く場合は、初期化後に
+全20構造の固定データは、リポジトリ内の `hands_on/exercises/data/h4_pec_v1/` または上で指定したキャッシュから読みます。
+カーネルの作業場所から自動検索します。別の場所へ置く場合は、保存先を途中で変更する場合は
 `os.environ['H4_DATA_DIR'] = '/取得先/hands_on/exercises/data/h4_pec_v1'` を設定します。
-R=2のデータはNotebookにも内蔵しています。他構造が見つからない場合は明示的に停止し、別の構造へ代用しません。
+不足データは固定コミットから必要に応じて取得します。取得できなければ停止し、別の構造へ代用しません。
 ファイルは固定manifestのハッシュで検証し、研究用データや最適化には依存しません。
 
 CASE=`exact`は選択構造の厳密準備・厳密発展の対照です。CASE=`both`で指定した両部品を使い、
@@ -215,6 +237,7 @@ FCI状態 → χ=6のMPS目標 → 指定Mの2-qubitゲート列へフィット 
 M4/M8の枝回路は小さい成分も保つ厳密な局所分解で合成しています。CX数はMだけで決めず、次の費用表で確認します。
 発展のゲート列はinterleavedスピン順で作られており、準備のblocked順へ接続するときの変換も含めて費用を数えます。
 ''')
+    md(circuit_inventory())
     code(f'FIT_INFO={fit_info!r}\n'+'''
 print('Preparation M, chi:',SELECTED_PREP_M,PREP_INFO['reports']['S0']['chi'],'evolution M:',SELECTED_EVOLUTION_M)
 print('MPO target microsteps/cutoff:',FIT_INFO['mpo_microsteps'],FIT_INFO['mpo_cutoff'])
@@ -527,17 +550,18 @@ else:
    実機ノイズを加えたシミュレーションにはならず、回路近似の偏りも残ります。
 3. 設定セルは接続・コンパイルのプレビューを行いますが、測定セルは送信せずスキップします。
 4. 同じ設定・保存先なら既存ジョブ／countsを再利用します。独立した再測定は別の保存先を指定し、元の記録を保持します。''')
+    cells.extend(pec_exercise_cells())
     md(r'''## 7．演習5への接続：L=1の診断から反復推定へ
 
-本冊の4条件比較とfidelity評価は、測定へ渡す回路を理解するための診断です。
+本冊の4条件比較・fidelity評価・固定Lでの20構造走査は、回路と信号を理解するための診断です。
 次冊では**同じH、同じMの選択回路、全0確率、MODE/CASEの意味**を使い、測定後の知識からLと探索点を更新します。
 
 ```text
-本冊: L=1固定 → 全0曲線・fidelity・費用を診断
+本冊: L=1診断／指定Lで20構造のピークを比較 → 信号・誤差・費用を確認
 次冊: 初期事前 → Lと探索点を選ぶ → 測定 → 事後 → 次の事前 → 繰り返す
 ```
 
-本冊の9点を次冊の初期事前へ自動的に変換するわけではありません。次冊は独立した初期事前から開始します。
+本冊のL=1測定や20構造のピーク走査を、次冊の初期事前へ自動的に変換するわけではありません。次冊は独立した初期事前から開始します。
 まず次冊のCASE=exact・MODE=exactで更新手順を見て、CASE=bothへ切り替えて本冊と同じ近似回路へ戻ります。
 比較では初期事前・SHOTS・SEEDなどを揃えます。各Notebookは独立して設定セルを実行してください。
 
@@ -557,7 +581,7 @@ else:
 ### 解答例（課題7：演習5への接続）
 
 1. **断定できません。** 短時間の高さは正しい固有位相の保証ではありません。長時間での近似位相、混入成分、推定モデルも確認します。
-2. 初期事前、測定方式、shots、seed、探索点数などを揃え、回路近似の有無を変えます。
+2. 同じ構造のHと軌道、初期事前、測定方式、shots、seed、探索点数などを揃え、回路近似の有無を変えます。
    反復中のLや探索点は過去の測定に依存するため、同じ初期条件でも途中から異なり得ます。
 3. **異なる量です。** 全0確率は回路から予測する測定事象の確率、事後分布は測定後の未知ギャップについての知識を表します。
 '''
