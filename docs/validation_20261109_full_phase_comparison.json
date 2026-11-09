@@ -1,0 +1,391 @@
+{
+  "notebook": "09_h4_joint_preparation_demo.ipynb",
+  "status": "passed",
+  "code_cells": 13,
+  "images": 3,
+  "stderr": [],
+  "elapsed_seconds": 66.17,
+  "qpu_used": false,
+  "colab_tested": false,
+  "method": "Fresh Python/IPython process, temporary cwd; no Jupyter kernel/UI test",
+  "validation_date": "2026-11-09",
+  "tests": {
+    "passed": 20,
+    "comparison_tests_passed": 11,
+    "real_measurements_mocked": true,
+    "targets": [
+      "hands_on/exercises/tests/test_h4_joint_preparation_demo.py",
+      "hands_on/exercises/tests/test_h4_download.py",
+      "hands_on/exercises/tests/test_current_materials.py"
+    ],
+    "unrelated_failures": [
+      {
+        "test": "test_hardware_setup_skips_authentication_by_default",
+        "reason": "06 is saved with USE_IBM=True; test expects default-off."
+      },
+      {
+        "test": "test_hardware_submit_guard_rejects_missing_preview",
+        "reason": "06 is saved with RUN_HARDWARE=True; test expects default-off."
+      }
+    ],
+    "unrelated_notebook_settings_changed": false
+  },
+  "settings": {
+    "geometry": "R_2p00000000",
+    "evolution_m": 16,
+    "L": 1,
+    "time": 0.1,
+    "scan": "full_period",
+    "phases": [
+      -3.141592653589793,
+      -2.6179938779914944,
+      -2.0943951023931957,
+      -1.5707963267948966,
+      -1.0471975511965979,
+      -0.5235987755982991,
+      0.0,
+      0.5235987755982987,
+      1.0471975511965974,
+      1.5707963267948966,
+      2.094395102393195,
+      2.617993877991494
+    ],
+    "trial_gaps": [
+      -31.41592653589793,
+      -26.17993877991494,
+      -20.943951023931955,
+      -15.707963267948966,
+      -10.471975511965978,
+      -5.2359877559829915,
+      0.0,
+      5.235987755982987,
+      10.471975511965974,
+      15.707963267948966,
+      20.943951023931948,
+      26.179938779914938
+    ],
+    "shots": 1024,
+    "optimization_level": 1,
+    "seed_transpiler": 7,
+    "initial_layout": [
+      120,
+      119,
+      118,
+      117,
+      116,
+      115,
+      114,
+      109,
+      121
+    ]
+  },
+  "total_requested_shots": 24576,
+  "joint_fidelity": 0.9976757425611849,
+  "fake_signals": {
+    "paired": {
+      "beta": [
+        -3.141592653589793,
+        -2.6179938779914944,
+        -2.0943951023931957,
+        -1.5707963267948966,
+        -1.0471975511965979,
+        -0.5235987755982991,
+        0.0,
+        0.5235987755982987,
+        1.0471975511965974,
+        1.5707963267948966,
+        2.094395102393195,
+        2.617993877991494
+      ],
+      "counts_all_zero": [
+        2,
+        3,
+        1,
+        0,
+        2,
+        2,
+        1,
+        7,
+        1,
+        0,
+        3,
+        4
+      ],
+      "actual_shots": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "observed": [
+        0.001953125,
+        0.0029296875,
+        0.0009765625,
+        0.0,
+        0.001953125,
+        0.001953125,
+        0.0009765625,
+        0.0068359375,
+        0.0009765625,
+        0.0,
+        0.0029296875,
+        0.00390625
+      ],
+      "lower_95": [
+        0.0005357808273540998,
+        0.0009968475014902932,
+        0.0001724080656205127,
+        0.0,
+        0.0005357808273540998,
+        0.0005357808273540998,
+        0.0001724080656205127,
+        0.003315209271509724,
+        0.0001724080656205127,
+        0.0,
+        0.0009968475014902932,
+        0.0015200811655754903
+      ],
+      "upper_95": [
+        0.007093273978132259,
+        0.008578032686730408,
+        0.005510821357131506,
+        0.0037374040400176777,
+        0.007093273978132259,
+        0.007093273978132259,
+        0.005510821357131506,
+        0.01404297244764834,
+        0.005510821357131506,
+        0.0037374040400176777,
+        0.008578032686730408,
+        0.01000062440537955
+      ],
+      "coefficients": [
+        0.0021158854166666674,
+        3.776868612774686e-05,
+        0.0006292359055638733
+      ],
+      "amplitude": 0.0006303683831717799,
+      "constant_probability": 0.0021158854166666665,
+      "statistic": 0.0024414062500000017,
+      "p_value": 0.5678,
+      "monte_carlo_samples": 4999,
+      "p_value_adjusted": 1.0,
+      "detected": false
+    },
+    "joint": {
+      "beta": [
+        -3.141592653589793,
+        -2.6179938779914944,
+        -2.0943951023931957,
+        -1.5707963267948966,
+        -1.0471975511965979,
+        -0.5235987755982991,
+        0.0,
+        0.5235987755982987,
+        1.0471975511965974,
+        1.5707963267948966,
+        2.094395102393195,
+        2.617993877991494
+      ],
+      "counts_all_zero": [
+        6,
+        2,
+        7,
+        11,
+        7,
+        10,
+        16,
+        15,
+        7,
+        10,
+        10,
+        5
+      ],
+      "actual_shots": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "observed": [
+        0.005859375,
+        0.001953125,
+        0.0068359375,
+        0.0107421875,
+        0.0068359375,
+        0.009765625,
+        0.015625,
+        0.0146484375,
+        0.0068359375,
+        0.009765625,
+        0.009765625,
+        0.0048828125
+      ],
+      "lower_95": [
+        0.002688088875029842,
+        0.0005357808273540998,
+        0.003315209271509724,
+        0.006008712294577323,
+        0.003315209271509724,
+        0.005313035304722443,
+        0.00964032654076094,
+        0.008896970926209183,
+        0.003315209271509724,
+        0.005313035304722443,
+        0.005313035304722443,
+        0.0020873949741738243
+      ],
+      "upper_95": [
+        0.01272426746139388,
+        0.007093273978132259,
+        0.01404297244764834,
+        0.019132770955518102,
+        0.01404297244764834,
+        0.01788262256263864,
+        0.025230283623006194,
+        0.02402781385482361,
+        0.01404297244764834,
+        0.01788262256263864,
+        0.01788262256263864,
+        0.011379135979515557
+      ],
+      "coefficients": [
+        0.008626302083333334,
+        0.003920647341816388,
+        0.0009111452166916193
+      ],
+      "amplitude": 0.004025128716549562,
+      "constant_probability": 0.008626302083333334,
+      "statistic": 0.09954300631936172,
+      "p_value": 0.0044,
+      "monte_carlo_samples": 4999,
+      "p_value_adjusted": 0.0088,
+      "detected": true
+    }
+  },
+  "fake_resources": {
+    "paired": {
+      "arm": "paired",
+      "point": 0,
+      "depth": 2611,
+      "two_qubit_gates": 1260,
+      "operations": {
+        "rz": 4096,
+        "sx": 2888,
+        "ecr": 1260,
+        "x": 178,
+        "measure": 9,
+        "barrier": 1
+      },
+      "initial_layout": [
+        120,
+        119,
+        118,
+        117,
+        116,
+        115,
+        114,
+        109,
+        121
+      ],
+      "final_layout": [
+        121,
+        120,
+        118,
+        117,
+        116,
+        115,
+        114,
+        109,
+        119
+      ]
+    },
+    "joint": {
+      "arm": "joint",
+      "point": 0,
+      "depth": 669,
+      "two_qubit_gates": 408,
+      "operations": {
+        "rz": 1919,
+        "sx": 1312,
+        "ecr": 408,
+        "x": 46,
+        "measure": 9,
+        "barrier": 1
+      },
+      "initial_layout": [
+        120,
+        119,
+        118,
+        117,
+        116,
+        115,
+        114,
+        109,
+        121
+      ],
+      "final_layout": [
+        120,
+        119,
+        118,
+        117,
+        116,
+        115,
+        114,
+        109,
+        121
+      ]
+    }
+  },
+  "fake_snapshot_date": "2025-02-26T13:56:01-05:00",
+  "previous_narrow_scan": {
+    "L": 1,
+    "time": 0.1,
+    "trial_gaps": [
+      -4.0,
+      -3.0,
+      -2.0,
+      -1.0,
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0
+    ],
+    "adjusted_p": {
+      "paired": 0.98,
+      "joint": 0.8452
+    }
+  },
+  "conclusion": "At L=1 and 1024 shots per point, the full-period phase scan detects joint-preparation phase dependence (adjusted p=0.0088). The paired arm remains unresolved (adjusted p=1).",
+  "changes": [
+    "Replace the nine-point \u00b10.4 rad scan with 12 evenly spaced points over [-pi, pi).",
+    "Keep L=1, preparation circuits, 1024 shots per point, shared initial layout, level-1 compilation and fixed seeds.",
+    "Plot correction phase, measured 95% intervals and harmonic projections.",
+    "Save full-period fake counts separately from the earlier narrow scan."
+  ],
+  "limitations": [
+    "FakeKawasaki uses historical calibration; real-device signal detection remains unverified.",
+    "Two-arm Bonferroni-corrected per-arm phase tests do not directly test the difference between arms.",
+    "Full-period coverage diagnoses interference; it does not establish gap accuracy.",
+    "The new scan uses 24576 total shots, versus 18432 in the nine-point scan.",
+    "No DD, twirling, calibration-aware layout search, or added idle relaxation."
+  ],
+  "notebook_sha256": "c0bddad6f8906f78527cfd7d9f17338baee1b1d5801fbca2ca4013ee8723b5df"
+}

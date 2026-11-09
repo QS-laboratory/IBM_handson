@@ -13,7 +13,7 @@
 | 06 | [H₄の実機デモ](06_h4_hardware_demo.ipynb) | 同じ9点で理想確率・有限shots・IBM実機を比較 | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/06_h4_hardware_demo.ipynb) |
 | 07 | [H₄の実機信号と回路長](07_h4_hardware_depth_scan.ipynb) | L=1・2・4の位相走査で信号の減衰を調べる | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/07_h4_hardware_depth_scan.ipynb) |
 | 08 | [H₄のjoint-state圧縮と誤り抑制](08_h4_joint_compression_suppression.ipynb) | joint準備・較正配置・twirling・DDをfakeと実機で比較 | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/08_h4_joint_compression_suppression.ipynb) |
-| 09 | [H₄のjoint準備だけの実機デモ](09_h4_joint_preparation_demo.ipynb) | 06をjoint準備・L=1・位相一周期へ最小変更 | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/09_h4_joint_preparation_demo.ipynb) |
+| 09 | [H₄のpaired/joint準備比較](09_h4_joint_preparation_demo.ipynb) | 06のpaired準備とjoint準備をL=1・位相一周期で比較 | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/09_h4_joint_preparation_demo.ipynb) |
 
 ## 実行方法
 
@@ -121,16 +121,19 @@ FakeKawasakiではゲート・読出し・明示的DelayのT1/T2ノイズを含�
 送信回路・ジョブID・全countsは `outputs/exercise8/` に保存します。実機接続・送信は既定で無効です。
 [08の検証記録](../../docs/validation_20261109_joint_compression.json)にはfake実行と模擬実機ジョブの結果を記録しています。
 
-## 09：06をjoint準備だけへ最小変更
+## 09：paired準備とjoint準備を同条件で比較
 
-06の読み込み・M16発展・level 1・fake/実機インターフェースを残し、AとA†を08のjoint準備へ置き換えます。
-追加の配置探索・level 3・twirling・DDは行いません。検出できた条件に合わせ、既定はL=1・位相一周期の12点です。
-各点1024 shots、1走査12,288 shotsです。L=4への変更も可能です。
+06のM6 paired準備と、その出力を直接圧縮したjoint準備を比較します。
+既定はL=1・位相一周期β∈[-π,π)の12点です。旧09の±0.4 radではピーク付近しか測れないため、ピークと谷を含めて信号を調べます。M16発展・初期物理qubit配置・level 1・seed=7・shotsを揃えます。
+各条件・各点1024 shots、合計24回路・24,576 shotsです。Lを変えるときも両条件に共通です。候補はε=β/(LΔt)で計算し、一周期を保ちます。これは干渉信号の診断で、ギャップ精度を示す走査ではありません。
+較正配置探索・level 3・twirling・DDは追加しません。
 
-既定はFakeKawasakiを実行します。実機では `USE_FAKE_KAWASAKI=False`、`USE_IBM=True` で接続し、
-プレビュー後に `RUN_HARDWARE=True` にします。保存先は `outputs/exercise9/` で、06のジョブと混同しません。
-06のGaussian表示はシミュレーション参考用に残し、fakeと実機はcountsと位相依存性を診断します。
-[09の検証記録](../../docs/validation_20261109_joint_only.json)では、実機へ送信せずにfakeの信号検出と回路の整合性を確認しています。
+理想確率、shot noiseのみ、FakeKawasaki、実機で両条件のcounts・位相依存性・回路費用を比較します。
+各条件のp値は2条件分を補正します。これは条件間の優劣の検定やギャップ精度の保証ではありません。
+既定はFakeKawasakiです。実機では `USE_FAKE_KAWASAKI=False`、`USE_IBM=True` で接続し、
+両条件のプレビュー後に `RUN_HARDWARE=True` にします。両条件を交互に並べて1ジョブへ送信します。
+保存先は `outputs/exercise9/` です。同条件の保存ジョブを再利用し、06のジョブと混同しません。
+[09の検証記録](../../docs/validation_20261109_full_phase_comparison.json)にはfake実行と模擬実機ジョブの検証を記録しています。
 
 ## H₄の固定データ
 

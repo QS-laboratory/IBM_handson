@@ -1,0 +1,317 @@
+{
+  "notebook": "09_h4_joint_preparation_demo.ipynb",
+  "status": "passed",
+  "code_cells": 13,
+  "images": 3,
+  "stderr": [],
+  "elapsed_seconds": 81.44,
+  "qpu_used": false,
+  "colab_tested": false,
+  "method": "Fresh Python/IPython process, temporary cwd; no Jupyter kernel/UI test",
+  "validation_date": "2026-11-09",
+  "tests": {
+    "passed": 19,
+    "comparison_tests_passed": 11,
+    "real_measurements_mocked": true,
+    "targets": [
+      "hands_on/exercises/tests/test_h4_joint_preparation_demo.py",
+      "hands_on/exercises/tests/test_h4_download.py",
+      "hands_on/exercises/tests/test_current_materials.py::test_complete_nine_notebook_collection_and_navigation"
+    ]
+  },
+  "settings": {
+    "geometry": "R_2p00000000",
+    "evolution_m": 16,
+    "L": 4,
+    "time": 0.4,
+    "trial_gaps": [
+      -4.0,
+      -3.0,
+      -2.0,
+      -1.0,
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0
+    ],
+    "shots": 1024,
+    "optimization_level": 1,
+    "seed_transpiler": 7,
+    "initial_layout": [
+      120,
+      119,
+      118,
+      117,
+      116,
+      115,
+      114,
+      109,
+      121
+    ]
+  },
+  "total_requested_shots": 18432,
+  "joint_fidelity": 0.9976757425611849,
+  "maximum_ideal_probability_difference": 0.0004999959709651725,
+  "fake_signals": {
+    "paired": {
+      "beta": [
+        -1.6,
+        -1.2000000000000002,
+        -0.8,
+        -0.4,
+        0.0,
+        0.4,
+        0.8,
+        1.2000000000000002,
+        1.6
+      ],
+      "counts_all_zero": [
+        2,
+        3,
+        1,
+        0,
+        2,
+        2,
+        1,
+        6,
+        1
+      ],
+      "actual_shots": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "observed": [
+        0.001953125,
+        0.0029296875,
+        0.0009765625,
+        0.0,
+        0.001953125,
+        0.001953125,
+        0.0009765625,
+        0.005859375,
+        0.0009765625
+      ],
+      "lower_95": [
+        0.0005357808273540998,
+        0.0009968475014902932,
+        0.0001724080656205127,
+        0.0,
+        0.0005357808273540998,
+        0.0005357808273540998,
+        0.0001724080656205127,
+        0.002688088875029842,
+        0.0001724080656205127
+      ],
+      "upper_95": [
+        0.007093273978132259,
+        0.008578032686730408,
+        0.005510821357131506,
+        0.0037374040400176777,
+        0.007093273978132259,
+        0.007093273978132259,
+        0.005510821357131506,
+        0.01272426746139388,
+        0.005510821357131506
+      ],
+      "coefficients": [
+        0.0025408623287530214,
+        -0.0010791097115799195,
+        0.0004962371532845624
+      ],
+      "amplitude": 0.0011877411679006766,
+      "constant_probability": 0.001953125,
+      "statistic": 0.0027828687401189297,
+      "p_value": 0.4892,
+      "monte_carlo_samples": 4999,
+      "p_value_adjusted": 0.9784,
+      "detected": false
+    },
+    "joint": {
+      "beta": [
+        -1.6,
+        -1.2000000000000002,
+        -0.8,
+        -0.4,
+        0.0,
+        0.4,
+        0.8,
+        1.2000000000000002,
+        1.6
+      ],
+      "counts_all_zero": [
+        5,
+        2,
+        5,
+        5,
+        0,
+        1,
+        2,
+        2,
+        0
+      ],
+      "actual_shots": [
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "observed": [
+        0.0048828125,
+        0.001953125,
+        0.0048828125,
+        0.0048828125,
+        0.0,
+        0.0009765625,
+        0.001953125,
+        0.001953125,
+        0.0
+      ],
+      "lower_95": [
+        0.0020873949741738243,
+        0.0005357808273540998,
+        0.0020873949741738243,
+        0.0020873949741738243,
+        0.0,
+        0.0001724080656205127,
+        0.0005357808273540998,
+        0.0005357808273540998,
+        0.0
+      ],
+      "upper_95": [
+        0.011379135979515557,
+        0.007093273978132259,
+        0.011379135979515557,
+        0.011379135979515557,
+        0.0037374040400176777,
+        0.005510821357131506,
+        0.007093273978132259,
+        0.007093273978132259,
+        0.0037374040400176777
+      ],
+      "coefficients": [
+        0.002503287873698141,
+        -0.00021322877369184864,
+        -0.001677825741672537
+      ],
+      "amplitude": 0.0016913207056466636,
+      "constant_probability": 0.002387152777777778,
+      "statistic": 0.014668608576320687,
+      "p_value": 0.0482,
+      "monte_carlo_samples": 4999,
+      "p_value_adjusted": 0.0964,
+      "detected": false
+    }
+  },
+  "fake_resources": {
+    "paired": {
+      "arm": "paired",
+      "point": 0,
+      "depth": 3730,
+      "two_qubit_gates": 1908,
+      "operations": {
+        "rz": 6838,
+        "sx": 4688,
+        "ecr": 1908,
+        "x": 307,
+        "measure": 9,
+        "barrier": 1
+      },
+      "initial_layout": [
+        120,
+        119,
+        118,
+        117,
+        116,
+        115,
+        114,
+        109,
+        121
+      ],
+      "final_layout": [
+        121,
+        120,
+        118,
+        117,
+        116,
+        115,
+        114,
+        109,
+        119
+      ]
+    },
+    "joint": {
+      "arm": "joint",
+      "point": 0,
+      "depth": 1785,
+      "two_qubit_gates": 1056,
+      "operations": {
+        "rz": 4784,
+        "sx": 3238,
+        "ecr": 1056,
+        "x": 148,
+        "measure": 9,
+        "barrier": 1
+      },
+      "initial_layout": [
+        120,
+        119,
+        118,
+        117,
+        116,
+        115,
+        114,
+        109,
+        121
+      ],
+      "final_layout": [
+        120,
+        119,
+        118,
+        117,
+        116,
+        115,
+        114,
+        109,
+        121
+      ]
+    }
+  },
+  "fake_snapshot_date": "2025-02-26T13:56:01-05:00",
+  "conclusion": "At L=4 and 1024 shots per point, neither preparation resolves phase dependence after Bonferroni correction for two arms.",
+  "comparison_controls": [
+    "Original 06 paired preparation retained",
+    "M16 evolution shared",
+    "L=4 and nine original 06 energy candidates shared",
+    "Equal shots per candidate and arm",
+    "Paired initial physical layout used for both arms",
+    "Optimization level 1 and seed 7 shared",
+    "Both arms interleaved in one hardware job",
+    "No layout search, level 3, DD or twirling"
+  ],
+  "real_mock_checks": [
+    "One job contains both arms",
+    "Job ID persisted before waiting for results",
+    "Raw counts retained before plotting",
+    "Completed cache reused without resubmission",
+    "Interrupted result retrieval resumes stored job",
+    "Changed configuration or unresolved submission marker prevents submission"
+  ],
+  "notes": [
+    "Fake snapshot is historical and differs from current hardware",
+    "Per-arm phase-dependence p-values are corrected for two arms, not a test of between-arm superiority",
+    "Compiled ideal probabilities checked at every point in both arms; L=1 and L=4 logical circuits also checked"
+  ]
+}

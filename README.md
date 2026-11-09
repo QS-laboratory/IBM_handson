@@ -18,7 +18,7 @@
 | 06 | [H₄の実機デモ](hands_on/exercises/06_h4_hardware_demo.ipynb) | 同じ9点で理想確率・有限shots・IBM実機を比較 | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/06_h4_hardware_demo.ipynb) |
 | 07 | [H₄の実機信号と回路長](hands_on/exercises/07_h4_hardware_depth_scan.ipynb) | L=1・2・4の位相走査で信号の減衰を調べる | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/07_h4_hardware_depth_scan.ipynb) |
 | 08 | [H₄のjoint-state圧縮と誤り抑制](hands_on/exercises/08_h4_joint_compression_suppression.ipynb) | joint準備・較正配置・twirling・DDをfakeと実機で比較 | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/08_h4_joint_compression_suppression.ipynb) |
-| 09 | [H₄のjoint準備だけの実機デモ](hands_on/exercises/09_h4_joint_preparation_demo.ipynb) | 06をjoint準備・L=1・位相一周期へ最小変更 | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/09_h4_joint_preparation_demo.ipynb) |
+| 09 | [H₄のpaired/joint準備比較](hands_on/exercises/09_h4_joint_preparation_demo.ipynb) | 06のpaired準備とjoint準備をL=1・位相一周期で比較 | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/09_h4_joint_preparation_demo.ipynb) |
 
 01〜05はシミュレーション、06〜09はシミュレータと実機の比較です。06も初期設定ではIBM接続・ジョブ送信を行いません。
 [実行方法・記号・設定](hands_on/exercises/README.md)を参照してください。
@@ -45,7 +45,7 @@ S. Kanno et al., *Tensor-based quantum phase difference estimation for large-sca
 - [正式版01〜06のローカル実行記録](docs/validation_20261109_promotion.json)
 - [07のローカル実行・模擬ジョブ検証](docs/validation_20261109_depth_scan.json)
 - [08のjoint圧縮・fake実行・模擬実機ジョブ検証](docs/validation_20261109_joint_compression.json)
-- [09のjoint準備のみ・fake実行検証](docs/validation_20261109_joint_only.json)
+- [09のpaired/joint準備比較・fake実行検証](docs/validation_20261109_full_phase_comparison.json)
 - [差し替え前の01〜05・生成コード・テスト](archive/pre_promotion_2026-11-09/README.md)
 - [それ以前の教材と自習資料](archive/README.md)
 
