@@ -16,4 +16,4 @@
 - [参考資料1：SQAI Quantum Chemistry](参考資料1_SQAI_QuantumChemistry.pdf)
 - [参考資料2：量子多体問題の量子シミュレーション](参考資料2_量子多体問題の量子シミュレーション.pdf)
 
-[演習ノートブック01〜05](../hands_on/exercises/README.md)へ戻る。
+[演習ノートブック01〜06](../hands_on/exercises/README.md)へ戻る。

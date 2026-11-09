@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-09",
+  "method": "Each notebook executed in a fresh local Python/IPython process and temporary working directory",
+  "colab_tested": false,
+  "ibm_authenticated": false,
+  "qpu_jobs_submitted": 0,
+  "notebooks": [
+    {
+      "notebook": "01_matrix_phase_estimation.ipynb",
+      "status": "passed",
+      "code_cells": 12,
+      "images": 12,
+      "elapsed_seconds": 1.37,
+      "qpu_used": false,
+      "colab_tested": false,
+      "method": "Fresh Python/IPython process, temporary cwd; no Jupyter kernel/UI test",
+      "sha256": "607d124ece2c692745933016a03813df227d4bc7d9541af35af0759d67b15eb5"
+    },
+    {
+      "notebook": "02_h2_one_qubit.ipynb",
+      "status": "passed",
+      "code_cells": 13,
+      "images": 13,
+      "elapsed_seconds": 2.0,
+      "qpu_used": false,
+      "colab_tested": false,
+      "method": "Fresh Python/IPython process, temporary cwd; no Jupyter kernel/UI test",
+      "sha256": "1bbfddcc82a33876ed0109d13b5e096daa418202916fe55498f56d7e95f1387c"
+    },
+    {
+      "notebook": "03_h2_jw_bpde.ipynb",
+      "status": "passed",
+      "code_cells": 13,
+      "images": 14,
+      "elapsed_seconds": 3.44,
+      "qpu_used": false,
+      "colab_tested": false,
+      "method": "Fresh Python/IPython process, temporary cwd; no Jupyter kernel/UI test",
+      "sha256": "1aff037e4039834c9c80429b2956e43791f400aeedb7e03feddbd1df98550e11"
+    },
+    {
+      "notebook": "04_h4_circuit_assessment.ipynb",
+      "status": "passed",
+      "code_cells": 5,
+      "images": 3,
+      "elapsed_seconds": 25.69,
+      "qpu_used": false,
+      "colab_tested": false,
+      "method": "Fresh Python/IPython process, temporary cwd; no Jupyter kernel/UI test",
+      "sha256": "4d29974177d84df4e44f233d1bcf3d9bc2d527f66ab36aa303b822126b6fbefe"
+    },
+    {
+      "notebook": "05_h4_iterative_bayes.ipynb",
+      "status": "passed",
+      "code_cells": 9,
+      "images": 3,
+      "elapsed_seconds": 10.43,
+      "qpu_used": false,
+      "colab_tested": false,
+      "method": "Fresh Python/IPython process, temporary cwd; no Jupyter kernel/UI test",
+      "sha256": "34d3147167e9388700013559a4afb2a25c0df68dafd20b8d2b0412ee064c07fa"
+    },
+    {
+      "notebook": "06_h4_hardware_demo.ipynb",
+      "status": "passed",
+      "code_cells": 9,
+      "images": 2,
+      "elapsed_seconds": 9.76,
+      "qpu_used": false,
+      "colab_tested": false,
+      "method": "Fresh Python/IPython process, temporary cwd; no Jupyter kernel/UI test",
+      "sha256": "6e0b93d0d42edd8dee4ebc2411ec59009a9dd0c9e3b747b7a597b22d3016d8f7"
+    }
+  ]
+}

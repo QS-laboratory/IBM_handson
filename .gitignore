@@ -23,3 +23,8 @@ hands_on/output/
 # Only the explicit regeneration inputs in SOURCE_FILES.json are published.
 # Those files are tracked; remaining local self-study research stays private.
 /archive/self_study/
+
+# Relocated local research artifacts and legacy path compatibility
+/data/self_study/
+/data/h4_research_figures.html
+/hands_on/self_study

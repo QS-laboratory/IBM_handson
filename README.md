@@ -6,27 +6,29 @@
 
 ## 演習を開く
 
-各冊はデータと補助関数を内蔵し、前の冊の実行状態に依存しません。Colabで自分のコピーを保存し、上から実行してください。
+各冊は単独で実行できます。Colabで自分のコピーを保存し、冒頭のインストールセルを有効にして上から実行してください。
 
-| 順番 | 内容 | Colab |
-|---|---|---|
-| 01 | [2×2行列：QPE・BPE・BPDE](hands_on/exercises/01_matrix_phase_estimation.ipynb) | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/01_matrix_phase_estimation.ipynb) |
-| 02 | [H₂・1 qubit：電子状態と化学への入口](hands_on/exercises/02_h2_one_qubit.ipynb) | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/02_h2_one_qubit.ipynb) |
-| 03 | [H₂・JW・4 qubit：厳密準備とTrotter分解](hands_on/exercises/03_h2_jw_bpde.ipynb) | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/03_h2_jw_bpde.ipynb) |
-| 04 | [H₄：回路近似の評価・実機接続](hands_on/exercises/04_h4_circuit_assessment.ipynb) | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/04_h4_circuit_assessment.ipynb) |
-| 05 | [H₄：反復的Bayesian推定](hands_on/exercises/05_h4_iterative_bayes.ipynb) | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/05_h4_iterative_bayes.ipynb) |
+| 順番 | 教材 | 内容 | Google Colab |
+|---|---|---|---|
+| 01 | [行列の位相推定](hands_on/exercises/01_matrix_phase_estimation.ipynb) | QPE・BPE・BPDE、Gaussian更新 | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/01_matrix_phase_estimation.ipynb) |
+| 02 | [H₂・1 qubit](hands_on/exercises/02_h2_one_qubit.ipynb) | 電子配置とスピン、S₀–S₂の位相差 | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/02_h2_one_qubit.ipynb) |
+| 03 | [H₂・Jordan–Wigner・4 qubit](hands_on/exercises/03_h2_jw_bpde.ipynb) | 02と同じ流れでS₀–T₀の差を測定 | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/03_h2_jw_bpde.ipynb) |
+| 04 | [H₄のポテンシャル曲線](hands_on/exercises/04_h4_circuit_assessment.ipynb) | 保存回路の表、期待値のPEC、Lを増やす位相実験 | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/04_h4_circuit_assessment.ipynb) |
+| 05 | [H₄のGaussian更新](hands_on/exercises/05_h4_iterative_bayes.ipynb) | シミュレーションで測定・フィット・事後更新を反復 | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/05_h4_iterative_bayes.ipynb) |
+| 06 | [H₄の実機デモ](hands_on/exercises/06_h4_hardware_demo.ipynb) | 同じ9点で理想確率・有限shots・IBM実機を比較 | [開く](https://colab.research.google.com/github/QS-laboratory/IBM_handson/blob/main/hands_on/exercises/06_h4_hardware_demo.ipynb) |
 
-[実行方法・記号・測定モード](hands_on/exercises/README.md)を参照してください。全ての問いに解答例があります。
-演習4・5は、厳密確率・有限shotsの模擬測定・IBM実機を切り替えられます。実機送信は初期状態では無効です。
-2026年11月9日、コミット `1203538` の5冊をGoogle Colabの新規CPUランタイムで通し実行し、全セルの完走を確認しました。最初のインストールセルを有効にしてから実行してください。[検証記録](docs/colab_validation_1203538.json)。IBM実機への送信は行っていません。
-追加改訂後の04・05（コミット `900224b`）も新規Colabランタイムで全14／15セルの完走を確認しました。[更新版の検証記録](docs/colab_validation_900224b.json)。
+01〜05はシミュレーション、06はシミュレータと実機の比較です。06も初期設定ではIBM接続・ジョブ送信を行いません。
+[実行方法・記号・設定](hands_on/exercises/README.md)を参照してください。
 
-## 事前準備
+## 事前準備と資料
 
-- [① IBM Quantumの利用登録](docs/01_ibm_quantum_registration.md) / [PDF](output/pdf/01_ibm_quantum_registration.pdf)
-- [② Google Colabからの接続確認](docs/02_colab_connection.md) / [PDF](output/pdf/02_colab_connection.pdf)
+- [① IBM Quantumの利用登録](docs/01_ibm_quantum_registration.md)
+- [② Google Colabからの接続確認](docs/02_colab_connection.md)
+- [Kanno論文・補足資料・参考資料](docs/README.md)
 
-本編の実行にPySCF・Julia・Aerは不要です。APIキーをコード・出力・GitHubへ記載しないでください。
+シミュレーションにはIBMアカウントは不要です。06で実機を使う方は本人のAPIキーと利用可能なインスタンスCRNを用意してください。
+APIキーは非表示入力し、コード・出力・GitHubへ記載しないでください。
+本編の実行にPySCF・Julia・Aerは不要です。
 
 ## 参考研究
 
@@ -35,10 +37,12 @@ S. Kanno et al., *Tensor-based quantum phase difference estimation for large-sca
 
 本教材は論文の分子・実機実験全体の再現ではありません。
 
-<details><summary>旧版・開発資料</summary>
+<details><summary>検証記録・旧版・開発資料</summary>
 
-[旧教材の保存場所](archive/README.md)。新本編の元教材・再生成用データは `archive/self_study/` に保持しています。
+- [正式版01〜06のローカル実行記録](docs/validation_20261109_promotion.json)
+- [差し替え前の01〜05・生成コード・テスト](archive/pre_promotion_2026-11-09/README.md)
+- [それ以前の教材と自習資料](archive/README.md)
+
+旧版のColab実行記録は、[1203538](docs/colab_validation_1203538.json)・[900224b](docs/colab_validation_900224b.json)の各コミットに対応します。
 
 </details>
-
-参考論文・補足資料は [資料一覧](docs/README.md) を参照してください。
